@@ -1,4 +1,4 @@
-from futuregreen.settings.common import *
+from futuregreen.settings.base import *
 
 
 DEBUG = True
