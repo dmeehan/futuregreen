@@ -14,17 +14,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3'
-        'NAME': '', # Or path to database file if using sqlite3.
-        'USER': '', # Not used with sqlite3.
-        'PASSWORD': '', # Not used with sqlite3.
-        'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '', # Set to empty string for default. Not used with sqlite3.
-    }
-}
-
 SITE_ID = 1
 SECRET_KEY = '=#%_^7kq!4zd=5opq2dtk(ri@%$ot-*$4f(st)v_wx3c1*!2-m'
 
@@ -79,7 +68,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #   'django.template.loaders.eggs.Loader',
-}
+)
 
 #==============================================================================
 # Middleware
