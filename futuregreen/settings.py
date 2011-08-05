@@ -15,7 +15,6 @@ ADMINS = (
 MANAGERS = ADMINS
 
 SITE_ID = 1
-SECRET_KEY = '=#%_^7kq!4zd=5opq2dtk(ri@%$ot-*$4f(st)v_wx3c1*!2-m'
 
 #==============================================================================
 # Localization
