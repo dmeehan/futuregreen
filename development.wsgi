@@ -12,7 +12,7 @@ project = os.path.dirname(__file__)
 workspace = os.path.dirname(project)
 sys.path.append(workspace)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'futuregreen.settings.development'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'futuregreen.settings'
 from django.core.handlers.wsgi import WSGIHandler
 application = WSGIHandler()
 
