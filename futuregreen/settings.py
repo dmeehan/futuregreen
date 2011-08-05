@@ -32,16 +32,16 @@ USE_L10N = True    #format dates, numbers and calendars according to locale
 
 ROOT_URLCONF = 'futuregreen.urls'
 
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'uploads')
+MEDIA_ROOT = '/home/futuregreen/futuregreenstudio.com/media/uploads/'
 MEDIA_URL = '/uploads/'
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = '/home/futuregreen/futuregreenstudio.com/media/static/'
 STATIC_URL = '/static/'
 
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 STATICFILES_DIRS = (
-    # add additional static file directories here
+    os.path.join(PROJECT_DIR, 'static',
 )
 
 STATICFILES_FINDERS = (
