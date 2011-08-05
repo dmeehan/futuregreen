@@ -60,9 +60,9 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
-TEMPLATE_CONTEXT_PROCESSORS += (
+# TEMPLATE_CONTEXT_PROCESSORS += (
     # 'Custom context processors here',
-)
+# )
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
