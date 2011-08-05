@@ -2,7 +2,9 @@
 
 import os
 
+
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+SITE_ROOT = os.path.join(PROJECT_DIR, os.pardir)
 PROJECT_URL = '/'
 
 DEBUG = True
@@ -32,10 +34,10 @@ USE_L10N = True    #format dates, numbers and calendars according to locale
 
 ROOT_URLCONF = 'futuregreen.urls'
 
-MEDIA_ROOT = '/home/futuregreen/futuregreenstudio.com/media/uploads/'
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'media/', 'uploads/')
 MEDIA_URL = '/uploads/'
 
-STATIC_ROOT = '/home/futuregreen/futuregreenstudio.com/media/static/'
+STATIC_ROOT = os.path.join(SITE_ROOT, 'media/', 'static/')
 STATIC_URL = '/static/'
 
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
