@@ -105,7 +105,7 @@ INSTALLED_APPS = (
     'taggit',
     'imagekit',
     'categories',
-    'generic-flatblocks',
+    'django_generic_flatblocks',
 )
 
 #==============================================================================
