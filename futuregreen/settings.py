@@ -91,7 +91,7 @@ INSTALLED_APPS = (
     # admin
     'grappelli',
     'django.contrib.admin',
-    'django.contrib.admindocs'
+    'django.contrib.admindocs',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
