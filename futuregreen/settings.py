@@ -102,7 +102,6 @@ INSTALLED_APPS = (
 
     # third party apps
     'south',
-    'haystack',
     'taggit',
     'imagekit',
     'categories',
