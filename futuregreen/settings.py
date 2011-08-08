@@ -119,8 +119,8 @@ INSTALLED_APPS = (
     'django_generic_flatblocks',
 
     # site-kit apps
-    'projects',
-    'contacts',
+    #'projects',
+    #'contacts',
 
     # local apps
     'futuregreen.portfolio',
