@@ -160,6 +160,8 @@ LOGGING = {
 # Third party app settings
 #==============================================================================
 
+GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
+
 PROJECTS_PROJECT_MODEL = 'futuregreen.portfolio.Project'
 PROJECTS_PROJECT_MARKUP = 'markdown'
 PROJECTS_PROJECT_PAGINATE_BY = 10
