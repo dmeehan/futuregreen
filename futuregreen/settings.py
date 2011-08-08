@@ -62,6 +62,13 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.request",
+    "django.core.context_processors.i18n",
+    'django.contrib.messages.context_processors.messages',
+)
+
 # TEMPLATE_CONTEXT_PROCESSORS += (
     # 'Custom context processors here',
 # )
@@ -93,6 +100,7 @@ MIDDLEWARE_CLASSES = (
 INSTALLED_APPS = (
     # admin
     'grappelli',
+    'grappelli.dashboard',
     'django.contrib.admin',
     'django.contrib.admindocs',
 
@@ -109,6 +117,13 @@ INSTALLED_APPS = (
     'imagekit',
     'categories',
     'django_generic_flatblocks',
+
+    # site-kit apps
+    'projects',
+    'contacts',
+
+    # local apps
+    'futuregreen.portfolio',
 )
 
 #==============================================================================
@@ -138,6 +153,21 @@ LOGGING = {
         },
     }
 }
+
+
+
+#==============================================================================
+# Third party app settings
+#==============================================================================
+
+PROJECTS_PROJECT_MODEL = 'futuregreen.portfolio.Project'
+PROJECTS_PROJECT_MARKUP = 'markdown'
+PROJECTS_PROJECT_PAGINATE_BY = 10
+
+
+#==============================================================================
+# local settings
+#==============================================================================
 
 try:
     from local_settings import *
