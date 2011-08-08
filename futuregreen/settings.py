@@ -162,9 +162,15 @@ LOGGING = {
 
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
-PROJECTS_PROJECT_MODEL = 'futuregreen.portfolio.Project'
-PROJECTS_PROJECT_MARKUP = 'markdown'
-PROJECTS_PROJECT_PAGINATE_BY = 10
+CATEGORIES_SETTINGS = {
+    'M2M_REGISTRY': {'futuregreen.portfolio.Project': 'categories',},
+}
+
+PROJECTS_SETTINGS = {
+    'PROJECT_MODEL': 'futuregreen.portfolio.Project',
+    'PROJECT_MARKUP': 'markdown',
+    'PROJECT_PAGINATE_BY': 10,
+}
 
 
 #==============================================================================
