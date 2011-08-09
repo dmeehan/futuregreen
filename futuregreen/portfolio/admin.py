@@ -30,10 +30,10 @@ class CategoryInline(admin.TabularInline):
 
 class ProjectAdmin(admin.ModelAdmin):
    inlines = [
+       CategoryInline,
        ClientInline,
        CollaboratorInline,
        DesignerInline,
-       CategoryInline,
    ]
    exclude = ('clients', 'collaborators', 'designers', 'categories',)
    list_display = ('name',)
