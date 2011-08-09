@@ -34,7 +34,7 @@ class ProjectAdmin(admin.ModelAdmin):
        DesignerInline,
        CategoryInline,
    ]
-   exclude = ('clients', 'collaborators', 'employees', 'categories',)
+   exclude = ('clients', 'collaborators', 'designers', 'categories',)
    list_display = ('name',)
    prepopulated_fields = {"slug": ("name",)}
 
