@@ -170,8 +170,17 @@ CATEGORIES_SETTINGS = {
     #'M2M_REGISTRY': {'futuregreen.portfolio.Project': 'categories',},
 }
 
+#==============================================================================
+# Backbeat app settings
+#==============================================================================
+
 PROJECTS_SETTINGS = {
     'PROJECT_MODEL': 'futuregreen.portfolio.Project',
+    'PROJECT_MARKUP': 'markdown',
+    'PROJECT_PAGINATE_BY': 10,
+}
+
+CONTACTS_SETTINGS = {
     'PROJECT_MARKUP': 'markdown',
     'PROJECT_PAGINATE_BY': 10,
 }
