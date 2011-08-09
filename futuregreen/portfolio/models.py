@@ -2,7 +2,7 @@
 
 from django.db import models
 
-from taggit import TaggableManager
+from taggit.managers import TaggableManager
 
 from projects.models import PhysicalProjectBase
 
