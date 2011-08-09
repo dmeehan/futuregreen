@@ -19,3 +19,8 @@ django-categories==0.7.1
 django-imagekit==0.3.6
 django-generic-flatblocks==0.9.1
 django-grappelli==2.3.3
+
+# github
+git+git://github.com/dmeehan/contacts.git
+git+git://github.com/dmeehan/projects.git
+
