@@ -162,6 +162,8 @@ LOGGING = {
 # Third party app settings
 #==============================================================================
 
+GRAPPELLI_ADMIN_HEADLINE = 'Future Green Studio'
+GRAPPELLI_ADMIN_TITLE = 'Future Green Studio'
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
 CATEGORIES_SETTINGS = {
