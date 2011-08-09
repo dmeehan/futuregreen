@@ -10,18 +10,14 @@ class ClientInline(admin.TabularInline):
 class CollaboratorInline(admin.TabularInline):
     model = Project.collaborators.through
 
-class EmployeeInline(admin.TabularInline):
-    model = Project.employees.through
-
-class CategoryInline(admin.TabularInline):
-    model = Project.categories.through
+class DesignerInline(admin.TabularInline):
+    model = Project.designers.through
 
 class ProjectAdmin(admin.ModelAdmin):
    inlines = [
-       CategoryInline,
        ClientInline,
        CollaboratorInline,
-       EmployeeInline,
+       DesignerInline,
    ]
    list_display = ('name', '-date_end')
    prepopulated_fields = {"slug": ("name",)}

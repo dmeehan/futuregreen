@@ -2,7 +2,6 @@
 
 from django.db import models
 
-from categories import Category
 from taggit import TaggableManager
 
 from projects.models import PhysicalProjectBase
@@ -19,7 +18,6 @@ class Project(PhysicalProjectBase):
     collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
 
     # taxonomy
-    categories = models.ManyToManyField(Category)
     tags = TaggableManager()
 
 
