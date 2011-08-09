@@ -20,14 +20,22 @@ class CustomIndexDashboard(Dashboard):
     
     def init_with_context(self, context):
         site_name = get_admin_site_name(context)
-        
-        # append a model list module for "Site Content"
-        self.children.append(modules.ModelList(
-            _('Site Content'),
-            collapsible=True,
+
+        # append a Group module for "Site Content"
+        self.children.append(modules.Group(
+            title="Site Content",
             column=1,
-            css_classes=('collapse open',),
-            models=('django_generic_flatblocks.*',),
+            collapsible=True,
+            children=[
+                modules.AppList(
+                    title='Portfolio',
+                    models=('futuregreen.portfolio.*',)
+                ),
+                modules.AppList(
+                    title='Studio',
+                    models=('futuregreen.studio.*',)
+                )
+            ]
         ))
         
         # append a model list module for "Site Organization"
