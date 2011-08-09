@@ -106,10 +106,10 @@ INSTALLED_APPS = (
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.markup',
     'django.contrib.messages',
+    'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
 
     # third party apps
