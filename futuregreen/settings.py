@@ -166,23 +166,20 @@ GRAPPELLI_ADMIN_HEADLINE = 'Future Green Studio'
 GRAPPELLI_ADMIN_TITLE = 'Future Green Studio'
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
-CATEGORIES_SETTINGS = {
-    #'M2M_REGISTRY': {'futuregreen.portfolio.Project': 'categories',},
-}
 
 #==============================================================================
 # Backbeat app settings
 #==============================================================================
 
 PROJECTS_SETTINGS = {
-    #'PROJECT_MODEL': 'futuregreen.portfolio.Project',
+    'PROJECT_MODEL': 'futuregreen.portfolio.Project',
     'PROJECT_MARKUP': 'markdown',
     'PROJECT_PAGINATE_BY': 10,
 }
 
 CONTACTS_SETTINGS = {
-    'PROJECT_MARKUP': 'markdown',
-    'PROJECT_PAGINATE_BY': 10,
+    'CONTACT_MARKUP': 'markdown',
+    'CONTACT_PAGINATE_BY': 10,
 }
 
 

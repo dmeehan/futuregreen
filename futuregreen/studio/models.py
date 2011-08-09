@@ -25,6 +25,17 @@ class Collaborator(Contact):
     pass
 
 class Employee(Contact):
+    # employee status choices
+    STATUS_FULL = 1
+    STATUS_CONTRACT = 2
+    STATUS_FORMER = 3
+    STATUS_CHOICES = (
+        (STATUS_FULL, 'Full-time'),
+        (STATUS_CONTRACT, 'Contract'),
+        (STATUS_FORMER, 'Former'),
+    )
     employee_type = models.ForeignKey(EmployeeType)
-    title = models.CharField(max_length=250)
+    job_title = models.CharField(max_length=250)
+    status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
+                                              default=STATUS_FULL)
 
