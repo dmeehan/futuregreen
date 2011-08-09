@@ -8,24 +8,25 @@ class ClientInline(admin.TabularInline):
     model = Project.clients.through
     verbose_name = 'client'
     verbose_name_plural = 'clients'
+    extra=1
 
 class CollaboratorInline(admin.TabularInline):
     model = Project.collaborators.through
     verbose_name = 'collaborator'
     verbose_name_plural = 'collaborators'
-    extra=0
+    extra=1
 
 class DesignerInline(admin.TabularInline):
     model = Project.designers.through
     verbose_name = 'designer'
     verbose_name_plural = 'designers'
-    extra=0
+    extra=1
 
 class CategoryInline(admin.TabularInline):
     model = Project.categories.through
     verbose_name = 'category'
     verbose_name_plural = 'categories'
-    extra=0
+    extra=1
 
 class ProjectAdmin(admin.ModelAdmin):
    inlines = [
