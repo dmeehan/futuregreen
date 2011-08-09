@@ -12,9 +12,12 @@ class EmployeeType(models.Model):
     slug = models.SlugField(unique=True,
                             help_text="Suggested value automatically generated from name. Must be unique.")
 
+    def __unicode__(self):
+        return u'%s' % self.name
+
 class Contact(ContactBase):
     # taxonomy
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
 
     class Meta:
         abstract = True
