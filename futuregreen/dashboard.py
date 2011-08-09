@@ -15,7 +15,7 @@ from grappelli.dashboard.utils import get_admin_site_name
 
 class CustomIndexDashboard(Dashboard):
     """
-    Custom index dashboard for www.
+    Custom index dashboard for futuregreenstudio
     """
     
     def init_with_context(self, context):
