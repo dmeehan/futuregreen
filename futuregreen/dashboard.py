@@ -27,11 +27,11 @@ class CustomIndexDashboard(Dashboard):
             column=1,
             collapsible=True,
             children=[
-                modules.AppList(
+                modules.ModelList(
                     title='Portfolio',
                     models=('futuregreen.portfolio.*',)
                 ),
-                modules.AppList(
+                modules.ModelList(
                     title='Studio',
                     models=('futuregreen.studio.*',)
                 )
