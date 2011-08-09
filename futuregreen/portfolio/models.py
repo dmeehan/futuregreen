@@ -9,7 +9,7 @@ from projects.models import PhysicalProjectBase
 
 from futuregreen.studio.models import Client, Collaborator, Employee
 
-class Project(PhysicalProjectBase)
+class Project(PhysicalProjectBase):
     """FutureGreen project. Extends projects.PhysicalProjectBase
     """
 
