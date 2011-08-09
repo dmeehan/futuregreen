@@ -116,6 +116,8 @@ INSTALLED_APPS = (
     'taggit',
     'imagekit',
     'categories',
+    'editor',
+    'mptt',
     'django_generic_flatblocks',
 
     # site-kit apps
