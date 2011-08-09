@@ -175,7 +175,7 @@ CATEGORIES_SETTINGS = {
 #==============================================================================
 
 PROJECTS_SETTINGS = {
-    'PROJECT_MODEL': 'futuregreen.portfolio.Project',
+    #'PROJECT_MODEL': 'futuregreen.portfolio.Project',
     'PROJECT_MARKUP': 'markdown',
     'PROJECT_PAGINATE_BY': 10,
 }
