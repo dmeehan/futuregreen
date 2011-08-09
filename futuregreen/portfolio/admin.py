@@ -19,7 +19,7 @@ class ProjectAdmin(admin.ModelAdmin):
        CollaboratorInline,
        DesignerInline,
    ]
-   list_display = ('name', '-date_end')
+   list_display = ('name',)
    prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(Project, ProjectAdmin)
