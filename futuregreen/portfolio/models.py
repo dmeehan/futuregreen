@@ -13,10 +13,13 @@ class Project(PhysicalProjectBase)
     """FutureGreen project. Extends projects.PhysicalProjectBase
     """
 
+    # relations
     designers = models.ManyToManyField(Employee, blank=True, null=True)
     clients = models.ManyToManyField(Client, blank=True, null=True)
     collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
 
-    tags = TaggableManager()
+    # taxonomy
     categories = models.ManyToManyField(Category)
+    tags = TaggableManager()
+
 

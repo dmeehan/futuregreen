@@ -13,6 +13,7 @@ class EmployeeType(models.Model):
                             help_text="Suggested value automatically generated from name. Must be unique.")
 
 class Contact(ContactBase):
+    # taxonomy
     tags = TaggableManager()
 
     class Meta:
@@ -34,6 +35,8 @@ class Employee(Contact):
         (STATUS_CONTRACT, 'Contract'),
         (STATUS_FORMER, 'Former'),
     )
+
+    # extended core fields
     employee_type = models.ForeignKey(EmployeeType)
     job_title = models.CharField(max_length=250)
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
