@@ -19,5 +19,3 @@ class Project(PhysicalProjectBase):
 
     # taxonomy
     tags = TaggableManager()
-
-
