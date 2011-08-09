@@ -22,8 +22,8 @@ class CustomIndexDashboard(Dashboard):
         site_name = get_admin_site_name(context)
         
         # append a model list module for "Site Content"
-        self.children.append(modules.AppList(
-            _('AppList: Applications'),
+        self.children.append(modules.ModelList(
+            _('Site Content'),
             collapsible=True,
             column=1,
             css_classes=('collapse open',),
@@ -31,8 +31,8 @@ class CustomIndexDashboard(Dashboard):
         ))
         
         # append a model list module for "Site Organization"
-        self.children.append(modules.AppList(
-            _('AppList: Applications'),
+        self.children.append(modules.ModelList(
+            _('Site Organization'),
             collapsible=True,
             column=1,
             css_classes=('collapse open',),
@@ -41,7 +41,7 @@ class CustomIndexDashboard(Dashboard):
         
         # append a model list module for "Administration"
         self.children.append(modules.ModelList(
-            _('Administration'),
+            _('Site Administration'),
             column=1,
             collapsible=False,
             models=('django.contrib.*',),
