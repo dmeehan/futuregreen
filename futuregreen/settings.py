@@ -120,9 +120,9 @@ INSTALLED_APPS = (
     'mptt',
     'django_generic_flatblocks',
 
-    # site-kit apps
-    #'projects',
-    #'contacts',
+    # backbeat apps
+    'projects',
+    'contacts',
 
     # local apps
     #'futuregreen.portfolio',
