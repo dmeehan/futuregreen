@@ -18,4 +18,4 @@ class Project(PhysicalProjectBase):
     collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
 
     # taxonomy
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)

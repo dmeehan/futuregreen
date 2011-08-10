@@ -11,6 +11,7 @@ class EmployeeTypeAdmin(admin.ModelAdmin):
 class EmployeeAdmin(admin.ModelAdmin):
    list_display = ('name', 'job_title')
    prepopulated_fields = {"slug": ("name",)}
+   exclude = ('contact_type')
 
 class ContactAdmin(admin.ModelAdmin):
    list_display = ('name',)
