@@ -45,3 +45,7 @@ class Employee(Contact):
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_FULL)
 
+    def save(self, force_insert=False, force_update=False):
+        self.contact_type = self.TYPE_PERSON
+        super(Employee, self).save(force_insert, force_update)
+
