@@ -20,5 +20,5 @@ django-generic-flatblocks==0.9.1
 django-grappelli==2.3.3
 
 # backbeat apps
-git+git://github.com/dmeehan/django-backbeat-contacts.git
-git+git://github.com/dmeehan/django-backbeat-projects.git
+-e git+git://github.com/dmeehan/django-backbeat-contacts.git#egg=django-backbeat-contacts
+-e git+git://github.com/dmeehan/django-backbeat-projects.git#egg=django-backbeat-projects
