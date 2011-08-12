@@ -9,7 +9,7 @@ urlpatterns = patterns('',
 
     # portfolio index
     url(r'^projects/$',
-        ListView.as_view(model=Project),
+        ListView.as_view(model=Project, context_object_name = "project_list"),
         name="portfolio_project_list"),
 
     url(r'^projects/project/(?P<slug>[-\w]+)/$',
