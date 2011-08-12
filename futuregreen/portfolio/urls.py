@@ -10,10 +10,10 @@ urlpatterns = patterns('',
     # portfolio index
     url(r'^projects/$',
         ListView.as_view(model=Project, context_object_name = "project_list"),
-        name="portfolio_project_list"),
+        name="projects_project_list"),
 
     url(r'^projects/project/(?P<slug>[-\w]+)/$',
         DetailView.as_view(model=Project, context_object_name = "project"),
-        name="portfolio_project_detail"),
+        name="projects_project_detail"),
 
 )
