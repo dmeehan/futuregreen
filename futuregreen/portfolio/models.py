@@ -2,6 +2,7 @@
 
 from django.db import models
 
+from imagekit.models import ImageModel
 from taggit.managers import TaggableManager
 
 from projects.models import PhysicalProjectBase
@@ -19,3 +20,12 @@ class Project(PhysicalProjectBase):
 
     # taxonomy
     tags = TaggableManager(blank=True)
+
+
+#class ProjectImage(ImageBase, ImageModel):
+    #pass
+
+    #class IKOptions:
+        #spec_module = 'futuregreen.portfolio.imagespecs'
+        #cache_dir = 'resized'
+        #image_field = 'image'
