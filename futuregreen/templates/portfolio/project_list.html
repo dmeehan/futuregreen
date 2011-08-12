@@ -1,0 +1,36 @@
+{% extends "portfolio/portfolio_base.html" %}
+
+{% block main %}
+<section class="project-list">
+{% for project in project_list %}
+     <article class="project">
+        <header><h1>{{ project.name }}</h1></header>
+        <section class="description">
+            <p>{{ project.short_description }}</p>
+            {% if date_start %}<p>{{ project.date_start }}</p>{% endif %}
+            {% if date_end %}<p>{{ project.date_end }}</p>{% endif %}
+            {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
+            <p>{{ project.size }} {{ project.get_unit_display }} </p>
+        </section>
+
+         {% if project.tags.all or project.categories.all %}
+        <section class="classification">
+            {% if project.tags.all %}
+            <ul>
+                {% for tag in project.tags.all %}
+                <li> {{ tag.name }} </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if project.categories.all %}
+            <ul>
+                {% for category in project.categories.all %}
+                <li> {{ category.name }} </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </section>
+        {% endif %}
+    </article>
+{% endfor %}
+</section>
