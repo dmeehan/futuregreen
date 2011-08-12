@@ -10,7 +10,7 @@
     <p>{{ project.status }}</p>
     <p>{{ project.featured }}</p>
     <p>{{ project.slug }}</p>
-    <p>{{ project.size }} {{ project.unit }} </p>
+    <p>{{ project.size }} {{ project.get_unit_display }} </p>
 
     {% if project.tags.all %}
     <ul>
