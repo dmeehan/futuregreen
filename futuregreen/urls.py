@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')),
 
     # portfolio
-    (r'^porfolio/', include('futuregreen.portfolio.urls')),
+    (r'^portfolio/', include('futuregreen.portfolio.urls')),
     
 )
 
