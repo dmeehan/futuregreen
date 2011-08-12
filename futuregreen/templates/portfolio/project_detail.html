@@ -7,9 +7,6 @@
     {% if date_start %}<p>{{ project.date_start }}</p>{% endif %}
     {% if date_end %}<p>{{ project.date_end }}</p>{% endif %}
     {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
-    <p>{{ project.status }}</p>
-    <p>{{ project.featured }}</p>
-    <p>{{ project.slug }}</p>
     <p>{{ project.size }} {{ project.get_unit_display }} </p>
 
     {% if project.tags.all %}
