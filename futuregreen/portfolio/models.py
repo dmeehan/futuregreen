@@ -1,5 +1,6 @@
 # futuregreen/portfolio/models.py
 
+from django.contrib.contenttypes import generic
 from django.db import models
 
 from imagekit.models import ImageModel
@@ -11,7 +12,9 @@ from media.models import GenericRelatedImageBase
 from futuregreen.studio.models import Client, Collaborator, Employee
 
 class Project(PhysicalProjectBase):
-    """FutureGreen project. Extends projects.PhysicalProjectBase
+    """
+        FutureGreen project. Extends projects.PhysicalProjectBase
+        
     """
 
     # relations
@@ -24,6 +27,10 @@ class Project(PhysicalProjectBase):
 
 
 class ProjectImage(GenericRelatedImageBase, ImageModel):
+    """
+        Images for a project.
+
+    """
 
     CROPHORZ_LEFT = 0
     CROPHORZ_CENTER = 1
@@ -43,7 +50,7 @@ class ProjectImage(GenericRelatedImageBase, ImageModel):
         (CROPVERT_BOTTOM, 'BOTTOM'),
     )
 
-    project = models.ForeignkeyField(Project)
+    project = generic.GenericRelation(Project)
 
     crop_horz = models.PositiveSmallIntegerField(
                     verbose_name='horizontal cropping',
