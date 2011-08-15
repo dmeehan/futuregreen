@@ -26,7 +26,7 @@ class Project(PhysicalProjectBase):
     tags = TaggableManager(blank=True)
 
 
-class ProjectImage(,ImageModel, GenericRelatedImageBase):
+class ProjectImage(ImageModel, GenericRelatedImageBase):
     """
         Images for a project.
 
