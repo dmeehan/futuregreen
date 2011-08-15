@@ -1,8 +1,16 @@
 # futuregreen/portfolio/admin.py
 
 from django.contrib import admin
+from django.contrib.contenttypes import generic
 
-from futuregreen.portfolio.models import Project
+from futuregreen.portfolio.models import Project, ProjectImage
+
+class ImageInline(generic.GenericTabularInline):
+    model = ProjectImage
+    extra=1
+
+    # grappelli options
+    sortable_field_name = "order"
 
 class ClientInline(admin.TabularInline):
     model = Project.clients.through
@@ -30,6 +38,7 @@ class CategoryInline(admin.TabularInline):
 
 class ProjectAdmin(admin.ModelAdmin):
    inlines = [
+       ImageInline,
        CategoryInline,
        ClientInline,
        CollaboratorInline,
