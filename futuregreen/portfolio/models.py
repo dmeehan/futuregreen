@@ -21,6 +21,7 @@ class Project(PhysicalProjectBase):
     designers = models.ManyToManyField(Employee, blank=True, null=True)
     clients = models.ManyToManyField(Client, blank=True, null=True)
     collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
+    images = generic.GenericRelation("ProjectImage")
 
     # taxonomy
     tags = TaggableManager(blank=True)
@@ -49,8 +50,6 @@ class ProjectImage(ImageModel, GenericRelatedImageBase):
         (CROPVERT_CENTER, 'CENTER'),
         (CROPVERT_BOTTOM, 'BOTTOM'),
     )
-
-    project = generic.GenericRelation(Project)
 
     crop_horz = models.PositiveSmallIntegerField(
                     verbose_name='horizontal cropping',
