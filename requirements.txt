@@ -22,3 +22,4 @@ django-grappelli==2.3.3
 # backbeat apps
 -e git+git://github.com/dmeehan/django-backbeat-contacts.git#egg=django-backbeat-contacts
 -e git+git://github.com/dmeehan/django-backbeat-projects.git#egg=django-backbeat-projects
+-e git+git://github.com/dmeehan/django-backbeat-media.git#egg=django-backbeat-media
