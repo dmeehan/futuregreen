@@ -69,4 +69,3 @@ class ProjectImage(GenericRelatedImageBase, ImageModel):
     class IKOptions:
         spec_module = 'futuregreen.portfolio.imagespecs'
         cache_dir = 'images/resized'
-        image_field = 'image'
