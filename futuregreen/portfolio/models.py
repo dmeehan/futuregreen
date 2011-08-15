@@ -6,6 +6,7 @@ from imagekit.models import ImageModel
 from taggit.managers import TaggableManager
 
 from projects.models import PhysicalProjectBase
+from media.models import GenericRelatedImageBase
 
 from futuregreen.studio.models import Client, Collaborator, Employee
 
@@ -22,10 +23,43 @@ class Project(PhysicalProjectBase):
     tags = TaggableManager(blank=True)
 
 
-#class ProjectImage(ImageBase, ImageModel):
-    #pass
+class ProjectImage(GenericRelatedImageBase, ImageModel):
 
-    #class IKOptions:
-        #spec_module = 'futuregreen.portfolio.imagespecs'
-        #cache_dir = 'resized'
-        #image_field = 'image'
+    CROPHORZ_LEFT = 0
+    CROPHORZ_CENTER = 1
+    CROPHORZ_RIGHT = 2
+    CROPHORZ_CHOICES = (
+        (CROPHORZ_LEFT, 'left'),
+        (CROPHORZ_CENTER, 'center'),
+        (CROPHORZ_RIGHT, 'RIGHT'),
+    )
+
+    CROPVERT_TOP = 0
+    CROPVERT_CENTER = 1
+    CROPVERT_BOTTOM = 2
+    CROPVERT_CHOICES = (
+        (CROPVERT_TOP, 'TOP'),
+        (CROPVERT_CENTER, 'CENTER'),
+        (CROPVERT_BOTTOM, 'BOTTOM'),
+    )
+
+    project = models.ForeignkeyField(Project)
+
+    crop_horz = models.PositiveSmallIntegerField(
+                    verbose_name='horizontal cropping',
+                    choices=CROPHORZ_CHOICES,
+                    blank=True,
+                    default=CROPHORZ_CENTER,
+                    help_text="From where to horizontally crop the image, if cropping is necessary.")
+
+    crop_vert = models.PositiveSmallIntegerField(
+                    verbose_name='vertical cropping',
+                    choices=CROPVERT_CHOICES,
+                    blank=True,
+                    default=CROPVERT_CENTER,
+                    help_text="From were to vertically crop the image, if cropping is necessary.")
+
+    class IKOptions:
+        spec_module = 'futuregreen.portfolio.imagespecs'
+        cache_dir = 'images/resized'
+        image_field = 'image'

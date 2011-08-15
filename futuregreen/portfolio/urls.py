@@ -3,6 +3,7 @@
 from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
 
+from projects.views import *
 from futuregreen.portfolio.models import *
 
 urlpatterns = patterns('',
