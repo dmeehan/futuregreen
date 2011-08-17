@@ -250,6 +250,6 @@ class ProjectImage(ImageModel, ImageBase):
         super(ProjectImage, self).save(*args, **kwargs)
 
     class IKOptions:
-        spec_module = 'projects.imagespecs'
+        spec_module = 'futuregreen.projects.imagespecs'
         cache_dir = 'images/projects/resized'
 
