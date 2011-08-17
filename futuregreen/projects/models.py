@@ -229,7 +229,7 @@ class ProjectImage(ImageModel, ImageBase):
                     default=CROPVERT_CENTER,
                     help_text="From were to vertically crop the image, if cropping is necessary.")
 
-   class Meta:
+    class Meta:
         ordering = ['order',]
     
     def get_upload_path(self, filename):
