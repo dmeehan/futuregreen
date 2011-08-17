@@ -4,12 +4,17 @@ from django.contrib import admin
 
 from futuregreen.projects.models import Project, ProjectImage
 
-class ImageInline(admin.TabularInline):
+class ImageInline(admin.StackedInline):
     model = ProjectImage
-    extra=1
+    prepopulated_fields = {"slug": ("name",)}
+    fields = ('order', 'is_main', 'image', 'name', 'caption',
+              'crop_horiz', 'crop_vert', 'slug', )
+    extra = 1
 
-    # grappelli options
+    # Grappelli options
+    allow_add = True
     sortable_field_name = "order"
+    classes = ('collapse closed',)
 
 class ClientInline(admin.TabularInline):
     model = Project.clients.through
