@@ -167,7 +167,7 @@ GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
 CATEGORIES_SETTINGS = {
     'M2M_REGISTRY': {
-        'portfolio.project': 'categories',
+        'projects.project': 'categories',
     }
 }
 
