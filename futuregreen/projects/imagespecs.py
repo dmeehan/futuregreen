@@ -1,4 +1,4 @@
-# futuregreen/portfolio/imagespecs.py
+# projects/imagespecs.py
 
 from imagekit.specs import ImageSpec
 from imagekit import processors

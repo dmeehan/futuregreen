@@ -1,2 +1,0 @@
-# futuregreen/portfolio/views.py
-

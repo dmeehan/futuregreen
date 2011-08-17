@@ -2,8 +2,10 @@
 
 from django.db import models
 
-# Country field. Based on: http://www.djangosnippets.org/snippets/1476/
+"""
+    Country field. Based on: http://www.djangosnippets.org/snippets/1476/
 
+"""
 
 # ISO 3166-1 country names and codes adapted from http://opencountrycodes.appspot.com/python/
 COUNTRIES = (

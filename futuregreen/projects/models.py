@@ -2,13 +2,19 @@
 
 from decimal import Decimal
 
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models import permalink
 from django.utils.html import strip_tags
 
+from imagekit.models import ImageModel
+from taggit.managers import TaggableManager
+
+from contacts.models import Client, Collaborator, Employee
+from media.models import ImageBase
 from projects.managers import ProjectManager
-from projects.settings import PROJECT_MARKUP
+from projects.fields import PositionField
 
 class ProjectBase(models.Model):
     """
@@ -166,13 +172,81 @@ class PhysicalMixin(models.Model):
     def save(self, force_insert=False, force_update=False):
         self.area_normalized = self.convert(self.UNIT_SQUAREFOOT)
         super(PhysicalMixin, self).save(force_insert, force_update)
+
+class Project(ProjectBase, PhysicalMixin):
+    """
+        FutureGreen project. Extends projects.PhysicalProjectBase
+
+    """
+
+    # relations
+    designers = models.ManyToManyField(Employee, blank=True, null=True)
+    clients = models.ManyToManyField(Client, blank=True, null=True)
+    collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
+
+    # taxonomy
+    tags = TaggableManager(blank=True)
+
+
+class ProjectImage(ImageModel, ImageBase):
+    """
+        Images for a project.
+
+    """
+    project = models.ForeignKey(Project)
+    position = PositionField(unique_for_field='project')
+    is_main = models.BooleanField('Main image', default=False)
+
+    CROPHORZ_LEFT = 0
+    CROPHORZ_CENTER = 1
+    CROPHORZ_RIGHT = 2
+    CROPHORZ_CHOICES = (
+        (CROPHORZ_LEFT, 'left'),
+        (CROPHORZ_CENTER, 'center'),
+        (CROPHORZ_RIGHT, 'right'),
+    )
+
+    CROPVERT_TOP = 0
+    CROPVERT_CENTER = 1
+    CROPVERT_BOTTOM = 2
+    CROPVERT_CHOICES = (
+        (CROPVERT_TOP, 'top'),
+        (CROPVERT_CENTER, 'center'),
+        (CROPVERT_BOTTOM, 'bottom'),
+    )
+
+    crop_horz = models.PositiveSmallIntegerField(
+                    verbose_name='horizontal cropping',
+                    choices=CROPHORZ_CHOICES,
+                    blank=True,
+                    default=CROPHORZ_CENTER,
+                    help_text="From where to horizontally crop the image, if cropping is necessary.")
+
+    crop_vert = models.PositiveSmallIntegerField(
+                    verbose_name='vertical cropping',
+                    choices=CROPVERT_CHOICES,
+                    blank=True,
+                    default=CROPVERT_CENTER,
+                    help_text="From were to vertically crop the image, if cropping is necessary.")
+
+   class Meta:
+        ordering = ['order',]
     
+    def get_upload_path(self, filename):
+        related_project = str(self.project.slug)
 
-class PhysicalProjectBase(ProjectBase, PhysicalMixin):
-    """
+        root, ext = os.path.splitext(filename)
+        return os.path.join('images', 'projects', related_project,
+                            self.filename + ext)
 
-        An abstract base model for a
-        physically constructable design project.
+    def save(self, *args, **kwargs):
+        if self.is_main:
+            related_images = self._default_manager.filter(
+                project=self.project)
+            related_images.update(is_main=False)
 
-    """
-    pass
+        super(ProjectImage, self).save(*args, **kwargs)
+
+    class IKOptions:
+        spec_module = 'projects.imagespecs'
+        cache_dir = 'images/projects/resized'
