@@ -7,7 +7,7 @@ from futuregreen.projects.models import Project, ProjectImage
 class ImageInline(admin.StackedInline):
     model = ProjectImage
     prepopulated_fields = {"slug": ("name",)}
-    fields = ('is_main', 'image', 'name', 'caption',
+    fields = ('image', 'is_main', 'name', 'caption',
               'crop_horz', 'crop_vert', 'slug', 'order' )
     extra = 1
 
