@@ -14,7 +14,7 @@ import categories
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
 from futuregreen.media.models import ImageBase
-from futuregreen.projects.managers import ProjectManager
+#from futuregreen.projects.managers import ProjectManager
 from futuregreen.projects.fields import PositionField
 
 class ProjectBase(models.Model):
