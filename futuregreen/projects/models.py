@@ -81,15 +81,15 @@ class ProjectBase(models.Model):
         """Turns any markup into HTML"""
         original = self.description_html
 
-        if PROJECT_MARKUP == 'markdown':
+        if settings.PROJECT_MARKUP == 'markdown':
             import markdown
             self.description_html = markdown.markdown(self.description)
-        elif PROJECT_MARKUP == 'textile':
+        elif settings.PROJECT_MARKUP == 'textile':
             import textile
             self.description_html = textile.textile(self.description)
-        elif PROJECT_MARKUP == 'wysiwyg':
+        elif settings.PROJECT_MARKUP == 'wysiwyg':
             self.description_html = self.description
-        elif PROJECT_MARKUP == 'html':
+        elif settings.PROJECT_MARKUP == 'html':
             self.description_html = self.description
         else:
             self.description_html = strip_tags(self.description)
