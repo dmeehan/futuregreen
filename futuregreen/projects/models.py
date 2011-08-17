@@ -23,7 +23,7 @@ class ProjectBase(models.Model):
         An abstract base class for a project.
     
     """
-    objects = ProjectManager()
+    #objects = ProjectManager()
     
     # project status choices 
     STATUS_LIVE = 1

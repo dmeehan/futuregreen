@@ -1,11 +1,11 @@
-# portfolio/managers.py
+# projects/managers.py
 
 from datetime import datetime
 
 from django.db import models
 from django.db.models.query import QuerySet
 
-
+'''
 class ProjectMixin(object):
     def live(self):
         return self.get_query_set().filter(status=self.model.STATUS_LIVE)
@@ -37,3 +37,4 @@ class ProjectQuerySet(QuerySet, ProjectMixin):
 class ProjectManager(models.Manager, ProjectMixin):
     def get_query_set(self):
         return ProjectQuerySet(self.model, using=self._db)
+'''
