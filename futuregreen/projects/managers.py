@@ -8,11 +8,11 @@ from django.db.models.query import QuerySet
 
 class ProjectMixin(object):
     def live(self):
-        return self.get_query_set().filter(status=self.model.LIVE_STATUS)
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)
 
     def stage(self):
-        return self.get_query_set().exclude(status=self.model.DRAFT_STATUS)\
-                                   .exclude(status=self.model.HIDDEN_STATUS)
+        return self.get_query_set().exclude(status=self.model.STATUS_DRAFT)\
+                                   .exclude(status=self.model.STATUS_HIDDEN)
     def featured(self):
         return self.get_query_set().filter(featured=True)
 
