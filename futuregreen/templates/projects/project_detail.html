@@ -4,7 +4,7 @@
     <article class="project">
         <header><h1>{{ project.name }}</h1></header>
         <section class="slideshow">
-            {% for image in project.projectimages.all %}
+            {% for image in project.projectimage_set.all %}
                 <article class="images">
                     <img src="image.url" height="image.height" width="image.width" alt="{{ image.caption }}"/>
                     <p>{{ image.name }}: {{ image.caption }}</p>
