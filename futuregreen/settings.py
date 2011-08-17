@@ -175,29 +175,19 @@ CATEGORIES_SETTINGS = {
     }
 }
 
+#==============================================================================
+# local app settings
+#==============================================================================
+PROJECT_MARKUP = 'markdown'
+PROJECT_PAGINATE_BY = 10
+
+
+CONTACT_MARKUP = 'markdown'
+CONTACT_PAGINATE_BY = 10
 
 
 #==============================================================================
-# Backbeat app settings
-#==============================================================================
-
-PROJECTS_SETTINGS = {
-    'PROJECT_MODELS': ('futuregreen.portfolio.Project',),
-    'PROJECT_MARKUP': 'markdown',
-    'PROJECT_PAGINATE_BY': 10,
-}
-
-CONTACTS_SETTINGS = {
-    'CONTACT_MODELS': ('futuregreen.studio.Client',
-                       'futuregreen.studio.Collaborator',
-                       'futuregreen.studio.Employee',),
-    'CONTACT_MARKUP': 'markdown',
-    'CONTACT_PAGINATE_BY': 10,
-}
-
-
-#==============================================================================
-# local settings
+# local environment settings
 #==============================================================================
 
 try:
