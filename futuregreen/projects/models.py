@@ -11,7 +11,7 @@ from django.utils.html import strip_tags
 from imagekit.models import ImageModel
 from taggit.managers import TaggableManager
 import categories
-from easy_maps import Address
+from easy_maps.models import Address
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
 from futuregreen.media.models import ImageBase
