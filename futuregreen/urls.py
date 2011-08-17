@@ -11,8 +11,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
 
-    # portfolio
-    (r'^portfolio/', include('futuregreen.projects.urls')),
+    # projects
+    (r'^projects/', include('futuregreen.projects.urls')),
     
 )
 
