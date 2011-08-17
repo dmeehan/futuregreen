@@ -16,16 +16,16 @@ class ProjectListView(ListView):
     template = '/projects/project_list.html'
 
 class ProjectSizeAscListView(ProjectListView):
-    queryset = Project._default_manager.live().size_asc()
+    pass
 
 class ProjectSizeDescListView(ProjectListView):
-    queryset = Project._default_manager.live().size_desc()
+    pass
 
 class ProjectDateListView(ProjectListView):
-    queryset = Project._default_manager.live()
+    pass
 
 class ProjectCurrentListView(ProjectListView):
-    queryset = Project._default_manager.live().current()
+    pass
 
 class ProjectCompletedListView(ProjectListView):
-    queryset = Project._default_manager.live().completed()
+    pass
