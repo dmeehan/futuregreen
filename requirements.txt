@@ -9,6 +9,7 @@
 psycopg2
 PIL
 geopy
+markdown
 
 # django third party modules
 django==1.3
