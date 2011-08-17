@@ -165,19 +165,12 @@ GRAPPELLI_ADMIN_HEADLINE = 'Future Green Studio'
 GRAPPELLI_ADMIN_TITLE = 'Future Green Studio'
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
-CATEGORIES_SETTINGS = {
-    'RELATION_MODELS': ['projects.project',],
-    'M2M_REGISTRY': {
-        'projects.project': 'categories',
-    }
-}
 
 #==============================================================================
 # local app settings
 #==============================================================================
 PROJECT_MARKUP = 'markdown'
 PROJECT_PAGINATE_BY = 10
-
 
 CONTACT_MARKUP = 'markdown'
 CONTACT_PAGINATE_BY = 10

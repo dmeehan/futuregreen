@@ -10,6 +10,7 @@ from django.utils.html import strip_tags
 
 from imagekit.models import ImageModel
 from taggit.managers import TaggableManager
+import categories
 
 from contacts.models import Client, Collaborator, Employee
 from media.models import ImageBase
@@ -186,6 +187,7 @@ class Project(ProjectBase, PhysicalMixin):
 
     # taxonomy
     tags = TaggableManager(blank=True)
+    category = models.ManyToManyField('categories.Category')
 
 
 class ProjectImage(ImageModel, ImageBase):
@@ -250,3 +252,4 @@ class ProjectImage(ImageModel, ImageBase):
     class IKOptions:
         spec_module = 'projects.imagespecs'
         cache_dir = 'images/projects/resized'
+
