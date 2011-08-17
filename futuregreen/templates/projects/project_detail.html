@@ -3,6 +3,7 @@
 {% block main %}
     <article class="project">
         <header><h1>{{ project.name }}</h1></header>
+        {% if project.projectimage_set.all %}
         <section class="slideshow">
             {% for image in project.projectimage_set.all %}
                 <article class="images">
@@ -11,6 +12,7 @@
                 </article>
             {% endfor %}
         </section>
+        {% endif %}
         <section class="description">
             <p>{{ project.short_description }}</p>
             <p>{{ project.description_html|safe }}</p>
