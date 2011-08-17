@@ -252,5 +252,5 @@ class ProjectImage(ImageModel, ImageBase):
 
     class IKOptions:
         spec_module = 'futuregreen.projects.imagespecs'
-        cache_dir = 'images/projects/resized'
+        cache_dir = 'resized'
 
