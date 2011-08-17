@@ -9,7 +9,8 @@
             {% if date_start %}<p>{{ project.date_start }}</p>{% endif %}
             {% if date_end %}<p>{{ project.date_end }}</p>{% endif %}
             {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
-            <p>{{ project.size }} {{ project.get_unit_display }} </p>
+            <p>{{ project.area }} {{ project.get_unit_display }} </p>
+            <p>{{ project.square_feet }} square feet </p>
         </section>
     
          {% if project.tags.all or project.categories.all %}
