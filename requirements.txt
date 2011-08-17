@@ -18,5 +18,5 @@ django-taggit==0.9.3
 django-categories==0.7.1
 django-imagekit==0.3.6
 django-generic-flatblocks==0.9.1
-django-grappelli==2.3.3]
+django-grappelli==2.3.3
 django-easy-maps==0.7.1
