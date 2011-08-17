@@ -121,14 +121,10 @@ INSTALLED_APPS = (
     'mptt',
     'django_generic_flatblocks',
 
-    # backbeat apps
-    'projects',
-    'contacts',
-    'media',
-
     # local apps
-    'futuregreen.portfolio',
-    'futuregreen.studio',
+    'futuregreen.projects',
+    'futuregreen.contacts',
+    'futuregreen.media',
 )
 
 #==============================================================================
