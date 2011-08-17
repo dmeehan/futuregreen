@@ -14,7 +14,7 @@ import categories
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
 from futuregreen.media.models import ImageBase
-#from futuregreen.projects.managers import ProjectManager
+from futuregreen.projects.managers import ProjectManager
 from futuregreen.projects.fields import PositionField
 
 class ProjectBase(models.Model):
@@ -23,7 +23,6 @@ class ProjectBase(models.Model):
         An abstract base class for a project.
     
     """
-    #objects = ProjectManager()
     
     # project status choices 
     STATUS_LIVE = 1
@@ -179,7 +178,8 @@ class Project(ProjectBase, PhysicalMixin):
         FutureGreen project. Extends projects.PhysicalProjectBase
 
     """
-
+    objects = ProjectManager()
+    
     # relations
     designers = models.ManyToManyField(Employee, blank=True, null=True)
     clients = models.ManyToManyField(Client, blank=True, null=True)
