@@ -29,7 +29,8 @@ class CustomIndexDashboard(Dashboard):
             children=[
                 modules.ModelList(
                     title='Portfolio',
-                    models=('futuregreen.projects.*',)
+                    models=('futuregreen.projects.project',
+                            'futuregreen.projects.projectimages')
                 ),
                 modules.ModelList(
                     title='Studio',
