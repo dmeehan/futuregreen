@@ -8,7 +8,7 @@ class ImageInline(admin.StackedInline):
     model = ProjectImage
     prepopulated_fields = {"slug": ("name",)}
     fields = ('order', 'is_main', 'image', 'name', 'caption',
-              'crop_horiz', 'crop_vert', 'slug', )
+              'crop_horz', 'crop_vert', 'slug', )
     extra = 1
 
     # Grappelli options
