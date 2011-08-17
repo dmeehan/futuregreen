@@ -239,12 +239,8 @@ class ProjectImage(ImageModel, ImageBase):
     class Meta:
         ordering = ['order',]
     
-    def get_upload_path(self, filename):
-        related_project = str(self.project.slug)
-
-        root, ext = os.path.splitext(filename)
-        return os.path.join('images', 'projects', related_project,
-                            self.filename + ext)
+    def get_upload_path(instance, filename):
+        return os.path.join('images', 'projects', instance.project.slug, filename)
 
     def save(self, *args, **kwargs):
         if self.is_main:
