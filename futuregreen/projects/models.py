@@ -187,7 +187,7 @@ class Project(ProjectBase, PhysicalMixin):
 
     # taxonomy
     tags = TaggableManager(blank=True)
-    category = models.ManyToManyField('categories.Category')
+    categories = models.ManyToManyField('categories.Category')
 
 
 class ProjectImage(ImageModel, ImageBase):
