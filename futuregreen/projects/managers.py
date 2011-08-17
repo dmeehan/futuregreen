@@ -1,0 +1,39 @@
+# portfolio/managers.py
+
+from datetime import datetime
+
+from django.db import models
+from django.db.models.query import QuerySet
+
+
+class ProjectMixin(object):
+    def live(self):
+        return self.get_query_set().filter(status=self.model.LIVE_STATUS)
+
+    def stage(self):
+        return self.get_query_set().exclude(status=self.model.DRAFT_STATUS)\
+                                   .exclude(status=self.model.HIDDEN_STATUS)
+    def featured(self):
+        return self.get_query_set().filter(featured=True)
+
+    def current(self):
+        return self.get_query_set().filter(date_start__gte=datetime.now)
+
+    def completed(self):
+        return self.get_query_set().filter(date_end__lte=datetime.now)
+
+    def future(self):
+        return self.get_query_set().filter(date_start__lte=datetime.now)
+
+    def size_asc(self):
+        return self.get_query_set().order_by(-'size_normalized')
+
+    def size_desc(self):
+        return self.get_query_set().order_by('size_normalized')
+
+class ProjectQuerySet(QuerySet, ProjectMixin):
+    pass
+
+class ProjectManager(models.Manager, ProjectMixin):
+    def get_query_set(self):
+        return ProjectQuerySet(self.model, using=self._db)
