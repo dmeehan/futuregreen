@@ -194,7 +194,7 @@ class ProjectImage(ImageModel, ImageBase):
 
     """
     project = models.ForeignKey(Project)
-    position = PositionField(unique_for_field='project')
+    order = PositionField(unique_for_field='project')
     is_main = models.BooleanField('Main image', default=False)
 
     CROPHORZ_LEFT = 0
