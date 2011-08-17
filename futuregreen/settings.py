@@ -166,8 +166,9 @@ GRAPPELLI_ADMIN_TITLE = 'Future Green Studio'
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
 CATEGORIES_SETTINGS = {
+    'RELATION_MODELS': ['projects.project',],
     'M2M_REGISTRY': {
-        'futuregreen.projects.Project': 'categories',
+        'projects.project': 'categories',
     }
 }
 
