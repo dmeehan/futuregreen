@@ -11,6 +11,7 @@ from django.utils.html import strip_tags
 from imagekit.models import ImageModel
 from taggit.managers import TaggableManager
 import categories
+from easy_maps import Address
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
 from futuregreen.media.models import ImageBase
@@ -179,6 +180,9 @@ class Project(ProjectBase, PhysicalMixin):
 
     """
     objects = ProjectManager()
+
+    #address
+    address = models.ForeignKey(Address, blank=True, null=True)
     
     # relations
     designers = models.ManyToManyField(Employee, blank=True, null=True)
