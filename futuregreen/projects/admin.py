@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from projects.models import Project, ProjectImage
+from futuregreen.projects.models import Project, ProjectImage
 
 class ImageInline(admin.TabularInline):
     model = ProjectImage

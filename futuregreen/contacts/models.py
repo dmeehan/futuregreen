@@ -7,8 +7,8 @@ from django.db.models import permalink
 
 from taggit.managers import TaggableManager
 
-from contacts.fields import CountryField
-from contacts.managers import ContactManager
+from futuregreen.contacts.fields import CountryField
+from futuregreen.contacts.managers import ContactManager
 
 class ContactBase(models.Model):
     """

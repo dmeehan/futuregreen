@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from contacts.models import *
+from futuregreen.contacts.models import *
 
 admin.site.register(Client)
 admin.site.register(Collaborator)

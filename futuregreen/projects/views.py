@@ -4,7 +4,7 @@ from django.conf import settings
 from django.db.models import get_model
 from django.views.generic import ListView, DetailView
 
-from projects.models import Project
+from futuregreen.projects.models import Project
 
 class ProjectDetailView(DetailView):
     model = Project

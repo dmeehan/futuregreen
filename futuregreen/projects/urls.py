@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.defaults import *
 from django.db.models import get_model
 
-from portfolio.projects.views import *
+from futuregreen.projects.views import *
 
 urlpatterns = patterns('',
    url(r'^projects/$', ProjectListView.as_view(), name = 'projects_project_list'),

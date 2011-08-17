@@ -2,8 +2,8 @@
 
 from django.conf.urls.defaults import *
 
-from contacts.views import *
-from contacts.models import *
+from futuregreen.contacts.views import *
+from futuregreen.contacts.models import *
 
 urlpatterns = patterns('',
     url(r'^contacts/$', 'ContactListView.as_view()', name="contacts_contact_list" ),
