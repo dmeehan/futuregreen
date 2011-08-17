@@ -14,7 +14,6 @@ class ImageInline(admin.StackedInline):
     # Grappelli options
     allow_add = True
     sortable_field_name = "order"
-    classes = ('collapse open',)
 
 class ClientInline(admin.TabularInline):
     model = Project.clients.through
