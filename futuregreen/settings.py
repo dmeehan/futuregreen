@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'editor',
     'mptt',
     'django_generic_flatblocks',
+    'easy_maps',
 
     # local apps
     'futuregreen.projects',
@@ -164,6 +165,8 @@ LOGGING = {
 GRAPPELLI_ADMIN_HEADLINE = 'Future Green Studio'
 GRAPPELLI_ADMIN_TITLE = 'Future Green Studio'
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
+
+EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07VxS9kqQgB3QHZLQ48Isywu37uNS74w'
 
 
 #==============================================================================
