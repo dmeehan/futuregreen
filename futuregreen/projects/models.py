@@ -1,5 +1,6 @@
 # projects/models.py
 
+import os
 from decimal import Decimal
 
 from django.conf import settings
