@@ -7,14 +7,14 @@ from futuregreen.projects.models import Project, ProjectImage
 class ImageInline(admin.StackedInline):
     model = ProjectImage
     prepopulated_fields = {"slug": ("name",)}
-    fields = ('order', 'is_main', 'image', 'name', 'caption',
+    fields = ('is_main', 'image', 'name', 'caption',
               'crop_horz', 'crop_vert', 'slug', )
     extra = 1
 
     # Grappelli options
     allow_add = True
     sortable_field_name = "order"
-    classes = ('collapse closed',)
+    classes = ('collapse open',)
 
 class ClientInline(admin.TabularInline):
     model = Project.clients.through
