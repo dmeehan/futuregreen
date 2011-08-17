@@ -67,6 +67,7 @@ class ImageBase(ImageFieldMixin):
     # core fields
     name = models.CharField(max_length=255)
     caption = models.TextField(null=True, blank=True)
+    public = models.BooleanField(default=True, help_text="This file is publicly available.")
 
     class Meta:
         abstract=True
