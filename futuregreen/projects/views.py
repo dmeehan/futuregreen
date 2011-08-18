@@ -11,9 +11,7 @@ class ProjectDetailView(DetailView):
 
 class ProjectListView(ListView):
     model = Project
-    context_object_name="project_list",
     paginate_by = settings.PROJECT_PAGINATE_BY
-    template = '/projects/project_list.html'
 
 class ProjectSizeAscListView(ProjectListView):
     pass
