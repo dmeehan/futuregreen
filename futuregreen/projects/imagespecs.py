@@ -8,6 +8,11 @@ class ResizeAdminThumbnail(processors.Resize):
     height = 67
     crop = True
 
+class ResizeList(processors.Resize):
+    width = 180
+    height = 180
+    crop = True
+
 class EnhanceSmall(processors.Adjustment):
     contrast = 1.2
     sharpness = 1.1
@@ -20,3 +25,7 @@ class AdminThumbnail(ImageSpec):
     access_as = 'admin_thumbnail'
     pre_cache = False
     processors = [ResizeAdminThumbnail, EnhanceSmall]
+
+class List(ImageSpec):
+    pre_cache = False
+    processors = [ResizeList,]

@@ -9,9 +9,9 @@
         <section class="image">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
-                    <img src="{{ image.admin_thumbnail.url }}"
-                         height="{{ image.admin_thumbnail.height }}"
-                         width="{{ image.admin_thumbnail.width }}"
+                    <img src="{{ image.list.url }}"
+                         height="{{ image.list.height }}"
+                         width="{{ image.list.width }}"
                          alt="{{ image.caption }}"/>
                 {% endif %}
             {% endfor %}
