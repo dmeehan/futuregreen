@@ -7,9 +7,9 @@
         <section class="slideshow">
             {% for image in project.projectimage_set.all %}
                 <article class="images">
-                    <img src="{{ image.admin_thumbnail.url }}"
-                         height="{{ image.admin_thumbnail.height }}"
-                         width="{{ image.admin_thumbnail.width }}"
+                    <img src="{{ image.detail.url }}"
+                         height="{{ image.detail.height }}"
+                         width="{{ image.detail.width }}"
                          alt="{{ image.caption }}"/>
                     <p>{{ image.name }}: {{ image.caption }}</p>
                 </article>
