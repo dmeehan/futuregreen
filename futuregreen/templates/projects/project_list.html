@@ -6,6 +6,16 @@
 {% for project in project_list %}
      <article class="project">
         <header><h1>{{ project.name }}</h1></header>
+        <section class="image">
+            {% for image in project.projectimage_set.all %}
+                {% if image.is_main %}
+                    <img src="{{ image.admin_thumbnail.url }}"
+                         height="{{ image.admin_thumbnail.height }}"
+                         width="{{ image.admin_thumbnail.width }}"
+                         alt="{{ image.caption }}"/>
+                {% endif %}
+            {% endfor %}
+        </section>
         <section class="description">
             <p>{{ project.short_description }}</p>
             {% if date_start %}<p>{{ project.date_start }}</p>{% endif %}
