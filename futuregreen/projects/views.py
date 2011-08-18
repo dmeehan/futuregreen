@@ -10,7 +10,7 @@ class ProjectDetailView(DetailView):
     model = Project
 
 class ProjectListView(ListView):
-    model = Project
+    queryset = Project._default_manager.live()
     paginate_by = settings.PROJECT_PAGINATE_BY
 
 class ProjectSizeAscListView(ProjectListView):
