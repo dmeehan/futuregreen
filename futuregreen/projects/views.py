@@ -10,7 +10,7 @@ class ProjectDetailView(DetailView):
     model = Project
 
 class ProjectListView(ListView):
-    queryset = Project._default_manager.live()
+    queryset = Project.objects.live()
     context_object_name="project_list",
     paginate_by = settings.PROJECT_PAGINATE_BY
     template = '/projects/project_list.html'

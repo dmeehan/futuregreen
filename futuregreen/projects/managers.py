@@ -25,7 +25,7 @@ class ProjectMixin(object):
         return self.get_query_set().filter(date_start__lte=datetime.now)
 
     def size_asc(self):
-        return self.get_query_set().order_by('size_normalized')
+        return self.get_query_set().order_by('-size_normalized')
 
     def size_desc(self):
         return self.get_query_set().order_by('size_normalized')
