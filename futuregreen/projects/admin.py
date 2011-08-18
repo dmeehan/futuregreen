@@ -67,7 +67,8 @@ class ProjectAdmin(admin.ModelAdmin):
        BuilderInline,
     ]
     exclude = ('clients', 'collaborators', 'designers', 'builders', 'categories',)
-    list_display = ('name',)
+    list_display = ('name', 'start_date', 'end_date', 'status', 'featured')
+    list_editable = ('status', 'featured')
     prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(Project, ProjectAdmin)
