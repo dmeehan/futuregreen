@@ -59,6 +59,10 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name',)
     prepopulated_fields = {"slug": ("name",)}
 
+class ImageAdmin(admin.ModelAdmin)
+    model = ProjectImage
+    prepopulated_fields = {"slug": ("name",)}
+
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectImage)
 
