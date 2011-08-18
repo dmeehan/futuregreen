@@ -186,8 +186,8 @@ class Project(ProjectBase, PhysicalMixin):
                                help_text="Enter the full address of the project")
     
     # relations
-    designers = models.ManyToManyField(Employee, blank=True, null=True)
-    builders = models.ManyToManyField(Employee, blank=True, null=True)
+    designers = models.ManyToManyField(Employee, blank=True, null=True, related_name='designers')
+    builders = models.ManyToManyField(Employee, blank=True, null=True, related_name='builders')
     clients = models.ManyToManyField(Client, blank=True, null=True)
     collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
 
