@@ -2,6 +2,8 @@
 
 from django.contrib import admin
 
+from easy_maps.widgets import AddressWithMapWidget
+
 from futuregreen.projects.models import Project, ProjectImage
 
 class ImageInline(admin.StackedInline):
@@ -40,16 +42,21 @@ class CategoryInline(admin.TabularInline):
     extra=1
 
 class ProjectAdmin(admin.ModelAdmin):
-   inlines = [
+    class form(forms.ModelForm):
+        class Meta:
+            widgets = {
+                'address': AddressWithMapWidget({'class': 'vTextField'})
+            }
+    inlines = [
        ImageInline,
        CategoryInline,
        ClientInline,
        CollaboratorInline,
        DesignerInline,
-   ]
-   exclude = ('clients', 'collaborators', 'designers', 'categories',)
-   list_display = ('name',)
-   prepopulated_fields = {"slug": ("name",)}
+    ]
+    exclude = ('clients', 'collaborators', 'designers', 'categories',)
+    list_display = ('name',)
+    prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectImage)
