@@ -40,6 +40,12 @@ class DesignerInline(admin.TabularInline):
     verbose_name_plural = 'designers'
     extra=1
 
+class BuilderInline(admin.TabularInline):
+    model = Project.builders.through
+    verbose_name = 'builder'
+    verbose_name_plural = 'builders'
+    extra=1
+
 class CategoryInline(admin.TabularInline):
     model = Project.categories.through
     verbose_name = 'category'
@@ -58,8 +64,9 @@ class ProjectAdmin(admin.ModelAdmin):
        ClientInline,
        CollaboratorInline,
        DesignerInline,
+       BuilderInline,
     ]
-    exclude = ('clients', 'collaborators', 'designers', 'categories',)
+    exclude = ('clients', 'collaborators', 'designers', 'builders', 'categories',)
     list_display = ('name',)
     prepopulated_fields = {"slug": ("name",)}
 

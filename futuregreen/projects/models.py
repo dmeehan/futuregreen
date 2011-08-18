@@ -187,6 +187,7 @@ class Project(ProjectBase, PhysicalMixin):
     
     # relations
     designers = models.ManyToManyField(Employee, blank=True, null=True)
+    builders = models.ManyToManyField(Employee, blank=True, null=True)
     clients = models.ManyToManyField(Client, blank=True, null=True)
     collaborators = models.ManyToManyField(Collaborator, blank=True, null=True)
 
