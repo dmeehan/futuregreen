@@ -19,20 +19,27 @@
         <section class="description">
             <p>{{ project.short_description }}</p>
             <p>{{ project.description_html|safe }}</p>
+            {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
+        </section>
+        <section class="dates">
+            <h2>Date</h2>
             {% if date_start %}<p>{{ project.date_start }}</p>{% endif %}
             {% if date_end %}<p>{{ project.date_end }}</p>{% endif %}
-            {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
+        </section>
+        <section class="size">
+            <h2>Area</h2>
             <p>{{ project.area|floatformat }} {{ project.get_unit_display }} </p>
         </section>
-
         <section class="address">
+            <h2>Location</h2>
             {% load easy_maps_tags %}
-            {% easy_map project.address 300 400 %}
+            {% easy_map project.address 180 180 %}
         </section>
     
          {% if project.tags.all or project.categories.all %}
         <section class="classification">
             {% if project.tags.all %}
+            <h2>Tags</h2>
             <ul>
                 {% for tag in project.tags.all %}
                 <li> {{ tag.name }} </li>
@@ -40,6 +47,7 @@
             </ul>
             {% endif %}
             {% if project.categories.all %}
+            <h2>Categories</h2>
             <ul>
                 {% for category in project.categories.all %}
                 <li> {{ category.name }} </li>
