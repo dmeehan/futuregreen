@@ -176,7 +176,7 @@ class PhysicalMixin(models.Model):
 
 class Project(ProjectBase, PhysicalMixin):
     """
-        FutureGreen project. Extends projects.PhysicalProjectBase
+        FutureGreen project.
 
     """
     objects = ProjectManager()
