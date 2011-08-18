@@ -8,9 +8,19 @@ class ResizeAdminThumbnail(processors.Resize):
     height = 67
     crop = True
 
+class Thumbnail(processors.Resize):
+    width = 80
+    height = 80
+    crop = True
+
 class ResizeList(processors.Resize):
     width = 180
     height = 180
+    crop = True
+
+class ResizeDetail(processors.Resize):
+    width = 780
+    height = 380
     crop = True
 
 class EnhanceSmall(processors.Adjustment):
@@ -26,6 +36,14 @@ class AdminThumbnail(ImageSpec):
     pre_cache = False
     processors = [ResizeAdminThumbnail, EnhanceSmall]
 
+class Thumbnail(ImageSpec):
+    pre_cache = False
+    processors = [Thumbnail, EnhanceSmall]
+
 class List(ImageSpec):
     pre_cache = False
-    processors = [ResizeList,]
+    processors = [ResizeList]
+
+class Detail(ImageSpec):
+    pre_cache = False
+    processors = [ResizeDetail]
