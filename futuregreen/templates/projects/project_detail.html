@@ -17,7 +17,6 @@
         </section>
         {% endif %}
         <section class="description">
-            <p>{{ project.short_description }}</p>
             <p>{{ project.description_html|safe }}</p>
             {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
         </section>
