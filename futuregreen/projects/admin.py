@@ -64,7 +64,7 @@ class ImageAdmin(admin.ModelAdmin)
     prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(ProjectImage)
+admin.site.register(ProjectImage, ImageAdmin)
 
 
 
