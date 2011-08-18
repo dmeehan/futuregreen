@@ -25,6 +25,11 @@
             <p>{{ project.area }} {{ project.get_unit_display }} </p>
             <p>{{ project.square_feet }} square feet </p>
         </section>
+
+        <section class="address">
+            {% load easy_maps_tags %}
+            {% easy_map project.address %}
+        </section>
     
          {% if project.tags.all or project.categories.all %}
         <section class="classification">
