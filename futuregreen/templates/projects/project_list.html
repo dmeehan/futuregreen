@@ -9,10 +9,12 @@
         <section class="image">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
-                    <img src="{{ image.list.url }}"
-                         height="{{ image.list.height }}"
-                         width="{{ image.list.width }}"
-                         alt="{{ image.caption }}"/>
+                    <a href="{{ project.get_absolute_url }}">
+                        <img src="{{ image.list.url }}"
+                             height="{{ image.list.height }}"
+                             width="{{ image.list.width }}"
+                             alt="{{ image.caption }}"/>
+                    </a>
                 {% endif %}
             {% endfor %}
         </section>
