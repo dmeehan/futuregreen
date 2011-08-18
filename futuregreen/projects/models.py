@@ -183,7 +183,8 @@ class Project(ProjectBase, PhysicalMixin):
     objects = ProjectManager()
 
     #address
-    address = models.ForeignKey(Address, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True,
+                               help_text="Enter the full address of the project")
     
     # relations
     designers = models.ManyToManyField(Employee, blank=True, null=True)
