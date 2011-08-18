@@ -24,8 +24,8 @@
         {% if project.date_start or project.date_end %}
         <section class="dates">
             <h2>Date</h2>
-            {% if project.date_start %}<p>{{ project.date_start|date:"M Y" }}</p>{% endif %}
-            {% if project.date_end %}<p>{{ project.date_end|date:"M Y" }}</p>{% endif %}
+            {% if project.date_start %}<p>{{ project.date_start|date:"F Y" }}</p>{% endif %}
+            {% if project.date_end %}<p>{{ project.date_end|date:"F Y" }}</p>{% endif %}
        {% endif %}
         </section>
         <section class="size">
