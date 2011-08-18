@@ -11,7 +11,7 @@
                          height="{{ image.detail.height }}"
                          width="{{ image.detail.width }}"
                          alt="{{ image.caption }}"/>
-                    <p>{{ image.name }}: {{ image.caption }}</p>
+                     {% if image.caption %}<p>{{ image.caption }}</p>{% endif %}
                 </article>
             {% endfor %}
         </section>
@@ -23,8 +23,8 @@
         </section>
         <section class="dates">
             <h2>Date</h2>
-            {% if date_start %}<p>{{ project.date_start }}</p>{% endif %}
-            {% if date_end %}<p>{{ project.date_end }}</p>{% endif %}
+            {% if date_start %}<p>{{ project.date_start|date:"M Y" }}</p>{% endif %}
+            {% if date_end %}<p>{{ project.date_end|date:"M Y" }}</p>{% endif %}
         </section>
         <section class="size">
             <h2>Area</h2>
