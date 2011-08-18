@@ -59,7 +59,7 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name',)
     prepopulated_fields = {"slug": ("name",)}
 
-class ImageAdmin(admin.ModelAdmin)
+class ImageAdmin(admin.ModelAdmin):
     model = ProjectImage
     prepopulated_fields = {"slug": ("name",)}
 
