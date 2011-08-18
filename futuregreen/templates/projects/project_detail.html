@@ -21,10 +21,12 @@
             <p>{{ project.description_html|safe }}</p>
             {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
         </section>
+        {% if project.date_start or project.date_end %}
         <section class="dates">
             <h2>Date</h2>
-            {% if date_start %}<p>{{ project.date_start|date:"M Y" }}</p>{% endif %}
-            {% if date_end %}<p>{{ project.date_end|date:"M Y" }}</p>{% endif %}
+            {% if project.date_start %}<p>{{ project.date_start|date:"M Y" }}</p>{% endif %}
+            {% if project.date_end %}<p>{{ project.date_end|date:"M Y" }}</p>{% endif %}
+       {% endif %}
         </section>
         <section class="size">
             <h2>Area</h2>
