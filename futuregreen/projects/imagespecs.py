@@ -23,6 +23,9 @@ class ResizeDetail(processors.Resize):
     height = 380
     crop = True
 
+class ResizeMax(processors.Resize):
+    width = 1080
+
 class EnhanceSmall(processors.Adjustment):
     contrast = 1.2
     sharpness = 1.1
