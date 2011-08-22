@@ -9,8 +9,10 @@ from futuregreen.projects.models import Project, ProjectImage
 
 class ProjectImageAdmin(admin.ModelAdmin):
     model = ProjectImage
-    list_display = ('name', 'admin_thumbnail_view',)
+    list_display = ('name', 'admin_thumbnail_view', 'project')
     prepopulated_fields = {"slug": ("name",)}
+
+    ordering = ('project',)
 
 class ImageInline(admin.StackedInline):
     model = ProjectImage
