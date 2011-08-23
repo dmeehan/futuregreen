@@ -9,7 +9,7 @@ class ContactAdmin(admin.ModelAdmin):
 
 class EmployeeAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('name', 'employee_type', 'title')
+    list_display = ('name', 'employee_type', 'job_title')
 
 admin.site.register(Client, ContactAdmin)
 admin.site.register(Collaborator, ContactAdmin)
