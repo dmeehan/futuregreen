@@ -26,18 +26,18 @@ class TextBlockBase(models.Model):
 
     def render_markup(self):
         """Turns any markup into HTML"""
-        if settings.POSTS_MARKUP == 'markdown':
+        if settings.BLOCKS_MARKUP == 'markdown':
             import markdown
             self.body_html = markdown.markdown(self.body)
             self.excerpt_html = markdown.markdown(self.excerpt)
-        elif settings.POSTS_MARKUP == 'textile':
+        elif settings.BLOCKS_MARKUP == 'textile':
             import textile
             self.body_html = textile.textile(self.body)
             self.excerpt_html = textile.markdown(self.excerpt)
-        elif settings.POSTS_MARKUP == 'wysiwyg':
+        elif settings.BLOCKS_MARKUP == 'wysiwyg':
             self.body_html = self.body
             self.excerpt_html = self.excerpt
-        elif settings.POSTS_MARKUP == 'html':
+        elif settings.BLOCKS_MARKUP == 'html':
             self.body_html = self.body
             self.excerpt_html = self.excerpt
         else:
