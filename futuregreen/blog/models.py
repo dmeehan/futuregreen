@@ -8,7 +8,7 @@ from taggit.managers import TaggableManager
 import categories
 
 from blocks.models import LinkBase, ArticleBase
-from media.models import RelatedImageAutoBase
+from images.models import RelatedImageAutoBase
 
 class BlogLink(LinkBase):
     """
