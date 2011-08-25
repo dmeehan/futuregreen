@@ -1,0 +1,1 @@
+# blocks/views.py
