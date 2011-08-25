@@ -1,10 +1,10 @@
-# projects/views.py
+# portfolio/views.py
 
 from django.conf import settings
 from django.db.models import get_model
 from django.views.generic import ListView, DetailView
 
-from futuregreen.projects.models import Project
+from futuregreen.portfolio.models import Project
 
 class ProjectDetailView(DetailView):
     model = Project

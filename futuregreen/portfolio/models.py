@@ -15,7 +15,7 @@ import categories
 from images.models import RelatedImageAutoBase
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
-from futuregreen.projects.managers import ProjectManager
+from futuregreen.portfolio.managers import ProjectManager
 
 class ProjectBase(models.Model):
     """
@@ -53,7 +53,7 @@ class ProjectBase(models.Model):
     # Metadata.
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_LIVE,
-                                              help_text="Only projects with live status will be publicly displayed.")
+                                              help_text="Only portfolio with live status will be publicly displayed.")
     featured = models.BooleanField(default=False)
     slug = models.SlugField(unique=True,
                             help_text="Suggested value automatically generated from title. Must be unique.")

@@ -1,11 +1,11 @@
-# projects/admin.py
+# portfolio/admin.py
 
 from django import forms
 from django.contrib import admin
 
 from easy_maps.widgets import AddressWithMapWidget
 
-from futuregreen.projects.models import Project, ProjectImage
+from futuregreen.portfolio.models import Project, ProjectImage
 
 class ProjectImageAdmin(admin.ModelAdmin):
     model = ProjectImage

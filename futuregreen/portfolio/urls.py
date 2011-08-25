@@ -1,9 +1,9 @@
-# projects/urls.py
+# portfolio/urls.py
 
 from django.conf import settings
 from django.conf.urls.defaults import *
 
-from futuregreen.projects.views import *
+from futuregreen.portfolio.views import *
 
 urlpatterns = patterns('',
    url(r'^$', ProjectListView.as_view(), name='projects_project_list'),
