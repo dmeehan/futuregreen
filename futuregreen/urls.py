@@ -13,8 +13,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
 
-    # projects
-    (r'^projects/', include('futuregreen.projects.urls')),
+    # portfolio
+    (r'^portfolio/', include('futuregreen.portfolio.urls')),
     
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
