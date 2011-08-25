@@ -14,7 +14,7 @@ from taggit.managers import TaggableManager
 import categories
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
-from futuregreen.media.models import ImageBase
+from futuregreen.media.models import ImageAutoSizeBase
 from futuregreen.projects.managers import ProjectManager
 from futuregreen.projects.fields import PositionField
 
@@ -196,7 +196,7 @@ class Project(ProjectBase, PhysicalMixin):
     categories = models.ManyToManyField('categories.Category')
 
 
-class ProjectImage(ImageModel, ImageBase):
+class ProjectImage(ImageAutoSizeBase):
     """
         Images for a project.
 
@@ -204,38 +204,6 @@ class ProjectImage(ImageModel, ImageBase):
     project = models.ForeignKey(Project)
     order = PositionField(unique_for_field='project')
     is_main = models.BooleanField('Main image', default=False)
-
-    CROPHORZ_LEFT = 0
-    CROPHORZ_CENTER = 1
-    CROPHORZ_RIGHT = 2
-    CROPHORZ_CHOICES = (
-        (CROPHORZ_LEFT, 'left'),
-        (CROPHORZ_CENTER, 'center'),
-        (CROPHORZ_RIGHT, 'right'),
-    )
-
-    CROPVERT_TOP = 0
-    CROPVERT_CENTER = 1
-    CROPVERT_BOTTOM = 2
-    CROPVERT_CHOICES = (
-        (CROPVERT_TOP, 'top'),
-        (CROPVERT_CENTER, 'center'),
-        (CROPVERT_BOTTOM, 'bottom'),
-    )
-
-    crop_horz = models.PositiveSmallIntegerField(
-                    verbose_name='horizontal cropping',
-                    choices=CROPHORZ_CHOICES,
-                    blank=True,
-                    default=CROPHORZ_CENTER,
-                    help_text="From where to horizontally crop the image, if cropping is necessary.")
-
-    crop_vert = models.PositiveSmallIntegerField(
-                    verbose_name='vertical cropping',
-                    choices=CROPVERT_CHOICES,
-                    blank=True,
-                    default=CROPVERT_CENTER,
-                    help_text="From were to vertically crop the image, if cropping is necessary.")
 
     class Meta:
         ordering = ['order',]
@@ -250,8 +218,4 @@ class ProjectImage(ImageModel, ImageBase):
             related_images.update(is_main=False)
 
         super(ProjectImage, self).save(*args, **kwargs)
-
-    class IKOptions:
-        spec_module = 'futuregreen.projects.imagespecs'
-        cache_dir = 'resized'
 

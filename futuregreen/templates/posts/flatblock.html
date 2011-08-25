@@ -1,0 +1,13 @@
+<article>
+{% if object.title %}
+<header>
+    <h1>{{ object.title }}</h1>
+</header>
+{% endif %}
+{% if object.body_html %}
+<p>{{ object.body_html|safe }}</p>
+{% endif %}
+{% if object.image %}
+<img src="{{ object.image.url }}" />
+{% endif %}
+</article>
