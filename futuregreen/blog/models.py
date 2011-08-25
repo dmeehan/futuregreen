@@ -7,7 +7,7 @@ from django.db.models import permalink
 from taggit.managers import TaggableManager
 import categories
 
-from blocks.models import LinkBase, ArticleBase
+from futuregreen.blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase
 
 class BlogLink(LinkBase):
