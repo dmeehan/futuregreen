@@ -174,6 +174,11 @@ EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07
 #==============================================================================
 # local app settings
 #==============================================================================
+MEDIA_SPEC_FILE = 'futuregreen.imagespecs'
+MEDIA_CACHE_DIR = 'resized'
+MEDIA_CACHE_FILENAME_FORMAT = "%(filename)s_%(specname)s.%(extension)s"
+MEDIA_PREPROCESSOR_SPEC = None
+
 PROJECT_MARKUP = 'markdown'
 PROJECT_PAGINATE_BY = 10
 
