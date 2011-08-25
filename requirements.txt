@@ -23,4 +23,4 @@ django-grappelli==2.3.3
 django-easy-maps==0.7.1
 
 # backbeat apps
--e git+git://github.com/dmeehan/django-backbeat-media.git#egg=django-backbeat-media
+-e git+git://github.com/dmeehan/django-backbeat-images.git#egg=django-backbeat-images
