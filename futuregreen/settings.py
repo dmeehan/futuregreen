@@ -124,10 +124,15 @@ INSTALLED_APPS = (
     'django_generic_flatblocks',
     'easy_maps',
 
+    # backbeat apps
+    'media',
+
     # local apps
     'futuregreen.projects',
     'futuregreen.contacts',
     'futuregreen.media',
+    'futuregreen.blocks',
+    'futuregreen.blog'
 )
 
 #==============================================================================
