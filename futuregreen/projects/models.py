@@ -202,3 +202,6 @@ class ProjectImage(RelatedImageAutoBase):
     """
     project = models.ForeignKey(Project)
 
+    class Meta:
+        ordering = ['order',]
+
