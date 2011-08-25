@@ -125,7 +125,7 @@ INSTALLED_APPS = (
     'easy_maps',
 
     # backbeat apps
-    'media',
+    'images',
 
     # local apps
     'futuregreen.projects',
