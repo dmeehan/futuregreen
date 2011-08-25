@@ -12,11 +12,10 @@ from django.utils.html import strip_tags
 from taggit.managers import TaggableManager
 import categories
 
-from images.models import RelatedImageAutoSizeBase
+from images.models import RelatedImageAutoBase
 
 from futuregreen.contacts.models import Client, Collaborator, Employee
 from futuregreen.projects.managers import ProjectManager
-from futuregreen.projects.fields import PositionField
 
 class ProjectBase(models.Model):
     """
@@ -196,7 +195,7 @@ class Project(ProjectBase, PhysicalMixin):
     categories = models.ManyToManyField('categories.Category')
 
 
-class ProjectImage(RelatedImageAutoSizeBase):
+class ProjectImage(RelatedImageAutoBase):
     """
         Images for a project.
 
