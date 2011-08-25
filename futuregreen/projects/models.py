@@ -9,12 +9,12 @@ from django.db import models
 from django.db.models import permalink
 from django.utils.html import strip_tags
 
-from imagekit.models import ImageModel
 from taggit.managers import TaggableManager
 import categories
 
+from images.models import RelatedImageAutoSizeBase
+
 from futuregreen.contacts.models import Client, Collaborator, Employee
-from futuregreen.media.models import ImageAutoSizeBase
 from futuregreen.projects.managers import ProjectManager
 from futuregreen.projects.fields import PositionField
 
@@ -196,26 +196,10 @@ class Project(ProjectBase, PhysicalMixin):
     categories = models.ManyToManyField('categories.Category')
 
 
-class ProjectImage(ImageAutoSizeBase):
+class ProjectImage(RelatedImageAutoSizeBase):
     """
         Images for a project.
 
     """
     project = models.ForeignKey(Project)
-    order = PositionField(unique_for_field='project')
-    is_main = models.BooleanField('Main image', default=False)
-
-    class Meta:
-        ordering = ['order',]
-    
-    def get_upload_path(self, filename):
-        return os.path.join('images', 'projects', self.project.slug, filename)
-
-    def save(self, *args, **kwargs):
-        if self.is_main:
-            related_images = self._default_manager.filter(
-                project=self.project)
-            related_images.update(is_main=False)
-
-        super(ProjectImage, self).save(*args, **kwargs)
 
