@@ -20,7 +20,6 @@ class BlogEntryAdmin(admin.ModelAdmin):
        ImageInline,
     ]
 
-
 admin.site.register(BlogEntry, BlogEntryAdmin)
 admin.site.register(BlogLink)
 admin.site.register(BlogImage)
