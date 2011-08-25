@@ -24,7 +24,7 @@ class Entry(ArticleBase):
         An article entry for the blog
     """
     enable_comments = models.BooleanField(default=True)
-    links = models.ManyToManyField(BlogLink)
+    links = models.ManyToManyField(Link)
 
     # taxonomy
     tags = TaggableManager(blank=True)
