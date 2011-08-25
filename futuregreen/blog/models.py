@@ -10,7 +10,7 @@ import categories
 from futuregreen.blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase
 
-class BlogLink(LinkBase):
+class Link(LinkBase):
     """
         A link entry for the blog
     """
@@ -19,7 +19,7 @@ class BlogLink(LinkBase):
     categories = models.ManyToManyField('categories.Category')
 
 
-class BlogEntry(ArticleBase):
+class Entry(ArticleBase):
     """
         An article entry for the blog
     """
@@ -40,11 +40,11 @@ class BlogEntry(ArticleBase):
 
 
 
-class BlogImage(RelatedImageAutoBase):
+class EntryImage(RelatedImageAutoBase):
     """
         Images for a blog entry.
     """
-    entry = models.ForeignKey(BlogEntry)
+    entry = models.ForeignKey(Entry)
 
 
 
@@ -53,4 +53,4 @@ class LinkImage(RelatedImageAutoBase):
     """
         Images for a link.
     """
-    link = models.ForeignKey(BlogLink)
+    link = models.ForeignKey(Link)
