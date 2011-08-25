@@ -1,1 +1,1 @@
-# blocks/views.py
+# blog/views.py
