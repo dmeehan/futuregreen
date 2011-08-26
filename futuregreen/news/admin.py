@@ -15,7 +15,7 @@ class ImageInline(admin.StackedInline):
     allow_add = True
     sortable_field_name = "order"
 
-class EntryAdmin(admin.ModelAdmin):
+class ItemAdmin(admin.ModelAdmin):
     inlines = [
        ImageInline,
     ]
