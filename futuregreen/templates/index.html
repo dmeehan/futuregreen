@@ -2,7 +2,7 @@
 {% load generic_flatblocks %}
 {% load portfolio_tags %}
 {% block main %}
-    {% gblock "firm_profile" for "content.ContentBlock" %}
+    {% gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     {% get_featured_projects %}
     {% for project in featured_project_list %}
         {{ project.name }}
