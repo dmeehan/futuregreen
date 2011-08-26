@@ -63,7 +63,7 @@ class CustomIndexDashboard(Dashboard):
         self.children.append(modules.ModelList(
             _('Site Administration'),
             column=1,
-            collapsible=False,
+            css_classes=('collapse closed',),
             models=('django.contrib.*',),
         ))
 
