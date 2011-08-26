@@ -14,7 +14,7 @@ import categories
 from images.models import RelatedImageAutoBase
 
 from futuregreen.portfolio.managers import ProjectManager
-from futuregreen.studio.models import Client, Collaborator, Employee
+from futuregreen.people.models import Client, Collaborator, Employee
 
 class ProjectBase(models.Model):
     """
