@@ -25,3 +25,4 @@ django-easy-maps==0.7.1
 # backbeat apps
 -e git+git://github.com/dmeehan/django-backbeat-images.git#egg=django-backbeat-images
 -e git+git://github.com/dmeehan/django-backbeat-blocks.git#egg=django-backbeat-blocks
+-e git+git://github.com/dmeehan/django-backbeat-contacts.git#egg=django-backbeat-contacts
