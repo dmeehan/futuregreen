@@ -8,7 +8,7 @@ class ContactAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     fieldsets = (
         (None, {
-            'fields': ('contact_type', 'name', 'description',)
+            'fields': ('name', 'description',)
         }),
         ('Contact Info', {
             'classes': ('collapse',),
