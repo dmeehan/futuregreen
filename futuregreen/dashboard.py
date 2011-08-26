@@ -27,6 +27,16 @@ class CustomIndexDashboard(Dashboard):
             column=1,
             collapsible=True,
             children=[
+                 modules.ModelList(
+                    css_classes=('collapse open',),
+                    title='Portfolio',
+                    models=('futuregreen.portfolio.*',)
+                ),
+                modules.ModelList(
+                    css_classes=('collapse closed',),
+                    title='People',
+                    models=('futuregreen.people.*',)
+                ),
                 modules.ModelList(
                     css_classes=('collapse closed',),
                     title='Content Blocks',
@@ -41,16 +51,6 @@ class CustomIndexDashboard(Dashboard):
                     css_classes=('collapse closed',),
                     title='Blog',
                     models=('futuregreen.blog.*',)
-                ),
-                modules.ModelList(
-                    css_classes=('collapse closed',),
-                    title='Portfolio',
-                    models=('futuregreen.portfolio.*',)
-                ),
-                modules.ModelList(
-                    css_classes=('collapse closed',),
-                    title='People',
-                    models=('futuregreen.people.*',)
                 ),
             ]
         ))
