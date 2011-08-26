@@ -32,7 +32,7 @@ class EmployeeType(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
-class Employee(Contact, ImageFieldAutoMixin):
+class Employee(ImageFieldAutoMixin, Contact):
     # employee status choices
     STATUS_FULL = 1
     STATUS_CONTRACT = 2
