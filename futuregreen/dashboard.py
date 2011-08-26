@@ -33,7 +33,7 @@ class CustomIndexDashboard(Dashboard):
                 ),
                 modules.ModelList(
                     title='Studio',
-                    models=('futuregreen.contacts.*',)
+                    models=('futuregreen.studio.*',)
                 ),
             ]
         ))
