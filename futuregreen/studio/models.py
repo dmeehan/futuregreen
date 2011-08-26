@@ -1,5 +1,7 @@
 # studio/models.py
 
+from django.db import models
+
 from contacts.models import ContactBase
 
 class Contact(ContactBase):
