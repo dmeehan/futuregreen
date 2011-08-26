@@ -13,8 +13,8 @@ from taggit.managers import TaggableManager
 import categories
 
 from images.models import RelatedImageAutoBase
+from contacts.models import Client, Collaborator, Employee
 
-from futuregreen.contacts.models import Client, Collaborator, Employee
 from futuregreen.portfolio.managers import ProjectManager
 
 class ProjectBase(models.Model):
