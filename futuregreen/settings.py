@@ -191,7 +191,7 @@ PROJECT_PAGINATE_BY = 10
 CONTACT_MARKUP = 'markdown'
 CONTACT_PAGINATE_BY = 10
 
-POSTS_MARKUP = 'markdown'
+BLOCKS_MARKUP = 'markdown'
 
 
 #==============================================================================
