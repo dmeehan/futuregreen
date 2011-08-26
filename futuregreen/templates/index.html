@@ -1,5 +1,10 @@
 {% extends "base.html" %}
+{% load generic_flatblocks %}
+{% load portfolio_tags %}
 {% block main %}
-    {% load generic_flatblocks %}
     {% gblock "firm_profile" for "content.ContentBlock" %}
+    {% get_featured_projects %}
+    {% for project in featured_project_list %}
+        {{ project.name }}
+    {% endfor %}
 {% endblock main %}
