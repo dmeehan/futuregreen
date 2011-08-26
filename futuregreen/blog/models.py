@@ -40,7 +40,7 @@ class Entry(ArticleBase):
 
 
 
-class BlogEntryImage(RelatedImageAutoBase):
+class EntryImage(RelatedImageAutoBase):
     """
         Images for a blog entry.
     """
