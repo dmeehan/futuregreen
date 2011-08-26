@@ -6,21 +6,6 @@ from futuregreen.people.models import *
 
 class ContactAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
-    fieldsets = (
-        (None, {
-            'fields': ('name', 'description',)
-        }),
-        ('Contact Info', {
-            'classes': ('collapse',),
-            'fields': ('address_line1', 'address_line2',
-                       'city', 'state', 'code', 'country', 'email',
-                       'phone', 'mobile', 'fax', 'website',)
-        }),
-        ('Metadata', {
-            'classes': ('collapse',),
-            'fields': ('slug', 'user',)
-        }),
-    )
 
 class EmployeeAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
