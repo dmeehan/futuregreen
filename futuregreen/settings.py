@@ -127,7 +127,7 @@ INSTALLED_APPS = (
     # backbeat apps
     'images',
     'contacts',
-    'content',
+    'blocks',
 
     # local apps
     'futuregreen.portfolio',
