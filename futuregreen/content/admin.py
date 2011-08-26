@@ -5,7 +5,7 @@ from django.contrib import admin
 from futuregreen.content.models import ContentBlock
 
 class ContentBlockAdmin(admin.ModelAdmin):
-fieldsets = (
+    fieldsets = (
         ('Title', {
             'fields': ('title',)
         }),
