@@ -1,6 +1,6 @@
 # studio/admin.py
 
-rom django.contrib import admin
+from django.contrib import admin
 
 from futuregreen.studio.models import *
 
