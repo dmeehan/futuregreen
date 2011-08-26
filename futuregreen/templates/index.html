@@ -1,5 +1,5 @@
 {% extends "base.html" %}
 {% block main %}
     {% load generic_flatblocks %}
-    {% gblock "firm_profile" for "content.ContentBlock" %}
+    {% gblock "firm_profile" for "content.ContentBlock" using "content/block.html" %}
 {% endblock main %}
