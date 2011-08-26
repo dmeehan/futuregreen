@@ -16,13 +16,13 @@ class EmployeeAdmin(admin.ModelAdmin):
                        'employee_type', 'job_title', 'status')
         }),
         ('Contact Info', {
-            'classes': ('collapse',),
+            'classes': ('collapse closed',),
             'fields': ('address_line1', 'address_line2',
                        'city', 'state', 'code', 'country', 'email',
                        'phone', 'mobile', 'fax', 'website',)
         }),
         ('Metadata', {
-            'classes': ('collapse',),
+            'classes': ('collapse closed',),
             'fields': ('slug',)
         }),
     )
