@@ -48,7 +48,7 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             column=1,
             css_classes=('collapse open',),
-            models=('categories.*','taggit.*',),
+            models=('categories.*','taggit.*', 'django_generic_flatblocks.*'),
         ))
         
         # append a model list module for "Administration"
