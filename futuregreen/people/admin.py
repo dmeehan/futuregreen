@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from futuregreen.studio.models import *
+from futuregreen.people.models import *
 
 class ContactAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
