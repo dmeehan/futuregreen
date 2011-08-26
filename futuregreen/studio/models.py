@@ -3,6 +3,7 @@
 from django.db import models
 
 from contacts.models import ContactBase
+from images.models import ImageFieldAutoMixin
 
 class Contact(ContactBase):
     pass
@@ -31,7 +32,7 @@ class EmployeeType(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
-class Employee(Contact):
+class Employee(Contact, ImageFieldAutoMixin):
     # employee status choices
     STATUS_FULL = 1
     STATUS_CONTRACT = 2
