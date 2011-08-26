@@ -8,7 +8,7 @@ def compose_featured(parser, token):
 
 class FeaturedNode(template.Node):
     def render(self, context):
-        context['featured_project_list'] = Project.objects.live().featured()
+        context['featured_project_list'] = Project.objects.live().filter(featured=True)
         return ''
 		
 register = template.Library()
