@@ -70,7 +70,7 @@ class ProjectBase(models.Model):
 
     @permalink
     def get_absolute_url(self):
-        return ('projects_project_detail', [str(self.slug)])
+        return ('portfolio_project_detail', [str(self.slug)])
         
     def __unicode__(self):
         return u'%s' % self.name
