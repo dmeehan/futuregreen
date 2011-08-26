@@ -1,5 +1,23 @@
 # studio/models.py
 
+
+class Contact(ContactBase):
+    pass
+
+class Client(Contact):
+    def set_relation(self):
+        self.relation = 'client'
+
+    class meta:
+        proxy = True
+
+class Collaborator(Contact):
+    def set_relation(self):
+        self.relation = 'collaborator'
+
+    class meta:
+        proxy = True
+
 class EmployeeType(models.Model):
     name =  models.CharField(max_length=255)
     description = models.TextField(blank=True)
