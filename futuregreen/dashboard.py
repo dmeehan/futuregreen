@@ -37,7 +37,7 @@ class CustomIndexDashboard(Dashboard):
                 ),
                 modules.ModelList(
                     title='Content Blocks',
-                    models=('futuregreen.blocks.*',)
+                    models=('futuregreen.content.*',)
                 ),
             ]
         ))

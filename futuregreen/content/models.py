@@ -1,4 +1,4 @@
-# blocks/models.py
+# content/models.py
 
 from blocks.models import TextBlockBase
 from images.models import ImageFieldAutoMixin

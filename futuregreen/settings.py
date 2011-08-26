@@ -127,13 +127,13 @@ INSTALLED_APPS = (
     # backbeat apps
     'images',
     'contacts',
-    'blocks',
+    'content',
 
     # local apps
     'futuregreen.portfolio',
     'futuregreen.blog',
     'futuregreen.people',
-    'futuregreen.blocks',
+    'futuregreen.content',
 )
 
 #==============================================================================
