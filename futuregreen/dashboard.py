@@ -28,16 +28,24 @@ class CustomIndexDashboard(Dashboard):
             collapsible=True,
             children=[
                 modules.ModelList(
+                    title='Content Blocks',
+                    models=('futuregreen.content.*',)
+                ),
+                modules.ModelList(
+                    title='News',
+                    models=('futuregreen.news.*',)
+                ),
+                modules.ModelList(
+                    title='Blog',
+                    models=('futuregreen.blog.*',)
+                ),
+                modules.ModelList(
                     title='Portfolio',
                     models=('futuregreen.portfolio.*',)
                 ),
                 modules.ModelList(
                     title='People',
                     models=('futuregreen.people.*',)
-                ),
-                modules.ModelList(
-                    title='Content Blocks',
-                    models=('futuregreen.content.*',)
                 ),
             ]
         ))
