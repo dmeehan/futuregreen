@@ -1,5 +1,6 @@
 # studio/models.py
 
+from contacts.models import ContactBase
 
 class Contact(ContactBase):
     pass
