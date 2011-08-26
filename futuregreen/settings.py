@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'futuregreen.blog',
     'futuregreen.people',
     'futuregreen.content',
+    'futuregreen.news',
 )
 
 #==============================================================================
