@@ -3,6 +3,7 @@
 {% load portfolio_tags %}
 {% block main %}
     {% gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+    <p><a href="#">Read More</a></p>
     {% get_featured_projects %}
     {% for project in featured_project_list %}
         {{ project.name }}
