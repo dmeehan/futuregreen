@@ -30,10 +30,6 @@ class Entry(ArticleBase):
     tags = TaggableManager(blank=True)
     categories = models.ManyToManyField('categories.Category')
 
-    #auto-generated fields
-    date_created = models.DateTimeField(auto_now_add=True)
-    date_modified = models.DateTimeField(auto_now=True)
-
     @permalink
     def get_absolute_url(self):
         return ('blog_entry_detail', [str(self.slug)])
