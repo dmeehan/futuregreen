@@ -26,7 +26,7 @@ class ImageInline(admin.StackedInline):
         }),
     )
     prepopulated_fields = {"slug": ("name",)}
-    extra = 1
+    extra = 0
 
     # Grappelli options
     allow_add = True
