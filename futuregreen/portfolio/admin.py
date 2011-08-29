@@ -49,12 +49,6 @@ class BuilderInline(admin.TabularInline):
     verbose_name_plural = 'builders'
     extra=1
 
-class CategoryInline(admin.TabularInline):
-    model = Project.categories.through
-    verbose_name = 'category'
-    verbose_name_plural = 'categories'
-    extra=1
-
 class ProjectAdmin(admin.ModelAdmin):
     class form(forms.ModelForm):
         class Meta:
@@ -63,7 +57,6 @@ class ProjectAdmin(admin.ModelAdmin):
             }
     inlines = [
        ImageInline,
-       CategoryInline,
        ClientInline,
        CollaboratorInline,
        DesignerInline,
