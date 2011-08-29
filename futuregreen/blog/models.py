@@ -4,7 +4,7 @@ from django.conf import settings
 from django.db import models
 from django.db.models import permalink
 
-from taggit.managers import TaggableManager
+from taggit_autosuggest.managers import TaggableManager
 
 from blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase

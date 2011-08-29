@@ -8,7 +8,7 @@ from django.db import models
 from django.db.models import permalink
 from django.utils.html import strip_tags
 
-from taggit.managers import TaggableManager
+from taggit_autosuggest.managers import TaggableManager
 
 from images.models import RelatedImageAutoBase
 
