@@ -18,7 +18,7 @@ class ImageInline(admin.StackedInline):
     model = ProjectImage
     fieldsets = (
         ('Image', {
-            'fields': ('image', 'name', 'description',),
+            'fields': ('image', 'name', 'caption',),
         }),
         ('Options', {
             'classes': ('collapse closed',),
