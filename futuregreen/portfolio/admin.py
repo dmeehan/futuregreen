@@ -62,7 +62,7 @@ class ProjectAdmin(admin.ModelAdmin):
        BuilderInline,
     ]
 
-    fieldsets = (
+    """fieldsets = (
         (None, {
             'classes': ('collapse open',),
             'fields': ('name', 'short_description',
@@ -79,6 +79,7 @@ class ProjectAdmin(admin.ModelAdmin):
             'fields': ('status', 'slug', 'user',)
         }),
     )
+    """
     list_display = ('name', 'date_end', 'area_normalized', 'status', 'featured')
     list_editable = ('status', 'featured')
     prepopulated_fields = {"slug": ("name",)}
