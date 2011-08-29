@@ -71,7 +71,7 @@ class ProjectAdmin(admin.ModelAdmin):
         }),
         (None, {
             'fields': ('tags', 'date_start', 'date_end',
-                       'area', 'units', 'address',)
+                       'area', 'unit', 'address',)
         }),
         ('Metadata', {
             'classes': ('collapse closed',),
