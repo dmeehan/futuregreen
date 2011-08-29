@@ -198,7 +198,7 @@ class ProjectImage(RelatedImageAutoBase):
         Images for a project.
 
     """
-    project = models.ForeignKey(Project))
+    project = models.ForeignKey(Project)
 
 
 
