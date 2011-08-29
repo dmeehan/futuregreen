@@ -7,8 +7,8 @@ from futuregreen.news.models import Item, ItemImage
 class ImageInline(admin.StackedInline):
     model = ItemImage
     prepopulated_fields = {"slug": ("name",)}
-    fields = ('image', 'is_main', 'name', 'caption',
-              'crop_horz', 'crop_vert', 'slug', 'order' )
+    fields = ('image', 'name', 'caption',
+              'is_main', 'crop_horz', 'crop_vert', 'order' )
     extra = 0
 
     # Grappelli options

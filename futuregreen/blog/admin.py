@@ -7,8 +7,8 @@ from futuregreen.blog.models import Entry, Link, EntryImage, LinkImage
 class ImageInline(admin.StackedInline):
     model = EntryImage
     prepopulated_fields = {"slug": ("name",)}
-    fields = ('image', 'is_main', 'name', 'caption',
-              'crop_horz', 'crop_vert', 'slug', 'order' )
+    fields = ('image', 'name', 'caption',
+              'is_main', 'crop_horz', 'crop_vert', 'order' )
     extra = 0
 
     # Grappelli options
