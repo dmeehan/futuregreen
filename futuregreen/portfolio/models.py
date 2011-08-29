@@ -9,7 +9,6 @@ from django.db.models import permalink
 from django.utils.html import strip_tags
 
 from taggit.managers import TaggableManager
-import categories
 
 from images.models import RelatedImageAutoBase
 
@@ -191,7 +190,6 @@ class Project(ProjectBase, PhysicalMixin):
 
     # taxonomy
     tags = TaggableManager(blank=True)
-    categories = models.ManyToManyField('categories.Category')
 
 
 class ProjectImage(RelatedImageAutoBase):

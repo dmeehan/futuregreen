@@ -5,7 +5,6 @@ from django.db import models
 from django.db.models import permalink
 
 from taggit.managers import TaggableManager
-import categories
 
 from blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase
@@ -16,7 +15,6 @@ class Link(LinkBase):
     """
     # taxonomy
     tags = TaggableManager(blank=True)
-    categories = models.ManyToManyField('categories.Category', blank=True)
 
 
 class Entry(ArticleBase):
@@ -28,7 +26,6 @@ class Entry(ArticleBase):
 
     # taxonomy
     tags = TaggableManager(blank=True)
-    categories = models.ManyToManyField('categories.Category')
 
     @permalink
     def get_absolute_url(self):

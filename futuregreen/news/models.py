@@ -5,7 +5,6 @@ from django.db import models
 from django.db.models import permalink
 
 from taggit.managers import TaggableManager
-import categories
 
 from blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase

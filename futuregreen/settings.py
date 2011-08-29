@@ -117,9 +117,6 @@ INSTALLED_APPS = (
     'south',
     'taggit',
     'imagekit',
-    'categories',
-    'editor',
-    'mptt',
     'django_generic_flatblocks',
     'easy_maps',
 
