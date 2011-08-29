@@ -16,7 +16,7 @@ class Link(LinkBase):
     """
     # taxonomy
     tags = TaggableManager(blank=True)
-    categories = models.ManyToManyField('categories.Category')
+    categories = models.ManyToManyField('categories.Category', blank=True)
 
 
 class Entry(ArticleBase):
@@ -32,16 +32,19 @@ class Entry(ArticleBase):
 
     @permalink
     def get_absolute_url(self):
-        return ('blog_entry_detail', [str(self.slug)])
+        return ('blog_entry_detail', None, {
+            'year': self.publish.year,
+            'month': self.publish.strftime('%b').lower(),
+            'day': self.publish.day,
+            'slug': self.slug
+        })
 
-
-
+    
 class EntryImage(RelatedImageAutoBase):
     """
         Images for a blog entry.
     """
     entry = models.ForeignKey(Entry)
-
 
 
 

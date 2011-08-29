@@ -17,7 +17,12 @@ class Item(ArticleBase):
 
     @permalink
     def get_absolute_url(self):
-        return ('news_item_detail', [str(self.slug)])
+        return ('news_item_detail', None, {
+            'year': self.publish.year,
+            'month': self.publish.strftime('%b').lower(),
+            'day': self.publish.day,
+            'slug': self.slug
+        })
 
 class ItemImage(RelatedImageAutoBase):
     """
