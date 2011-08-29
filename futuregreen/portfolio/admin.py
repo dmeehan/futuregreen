@@ -67,6 +67,8 @@ class ProjectAdmin(admin.ModelAdmin):
             }
             
     inlines = [
+       ProjectTypeInline,
+       LandscapeTypeInline,
        ImageInline,
        ClientInline,
        CollaboratorInline,
@@ -86,7 +88,7 @@ class ProjectAdmin(admin.ModelAdmin):
                        'area', 'unit', 'address',)
         }),
         ('Metadata', {
-            'classes': ('collapse open',),
+            'classes': ('collapse closed',),
             'fields': ('status', 'slug', 'user',)
         }),
     )
