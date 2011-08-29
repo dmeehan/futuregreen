@@ -33,22 +33,22 @@ class CustomIndexDashboard(Dashboard):
                     models=('futuregreen.portfolio.*',)
                 ),
                 modules.ModelList(
-                    css_classes=('collapse closed',),
+                    css_classes=('collapse open',),
                     title='People',
                     models=('futuregreen.people.*',)
                 ),
                 modules.ModelList(
-                    css_classes=('collapse closed',),
+                    css_classes=('collapse open',),
                     title='Content Blocks',
                     models=('futuregreen.content.*',)
                 ),
                 modules.ModelList(
-                    css_classes=('collapse closed',),
+                    css_classes=('collapse open',),
                     title='News',
                     models=('futuregreen.news.*',)
                 ),
                 modules.ModelList(
-                    css_classes=('collapse closed',),
+                    css_classes=('collapse open',),
                     title='Blog',
                     models=('futuregreen.blog.*',)
                 ),
