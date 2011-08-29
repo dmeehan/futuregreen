@@ -6,7 +6,6 @@ from futuregreen.blog.models import Entry, Link, EntryImage, LinkImage
 
 class ImageInline(admin.StackedInline):
     model = EntryImage
-    prepopulated_fields = {"slug": ("name",)}
     fields = ('image', 'name', 'caption',
               'is_main', 'crop_horz', 'crop_vert', 'order' )
     extra = 0
