@@ -66,15 +66,17 @@ class ProjectAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
+            'classes': ('collapse open',),
             'fields': ('name', 'short_description',
                        'description', 'external_url')
         }),
         (None, {
+            'classes': ('collapse open',),
             'fields': ('tags', 'date_start', 'date_end',
                        'area', 'unit', 'address',)
         }),
         ('Metadata', {
-            'classes': ('collapse closed',),
+            'classes': ('collapse open',),
             'fields': ('status', 'slug', 'user',)
         }),
     )
