@@ -1,6 +1,7 @@
 # studio/models.py
 
 from django.db import models
+from django.auth.models import User
 
 from contacts.models import ContactBase
 from images.models import ImageFieldAutoMixin
@@ -48,6 +49,8 @@ class Employee(ImageFieldAutoMixin, Contact):
     job_title = models.CharField(max_length=250)
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_FULL)
+
+    user = models.ForeignKey(User, blank=True)
 
     def save(self, force_insert=False, force_update=False):
         self.contact_type = self.TYPE_PERSON

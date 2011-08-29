@@ -23,7 +23,7 @@ class EmployeeAdmin(admin.ModelAdmin):
         }),
         ('Metadata', {
             'classes': ('collapse closed',),
-            'fields': ('slug',)
+            'fields': ('slug', 'user',)
         }),
     )
 
