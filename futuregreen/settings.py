@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'django_generic_flatblocks',
     'easy_maps',
     'categories',
+    'editor',
 
     # backbeat apps
     'images',
