@@ -62,7 +62,7 @@ class ProjectAdmin(admin.ModelAdmin):
        DesignerInline,
        BuilderInline,
     ]
-    exclude = ('clients', 'collaborators', 'designers', 'builders', 'categories',)
+    exclude = ('clients', 'collaborators', 'designers', 'builders',)
     list_display = ('name', 'date_end', 'area_normalized', 'status', 'featured')
     list_editable = ('status', 'featured')
     prepopulated_fields = {"slug": ("name",)}
