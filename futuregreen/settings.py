@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'imagekit',
     'django_generic_flatblocks',
     'easy_maps',
+    'categories',
 
     # backbeat apps
     'images',
@@ -172,6 +173,17 @@ GRAPPELLI_ADMIN_TITLE = 'Future Green Studio'
 GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
 EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07VxS9kqQgB3QHZLQ48Isywu37uNS74w'
+
+CATEGORIES_SETTINGS = {
+    'M2M_REGISTRY': {
+        'blog.Entry': 'categories',
+        'blog.Links': 'categories',
+        'portfolio.Project': (
+            {'name': 'landscape_type', 'related_name': 'project_landscape_type'},
+            {'name': 'categories', 'related_name': 'project_categories'},
+        ),
+    }
+}
 
 
 #==============================================================================

@@ -193,6 +193,7 @@ class Project(ProjectBase, PhysicalMixin):
     tags = TaggableManager(blank=True)
 
 
+
 class ProjectImage(RelatedImageAutoBase):
     """
         Images for a project.
