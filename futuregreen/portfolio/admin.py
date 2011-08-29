@@ -18,11 +18,11 @@ class ImageInline(admin.StackedInline):
     model = ProjectImage
     fieldsets = (
         (None, {
-            'fields': ('image', 'name', 'caption',),
+            'fields': ('image', 'name', 'caption','slug',),
         }),
-        (None, {
+        ('Options', {
             'classes': ('collapse closed',),
-            'fields': ('is_main', 'crop_horz', 'crop_vert', 'slug', 'order')
+            'fields': ('is_main', 'crop_horz', 'crop_vert', 'order')
         }),
     )
     prepopulated_fields = {"slug": ("name",)}
