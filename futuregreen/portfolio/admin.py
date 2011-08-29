@@ -16,10 +16,17 @@ class ProjectImageAdmin(admin.ModelAdmin):
 
 class ImageInline(admin.StackedInline):
     model = ProjectImage
+    fieldsets = (
+        ('Image', {
+            'fields': ('image', 'name', 'description',)
+        }),
+        ('Options', {
+            'classes': ('collapse closed',),
+            'fields': ('is_main', 'crop_horz', 'crop_vert', 'slug', 'order')
+        }),
+    )
     prepopulated_fields = {"slug": ("name",)}
-    fields = ('image', 'is_main', 'name', 'caption',
-              'crop_horz', 'crop_vert', 'slug', 'order' )
-    extra = 0
+    extra = 1
 
     # Grappelli options
     allow_add = True
