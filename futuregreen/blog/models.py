@@ -33,9 +33,9 @@ class Entry(ArticleBase):
     @permalink
     def get_absolute_url(self):
         return ('blog_entry_detail', None, {
-            'year': self.publish.year,
-            'month': self.publish.strftime('%b').lower(),
-            'day': self.publish.day,
+            'year': self.date_published.year,
+            'month': self.date_published.strftime('%b').lower(),
+            'day': self.date_published.day,
             'slug': self.slug
         })
 
