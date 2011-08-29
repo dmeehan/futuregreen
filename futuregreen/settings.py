@@ -177,7 +177,7 @@ EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07
 CATEGORIES_SETTINGS = {
     'M2M_REGISTRY': {
         'blog.Entry': 'categories',
-        'blog.Links': 'categories',
+        'blog.Link': 'categories',
         'portfolio.Project': (
             {'name': 'landscape_type', 'related_name': 'project_landscape_type'},
             {'name': 'categories', 'related_name': 'project_categories'},
