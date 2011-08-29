@@ -7,6 +7,7 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 SITE_ROOT = os.path.join(PROJECT_DIR, os.pardir)
 PROJECT_URL = '/'
 
+DEBUG = FALSE
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
