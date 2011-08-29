@@ -17,10 +17,10 @@ class ProjectImageAdmin(admin.ModelAdmin):
 class ImageInline(admin.StackedInline):
     model = ProjectImage
     fieldsets = (
-        ('Image', {
+        (None, {
             'fields': ('image', 'name', 'caption',),
         }),
-        ('Options', {
+        (None, {
             'classes': ('collapse closed',),
             'fields': ('is_main', 'crop_horz', 'crop_vert', 'slug', 'order')
         }),
