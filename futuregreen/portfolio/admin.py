@@ -10,16 +10,14 @@ from futuregreen.portfolio.models import Project, ProjectImage
 class ProjectImageAdmin(admin.ModelAdmin):
     model = ProjectImage
     list_display = ('name', 'admin_thumbnail_view', 'project')
-    prepopulated_fields = {"slug": ("name",)}
 
     ordering = ('project',)
 
 class ImageInline(admin.StackedInline):
     model = ProjectImage
-    fields = ('image', 'name', 'caption','slug',
+    fields = ('image', 'name', 'caption',
               'is_main', 'crop_horz', 'crop_vert', 'order',)
-    prepopulated_fields = {"slug": ("name",)}
-    extra = 1
+    extra = 0
 
     # Grappelli options
     allow_add = True
