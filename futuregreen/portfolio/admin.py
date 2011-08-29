@@ -55,6 +55,7 @@ class ProjectAdmin(admin.ModelAdmin):
             widgets = {
                 'address': AddressWithMapWidget({'class': 'vTextField'})
             }
+            
     inlines = [
        ImageInline,
        ClientInline,
@@ -62,7 +63,21 @@ class ProjectAdmin(admin.ModelAdmin):
        DesignerInline,
        BuilderInline,
     ]
-    exclude = ('clients', 'collaborators', 'designers', 'builders',)
+
+    fieldsets = (
+        (None, {
+            'fields': ('name', 'short_description',
+                       'description', 'external_url')
+        }),
+        (None, {
+            'fields': ('tags', 'date_start', 'date_end',
+                       'area', 'units', 'address',)
+        }),
+        ('Metadata', {
+            'classes': ('collapse closed',),
+            'fields': ('status', 'slug', 'user',)
+        }),
+    )
     list_display = ('name', 'date_end', 'area_normalized', 'status', 'featured')
     list_editable = ('status', 'featured')
     prepopulated_fields = {"slug": ("name",)}
