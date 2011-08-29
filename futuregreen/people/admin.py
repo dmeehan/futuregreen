@@ -42,7 +42,6 @@ class EmployeeAdmin(admin.ModelAdmin):
         }),
     )
 
-admin.site.register(Client, ContactAdmin)
-admin.site.register(Collaborator, ContactAdmin)
+admin.site.register(Contact, ContactAdmin)
 admin.site.register(Employee, EmployeeAdmin)
 admin.site.register(EmployeeType, ContactAdmin)
