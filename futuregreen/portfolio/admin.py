@@ -70,7 +70,8 @@ class ProjectAdmin(admin.ModelAdmin):
         }),
         (None, {
             'classes': ('collapse open',),
-            'fields': ('tags', 'date_start', 'date_end',
+            'fields': ('categories', 'landscape_type',
+                       'tags', 'date_start', 'date_end',
                        'area', 'unit', 'address',)
         }),
         ('Metadata', {
