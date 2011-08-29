@@ -47,6 +47,18 @@ class BuilderInline(admin.TabularInline):
     verbose_name_plural = 'builders'
     extra=1
 
+class ProjectTypeInline(admin.TabularInline):
+    model = Project.projecttype.through
+    verbose_name = 'project type'
+    verbose_name_plural = 'project types'
+    extra=1
+
+class LandscapeTypeInline(admin.TabularInline):
+    model = Project.landscapetype.through
+    verbose_name = 'landscape type'
+    verbose_name_plural = 'landscape types'
+    extra=1
+
 class ProjectAdmin(admin.ModelAdmin):
     class form(forms.ModelForm):
         class Meta:
@@ -62,7 +74,7 @@ class ProjectAdmin(admin.ModelAdmin):
        BuilderInline,
     ]
 
-    """fieldsets = (
+    fieldsets = (
         (None, {
             'classes': ('collapse open',),
             'fields': ('name', 'short_description',
@@ -70,8 +82,7 @@ class ProjectAdmin(admin.ModelAdmin):
         }),
         (None, {
             'classes': ('collapse open',),
-            'fields': ('categories', 'landscape_type',
-                       'tags', 'date_start', 'date_end',
+            'fields': ('tags', 'date_start', 'date_end',
                        'area', 'unit', 'address',)
         }),
         ('Metadata', {
@@ -79,7 +90,7 @@ class ProjectAdmin(admin.ModelAdmin):
             'fields': ('status', 'slug', 'user',)
         }),
     )
-    """
+
     list_display = ('name', 'date_end', 'area_normalized', 'status', 'featured')
     list_editable = ('status', 'featured')
     prepopulated_fields = {"slug": ("name",)}

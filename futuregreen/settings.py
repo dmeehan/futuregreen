@@ -180,8 +180,8 @@ CATEGORIES_SETTINGS = {
         'blog.Entry': 'categories',
         'blog.Link': 'categories',
         'portfolio.Project': (
-            {'name': 'landscape_type', 'related_name': 'project_landscape_type'},
-            {'name': 'categories', 'related_name': 'project_categories'},
+            {'name': 'landscape_types', 'related_name': 'landscape_types'},
+            {'name': 'project_types', 'related_name': 'project_types'},
         ),
     }
 }
