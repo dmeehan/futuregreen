@@ -48,13 +48,13 @@ class BuilderInline(admin.TabularInline):
     extra=1
 
 class ProjectTypeInline(admin.TabularInline):
-    model = Project.projecttypes.through
+    model = Project.project_types.through
     verbose_name = 'project type'
     verbose_name_plural = 'project types'
     extra=1
 
 class LandscapeTypeInline(admin.TabularInline):
-    model = Project.landscapetypes.through
+    model = Project.landscape_types.through
     verbose_name = 'landscape type'
     verbose_name_plural = 'landscape types'
     extra=1
