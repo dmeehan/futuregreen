@@ -4,7 +4,6 @@ from django import forms
 from django.contrib import admin
 
 from easy_maps.widgets import AddressWithMapWidget
-from categories.admin import CategoryAdmin
 
 from futuregreen.portfolio.models import Project, ProjectImage, ProjectType, LandscapeType
 
@@ -100,7 +99,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectImage, ProjectImageAdmin)
-admin.site.register(ProjectType, CategoryAdmin)
-admin.site.register(LandscapeType, CategoryAdmin)
+admin.site.register(ProjectType)
+admin.site.register(LandscapeType)
 
 
