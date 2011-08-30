@@ -206,10 +206,8 @@ class ProjectImage(RelatedImageAutoBase):
 
 
 class ProjectType(Category):
-    class Meta:
-        proxy = True
+    pass
 
 class LandscapeType(Category):
-    class Meta:
-        proxy = True
+    pass
 
