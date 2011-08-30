@@ -11,7 +11,7 @@
         <article class="project featured">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
-                    <img src="{{ image.projectlist.url }}" />
+                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.projectlist.url }}" /></a>
                 {% endif %}
             {%  endfor %}
         {{ project.name }}
