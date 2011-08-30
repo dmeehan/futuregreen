@@ -1,6 +1,6 @@
 {% extends "portfolio/portfolio_base.html" %}
 {% block page_title %}: {{ project.name }}{% endblock page_title %}
-{% block main %}
+{% block content %}
     <article class="project">
         <header><h1>{{ project.name }}</h1></header>
         {% if project.projectimage_set.all %}
@@ -98,4 +98,4 @@
         {% endif %}
     </article>
     
-{% endblock main %}
+{% endblock content %}

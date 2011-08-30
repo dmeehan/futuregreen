@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load generic_flatblocks %}
 {% load portfolio_tags %}
-{% block main %}
+{% block content %}
     <article id="profile" class="text featured">
     {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     <p><a href="#">Read More</a></p>
@@ -17,4 +17,4 @@
         {{ project.name }}
         </article>
     {% endfor %}
-{% endblock main %}
+{% endblock content %}
