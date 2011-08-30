@@ -7,9 +7,9 @@
         <section class="slideshow">
             {% for image in project.projectimage_set.all %}
                 <article class="images">
-                    <img src="{{ image.detail.url }}"
-                         height="{{ image.detail.height }}"
-                         width="{{ image.detail.width }}"
+                    <img src="{{ image.projectdetail.url }}"
+                         height="{{ image.projectdetail.height }}"
+                         width="{{ image.projectdetail.width }}"
                          alt="{{ image.caption }}"/>
                      {% if image.caption %}<p>{{ image.caption }}</p>{% endif %}
                 </article>
