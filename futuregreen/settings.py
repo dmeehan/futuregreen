@@ -175,17 +175,6 @@ GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
 EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07VxS9kqQgB3QHZLQ48Isywu37uNS74w'
 
-CATEGORIES_SETTINGS = {
-    'M2M_REGISTRY': {
-        'blog.Entry': 'categories',
-        'blog.Link': 'categories',
-        'portfolio.Project': (
-            {'name': 'landscape_types', 'related_name': 'landscape_types'},
-            {'name': 'project_types', 'related_name': 'project_types'},
-        ),
-    }
-}
-
 
 #==============================================================================
 # local app settings

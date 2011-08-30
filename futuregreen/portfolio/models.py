@@ -9,6 +9,7 @@ from django.db.models import permalink
 from django.utils.html import strip_tags
 
 from taggit.managers import TaggableManager
+from categories.models import Category
 
 from images.models import RelatedImageAutoBase
 
@@ -170,6 +171,7 @@ class PhysicalMixin(models.Model):
     def save(self, force_insert=False, force_update=False):
         self.area_normalized = self.convert(self.UNIT_SQUAREFOOT)
         super(PhysicalMixin, self).save(force_insert, force_update)
+        
 
 class Project(ProjectBase, PhysicalMixin):
     """
@@ -191,7 +193,8 @@ class Project(ProjectBase, PhysicalMixin):
 
     # taxonomy
     tags = TaggableManager(blank=True)
-
+    project_types = models.ManyToManyField('ProjectType', blank=True, null=True)
+    landscape_types = models.ManyToManyField('LandscapeType', blank=True, null=True)
 
 
 class ProjectImage(RelatedImageAutoBase):
@@ -202,6 +205,11 @@ class ProjectImage(RelatedImageAutoBase):
     project = models.ForeignKey(Project)
 
 
+class ProjectType(Category):
+    class Meta:
+        proxy = True
 
-
+class LandscapeType(Category):
+    class Meta:
+        proxy = True
 
