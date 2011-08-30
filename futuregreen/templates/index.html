@@ -3,12 +3,17 @@
 {% load portfolio_tags %}
 {% block main %}
     <article id="profile" class="text featured">
-    
+    {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     <p><a href="#">Read More</a></p>
     </article>
     {% get_featured_projects %}
     {% for project in featured_project_list %}
         <article class="project featured">
+            {% for image in project.projectimage_set.all %}
+                {% if image.is_main %}
+                    <img src="image.projectlist.url" />
+                {% endif %}
+            {%  endfor %}
         {{ project.name }}
         </article>
     {% endfor %}
