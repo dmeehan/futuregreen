@@ -59,7 +59,7 @@
             <h2>Landscape Type</h2>
             <ul>
                 {% for category in project.landscape_types.all %}
-                <li> {{ category.parent.name }} </li>
+                <li>{% if category.parent %}<a href="#">{{ category.parent.name }}</a>>{% endif %}<a href="#">{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
             {% endif %}
