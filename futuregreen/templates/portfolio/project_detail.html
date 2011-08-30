@@ -37,7 +37,7 @@
             {% easy_map project.address 180 180 %}
         </section>
     
-         {% if project.tags.all or project.categories.all %}
+         {% if project.tags.all or project.project_types.all or project.landscape_types.all %}
         <section class="classification">
             {% if project.tags.all %}
             <h2>Tags</h2>
@@ -47,10 +47,18 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            {% if project.categories.all %}
-            <h2>Categories</h2>
+            {% if project.project_types.all %}
+            <h2>Project Type</h2>
             <ul>
-                {% for category in project.categories.all %}
+                {% for category in project.project_types.all %}
+                <li> {{ category.name }} </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% if project.landscape_types.all %}
+            <h2>Landscape Type</h2>
+            <ul>
+                {% for category in project.landscape_types.all %}
                 <li> {{ category.name }} </li>
                 {% endfor %}
             </ul>
