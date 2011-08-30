@@ -68,9 +68,9 @@ class ProjectAdmin(admin.ModelAdmin):
             }
             
     inlines = [
+       ImageInline,
        ProjectTypeInline,
        LandscapeTypeInline,
-       ImageInline,
        ClientInline,
        CollaboratorInline,
        DesignerInline,
