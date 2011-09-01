@@ -21,6 +21,6 @@ urlpatterns = patterns('',
         name = 'categories_tree_list'),
     url(r'^projects/projecttypes/(?P<path>.+)/$', CategoryRelatedList.as_view(
         template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
-    url(r'^projects/landscapetypes/(?P<path>.+)/$', CategoryRelatedList.as_view(
+    url(r'^projects/landscapetypes/(?P<path>.+)/$', CategoryRelatedList.as_view(model=Project,
         template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
 )
