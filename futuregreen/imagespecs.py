@@ -8,22 +8,22 @@ class ResizeAdminThumbnail(processors.Resize):
     height = 67
     crop = True
 
-class ResizeProjectThumbnail(processors.Resize):
+class ResizeThumbnail(processors.Resize):
     width = 80
     height = 80
     crop = True
 
-class ResizeProjectList(processors.Resize):
+class ResizeList(processors.Resize):
     width = 180
     height = 180
     crop = True
 
-class ResizeProjectDetail(processors.Resize):
+class ResizeDetail(processors.Resize):
     width = 780
     height = 380
     crop = True
 
-class ResizeProjectMax(processors.Resize):
+class ResizeMax(processors.Resize):
     width = 1080
 
 class EnhanceSmall(processors.Adjustment):
@@ -39,14 +39,14 @@ class AdminThumbnail(ImageSpec):
     pre_cache = False
     processors = [ResizeAdminThumbnail, EnhanceSmall]
 
-class ProjectThumbnail(ImageSpec):
+class Thumbnail(ImageSpec):
     pre_cache = False
     processors = [ResizeProjectThumbnail, EnhanceSmall]
 
-class ProjectList(ImageSpec):
+class List(ImageSpec):
     pre_cache = False
     processors = [ResizeProjectList]
 
-class ProjectDetail(ImageSpec):
+class Detail(ImageSpec):
     pre_cache = False
     processors = [ResizeProjectDetail]
