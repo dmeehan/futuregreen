@@ -14,10 +14,10 @@ class ProjectListView(ListView):
     paginate_by = settings.PROJECT_PAGINATE_BY
 
 class ProjectSizeAscListView(ProjectListView):
-    queryset = Project._default_manager.size_asc()
+    pass
 
 class ProjectSizeDescListView(ProjectListView):
-    queryset = Project._default_manager.size_desc()
+    pass
 
 class ProjectDateListView(ProjectListView):
     pass
