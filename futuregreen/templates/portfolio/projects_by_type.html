@@ -11,7 +11,7 @@
    </header>
     {% endblock content_header %}
     {% for project in category.projecttype.project_set.all %}
-        {{ project }}
+        {% include "portfolio/project_snippet.html" %}
     {% endfor %}
 {% endblock content %}
 
