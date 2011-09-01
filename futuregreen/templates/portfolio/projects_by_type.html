@@ -1,5 +1,5 @@
 {% extends 'portfolio/project_list.html' %}
-{% block page_header %}
+{% block content_header %}
     <header>
     {% load category_tags %}
     {% breadcrumbs category ">" %}
@@ -11,7 +11,7 @@
                <li><a href="{{ child.get_absolute_url }}">{{ child }}</a></li>
                 {% endfor %}</ul>
        {% endif %}
-        {% block page_title %}{{ category }}{% endblock page_title %}
+        {% block content_title %}{{ category }}{% endblock content_title %}
    </header>
-{% endblock page_header %}
+{% endblock content_header %}
 
