@@ -2,10 +2,12 @@
 
 from django.conf import settings
 from django.conf.urls.defaults import *
+from django.views.generic import ListView, DetailView
 
 from categories.views import CategoryDetailView, CategoryRelatedList
 
 from futuregreen.portfolio.views import *
+from futuregreen.portfolio.models import ProjectType
 
 urlpatterns = patterns('',
     url(r'^projects/$', ProjectListView.as_view(), name='portfolio_project_list'),
@@ -17,6 +19,8 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
+    url(r'^projects/projecttypes/$', ListView.as_view(queryset = ProjectType.filter(level=0),
+        name = 'categories_tree_list'),
     url(r'^projects/projecttypes/(?P<path>.+)/$', CategoryDetailView.as_view(model=ProjectType,
         template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
 )
