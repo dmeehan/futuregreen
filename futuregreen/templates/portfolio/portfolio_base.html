@@ -11,5 +11,20 @@
    {%  block main %}
    {%  endblock main %}
    {%  block aside %}
+       <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url portfolio_projects_area_asc %}">
+                           View by size: largest to smallest
+                        </a>
+                    </li>
+                    <li><a href="{% url portfolio_projects_area_desc %}">
+                            View by size: smallest to largest
+                        </a>
+                   </li>
+                </ul>
+            </nav>
+       </aside>
    {%  endblock aside %}
 {% endblock content %}

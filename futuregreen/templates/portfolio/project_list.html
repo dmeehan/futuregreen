@@ -1,7 +1,7 @@
 {% extends "portfolio/portfolio_base.html" %}
 
 
-<section class="project-list">
+
     {% block content_header %}
     <header>
     {% block content_title %}
@@ -10,8 +10,10 @@
     </header>
     {% endblock content_header %}
     {% block main %}
+        <section class="project-list">
         {% for project in project_list %}
             {% include "portfolio/project_snippet.html" %}
         {% endfor %}
+        </section>
     {% endblock main %}
-</section>
+
