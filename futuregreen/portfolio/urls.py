@@ -3,6 +3,8 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 
+from categories.views import CategoryDetailView, CategoryRelatedList,
+
 from futuregreen.portfolio.views import *
 
 urlpatterns = patterns('',
@@ -11,7 +13,5 @@ urlpatterns = patterns('',
    url(r'^projects/current/$', ProjectCurrentListView.as_view(), name = 'portfolio_project_current'),
    url(r'^projects/scale/ascending/$', ProjectSizeAscListView.as_view(), name = 'portfolio_project_area_asc'),
    url(r'^projects/scale/descending/$', ProjectSizeDescListView.as_view(), name = 'portfolio_project_area_desc'),
-   url(r'^projects/type/(\w+)/$', ProjectProjectTypeListView.as_view(), name = 'portfolio_project_projecttype'),
-   url(r'^projects/landscape/(\w+)/$', ProjectLandscapeTypeListView.as_view(), name = 'portfolio_project_landscapetype'),
    url(r'^project/(?P<slug>[-\w]+)/$', ProjectDetailView.as_view(), name = 'portfolio_project_detail'),
 )
