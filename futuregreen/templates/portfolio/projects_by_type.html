@@ -2,16 +2,10 @@
 {% block content_header %}
     <header>
     {% load category_tags %}
-    {% breadcrumbs category ">" %}
-    {% if category.description %}<p>{{ category.description }}</p>{% endif %}
-       {% if category.children.count %}
-           <h3>Subcategories</h3>
-           <ul>
-               {% for child in category.children.all %}
-               <li><a href="{{ child.get_absolute_url }}">{{ child }}</a></li>
-                {% endfor %}</ul>
-       {% endif %}
-        {% block content_title %}{{ category }}{% endblock content_title %}
+        <p>{% breadcrumbs category ">" %}</p>
+        {% block content_title %}
+            <h1>{{ category }}</h1>
+        {% endblock content_title %}
    </header>
 {% endblock content_header %}
 
