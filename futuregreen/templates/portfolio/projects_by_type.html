@@ -9,7 +9,7 @@
         {% endblock content_title %}
    </header>
     {% endblock content_header %}
-    {% for project in object_list %}
+    {% for project in category.project_set.all %}
         {{ project }}
     {% endfor %}
 {% endblock content %}
