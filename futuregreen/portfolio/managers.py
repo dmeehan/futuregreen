@@ -13,22 +13,25 @@ class ProjectMixin(object):
         return self.get_query_set().exclude(status=self.model.STATUS_DRAFT)\
                                    .exclude(status=self.model.STATUS_HIDDEN)
     def featured(self):
-        return self.get_query_set().live().filter(featured=True)
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
+                                   .filter(featured=True)
 
     def current(self):
-        return self.get_query_set().live().filter(date_start__gte=datetime.now)
+        return self.get_query_set().filter(date_start__gte=datetime.now)
 
     def completed(self):
-        return self.get_query_set().live().filter(date_end__lte=datetime.now)
+        return self.get_query_set().filter(date_end__lte=datetime.now)
 
     def future(self):
-        return self.get_query_set().live().filter(date_start__lte=datetime.now)
+        return self.get_query_set().filter(date_start__lte=datetime.now)
 
     def size_asc(self):
-        return self.get_query_set().live().order_by('-size_normalized')
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
+                                   .order_by('-size_normalized')
 
     def size_desc(self):
-        return self.get_query_set().live().order_by('size_normalized')
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
+                                   .order_by('size_normalized')
 
 class ProjectQuerySet(QuerySet, ProjectMixin):
     pass

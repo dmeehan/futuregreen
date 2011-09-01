@@ -14,7 +14,7 @@ class ProjectListView(ListView):
     paginate_by = settings.PROJECT_PAGINATE_BY
 
 class ProjectSizeAscListView(ProjectListView):
-    pass
+    queryset = Project._default_manager.size_asc()
 
 class ProjectSizeDescListView(ProjectListView):
     pass
