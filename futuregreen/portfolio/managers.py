@@ -15,15 +15,17 @@ class ProjectMixin(object):
     def featured(self):
         return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
                                    .filter(featured=True)
-
     def current(self):
-        return self.get_query_set().filter(date_start__gte=datetime.now)
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
+                                   .filter(date_start__gte=datetime.now)
 
     def completed(self):
-        return self.get_query_set().filter(date_end__lte=datetime.now)
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
+                                   .filter(date_end__lte=datetime.now)
 
     def future(self):
-        return self.get_query_set().filter(date_start__lte=datetime.now)
+        return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
+                                   .filter(date_start__lte=datetime.now)
 
     def size_asc(self):
         return self.get_query_set().filter(status=self.model.STATUS_LIVE)\

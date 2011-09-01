@@ -96,6 +96,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
     list_display = ('name', 'date_end', 'area_normalized', 'status', 'featured')
     list_editable = ('status', 'featured')
+    list_filter = ('project_types', 'landscape_types', 'featured', 'status')
     prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(Project, ProjectAdmin)
