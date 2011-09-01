@@ -41,12 +41,12 @@ class AdminThumbnail(ImageSpec):
 
 class Thumbnail(ImageSpec):
     pre_cache = False
-    processors = [ResizeProjectThumbnail, EnhanceSmall]
+    processors = [ResizeThumbnail, EnhanceSmall]
 
 class List(ImageSpec):
     pre_cache = False
-    processors = [ResizeProjectList]
+    processors = [ResizeList]
 
 class Detail(ImageSpec):
     pre_cache = False
-    processors = [ResizeProjectDetail]
+    processors = [ResizeDetail]
