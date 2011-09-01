@@ -18,5 +18,5 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
     url(r'^projects/projecttypes/(?P<path>.+)/$', CategoryDetailView.as_view(model=ProjectType,
-        template = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
+        template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
 )
