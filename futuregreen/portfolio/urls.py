@@ -3,7 +3,7 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 
-from categories.views import CategoryDetailView, CategoryRelatedList,
+from categories.views import CategoryDetailView, CategoryRelatedList
 
 from futuregreen.portfolio.views import *
 

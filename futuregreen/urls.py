@@ -14,8 +14,5 @@ urlpatterns = patterns('',
 
     # portfolio
     (r'^portfolio/', include('futuregreen.portfolio.urls')),
-
-    # categories
-    (r'^categories/', include('categories.urls')),
     
 )
