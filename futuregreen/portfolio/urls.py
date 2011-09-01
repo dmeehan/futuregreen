@@ -10,6 +10,6 @@ urlpatterns = patterns('',
    url(r'^projects/completed/$', ProjectCompletedListView.as_view(), name='portfolio_project_completed'),
    url(r'^projects/current/$', ProjectCurrentListView.as_view(), name = 'portfolio_project_current'),
    url(r'^projects/scale/ascending/$', ProjectSizeAscListView.as_view(), name = 'portfolio_project_area_asc'),
-   url(r'^projects/scale/desending/$', ProjectSizeDescListView.as_view(), name = 'portfolio_project_area_desc'),
+   url(r'^projects/scale/descending/$', ProjectSizeDescListView.as_view(), name = 'portfolio_project_area_desc'),
    url(r'^project/(?P<slug>[-\w]+)/$', ProjectDetailView.as_view(), name = 'portfolio_project_detail'),
 )
