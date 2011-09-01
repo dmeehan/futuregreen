@@ -27,11 +27,11 @@ class ProjectMixin(object):
 
     def size_asc(self):
         return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
-                                   .order_by('-area_normalized')
+                                   .order_by('area_normalized')
 
     def size_desc(self):
         return self.get_query_set().filter(status=self.model.STATUS_LIVE)\
-                                   .order_by('area_normalized')
+                                   .order_by('-area_normalized')
 
 class ProjectQuerySet(QuerySet, ProjectMixin):
     pass

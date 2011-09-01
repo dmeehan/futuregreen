@@ -17,7 +17,7 @@ class ProjectSizeAscListView(ProjectListView):
     queryset = Project._default_manager.size_asc()
 
 class ProjectSizeDescListView(ProjectListView):
-    pass
+    queryset = Project._default_manager.size_desc()
 
 class ProjectDateListView(ProjectListView):
     pass
