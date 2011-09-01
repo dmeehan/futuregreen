@@ -5,11 +5,12 @@
     {% load category_tags %}
         <p>{% breadcrumbs category ">" %}</p>
         {% block content_title %}
-            <h1>{{ projecttype }} Projects {{ category }}</h1>
+            <h1>{{ category }} Projects</h1>
+            <p>Projecttype = {{ category.projectype }}</p>
         {% endblock content_title %}
    </header>
     {% endblock content_header %}
-    {% for project in projecttype.project_set.all %}
+    {% for project in category.projecttype.project_set.all %}
         {{ project }}
     {% endfor %}
 {% endblock content %}
