@@ -1,13 +1,17 @@
-{% extends 'portfolio/portfolio_base.html' %}
-{% load category_tags %}
-{% block content %}
-{% breadcrumbs category %}
-{% breadcrumbs category ">" %}
-{% display_path_as_ul category %}
-{% display_drilldown_as_ul category %}
-<p>{{ category.get_ancestors|category_path }}</p>
-<h2>{{ category }}</h2>
-{% if category.parent %}<h3>Go up to <a href="{{ category.parent.get_absolute_url }}">{{ category.parent }}</a></h3>{% endif %}
-{% if category.description %}<p>{{ category.description }}</p>{% endif %}
-{% if category.children.count %}<h3>Subcategories</h3><ul>{% for child in category.children.all %}<li><a href="{{ child.get_absolute_url }}">{{ child }}</a></li>{% endfor %}</ul>{% endif %}
-{% endblock %}
+{% extends 'portfolio/project_list.html' %}
+{% block page_header %}
+    <header>
+    {% load category_tags %}
+    {% breadcrumbs category ">" %}
+    {% if category.description %}<p>{{ category.description }}</p>{% endif %}
+       {% if category.children.count %}
+           <h3>Subcategories</h3>
+           <ul>
+               {% for child in category.children.all %}
+               <li><a href="{{ child.get_absolute_url }}">{{ child }}</a></li>
+                {% endfor %}</ul>
+       {% endif %}
+        {% block page_title %}{{ category }}{% endblock page_title %}
+   </header>
+{% endblock page_header %}
+

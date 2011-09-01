@@ -60,7 +60,9 @@
 
 
         <div id="main" role="main">
-        {% block content %}{% endblock content %}
+        {% block content %}
+            {% block page_header %}{% endblock page_header %}
+        {% endblock content %}
         </div>
 
 
