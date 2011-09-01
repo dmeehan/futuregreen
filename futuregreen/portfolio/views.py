@@ -2,9 +2,11 @@
 
 from django.conf import settings
 from django.db.models import get_model
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 
-from futuregreen.portfolio.models import Project
+from futuregreen.portfolio.models import Project, ProjectType, LandscapeType
+
 
 class ProjectDetailView(DetailView):
     model = Project
@@ -27,3 +29,13 @@ class ProjectCurrentListView(ProjectListView):
 
 class ProjectCompletedListView(ProjectListView):
     pass
+
+class ProjectProjectTypeListView(ProjectListView):
+    def get_queryset(self):
+        project_type = get_object_or_404(ProjectType, slug=self.args[0])
+        return Project._default_manager.filter(project_types=project_type)
+
+class ProjectLandscapeTypeListView(ProjectListView):
+    def get_queryset(self):
+        landscape_type = get_object_or_404(LandscapeType, slug=self.args[0])
+        return Project._default_manager.filter(landscape_types=landscape_type)
