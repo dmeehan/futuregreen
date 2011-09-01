@@ -19,8 +19,8 @@ urlpatterns = patterns('',
 
     url(r'^projects/projecttypes/$', ListView.as_view(queryset = ProjectType._default_manager.filter(level=0)),
         name = 'categories_tree_list'),
-    url(r'^projects/projecttypes/(?P<path>.+)/$', CategoryDetailView.as_view(model=ProjectType,
+    url(r'^projects/projecttypes/(?P<path>.+)/$', CategoryRelatedList.as_view(
         template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
-    url(r'^projects/landscapetypes/(?P<path>.+)/$', CategoryDetailView.as_view(model=LandscapeType,
+    url(r'^projects/landscapetypes/(?P<path>.+)/$', CategoryRelatedList.as_view(
         template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
 )
