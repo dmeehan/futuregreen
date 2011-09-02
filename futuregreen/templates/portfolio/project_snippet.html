@@ -3,12 +3,12 @@
         <section class="image"
                  style="float:left;
                         width:{{ project.relative_size|floatformat }}%;
-                        height:100px;
+                        height:180px;
                         overflow:hidden">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}">
-                        <img src="{{ image.list.url }}"
+                        <img src="{{ image.detail.url }}"
                              alt="{{ image.caption }}"
                              width="{{ image.detail.width }}"
                         />
