@@ -20,8 +20,7 @@ class ProjectSizeAscListView(ProjectListView):
     queryset = Project._default_manager.size_asc()
 
 class ProjectSizeListView(ProjectListView):
-    queryset = Project._default_manager.live()\
-                .aggregate(max_area=Max('area_normalized'))
+    queryset = Project._default_manager.live()
 
 class ProjectSizeDescListView(ProjectListView):
     queryset = Project._default_manager.size_desc()
