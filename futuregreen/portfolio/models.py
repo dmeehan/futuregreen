@@ -169,6 +169,11 @@ class PhysicalMixin(models.Model):
     def hectares(self):
         return self.convert(self.UNIT_HECTARE)
 
+    @property
+    def relative_size(self):
+        max = self._default_manager.live().aggregate(Max('area_normalized'))
+        return (self.area_normalized/max)*100
+
     def save(self, force_insert=False, force_update=False):
         self.area_normalized = self.convert(self.UNIT_SQUAREFOOT)
         super(PhysicalMixin, self).save(force_insert, force_update)
@@ -196,11 +201,6 @@ class Project(ProjectBase, PhysicalMixin):
     tags = TaggableManager(blank=True)
     project_types = models.ManyToManyField('ProjectType', blank=True, null=True)
     landscape_types = models.ManyToManyField('LandscapeType', blank=True, null=True)
-
-    @property
-    def relative_size(self):
-        max = self._default_manager.live().aggregate(Max('area_normalized'))
-        return (self.area_normalized/max)*100
 
 
 class ProjectImage(RelatedImageAutoBase):
