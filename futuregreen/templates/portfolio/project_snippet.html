@@ -6,7 +6,7 @@
                     <a href="{{ project.get_absolute_url }}">
                         <img src="{{ image.list.url }}"
                              height="{{ image.list.height }}"
-                             width="{{ image.list.width }}"
+                             width="{{ project.relative_size|floatformat }}%"
                              alt="{{ image.caption }}"/>
                     </a>
                 {% endif %}
