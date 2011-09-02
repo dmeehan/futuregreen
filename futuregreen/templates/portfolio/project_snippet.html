@@ -5,9 +5,8 @@
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}">
                         <img src="{{ image.list.url }}"
-                             height="{{ image.list.height }}"
-                             width="{{ project.relative_size|floatformat }}%"
-                             alt="{{ image.caption }}"/>
+                             alt="{{ image.caption }}"
+                             style="width:{{ project.relative_size|floatformat }}%"/>
                     </a>
                 {% endif %}
             {% endfor %}
