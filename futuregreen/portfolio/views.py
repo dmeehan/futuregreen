@@ -2,6 +2,7 @@
 
 from django.conf import settings
 from django.db.models import get_model
+from django.db.models import Max
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 
@@ -17,6 +18,10 @@ class ProjectListView(ListView):
 
 class ProjectSizeAscListView(ProjectListView):
     queryset = Project._default_manager.size_asc()
+
+class ProjectSizeListView(ProjectListView):
+    queryset = Project._default_manager.live()\
+                .annotate(max_area=Max('area_normalized'))
 
 class ProjectSizeDescListView(ProjectListView):
     queryset = Project._default_manager.size_desc()
