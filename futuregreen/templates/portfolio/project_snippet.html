@@ -3,6 +3,7 @@
         <section class="image"
                  style="float:left;
                         width:{{ project.relative_size|floatformat }}%;
+                        height:100px;
                         overflow:hidden">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
