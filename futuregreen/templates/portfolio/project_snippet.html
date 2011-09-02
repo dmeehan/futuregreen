@@ -18,7 +18,9 @@
             {% if project.date_end %}<p>{{ project.date_end }}</p>{% endif %}
             {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
             <p>{{ project.area|floatformat }} {{ project.get_unit_display }} </p>
-            <p>{{ project.relative_size|floatformat }}</p>
+            <p style="width:{{ project.relative_size|floatformat }}%; height:20px; background: Red;">
+                {{ project.relative_size|floatformat }}
+            </p>
         </section>
 
          {% if project.tags.all or project.categories.all %}
