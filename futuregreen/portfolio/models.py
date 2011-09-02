@@ -6,6 +6,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models import permalink
+from django.db.models import Max
 from django.utils.html import strip_tags
 
 from taggit.managers import TaggableManager
@@ -195,6 +196,11 @@ class Project(ProjectBase, PhysicalMixin):
     tags = TaggableManager(blank=True)
     project_types = models.ManyToManyField('ProjectType', blank=True, null=True)
     landscape_types = models.ManyToManyField('LandscapeType', blank=True, null=True)
+
+    @property
+    def relative_size(self):
+        max = self._default_manager.live().aggregate(Max('area_normalized'))
+        return (self.area_normalized/max)*100
 
 
 class ProjectImage(RelatedImageAutoBase):
