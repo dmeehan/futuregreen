@@ -175,6 +175,7 @@ GRAPPELLI_INDEX_DASHBOARD = 'futuregreen.dashboard.CustomIndexDashboard'
 
 EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07VxS9kqQgB3QHZLQ48Isywu37uNS74w'
 
+PIL_IMAGEFILE_MAXBLOCK = 1024 * 2 ** 10
 
 #==============================================================================
 # local app settings
