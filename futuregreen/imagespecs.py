@@ -19,8 +19,8 @@ class ResizeList(processors.Resize):
     crop = True
 
 class ResizeDetail(processors.Resize):
-    width = 1024
-    height = 686
+    width = 1200
+    height = 804
     crop = True
 
 class EnhanceSmall(processors.Adjustment):
