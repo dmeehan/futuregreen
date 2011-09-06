@@ -20,7 +20,6 @@ class ResizeList(processors.Resize):
 
 class ResizeDetail(processors.Resize):
     width = 1400
-    crop = True
 
 class EnhanceSmall(processors.Adjustment):
     contrast = 1.2
