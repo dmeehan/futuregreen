@@ -2,100 +2,163 @@
 {% block page_title %}: {{ project.name }}{% endblock page_title %}
 {% block main %}
     <article class="project">
-        <header><h1>{{ project.name }}</h1></header>
-        {% if project.projectimage_set.all %}
+    {% if project.projectimage_set.all %}
         <section class="slideshow">
+            <nav>
+                <a href="#open" id="open">Open</a>
+                <a href="#close" id="close">Close</a>
+            </nav>
             {% for image in project.projectimage_set.all %}
-                <article class="images">
-                    <img src="{{ image.detail.url }}"
-                         height="{{ image.detail.height }}"
-                         width="{{ image.detail.width }}"
-                         alt="{{ image.caption }}"/>
-                     {% if image.caption %}<p>{{ image.caption }}</p>{% endif %}
-                </article>
+                <img src="{{ image.detail.url }}"
+                     alt="{{ image.caption }}"/>
+                {% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}
             {% endfor %}
         </section>
         {% endif %}
-        <section class="description">
-            <p>{{ project.description_html|safe }}</p>
-            {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
-        </section>
-        {% if project.date_start or project.date_end %}
-        <section class="dates">
-            <h2>Date</h2>
-            {% if project.date_start %}<p>{{ project.date_start|date:"F Y" }}</p>{% endif %}
-            {% if project.date_end %}<p>{{ project.date_end|date:"F Y" }}</p>{% endif %}
-       {% endif %}
-        </section>
-        <section class="size">
-            <h2>Area</h2>
-            <p>{{ project.area|floatformat }} {{ project.get_unit_display }} </p>
-        </section>
-        <section class="address">
-            <h2>Location</h2>
-            {% load easy_maps_tags %}
-            {% easy_map project.address 180 180 %}
-        </section>
-    
-         {% if project.tags.all or project.project_types.all or project.landscape_types.all %}
-        <section class="classification">
+        <section class="details">
+            <header><h1>{{ project.name }}</h1></header>
+            {% if project.project_types.all or project.landscape_types.all %}
+                <ul class="categories">
+                    {% if project.project_types.all %}
+                        {% for category in project.project_types.all %}
+                            <li> {{ category.name }} </li>
+                        {% endfor %}
+                    {% endif %}
+                    {% if project.landscape_types.all %}
+                        {% for category in project.landscape_types.all %}
+                            <li> {{ category.name }} </li>
+                       {% endfor %}
+                    {% endif %}
+                </ul>
+            {% endif %}
+            {{ project.description_html|safe }}
+            {% if external_url %}
+                <p class="url">{{ project.external_url }}</p>
+            {% endif %}
             {% if project.tags.all %}
-            <h2>Tags</h2>
-            <ul>
-                {% for tag in project.tags.all %}
-                <li> {{ tag.name }} </li>
-                {% endfor %}
-            </ul>
+                <ul class="tags">
+                    {% for tag in project.tags.all %}
+                    <li> {{ tag.name }} </li>
+                    {% endfor %}
+                </ul>
             {% endif %}
-            {% if project.project_types.all %}
-            <h2>Project Type</h2>
-            <ul>
-                {% for category in project.project_types.all %}
-                <li> {{ category.name }} </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        {% if project.landscape_types.all %}
-            <h2>Landscape Type</h2>
-            <ul>
-                {% for category in project.landscape_types.all %}
-                <li>{% if category.parent %}<a href="{{ category.get_absolute_url }}">{{ category.parent.name }}</a> &raquo; {% endif %}<a href="#">{{ category.name }}</a></li>
-                {% endfor %}
-            </ul>
+            {% if project.clients.all or project.collaborators.all %}
+                <div class="people">
+                    {% if project.clients.all %}
+                    <h2>Clients</h2>
+                    <ul>
+                        {% for client in project.clients.all %}
+                        <li> {{ client.name }} </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% if project.collaborators.all %}
+                    <h2>Collaborators</h2>
+                    <ul>
+                        {% for collaborator in project.collaborators.all %}
+                        <li> {{ collaborator.name }} </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
             {% endif %}
         </section>
+        <section class="thumbnails">
+            <ul>
+                <li class="first">&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </ul>
+        </section>
+        <p class="address">
+                {% load easy_maps_tags %}
+                {% easy_map project.address 180 180 %}
+        </p>
+        {% if project.date_end %}
+            <p class="date">{{ project.date_end|date:"F Y" }}</p>
         {% endif %}
-
-        {% if project.clients.all or project.collaborators.all or project.designers.all  %}
-        <section class="people">
-            {% if project.clients.all %}
-            <h2>Clients</h2>
-            <ul>
-                {% for client in project.clients.all %}
-                <li> {{ client.name }} </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-
-            {% if project.collaborators.all %}
-            <h2>Collaborators</h2>
-            <ul>
-                {% for collaborator in project.collaborators.all %}
-                <li> {{ collaborator.name }} </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-
-            {% if project.designers.all %}
-            <h2>Designers</h2>
+        <p class="size">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+        {% if project.designers.all %}
             <ul>
                 {% for designer in project.designers.all %}
                 <li> {{ designer.name }} </li>
                 {% endfor %}
             </ul>
-            {% endif %}
-        </section>
         {% endif %}
     </article>
-    
 {% endblock main %}
+
+{% block js_local %}
+<script type="text/javascript">
+    function Flex() {
+            if ($(".shim").length == 0) {
+                var a = $(".slideshow")
+            } else {
+                var a = $(".shim")
+            }
+            var b = $(".thumbnails li");
+            var c = $(".thumbnails");
+            var d = $(".details");
+            var e = $(".thumbnails ul");
+            var width = a.width();
+            //var height = width * .61803;
+            //var height = width * .75;
+            var thumb_width = b.width();
+            var total_width = c.width();
+            var margin = total_width * .013331;
+
+            b.css('height', thumb_width);
+            b.css('margin-top', margin);
+            b.css('margin-bottom', margin);
+            c.css('margin-bottom', margin);
+            //d.css('height', height);
+            d.css('margin-bottom', margin);
+    }
+
+    $(document).ready(function() {
+        Flex();
+    });
+
+    $(window).resize(function() {
+        Flex();
+    });
+
+    $("#open").click(function () {
+        setTimeout(function(){
+            // Hide the address bar!
+            window.scrollTo(0, 0, 1);
+        }, 0);
+        var height = $(".slideshow").height();
+        $(".slideshow").removeClass('min');
+        $(".slideshow").removeClass('return');
+        $(".slideshow").addClass('start');
+        setTimeout(function() { $(".slideshow").addClass('max'); }, 50);
+        $(".project").prepend('<div class="shim"></div>');
+        $(".shim").css('height', height + 'px');
+        $(".details").css('height', height + 'px');
+    });
+
+    $("#close").click(function () {
+        $(".slideshow").removeClass('max');
+        $(".slideshow").removeClass('start');
+        $(".slideshow").addClass('return');
+        setTimeout(function() { $(".shim").remove(); }, 500);
+        setTimeout(function() { $(".slideshow").removeClass('return'); }, 500);
+        setTimeout(function() { $(".slideshow").addClass('min'); }, 500);
+    });
+</script>
+{% endblock js_local %}

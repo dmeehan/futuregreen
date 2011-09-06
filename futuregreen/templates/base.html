@@ -18,7 +18,10 @@
     {% endblock metadata %}
 
     {% block mobile-viewport %}
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0,
+	width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     {% endblock mobile-viewport %}
 
     {% block favicons %}
@@ -83,11 +86,11 @@
     {% endblock js-frameworks %}
 
     {% block js-global %}
-    <!-- <script defer src="js/script.js"></script> -->
+    
     {% endblock js-global %}
 
     {% block js-local %}
-    <!-- <script defer src="js/script.js"></script> -->
+
     {% endblock js-local %}
 
     {% block google-analytics %}

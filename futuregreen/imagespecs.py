@@ -19,8 +19,8 @@ class ResizeList(processors.Resize):
     crop = True
 
 class ResizeDetail(processors.Resize):
-    width = 780
-    height = 380
+    width = 1600
+    height = 1200
     crop = True
 
 class ResizeMax(processors.Resize):
