@@ -47,35 +47,33 @@
 
 <body>
 {% block body %}
-    <div id="page">
-        {% block header %}
-        <header>
-            <h1><a href="{% url home %}">Future Green Studio</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="{% url portfolio_project_list %}">Portfolio</a></li>
-                    <li>Studio</li>
-                    <li>Blog</li>
-                </ul>
-            </nav>
-        </header>
-        {% endblock header %}
+    {% block header %}
+    <header>
+        <h1><a href="{% url home %}">Future Green Studio</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url portfolio_project_list %}">Portfolio</a></li>
+                <li>Studio</li>
+                <li>Blog</li>
+            </ul>
+        </nav>
+    </header>
+    {% endblock header %}
 
 
-        <div id="main" role="main">
-        {% block content %}
-            {% block content_header %}{% endblock content_header %}
-        {% endblock content %}
-        </div>
-
-
-        {% block footer %}
-        <footer>
-            <p>&copy; {{ now }} Future Green Studio</p>
-            <p>92 3rd Street Brooklyn, NY | 718-855-8995 | info@futuregreenstudio.com</p>
-        </footer>
-        {% endblock footer %}
+    <div id="main" role="main">
+    {% block content %}
+        {% block content_header %}{% endblock content_header %}
+    {% endblock content %}
     </div>
+
+
+    {% block footer %}
+    <footer>
+        <p>&copy; {{ now }} Future Green Studio</p>
+        <p>92 3rd Street Brooklyn, NY | 718-855-8995 | info@futuregreenstudio.com</p>
+    </footer>
+    {% endblock footer %}
 
     <!-- JavaScript at the bottom for fast page loading -->
 
