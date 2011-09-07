@@ -77,6 +77,14 @@ body {
     body > header > h1 {
         margin:0;
         padding:0;
+        float:left;
+        height:80px;
+        width:280px;
+    }
+
+    body > header > nav {
+        float:left;
+        width:480px;
     }
 
     body > header > nav li {
