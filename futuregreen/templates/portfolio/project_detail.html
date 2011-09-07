@@ -66,22 +66,15 @@
         </section>
         <section class="thumbnails">
             <ul>
-                <li class="first">&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
+               {% for image in project.projectimage_set.all %}
+                    <li>
+                        <img src="{{ image.thumbnail.url }}"
+                             alt="{{ image.caption }}"/>
+                   </li>
+               {% endfor %}
+               {% if project.projectimage_set.count < 16 %}
+                   <li>extra</li>
+               {% endif %}
             </ul>
         </section>
         <p class="address">
