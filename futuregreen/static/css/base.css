@@ -79,7 +79,7 @@ body {
         padding:0;
     }
 
-    body > header li {
+    body > header > nav li {
         display:inline;
     }
 
