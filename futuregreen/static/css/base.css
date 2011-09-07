@@ -79,6 +79,10 @@ body {
         padding:0;
     }
 
+    body > header li {
+        display:inline;
+    }
+
     .slideshow {
         float:left;
         width:60.14%;
