@@ -168,6 +168,10 @@ body {
         margin:0;
     }
 
+    .size, .date, .designer {
+        float:left;
+    }
+
 /* expanded slideshow styles */
     .min {
         position:relative;

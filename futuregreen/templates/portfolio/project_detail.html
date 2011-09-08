@@ -85,7 +85,7 @@
             {% endif %}
             <p class="size">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
             {% if project.designers.all %}
-                <ul>
+                <ul class="designer">
                     {% for designer in project.designers.all %}
                     <li> {{ designer.name }} </li>
                     {% endfor %}
