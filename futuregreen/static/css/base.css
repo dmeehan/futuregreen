@@ -151,6 +151,10 @@ body {
         margin-right: 1.331%;
     }
 
+    .thumbnails img {
+        width:100%
+    }
+
     .more {
         float:left;
         width:36.54%;
