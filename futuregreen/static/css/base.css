@@ -91,7 +91,7 @@ body {
         display:inline;
     }
 
-    body > div.main {
+    body > .content {
         overflow: auto;
     }
 

@@ -60,14 +60,11 @@
     </header>
     {% endblock header %}
 
-
-    <div id="main" role="main">
+    <div class="content">
     {% block content %}
-        {% block content_header %}{% endblock content_header %}
     {% endblock content %}
     </div>
-
-
+    
     {% block footer %}
     <footer>
         <p>&copy; {{ now }} Future Green Studio</p>

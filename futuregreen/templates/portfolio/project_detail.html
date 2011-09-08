@@ -1,6 +1,6 @@
 {% extends "portfolio/portfolio_base.html" %}
 {% block page_title %}: {{ project.name }}{% endblock page_title %}
-{% block main %}
+{% block content %}
     <article class="project">
     {% if project.projectimage_set.all %}
         <section class="slideshow">
@@ -94,7 +94,7 @@
             {% endif %}
         </section>
     </article>
-{% endblock main %}
+{% endblock content %}
 
 {% block js_local %}
 <script type="text/javascript">
