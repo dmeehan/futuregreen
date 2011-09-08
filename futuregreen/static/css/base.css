@@ -91,6 +91,10 @@ body {
         display:inline;
     }
 
+    body > div.main {
+        overflow: auto;
+    }
+
     .slideshow {
         float:left;
         width:60.14%;
