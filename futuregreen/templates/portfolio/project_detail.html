@@ -10,7 +10,9 @@
             </nav>
             <ul>
             {% for image in project.projectimage_set.all %}
+                {% spaceless %}
                 <li><img src="{{ image.detail.url }}" alt="{{ image.caption }}"/>{% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}</li>
+                {% endspaceless %}
             {% endfor %}
             </ul>
         </section>
