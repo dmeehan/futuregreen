@@ -3,6 +3,7 @@
 {% block content %}
     <article class="project">
     {% if project.projectimage_set.all %}
+        {% spaceless %}
         <section class="slideshow">
             <nav>
                 <a href="#open" id="open">Open</a>
@@ -10,12 +11,11 @@
             </nav>
             <ul>
             {% for image in project.projectimage_set.all %}
-                {% spaceless %}
-                <li><img src="{{ image.detail.url }}" alt="{{ image.caption }}"/>{% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}</li>
-                {% endspaceless %}
+                <li><img src="{{ image.detail.url }}" alt="{{ image.caption }}" />{% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}</li>
             {% endfor %}
             </ul>
         </section>
+        {% endspaceless %}
         {% endif %}
         <section class="details">
             <header><h1>{{ project.name }}</h1></header>
