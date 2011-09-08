@@ -50,9 +50,9 @@ table {
 
 body {
         min-width:1024px;
-        width:90%;
+        width:85%;
         padding:0;
-        margin:0 5%;
+        margin:0 7.5%;
         position:relative;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
     }
@@ -77,6 +77,22 @@ body {
     body > header > h1 {
         margin:0;
         padding:0;
+        float:left;
+        height:80px;
+        width:280px;
+    }
+
+    body > header > nav {
+        float:left;
+        width:480px;
+    }
+
+    body > header > nav li {
+        display:inline;
+    }
+
+    body > .content {
+        overflow: auto;
     }
 
     .slideshow {
@@ -89,6 +105,7 @@ body {
 
     .slideshow img {
         width:100%;
+        display:block;
     }
 
     .slideshow nav {
@@ -101,7 +118,12 @@ body {
         position:absolute;
         bottom:0;
         left:0;
-        background:rgba(0,0,0,0.5);
+        background:rgba(0,0,0,0.7);
+        color:#fff;
+        line-height:3em;
+        padding:0 1.33%;
+        margin: 0;
+        width:97.34%;
     }
 
     .details {
@@ -112,6 +134,7 @@ body {
     }
 
     .thumbnails {
+        float:left;
         width:62.63%;
         overflow:auto;
         margin:5% 0;
@@ -133,6 +156,24 @@ body {
         width: 9.838%;
         margin-left: 1.331%;
         margin-right: 1.331%;
+    }
+
+    .thumbnails img {
+        width:100%
+    }
+
+    .more {
+        float:left;
+        width:36.54%;
+        margin:0;
+    }
+
+    .size, .date, .designer {
+        float:left;
+    }
+
+    footer {
+        clear:both;
     }
 
 /* expanded slideshow styles */

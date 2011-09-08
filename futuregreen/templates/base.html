@@ -17,12 +17,12 @@
     <meta name="author" content="">
     {% endblock metadata %}
 
-    {% block mobile-viewport %}
+    {% block mobile_viewport %}
     <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0,
 	width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    {% endblock mobile-viewport %}
+    {% endblock mobile_viewport %}
 
     {% block favicons %}
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -47,69 +47,62 @@
 
 <body>
 {% block body %}
-    <div id="page">
-        {% block header %}
-        <header>
-            <h1><a href="{% url home %}">Future Green Studio</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="{% url portfolio_project_list %}">Portfolio</a></li>
-                    <li>Studio</li>
-                    <li>Blog</li>
-                </ul>
-            </nav>
-        </header>
-        {% endblock header %}
+    {% block header %}
+    <header>
+        <h1><a href="{% url home %}">Future Green Studio</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url portfolio_project_list %}">Portfolio</a></li>
+                <li>Studio</li>
+                <li>Blog</li>
+            </ul>
+        </nav>
+    </header>
+    {% endblock header %}
 
-
-        <div id="main" role="main">
-        {% block content %}
-            {% block content_header %}{% endblock content_header %}
-        {% endblock content %}
-        </div>
-
-
-        {% block footer %}
-        <footer>
-            <p>&copy; {{ now }} Future Green Studio</p>
-            <p>92 3rd Street Brooklyn, NY | 718-855-8995 | info@futuregreenstudio.com</p>
-        </footer>
-        {% endblock footer %}
+    <div class="content">
+    {% block content %}
+    {% endblock content %}
     </div>
+    
+    {% block footer %}
+    <footer>
+        <p>&copy; {{ now }} Future Green Studio</p>
+        <p>92 3rd Street Brooklyn, NY | 718-855-8995 | info@futuregreenstudio.com</p>
+    </footer>
+    {% endblock footer %}
 
     <!-- JavaScript at the bottom for fast page loading -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-    {% block js-frameworks %}
+    {% block js_frameworks %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js">\x3C/script>')</script>
-    {% endblock js-frameworks %}
+    {% endblock js_frameworks %}
 
-    {% block js-global %}
-    
-    {% endblock js-global %}
+    {% block js_global %}
+    {% endblock js_global %}
 
-    {% block js-local %}
+    {% block js_local %}
+    {% endblock js_local %}
 
-    {% endblock js-local %}
-
-    {% block google-analytics %}
+    {% block google_analytics %}
     <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-    {% endblock google-analytics %}
+    {% endblock google_analytics %}
 
-    {% block browser-prompt %}
+    {% block browser_prompt %}
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 7 ]>
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
     <![endif]-->
-    {% endblock browser-prompt %}
+    {% endblock browser_prompt %}
 
 {% endblock body %}
 </body>

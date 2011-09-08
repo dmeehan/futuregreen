@@ -1,6 +1,6 @@
 {% extends "portfolio/portfolio_base.html" %}
 {% block page_title %}: {{ project.name }}{% endblock page_title %}
-{% block main %}
+{% block content %}
     <article class="project">
     {% if project.projectimage_set.all %}
         <section class="slideshow">
@@ -8,11 +8,14 @@
                 <a href="#open" id="open">Open</a>
                 <a href="#close" id="close">Close</a>
             </nav>
+            <ul>
             {% for image in project.projectimage_set.all %}
-                <img src="{{ image.detail.url }}"
-                     alt="{{ image.caption }}"/>
-                {% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}
+                <li>
+                    <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
+                    {% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}
+                </li>
             {% endfor %}
+            </ul>
         </section>
         {% endif %}
         <section class="details">
@@ -66,41 +69,31 @@
         </section>
         <section class="thumbnails">
             <ul>
-                <li class="first">&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
+               {% for image in project.projectimage_set.all %}
+                    <li>
+                        <img src="{{ image.thumbnail.url }}"
+                             alt="{{ image.caption }}"/>
+                   </li>
+               {% endfor %}
             </ul>
         </section>
-        <p class="address">
-                {% load easy_maps_tags %}
-                {% easy_map project.address 180 180 %}
-        </p>
-        {% if project.date_end %}
-            <p class="date">{{ project.date_end|date:"F Y" }}</p>
-        {% endif %}
-        <p class="size">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
-        {% if project.designers.all %}
-            <ul>
-                {% for designer in project.designers.all %}
-                <li> {{ designer.name }} </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+        <section class="more">
+            {% load easy_maps_tags %}
+            {% easy_map project.address 180 180 %}
+            {% if project.date_end %}
+                <p class="date">{{ project.date_end|date:"F Y" }}</p>
+            {% endif %}
+            <p class="size">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+            {% if project.designers.all %}
+                <ul class="designer">
+                    {% for designer in project.designers.all %}
+                    <li> {{ designer.name }} </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </section>
     </article>
-{% endblock main %}
+{% endblock content %}
 
 {% block js_local %}
 <script type="text/javascript">
@@ -138,10 +131,6 @@
     });
 
     $("#open").click(function () {
-        setTimeout(function(){
-            // Hide the address bar!
-            window.scrollTo(0, 0, 1);
-        }, 0);
         var height = $(".slideshow").height();
         $(".slideshow").removeClass('min');
         $(".slideshow").removeClass('return');
