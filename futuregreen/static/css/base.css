@@ -172,6 +172,10 @@ body {
         float:left;
     }
 
+    footer {
+        clear:both;
+    }
+
 /* expanded slideshow styles */
     .min {
         position:relative;
