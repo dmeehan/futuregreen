@@ -3,7 +3,6 @@
 {% block content %}
     <article class="project">
     {% if project.projectimage_set.all %}
-        {% spaceless %}
         <section class="slideshow">
             <nav>
                 <a href="#open" id="open">Open</a>
@@ -18,7 +17,6 @@
             {% endfor %}
             </ul>
         </section>
-        {% endspaceless %}
         {% endif %}
         <section class="details">
             <header><h1>{{ project.name }}</h1></header>
