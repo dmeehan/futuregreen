@@ -113,7 +113,10 @@ body {
         position:absolute;
         bottom:0;
         left:0;
-        background:rgba(0,0,0,0.5);
+        background:rgba(0,0,0,0.7);
+        color:#000;
+        padding: 10px;
+        margin: 0;
     }
 
     .details {
@@ -124,6 +127,7 @@ body {
     }
 
     .thumbnails {
+        float:left;
         width:62.63%;
         overflow:auto;
         margin:0 0 0 0;
@@ -145,6 +149,12 @@ body {
         width: 9.838%;
         margin-left: 1.331%;
         margin-right: 1.331%;
+    }
+
+    .more {
+        float:left;
+        width:36.54%;
+        margin:0 0.83%;
     }
 
 /* expanded slideshow styles */

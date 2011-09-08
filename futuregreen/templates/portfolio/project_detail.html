@@ -8,11 +8,15 @@
                 <a href="#open" id="open">Open</a>
                 <a href="#close" id="close">Close</a>
             </nav>
+            <ul>
             {% for image in project.projectimage_set.all %}
+                <li>
                 <img src="{{ image.detail.url }}"
                      alt="{{ image.caption }}"/>
                 {% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}
+                </li>
             {% endfor %}
+            </ul>
         </section>
         {% endif %}
         <section class="details">
@@ -77,21 +81,23 @@
                {% endif %}
             </ul>
         </section>
-        <p class="address">
-                {% load easy_maps_tags %}
-                {% easy_map project.address 180 180 %}
-        </p>
-        {% if project.date_end %}
-            <p class="date">{{ project.date_end|date:"F Y" }}</p>
-        {% endif %}
-        <p class="size">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
-        {% if project.designers.all %}
-            <ul>
-                {% for designer in project.designers.all %}
-                <li> {{ designer.name }} </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+        <section class="more">
+            <p class="address">
+                    {% load easy_maps_tags %}
+                    {% easy_map project.address 180 180 %}
+            </p>
+            {% if project.date_end %}
+                <p class="date">{{ project.date_end|date:"F Y" }}</p>
+            {% endif %}
+            <p class="size">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+            {% if project.designers.all %}
+                <ul>
+                    {% for designer in project.designers.all %}
+                    <li> {{ designer.name }} </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </section>
     </article>
 {% endblock main %}
 
@@ -108,8 +114,8 @@
             var d = $(".details");
             var e = $(".thumbnails ul");
             var width = a.width();
-            //var height = width * .61803;
-            //var height = width * .75;
+            var height = width * .61803;
+            var height = width * .75;
             var thumb_width = b.width();
             var total_width = c.width();
             var margin = total_width * .013331;
@@ -118,7 +124,7 @@
             b.css('margin-top', margin);
             b.css('margin-bottom', margin);
             c.css('margin-bottom', margin);
-            //d.css('height', height);
+            d.css('height', height);
             d.css('margin-bottom', margin);
     }
 
