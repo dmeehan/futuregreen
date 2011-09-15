@@ -95,12 +95,17 @@ body {
         overflow: auto;
     }
 
+/* slideshow */
     .slideshow {
         float:left;
         width:60.14%;
         margin:0 0.83%;
         overflow:hidden;
         position:relative;
+    }
+
+    .slideshow li {
+        float:left;
     }
 
     .slideshow img {
@@ -126,12 +131,16 @@ body {
         width:97.34%;
     }
 
+/* details */
+
     .details {
         float:left;
         width:36.54%;
         margin:0 0.83%;
         overflow:hidden;
     }
+
+/* thumbnails */
 
     .thumbnails {
         float:left;
