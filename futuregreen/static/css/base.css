@@ -105,7 +105,9 @@ body {
     }
 
     .slideshow li {
-        float:left;
+        position:absolute;
+        top:0;
+        left:0;
     }
 
     .slideshow img {
