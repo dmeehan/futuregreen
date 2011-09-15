@@ -102,10 +102,7 @@ body {
         margin:0 0.83%;
         overflow:hidden;
         position:relative;
-    }
-
-    .slideshow li {
-
+        background: #ccc;
     }
 
     .slideshow img {
