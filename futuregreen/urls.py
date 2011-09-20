@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')),
     
     url(r'^$', ListView.as_view(context_object_name = "project_list",
-        queryset = Project.objects.filter(featured=True),
+        queryset = Project._default_manager.live().filter(featured=True),
         template_name = "index.html",),
         name = 'home'),
 
