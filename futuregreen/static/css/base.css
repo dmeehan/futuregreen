@@ -101,9 +101,34 @@ body {
     overflow: hidden;
 }
 
-article.project {
-    width:15%;
-    margin:0 0.833%;
+div.main {
+    float:left;
+    width:50%;
+}
+
+div.secondary {
+     float:left;
+     width:33.3%;
+}
+
+div.tertiary {
+     float:left;
+     width:16.67%;
+}
+
+div.main article.project {
+    width:45%;
+    margin:0 5%;
+}
+
+div.secondary article.project {
+    width:30%;
+    margin:0 1.67%;
+}
+
+div.tertiary article.project {
+    width:95%;
+    margin:0 5%;
 }
 
 article.project img {
@@ -111,7 +136,7 @@ article.project img {
     display:block;
 }
 
-article.featured {
+div.main article.featured {
     width:31.67%
 }
 
