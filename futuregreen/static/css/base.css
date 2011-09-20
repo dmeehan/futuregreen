@@ -124,6 +124,14 @@ section.text {
     width:100%;
 }
 
+article#profile {
+    background:#7eac32;
+}
+
+article#news {
+    background:#d27193;
+}
+
 
 
 
