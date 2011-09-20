@@ -14,8 +14,8 @@ urlpatterns = patterns('',
     
     url(r'^$', ListView.as_view(context_object_name = "project_list",
         queryset = Project.objects.filter(featured=True).order_by('?'),
-        template_name = "index.html",
-        name = 'home')),
+        template_name = "index.html",),
+        name = 'home'),
 
     # portfolio
     (r'^portfolio/', include('futuregreen.portfolio.urls')),
