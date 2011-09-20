@@ -1,9 +1,10 @@
 # futuregreen/views.py
+from django.views.generic import ListView
+from futuregreen.portfolio.models import Project
 
-
-class IndexView():
+class IndexView(ListView):
     """
-        Bungle together a bunch of different content types.
-        Mix them up randomly and return the list.
+        Get the featured projects
     """
-    pass
+    context_object_name = "project_list"
+    queryset = Project.objects.filter(featured=True).order_by('?')

@@ -90,7 +90,7 @@ class ProjectAdmin(admin.ModelAdmin):
         }),
         ('Metadata', {
             'classes': ('collapse closed',),
-            'fields': ('status', 'slug', 'user',)
+            'fields': ('status', 'featured', 'slug', 'user',)
         }),
     )
 

@@ -202,6 +202,9 @@ class Project(ProjectBase, PhysicalMixin):
     project_types = models.ManyToManyField('ProjectType', blank=True, null=True)
     landscape_types = models.ManyToManyField('LandscapeType', blank=True, null=True)
 
+    def get_main_image(self):
+        return self.projectimage_set.filter(is_main=True)
+
 
 class ProjectImage(RelatedImageAutoBase):
     """
