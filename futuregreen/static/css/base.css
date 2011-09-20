@@ -108,6 +108,7 @@ article.project {
 
 article.project img {
     width:100%;
+    display:block;
 }
 
 article.featured {
