@@ -115,13 +115,13 @@ article.featured {
 }
 
 article#profile {
-    width:31.67%;
+    width:48.33%;
     height:31.03%;
-    background:#d27193;
+    background:#7eac32;
 }
 
 article#news {
-    width:48.33%;
+    width:31.67%;
     height:31.03%;
     background:#d27193;
 }
