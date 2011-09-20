@@ -7,4 +7,4 @@ class IndexView(ListView):
         Get the featured projects
     """
     context_object_name = "project_list"
-    queryset = Project.objects.filter(featured=True)
+    queryset = Project._default_manager.live().filter(featured=True)
