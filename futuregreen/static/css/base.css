@@ -116,21 +116,6 @@ div.tertiary {
      width:16.67%;
 }
 
-div.main article.project {
-    width:45%;
-    margin:0 5%;
-}
-
-div.secondary article.project {
-    width:30%;
-    margin:0 1.67%;
-}
-
-div.tertiary article.project {
-    width:95%;
-    margin:0 5%;
-}
-
 article.project img {
     width:100%;
     display:block;
