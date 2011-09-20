@@ -14,13 +14,18 @@ class ResizeThumbnail(processors.Resize):
     crop = True
 
 class ResizeList(processors.Resize):
-    width = 180
-    height = 180
+    width = 360
+    height = 360
     crop = True
 
 class ResizeDetail(processors.Resize):
     width = 1600
     height = 1067
+    crop = True
+
+class ResizeFeatured(processors.Resize):
+    width = 760
+    height = 760
     crop = True
 
 class EnhanceSmall(processors.Adjustment):
@@ -47,3 +52,7 @@ class List(ImageSpec):
 class Detail(ImageSpec):
     pre_cache = False
     processors = [ResizeDetail]
+
+class Featured(ImageSpec):
+    pre_cache = False
+    processors = [ResizeFeatured]
