@@ -126,6 +126,7 @@ div.main article.featured {
 }
 
 article.text {
+    width:100%;
     margin:0 0.833%;
 }
 
