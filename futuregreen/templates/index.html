@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load generic_flatblocks %}
 {% block content %}
-    <div style="float:left; width:16.67%;">
         {% for project in project_list|slice:":1" %}
             <article class="project box">
                 {% for image in project.projectimage_set.all %}
@@ -11,8 +10,6 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-    </div>
-    <div style="float:left; width:50%;">
         <article id="profile" class="text box">
         {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
         <p><a href="#">Read More</a></p>
@@ -26,8 +23,8 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-    </div>
-    <div style="float:left; width:33.33%;">
+   
+
     {% for project in project_list|slice:"8:" %}
         <article class="project box">
             {% for image in project.projectimage_set.all %}
