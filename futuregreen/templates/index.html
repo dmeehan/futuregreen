@@ -23,20 +23,11 @@
             {%  endfor %}
         </article>
     {% endfor %}
-    {% for project in project_list|slice:"7:7" %}
+    {% for project in project_list|slice:"6:" %}
         <article class="project featured">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}"><img src="{{ image.featured.url }}" /></a>
-                {% endif %}
-            {%  endfor %}
-        </article>
-    {% endfor %}
-    {% for project in project_list|slice:"8:" %}
-        <article class="project featured">
-            {% for image in project.projectimage_set.all %}
-                {% if image.is_main %}
-                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
                 {% endif %}
             {%  endfor %}
         </article>
