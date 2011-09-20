@@ -45,5 +45,14 @@
     {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     <p><a href="#">Read More</a></p>
     </article>
+    {% for project in project_list %}
+        <article class="project featured">
+            {% for image in project.projectimage_set.all %}
+                {% if image.is_main %}
+                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
+                {% endif %}
+            {%  endfor %}
+        </article>
+    {% endfor %}
 
 {% endblock content %}
