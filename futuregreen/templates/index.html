@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load generic_flatblocks %}
 {% block content %}
+    {% for project in project_list|slice:":1" %}
+        <article class="project">
+            {{ project.name }}
+            {% for image in project.projectimage_set.all %}
+                {% if image.is_main %}
+                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
+                {% endif %}
+            {%  endfor %}
+        </article>
+    {% endfor %}
     <article id="profile" class="text featured">
     {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     <p><a href="#">Read More</a></p>
