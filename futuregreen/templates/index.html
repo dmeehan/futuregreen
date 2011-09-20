@@ -2,7 +2,7 @@
 {% load generic_flatblocks %}
 {% block content %}
     {% for project in project_list|slice:":1" %}
-        <article class="project">
+        <article class="project box">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
@@ -10,12 +10,12 @@
             {%  endfor %}
         </article>
     {% endfor %}
-    <article id="profile" class="text">
+    <article id="profile" class="text box">
     {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     <p><a href="#">Read More</a></p>
     </article>
     {% for project in project_list|slice:"1:7" %}
-        <article class="project">
+        <article class="project box">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
@@ -24,7 +24,7 @@
         </article>
     {% endfor %}
     {% for project in project_list|slice:"7:8" %}
-        <article class="project featured">
+        <article class="project box featured">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}"><img src="{{ image.featured.url }}" /></a>
@@ -33,7 +33,7 @@
         </article>
     {% endfor %}
     {% for project in project_list|slice:"8:" %}
-        <article class="project">
+        <article class="project box">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
@@ -41,7 +41,7 @@
             {%  endfor %}
         </article>
     {% endfor %}
-     <article id="news" class="text">
+     <article id="news" class="text box">
         <p><a href="#">Read More</a></p>
     </article>
 
@@ -57,5 +57,14 @@
             var height = $(".project").height();
             $(".text").css('height', height);
         });
+    </script>
+    <script src="{{ STATIC_URL }}js/jquery.masonry.min.js"></script>
+    <script>
+      $(function(){
+        $('#container').masonry({
+          itemSelector: '.box',
+          columnWidth: 200
+        });
+      });
     </script>
 {% endblock js_local %}
