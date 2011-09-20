@@ -102,8 +102,7 @@ body {
 }
 
 article.project {
-    width:15%;
-    margin:0 0.833%;
+
 }
 
 article.project img {
@@ -112,20 +111,19 @@ article.project img {
 }
 
 article.featured {
-    width:31.67%
 }
 
 article.text {
-    margin:0 0.833%;
+
 }
 
 article#profile {
-    width:48.33%;
+
     background:#7eac32;
 }
 
 article#news {
-    width:31.67%;
+
     background:#d27193;
 }
 

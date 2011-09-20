@@ -1,37 +1,33 @@
 {% extends "base.html" %}
 {% load generic_flatblocks %}
 {% block content %}
-    {% for project in project_list|slice:":1" %}
-        <article class="project box">
-            {% for image in project.projectimage_set.all %}
-                {% if image.is_main %}
-                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
-                {% endif %}
-            {%  endfor %}
+    <div style="float:left; width:16.67%;">
+        {% for project in project_list|slice:":1" %}
+            <article class="project box">
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+            </article>
+        {% endfor %}
+    </div>
+    <div style="float:left; width:50%;">
+        <article id="profile" class="text box">
+        {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+        <p><a href="#">Read More</a></p>
         </article>
-    {% endfor %}
-    <article id="profile" class="text box">
-    {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-    <p><a href="#">Read More</a></p>
-    </article>
-    {% for project in project_list|slice:"1:7" %}
-        <article class="project box">
-            {% for image in project.projectimage_set.all %}
-                {% if image.is_main %}
-                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
-                {% endif %}
-            {%  endfor %}
-        </article>
-    {% endfor %}
-    {% for project in project_list|slice:"7:8" %}
-        <article class="project box featured">
-            {% for image in project.projectimage_set.all %}
-                {% if image.is_main %}
-                    <a href="{{ project.get_absolute_url }}"><img src="{{ image.featured.url }}" /></a>
-                {% endif %}
-            {%  endfor %}
-        </article>
-    {% endfor %}
+        {% for project in project_list|slice:"1:7" %}
+            <article class="project box">
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+            </article>
+        {% endfor %}
+    </div>
+    <div style="float:left; width:33.33%;">
     {% for project in project_list|slice:"8:" %}
         <article class="project box">
             {% for image in project.projectimage_set.all %}
@@ -57,14 +53,5 @@
             var height = $(".project").height();
             $(".text").css('height', height);
         });
-    </script>
-    <script src="{{ STATIC_URL }}js/jquery.masonry.min.js"></script>
-    <script>
-      $(function(){
-        $('#container').masonry({
-          itemSelector: '.box',
-          columnWidth: 200
-        });
-      });
     </script>
 {% endblock js_local %}
