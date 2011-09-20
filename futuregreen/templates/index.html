@@ -15,7 +15,7 @@
     {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
     <p><a href="#">Read More</a></p>
     </article>
-    {% for project in project_list %}
+    {% for project in project_list|slice:"1:" %}
         <article class="project">
             {{ project.name }}
             {% for image in project.projectimage_set.all %}
