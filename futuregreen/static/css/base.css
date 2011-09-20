@@ -96,11 +96,6 @@ body {
     }
 
 /********** HOMEPAGE ***********/
-.content > article {
-    float:left;
-    overflow: hidden;
-}
-
 div.main {
     float:left;
     width:50%;
