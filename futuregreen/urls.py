@@ -4,6 +4,8 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.contrib import admin
 admin.autodiscover()
 
+from futuregreen.portfolio.models import Project
+
 urlpatterns = patterns('',
     # admin
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
