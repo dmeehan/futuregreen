@@ -48,6 +48,7 @@
 
 {% endblock content %}
 {% block js_local %}
+    <script src="{{ STATIC_URL }}js/jquery.masonry.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             var height = $(".project").height();
@@ -58,5 +59,18 @@
             var height = $(".project").height();
             $(".text").css('height', height);
         });
+    </script>
+    <script>
+      $(function(){
+
+        var $container = $('.content');
+
+        $container.imagesLoaded( function(){
+          $container.masonry({
+            itemSelector : '.box'
+          });
+        });
+
+      });
     </script>
 {% endblock js_local %}
