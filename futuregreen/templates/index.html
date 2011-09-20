@@ -43,6 +43,7 @@
         </section>
     </div>
     <div class="secondary">
+        <section class="projects">
         {% for project in project_list|slice:"6:" %}
             <article class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
@@ -52,9 +53,12 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-         <article id="news" class="text box">
-            <p><a href="#">Read More</a></p>
-        </article>
+        </section>
+        <section class="text">
+            <article id="news" class="text box">
+                <p><a href="#">Read More</a></p>
+            </article>
+        </section>
     </div>
 
 {% endblock content %}
