@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
     
-    url(r'^$', 'futuregreen.views.index',name = 'home'),
+    url(r'^$', 'futuregreen.views.index', name = 'home'),
 
     # portfolio
     (r'^portfolio/', include('futuregreen.portfolio.urls')),
