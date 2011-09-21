@@ -68,12 +68,12 @@
 {% block js_local %}
     <script type="text/javascript">
         $(document).ready(function() {
-            var height = $(".project").height();
+            var height = $(".tertiary > article").height();
             $(".text").css('height', height);
         });
 
         $(window).resize(function() {
-            var height = $(".project").height();
+            var height = $(".tertiary > article").height();
             $(".text").css('height', height);
         });
     </script>
