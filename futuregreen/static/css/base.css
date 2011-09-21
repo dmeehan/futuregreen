@@ -131,6 +131,7 @@ div.secondary section.text article {
 }
 
 div.tertiary article.project {
+    float:left;
     width:90%;
     margin:0 5%;
 }
