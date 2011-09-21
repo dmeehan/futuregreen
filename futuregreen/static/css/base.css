@@ -122,8 +122,15 @@ article.project img {
     display:block;
 }
 
-div.main article.project {
-    width:%
+div.main section.projects {
+    float:left;
+    width:30%;
+    margin:0 1.67%;
+}
+
+div.main section.featured {
+    width:63.33%;
+    margin:0 1.67%;
 }
 
 section.text {
