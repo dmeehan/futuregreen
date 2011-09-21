@@ -165,10 +165,11 @@ div.main section.text .tease {
     text-transform: uppercase;
     text-decoration: none;
     color:#fff;
+    float:left;
 }
 
 div.main section.text .tease:after {
-    content: " \00BB;";
+    content: " \00BB";
 }
 
 div.main section.projects {
