@@ -163,10 +163,12 @@ div.main section.text h1 {
 div.main section.text .tease {
     font-weight:bold;
     text-transform: uppercase;
+    text-decoration: none;
+    color:#fff;
 }
 
 div.main section.text .tease:after {
-    content: " &raquo;"
+    content: " \00BB;";
 }
 
 div.main section.projects {
