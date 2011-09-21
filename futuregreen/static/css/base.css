@@ -156,9 +156,13 @@ div.main section.text article {
     line-height:1.3em;
 }
 
+div.main section.text header {
+
+}
+
 div.main section.text h1 {
     font-weight:bold;
-    padding: 10px 0;
+    line-height:2em;
 }
 
 div.main section.text .tease {
