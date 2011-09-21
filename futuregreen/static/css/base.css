@@ -323,14 +323,14 @@ div.main section.featured article.project {
         margin:0 0.83%;
     }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     body {
         width:98.33334%;
         margin: 0 .83333%;
     }
 
     div.main section.text article {
-        font-size:.85em;
+        font-size:0.92857em;
     }
 }
 
@@ -341,7 +341,7 @@ div.main section.featured article.project {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   body {
     width:85%;
     margin: 0 7.5%;
