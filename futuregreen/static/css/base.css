@@ -55,7 +55,7 @@ body {
         -webkit-transition: all 0.5s ease-in;
     }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     body {
         width:98.33334%;
         margin: 0 .83333%;
@@ -68,6 +68,14 @@ body {
     margin: 0 .83333%;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    width:85%;
+    margin: 0 7.5%;
+  }
+}
+
 
 
     h1 {
