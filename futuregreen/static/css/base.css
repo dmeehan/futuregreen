@@ -52,21 +52,23 @@ body {
         padding:0;
         position:relative;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
+        -webkit-transition: all 0.5s ease-in;
     }
 
 @media screen and (min-width: 1024px) {
     body {
-        width:85%;
-        margin:0 7.5%;
+        width:98.33334%;
+        margin: 0 .83333%;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-device-width: 1024px) and (orientation:landscape) {
   body {
-    width:100%;
-    margin: 0 0 0 0;
+    width:98.33334%;
+    margin: 0 .83333%;
   }
 }
+
 
     h1 {
         margin:0;
