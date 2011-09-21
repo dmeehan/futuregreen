@@ -71,6 +71,8 @@ body {
 
     body > header {
         height:100px;
+        width: 98.33334%;
+        margin: 0 .80333%;
     }
 
     body > header > h1 {
@@ -79,15 +81,18 @@ body {
         float:left;
         height:80px;
         width:280px;
+        line-height:100px;
     }
 
     body > header > nav {
-        float:left;
+        float:right;
         width:480px;
+        height:100px;
     }
 
     body > header > nav li {
         display:inline;
+        line-height:100px;
     }
 
     body > .content {
@@ -326,8 +331,6 @@ div.main section.featured article.project {
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
-        /*width:98.33334%;
-        margin: 0 .83333%;*/
         width:90%;
         margin: 0 5%;
     }
