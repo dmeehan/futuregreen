@@ -156,6 +156,7 @@ div.main section.projects {
 }
 
 div.main section.projects article.project {
+    float:left;
     width:90%;
     margin: 0 5%;
 }
