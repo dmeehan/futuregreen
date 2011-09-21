@@ -156,6 +156,19 @@ div.main section.text article {
     font-size:0.857em;
 }
 
+div.main section.text h1 {
+    margin: 10px 0;
+}
+
+div.main section.text .tease {
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+div.main section.text .tease:after {
+    content: " &raquo;"
+}
+
 div.main section.projects {
     float:left;
     width:33.33333%;
