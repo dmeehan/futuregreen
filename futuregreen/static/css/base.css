@@ -153,11 +153,12 @@ div.main section.text article {
     background:#7eac32 url('images/profile_bg.png') no-repeat left top;
     padding: 0 1.66667%;
     color:#fff;
-    font-size:0.857em;
+    /*font-size:0.857em;*/
+    font-weight:bold;
 }
 
 div.main section.text h1 {
-    margin: 10px 0;
+    font-weight:bold;
 }
 
 div.main section.text .tease {
