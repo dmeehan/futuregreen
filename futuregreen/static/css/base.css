@@ -120,7 +120,6 @@ div.tertiary {
 div.secondary section.projects article.project {
     float:left;
     width:45%;
-    height:180px;
     margin:0 2.5%;
 }
 
@@ -133,7 +132,6 @@ div.secondary section.text article {
 
 div.tertiary article.project {
     width:90%;
-    height:180px;
     margin:0 5%;
 }
 
@@ -155,7 +153,6 @@ div.main section.projects {
 
 div.main section.projects article.project {
     width:90%;
-    height:180px;
     margin: 0 5%;
 }
 
@@ -166,7 +163,6 @@ div.main section.featured {
 
 div.main section.featured article.project {
     width:95%;
-    height:180px;
     margin: 0 2.5%;
 }
 
