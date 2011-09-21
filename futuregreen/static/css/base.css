@@ -103,7 +103,12 @@ div.main {
 
 div.secondary {
      float:left;
-     width:33.3%;
+     width:33.33%;
+}
+
+div.tertiary {
+     float:left;
+     width:16.67%;
 }
 
 div.secondary section.projects article.project {
@@ -112,14 +117,16 @@ div.secondary section.projects article.project {
     margin:0 2.5%;
 }
 
+div.secondary section.text {
+    clear:both;
+    width:95%;
+    margin: 0 2.5%;
+    background:#d27193;
+}
+
 div.tertiary article.project {
     width:90%;
     margin:0 5%;
-}
-
-div.tertiary {
-     float:left;
-     width:16.67%;
 }
 
 article.project img {
@@ -152,15 +159,6 @@ div.main section.featured article.project {
     width:95%;
     margin: 0 2.5%;
 }
-
-div.secondary section.text {
-    clear:both;
-    width:95%;
-    margin: 0 2.5%;
-    background:#d27193;
-}
-
-
 
 /* slideshow */
     .slideshow {
