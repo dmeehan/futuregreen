@@ -103,6 +103,9 @@ body {
         width: 98.33334%;
         clear:both;
         margin: 0 .80333%;
+        color:#999;
+        text-transform: uppercase;
+        font-size:.85em;
     }
 
 /********** HOMEPAGE ***********/
