@@ -110,11 +110,11 @@ div.main {
 }
 
 div.secondary {
-     width:33.33%;
+     width:33.33333%;
 }
 
 div.tertiary {
-     width:16.67%;
+     width:16.66667%;
 }
 
 div.secondary section.projects article.project {
@@ -141,17 +141,17 @@ article.project img {
 }
 
 div.main section.text article {
-    width:93.33%;
-    margin: 0 1.67%;
+    width:93.33333%;
+    margin: 0 1.66667%;
     background-color: #7eac32;
-    padding: 0 1.67%;
+    padding: 0 1.66667%;
     color:#fff;
     font-size:0.857em;
 }
 
 div.main section.projects {
     float:left;
-    width:33%;
+    width:33.33333%;
 }
 
 div.main section.projects article.project {
@@ -161,7 +161,7 @@ div.main section.projects article.project {
 
 div.main section.featured {
     float:left;
-    width:67%;
+    width:66.66667%;
 }
 
 div.main section.featured article.project {
