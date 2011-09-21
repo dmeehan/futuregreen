@@ -51,7 +51,7 @@ a,
 a:link,
 a:active,
 a:hover,
-a:visited, {
+a:visited {
     color: #6699ff;
 }
 
