@@ -141,11 +141,20 @@ div.main section.projects {
     width:33%;
 }
 
+div.main section.projects article.project {
+    width:90%;
+    margin: 0 5%;
+}
+
 div.main section.featured {
     float:left;
     width:67%;
 }
 
+div.main section.featured article.project {
+    width:95%;
+    margin: 0 2.5%;
+}
 
 
 div.secondary section.text {
