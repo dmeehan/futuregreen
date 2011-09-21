@@ -130,6 +130,12 @@ article.project img {
     display:block;
 }
 
+div.main section.text {
+    width:96.66%;
+    margin: 0 1.67%;
+    background-color: #7eac32;
+}
+
 div.main section.projects {
     float:left;
     width:33%;
@@ -140,12 +146,7 @@ div.main section.featured {
     width:67%;
 }
 
-div.main section.text {
-    clear:both;
-    width:96.66%;
-    margin: 0 1.67%;
-    background-color: #7eac32;
-}
+
 
 div.secondary section.text {
     clear:both;
