@@ -49,13 +49,20 @@ table {
 
 
 body {
-        min-width:960px;
+        min-width:1024px;
         width:85%;
         padding:0;
         margin:0 7.5%;
         position:relative;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
     }
+
+@media screen and (max-width: 1024px) {
+  body {
+    width:100%;
+    margin: 0 0 0 0;
+  }
+}
 
     h1 {
         margin:0;
