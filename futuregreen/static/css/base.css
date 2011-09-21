@@ -99,11 +99,16 @@ body {
 div.main {
     float:left;
     width:50%;
-}
 
 div.secondary {
      float:left;
      width:33.3%;
+}
+
+div.secondary article.project {
+    float:left;
+    width:45%;
+    margin:0 2.5%;
 }
 
 div.tertiary {
@@ -116,12 +121,12 @@ article.project img {
     display:block;
 }
 
-div.main article.featured {
-    width:31.67%
+div.main article.project {
+    width:%
 }
 
 section.text {
-    width:100%;
+
 }
 
 article#profile {
