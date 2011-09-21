@@ -67,18 +67,20 @@
 {% endblock content %}
 {% block js_local %}
     <script type="text/javascript">
-        $(document).ready(function() {
+        function Flex() {
             var height = $(".project").width();
             $(".text > article").css('height', height);
             var total_width = $(".content").width();
             var margin = total_width * 0.0083;
             $("article").css('margin-top', margin);
             $("article").css('margin-bottom', margin);
+        }
+        $(document).ready(function() {
+            Flex();
         });
 
         $(window).resize(function() {
-            var height = $(".project").width();
-            $(".text").css('height', height);
+            Flex();
         });
     </script>
 {% endblock js_local %}
