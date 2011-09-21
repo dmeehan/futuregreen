@@ -1,13 +1,11 @@
-<article>
 {% if object.title %}
 <header>
     <h1>{{ object.title }}</h1>
 </header>
 {% endif %}
 {% if object.excerpt_html %}
-<p>{{ object.excerpt_html|safe }}</p>
+{{ object.excerpt_html|safe }}
 {% endif %}
 {% if object.image %}
 <img src="{{ object.image.url }}" />
 {% endif %}
-</article>
