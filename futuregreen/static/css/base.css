@@ -96,24 +96,31 @@ body {
     }
 
 /********** HOMEPAGE ***********/
-div.main {
+.content > div {
     float:left;
+    overflow: auto;
+}
+
+.content > div > section {
+    overflow: auto;
+}
+
+div.main {
     width:50%;
 }
 
 div.secondary {
-     float:left;
      width:33.33%;
 }
 
 div.tertiary {
-     float:left;
      width:16.67%;
 }
 
 div.secondary section.projects article.project {
     float:left;
     width:45%;
+    height:180px;
     margin:0 2.5%;
 }
 
@@ -126,6 +133,7 @@ div.secondary section.text article {
 
 div.tertiary article.project {
     width:90%;
+    height:180px;
     margin:0 5%;
 }
 
@@ -147,6 +155,7 @@ div.main section.projects {
 
 div.main section.projects article.project {
     width:90%;
+    height:180px;
     margin: 0 5%;
 }
 
@@ -157,6 +166,7 @@ div.main section.featured {
 
 div.main section.featured article.project {
     width:95%;
+    height:180px;
     margin: 0 2.5%;
 }
 
