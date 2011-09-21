@@ -95,6 +95,12 @@ body {
         overflow: auto;
     }
 
+    body > footer {
+        width: 98.33334%;
+        clear:both;
+        margin: 0 .80333%;
+    }
+
 /********** HOMEPAGE ***********/
 .content > div {
     float:left;
@@ -254,9 +260,7 @@ div.main section.featured article.project {
         float:left;
     }
 
-    footer {
-        clear:both;
-    }
+
 
 /* expanded slideshow styles */
     .min {
