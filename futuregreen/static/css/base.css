@@ -144,6 +144,9 @@ div.main section.text article {
     width:96.66%;
     margin: 0 1.67%;
     background-color: #7eac32;
+    padding: 10px;
+    color:#fff;
+    font-size:0.857em;
 }
 
 div.main section.projects {
