@@ -99,14 +99,11 @@ body {
 div.main {
     float:left;
     width:50%;
-    background: blue;
 }
 
 div.secondary {
      float:left;
      width:33.3%;
-    background: yellow;
-}
 
 div.secondary section.projects article.project {
     float:left;
@@ -122,7 +119,6 @@ div.tertiary article.project {
 div.tertiary {
      float:left;
      width:16.67%;
-     background: red;
 }
 
 article.project img {
