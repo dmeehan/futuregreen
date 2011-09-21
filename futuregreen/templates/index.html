@@ -13,8 +13,8 @@
         {% endfor %}
     </div>
     <div class="main">
-        <section class="text">
-            <article id="profile">
+        <section class="text" id="profile">
+            <article>
             {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
             <p><a href="#">Read More</a></p>
             </article>
@@ -24,7 +24,8 @@
                 <article class="project" id="{{ project.slug }}">
                     {% for image in project.projectimage_set.all %}
                         {% if image.is_main %}
-                            <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
+                            <a href="{{ project.get_absolute_url }}">
+                                <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
                         {% endif %}
                     {%  endfor %}
                 </article>
@@ -35,7 +36,8 @@
                 <article class="project" id="{{ project.slug }}">
                     {% for image in project.projectimage_set.all %}
                         {% if image.is_main %}
-                            <a href="{{ project.get_absolute_url }}"><img src="{{ image.featured.url }}" /></a>
+                            <a href="{{ project.get_absolute_url }}">
+                                <img alt="{{ project.title }}" src="{{ image.featured.url }}" /></a>
                         {% endif %}
                     {%  endfor %}
                 </article>
@@ -48,14 +50,15 @@
             <article class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
                     {% endif %}
                 {%  endfor %}
             </article>
         {% endfor %}
         </section>
-        <section class="text">
-            <article id="news">
+        <section class="text" id="news">
+            <article>
                 <p><a href="#">Read More</a></p>
             </article>
         </section>

@@ -106,7 +106,7 @@ div.secondary {
      width:33.3%;
 }
 
-div.secondary section.projects article {
+div.secondary section.projects article.project {
     float:left;
     width:45%;
     margin:0 2.5%;
@@ -133,15 +133,16 @@ div.main section.featured {
     margin:0 1.67%;
 }
 
-section.text {
-
+div.main section.text {
+    width:95%;
+    margin: 0 2.5%;
 }
 
-article#profile {
+section#profile {
     background:#7eac32;
 }
 
-article#news {
+section#news {
     background:#d27193;
 }
 
