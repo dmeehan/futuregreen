@@ -136,21 +136,15 @@ div.main section.featured {
 div.main section.text {
     width:96.66%;
     margin: 0 1.67%;
+    background-color: #7eac32;
 }
 
 div.secondary section.text {
+    clear:both;
     width:95%;
     margin: 0 2.5%;
-}
-
-section#profile {
-    background:#7eac32;
-}
-
-section#news {
     background:#d27193;
 }
-
 
 
 
