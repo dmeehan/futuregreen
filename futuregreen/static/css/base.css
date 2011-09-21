@@ -114,6 +114,11 @@ div.secondary section.projects article.project {
     margin:0 2.5%;
 }
 
+div.tertiary article.project {
+    width:90%;
+    margin:0 5%;
+}
+
 div.tertiary {
      float:left;
      width:16.67%;
