@@ -154,13 +154,11 @@ div.main section.text article {
     padding: 0 1.66667%;
     color:#fff;
     line-height:1.4em;
-    text-align: justify;
 }
 
 div.main section.text h1 {
     font-weight:bold;
     line-height:2em;
-    text-align: left;
 }
 
 div.main section.text .tease {
