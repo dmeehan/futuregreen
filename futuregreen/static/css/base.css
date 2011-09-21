@@ -49,6 +49,7 @@ table {
 
 
 body {
+        min-width:1024px;
         padding:0;
         position:relative;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
