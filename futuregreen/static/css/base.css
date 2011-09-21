@@ -117,7 +117,7 @@ div.secondary section.projects article.project {
     margin:0 2.5%;
 }
 
-div.secondary section.text {
+div.secondary section.text article {
     clear:both;
     width:95%;
     margin:0 2.5%;
@@ -134,7 +134,7 @@ article.project img {
     display:block;
 }
 
-div.main section.text {
+div.main section.text article {
     width:96.66%;
     margin: 0 1.67%;
     background-color: #7eac32;
