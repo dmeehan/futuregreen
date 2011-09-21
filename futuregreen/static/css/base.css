@@ -104,6 +104,7 @@ div.main {
 div.secondary {
      float:left;
      width:33.3%;
+}
 
 div.secondary section.projects article.project {
     float:left;
