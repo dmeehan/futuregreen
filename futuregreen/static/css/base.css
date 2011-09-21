@@ -47,6 +47,14 @@ table {
 	border-spacing: 0;
 }
 
+a,
+a:link,
+a:active,
+a:hover,
+a:visited, {
+    color: #6699ff;
+}
+
 
 body {
         min-width:1024px;
@@ -101,7 +109,7 @@ body {
 
     body > footer {
         clear:both;
-        color:#666;
+        color:#777;
         text-transform: uppercase;
         font-size:.85em;
     }
