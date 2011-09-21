@@ -68,7 +68,7 @@
 {% block js_local %}
     <script type="text/javascript">
         $(document).ready(function() {
-            var height = $(".project").width();
+            var height = $(".project").width() * .9333;
             $(".text > article").css('height', height);
             var total_width = $(".content").width();
             var margin = total_width * 0.0083;
