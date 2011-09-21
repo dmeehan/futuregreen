@@ -19,7 +19,7 @@
 
     {% block mobile_viewport %}
     <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0,
-	width=device-width, user-scalable=no">
+	                               width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     {% endblock mobile_viewport %}
@@ -31,7 +31,12 @@
     {% block css %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-    <link rel="stylesheet" media="handheld" href="css/handheld.css">  -->
+    <link rel="stylesheet" media="handheld" href="css/handheld.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" />
+    <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)"
+          type="text/css" href="iphone4.css" />
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">-->
     {% endblock css %}
 
     {% block js_head %}

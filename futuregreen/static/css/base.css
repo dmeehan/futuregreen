@@ -323,7 +323,20 @@ div.main section.featured article.project {
         margin:0 0.83%;
     }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1240px) and (min-width: 1024px) {
+    body {
+        /*width:98.33334%;
+        margin: 0 .83333%;*/
+        width:90%;
+        margin: 0 5%;
+    }
+
+    div.main section.text article {
+        font-size:0.92857em;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 960px) {
     body {
         width:98.33334%;
         margin: 0 .83333%;
@@ -332,13 +345,6 @@ div.main section.featured article.project {
     div.main section.text article {
         font-size:0.92857em;
     }
-}
-
-@media screen and (max-device-width: 1024px) and (orientation:landscape) {
-  body {
-    width:98.33334%;
-    margin: 0 .83333%;
-  }
 }
 
 @media screen and (min-width: 1240px) {
