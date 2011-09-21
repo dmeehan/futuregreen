@@ -132,16 +132,16 @@ article.project img {
 
 div.main section.projects {
     float:left;
-    width:30%;
-    margin:0 1.67%;
+    width:33%;
 }
 
 div.main section.featured {
-    width:63.33%;
-    margin:0 1.67%;
+    float:left;
+    width:67%;
 }
 
 div.main section.text {
+    clear:both;
     width:96.66%;
     margin: 0 1.67%;
     background-color: #7eac32;
