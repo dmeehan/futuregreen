@@ -68,13 +68,12 @@
 {% block js_local %}
     <script type="text/javascript">
         $(document).ready(function() {
-            var height = $("img:first").height();
+            var height = $(".project").width();
             $(".text").css('height', height);
-            alert(height);
         });
 
         $(window).resize(function() {
-            var height = $("img:first").height();
+            var height = $(".project").width();
             $(".text").css('height', height);
         });
     </script>
