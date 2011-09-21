@@ -158,6 +158,7 @@ div.main section.text article {
 
 div.main section.text h1 {
     font-weight:bold;
+    padding: 10px 0;
 }
 
 div.main section.text .tease {
