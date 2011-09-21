@@ -67,14 +67,14 @@
 {% endblock content %}
 {% block js_local %}
     <script type="text/javascript">
-        /*$(document).ready(function() {
-            var height = $(".tertiary > article").height();
+        $(document).ready(function() {
+            var height = $("img:first").height();
             $(".text").css('height', height);
         });
 
         $(window).resize(function() {
-            var height = $(".tertiary > article").height();
+            var height = $("img:first").height();
             $(".text").css('height', height);
-        });*/
+        });
     </script>
 {% endblock js_local %}
