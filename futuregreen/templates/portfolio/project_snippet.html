@@ -1,16 +1,11 @@
 <article class="project">
         <header style="display:none"><h1>{{ project.name }}</h1></header>
-        <section class="image"
-                 style="float:left;
-                        width:{{ project.relative_size|floatformat }}%;
-                        height:180px;
-                        overflow:hidden">
+        <section class="image">
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}">
-                        <img src="{{ image.detail.url }}"
+                        <img src="{{ image.list.url }}"
                              alt="{{ image.caption }}"
-                             width="2400px"
                         />
                     </a>
                 {% endif %}
