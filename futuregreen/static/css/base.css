@@ -224,7 +224,6 @@ div.main section.featured article.project {
         float:left;
         width:60.14%;
         margin:0 0.83%;
-        overflow:hidden;
         position:relative;
         background: #ccc;
     }
