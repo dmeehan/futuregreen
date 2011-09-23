@@ -137,6 +137,13 @@ body {
     overflow: hidden;
 }
 
+section.text .tease {
+    font-weight:bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#fff;
+}
+
 div.main {
     width:50%;
 }
@@ -192,13 +199,6 @@ div.main section.text article {
 div.main section.text h1 {
     font-weight:bold;
     line-height:1.8em;
-}
-
-div.main section.text .tease {
-    font-weight:bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    color:#fff;
 }
 
 div.main section.text .tease:after {

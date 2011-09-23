@@ -59,10 +59,10 @@
         </section>
         <section class="text" id="news">
             <article>
-                <h1 class="date">{{ item.date_published }}</h1>
+                <h1 class="date">{{ item.date_published|date:"M d Y" }}</h1>
                 <h2>{{ item.title }}</h2>
                 {{ item.excerpt|truncatewords:20 }}
-                <a href="#">Read More</a>
+                <a href="#" class="tease">Read More</a>
             </article>
         </section>
     </div>
