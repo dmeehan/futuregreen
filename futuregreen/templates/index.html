@@ -59,9 +59,9 @@
         </section>
         <section class="text" id="news">
             <article>
-                <p>{{ item.date_published }}</p>
-                <h1>{{ item.title }}</h1>
-                {{ item.excerpt }}
+                <h1 class="date">{{ item.date_published }}</h1>
+                <h2>{{ item.title }}</h2>
+                {{ item.excerpt|truncatewords:20 }}
                 <a href="#">Read More</a>
             </article>
         </section>

@@ -160,6 +160,13 @@ div.secondary section.text article {
     width:95%;
     margin:0 2.5%;
     background:#d27193;
+    color:white;
+}
+
+div.secondary section.text article .date {
+    font-weight:bold;
+    line-height:1.8em;
+    color:rgba(255,255,255,0.5);
 }
 
 div.tertiary article.project {
