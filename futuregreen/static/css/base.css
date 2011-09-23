@@ -144,6 +144,10 @@ section.text .tease {
     color:#fff;
 }
 
+section.text .tease:after {
+    content: " \00BB";
+}
+
 div.main {
     width:50%;
 }
@@ -164,8 +168,9 @@ div.secondary section.projects article.project {
 
 div.secondary section.text article {
     clear:both;
-    width:95%;
+    width:90%;
     margin:0 2.5%;
+    padding: 0 2.5%;
     background:#d27193;
     color:white;
 }
@@ -180,6 +185,7 @@ div.secondary section.text article h2 {
     clear:both;
     font-weight:bold;
     font-size:1.2857em;
+    margin-bottom:10px;
 }
 
 div.tertiary article.project {
@@ -205,10 +211,6 @@ div.main section.text article {
 div.main section.text h1 {
     font-weight:bold;
     line-height:1.8em;
-}
-
-div.main section.text .tease:after {
-    content: " \00BB";
 }
 
 div.main section.projects {
