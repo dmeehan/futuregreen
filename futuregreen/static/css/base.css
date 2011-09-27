@@ -210,7 +210,8 @@ div.main section.text article {
 
 div.main section.text h1 {
     font-weight:bold;
-    line-height:1.8em;
+    line-height:2em;
+    font-size:1.8em;
 }
 
 div.main section.projects {
