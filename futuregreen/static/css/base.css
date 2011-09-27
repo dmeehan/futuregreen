@@ -91,7 +91,7 @@ body {
         width:380px;
         overflow: hidden;
         font-size:8px;
-        background: url('images/logo.png' no-repeat left top)
+        background: url('images/logo.png')
     }
 
     body > header > nav {
