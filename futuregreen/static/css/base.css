@@ -102,7 +102,7 @@ body {
 
     body > header > nav li {
         display:inline;
-        line-height:100px;
+        line-height:80px;
     }
 
     body > .content {
