@@ -97,7 +97,6 @@ body {
     body > header > nav {
         float:right;
         width:480px;
-        line-height:80px;
     }
 
     body > header > nav li {
