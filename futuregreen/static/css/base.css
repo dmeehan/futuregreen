@@ -78,6 +78,7 @@ body {
     }
 
     body > header {
+        height:80px;
         width: 98.33334%;
         margin: 0 .80333%;
     }
