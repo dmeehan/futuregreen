@@ -116,13 +116,13 @@ body {
 
     body > footer > .copyright {
         float:left;
-        width:15%;
+        width:30%;
         margin: 0 .83333%;
     }
 
     body > footer > .contact {
         float:left;
-        width:81.66668%;
+        width:66.66668%;
         margin: 0 .83333%;
         text-align:right;
     }
