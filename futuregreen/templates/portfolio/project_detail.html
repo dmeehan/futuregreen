@@ -5,10 +5,10 @@
     {% if project.projectimage_set.all %}
         <section class="slideshow">
             <nav>
-                <a href="#open" id="open">Open</a>
-                <a href="#close" id="close">Close</a>
-                <a href="#next" id="next">Next</a>
-                <a href="#prev" id="prev">Prev</a>
+                <a href="#open" class="open">Open</a>
+                <a href="#close" class="close">Close</a>
+                <a href="#next" class="next">Next</a>
+                <a href="#prev" class="prev">Prev</a>
             </nav>
             <ul>
             {% for image in project.projectimage_set.all %}
@@ -101,8 +101,8 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/jcarousellite_1.0.1.min.js"></script>
 <script type="text/javascript">
     $(".slideshow").jCarouselLite({
-        btnNext: ".default .next",
-        btnPrev: ".default .prev"
+        btnNext: ".slideshow .next",
+        btnPrev: ".slideshow .prev"
     });
 </script>
 <script type="text/javascript">
