@@ -249,6 +249,7 @@ div.main section.featured article.project {
         width:97.5%;
         margin:0 1.25%;
         padding: 0;
+        background:url('images/bottom-right-bg.png') no-repeat bottom right;
     }
 
     .slideshow .carousel .slides img {
