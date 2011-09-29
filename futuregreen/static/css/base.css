@@ -386,7 +386,9 @@ div.main section.featured article.project {
     }
 
     .categories li {
+        float:left;
         width:6.25%;
+        margin: 0 1.25%;
         height:25px;
     }
 
