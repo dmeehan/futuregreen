@@ -243,19 +243,23 @@ div.main section.featured article.project {
         position: relative;
     }
 
-    .slideshow {
+    .slideshow-container .slideshow {
         position: relative;
         width:97.5%;
         margin:0 1.25%;
         padding: 0;
     }
 
-    .slideshow .slides img {
+    .slideshow-container .slideshow .slides img {
         width:100%;
         display:block;
     }
 
-    .slideshow .flex-caption {
+    .slideshow-container .slideshow .slides li {
+        position:relative;
+    }
+
+    .slideshow-container .slideshow .flex-caption {
         position:absolute;
         bottom:0;
         left:0;
