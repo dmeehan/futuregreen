@@ -244,6 +244,7 @@ div.main section.featured article.project {
         position: relative;
         background:url('images/top-bg.png') no-repeat top left;
         overflow: auto;
+        padding-top:1px;
     }
 
     .slideshow .carousel {
