@@ -98,13 +98,6 @@
 {% endblock content %}
 
 {% block js_local %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/jcarousellite_1.0.1.min.js"></script>
-<script type="text/javascript">
-    $(".slideshow").jCarouselLite({
-        btnNext: ".slideshow .next",
-        btnPrev: ".slideshow .prev"
-    });
-</script>
 <script type="text/javascript">
     function Flex() {
             if ($(".shim").length == 0) {
@@ -158,6 +151,13 @@
         setTimeout(function() { $(".shim").remove(); }, 500);
         setTimeout(function() { $(".slideshow").removeClass('return'); }, 500);
         setTimeout(function() { $(".slideshow").addClass('min'); }, 500);
+    });
+</script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript">
+    $(".slideshow").jCarouselLite({
+        btnNext: ".slideshow .next",
+        btnPrev: ".slideshow .prev"
     });
 </script>
 {% endblock js_local %}
