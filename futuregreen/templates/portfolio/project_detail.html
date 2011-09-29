@@ -128,11 +128,22 @@
 
     $(document).ready(function() {
         //Flex();
-        w = $(".slideshow li").width();
-        alert(w);
-        $(".slideshow").jCarouselLite({
-        btnNext: ".slideshow .next",
-        btnPrev: ".slideshow .prev"
+        ss = $(".slideshow");
+        list = $(".slideshow ul");
+        item = $(".slideshow li");
+        itemLen = item.size();
+        width = item.width();
+        ulSize = width * itemLen;
+
+        item.css({overflow:"hidden", float:"left", width:width});
+        list.css({width:ulSize+"px"});
+        ss.css({overflow: "hidden", width:width});
+
+        alert(ulSize);
+
+        //$(".slideshow").jCarouselLite({
+        //btnNext: ".slideshow .next",
+        //btnPrev: ".slideshow .prev"
     });
     });
 
