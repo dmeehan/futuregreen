@@ -32,12 +32,12 @@
                 <ul class="categories">
                     {% if project.project_types.all %}
                         {% for category in project.project_types.all %}
-                            <li> {{ category.name }} </li>
+                            <li> {{ category.alternate_title }} </li>
                         {% endfor %}
                     {% endif %}
                     {% if project.landscape_types.all %}
                         {% for category in project.landscape_types.all %}
-                            <li> {{ category.name }} </li>
+                            <li> {{ category.alternate_title }} </li>
                        {% endfor %}
                     {% endif %}
                 </ul>
