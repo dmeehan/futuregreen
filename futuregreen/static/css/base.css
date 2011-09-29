@@ -287,14 +287,14 @@ div.main section.featured article.project {
         margin-right: 1.25%;
     }
 
-    .slideshow-container .controls a {
+    .slideshow-container .controls img {
         width:100%;
         opacity:0.3;
         filter:alpha(opacity=30); /* For IE8 and earlier */
     }
 
-    .slideshow-container .controls a.active a,
-    .slideshow-container .controls a:hover {
+    .slideshow-container .controls a.active img,
+    .slideshow-container .controls a:hover img {
         opacity:1.0;
         filter:alpha(opacity=100); /* For IE8 and earlier */
     }
