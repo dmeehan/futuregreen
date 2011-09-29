@@ -10,7 +10,7 @@
                 <a href="#next" class="next">Next</a>
                 <a href="#prev" class="prev">Prev</a>
             </nav>
-            <ul>
+            <ul class="slides">
             {% for image in project.projectimage_set.all %}
                 <li>
                     <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
