@@ -67,7 +67,7 @@
             <ul class="slide-controls">
                {% for image in project.projectimage_set.all %}
                     <li>
-                        <a><img src="{{ image.thumbnail.url }}"
+                        <a href="#"><img src="{{ image.thumbnail.url }}"
                              alt="{{ image.caption }}"/></a>
                    </li>
                {% endfor %}
