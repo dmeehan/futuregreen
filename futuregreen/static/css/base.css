@@ -394,7 +394,7 @@ div.main section.featured article.project {
         overflow: auto;
         margin: 10px 2.5% 10px 2.5%;
     }
-    .size, .date, .designer {
+    .details .size, .details .date, .details .designer {
         float:left;
         width:20%;
         height:80px;
