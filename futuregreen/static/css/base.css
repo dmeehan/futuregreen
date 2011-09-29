@@ -245,17 +245,13 @@ div.main section.featured article.project {
 
     .slideshow {
         position: relative;
+        width:97.5%;
+        margin:0 1.25%;
     }
 
     .slideshow .slides img {
         width:100%;
         display:block;
-    }
-
-    .slideshow nav {
-        position:absolute;
-        top:10px;
-        left:10px;
     }
 
     .slideshow .flex-caption {
