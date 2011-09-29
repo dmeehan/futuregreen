@@ -298,14 +298,20 @@ div.main section.featured article.project {
         filter:alpha(opacity=100); /* For IE8 and earlier */
     }
 
-    .slideshow-container .flex-direction-nav .next {
+    .slideshow-container .flex-direction-nav a {
         position:absolute;
         top:0;
-        left:1.25%;
         width:33%;
         height:100%;
-        line-height:100%;
         z-index:1000;
+    }
+
+    .slideshow-container .flex-direction-nav .next {
+        right:1.25%;
+    }
+
+    .slideshow-container .flex-direction-nav .prev {
+        left:1.25%;
     }
 
 /* expanded slideshow styles */
