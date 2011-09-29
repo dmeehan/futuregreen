@@ -380,7 +380,6 @@ div.main section.featured article.project {
     .details h2 {
         font-size:1.1em;
         font-weight:bold;
-        margin-bottom:5px;
     }
 
     .details ul,
@@ -420,6 +419,10 @@ div.main section.featured article.project {
 
     .categories .landscape-type {
         background:#7eac32;
+    }
+
+    .people ul {
+        margin-top:0;
     }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
