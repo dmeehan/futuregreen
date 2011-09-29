@@ -125,7 +125,7 @@
 
     function FlexBox() {
             $('.box').each(function(i, obj){
-                width = this.width();
+                width = $(this).width();
                 this.css('height',width);
             });
     }
