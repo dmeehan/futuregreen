@@ -3,23 +3,27 @@
 {% block content %}
     <article class="project">
     {% if project.projectimage_set.all %}
-        <section class="slideshow">
-            <ul class="slides">
-            {% for image in project.projectimage_set.all %}
-                <li>
-                    <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
-                    {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
-                </li>
-            {% endfor %}
-            </ul>
-            <ul class="slide-controls">
-               {% for image in project.projectimage_set.all %}
+        <section class="slideshow-container">
+            <div class="slideshow">
+                <ul class="slides">
+                {% for image in project.projectimage_set.all %}
                     <li>
-                        <a href="#"><img src="{{ image.thumbnail.url }}"
-                             alt="{{ image.caption }}"/></a>
-                   </li>
-               {% endfor %}
-            </ul>
+                        <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
+                        {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="controls">
+                <ul>
+                   {% for image in project.projectimage_set.all %}
+                        <li>
+                            <a href="#"><img src="{{ image.thumbnail.url }}"
+                                 alt="{{ image.caption }}"/></a>
+                       </li>
+                   {% endfor %}
+                </ul>
+            </div>
         </section>
         {% endif %}
         <section class="details">
