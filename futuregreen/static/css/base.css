@@ -240,6 +240,7 @@ div.main section.featured article.project {
     .slideshow-container {
         float:left;
         width:61.80%;
+        position: relative;
     }
 
     .slideshow {
@@ -287,6 +288,13 @@ div.main section.featured article.project {
 
     .slideshow-container .controls img {
         width:100%
+    }
+
+    .slideshow-container .flex-direction-nav {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1000;
     }
 
 /* details */
