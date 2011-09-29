@@ -96,26 +96,14 @@
 <script type="text/javascript">
     function Flex() {
             if ($(".shim").length == 0) {
-                var a = $(".slideshow-container")
+                var a = $(".slideshow")
             } else {
                 var a = $(".shim")
             }
-            var b = $(".controls li");
-            var c = $(".controls");
-            var d = $(".details");
             var width = a.width();
-            var height = width * .667;
-            //var height = width * .75;
-            var thumb_width = b.width();
-            var total_width = c.width();
-            var margin = total_width * .013331;
+            var height = width * .6125;
 
-            //a.css('height', height);
-            b.css('margin-top', margin);
-            b.css('margin-bottom', margin);
-            c.css('margin-bottom', margin);
-            //d.css('height', height);
-            //d.css('margin-bottom', margin);
+            a.css('height', height);
     }
 
     function FlexMargin() {
@@ -125,7 +113,6 @@
             var div_width = div.width();
             var margin = div_width * .0125;
 
-            //a.css('height', height);
             li.css('margin-top', margin);
             li.css('margin-bottom', margin);
             div.css('margin-bottom', margin);
@@ -154,10 +141,12 @@
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
+        Flex();
         FlexMargin();
     });
 
     $(window).resize(function() {
+        Flex();
         FlexMargin();
     });
 
