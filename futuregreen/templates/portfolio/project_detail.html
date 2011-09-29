@@ -4,12 +4,6 @@
     <article class="project">
     {% if project.projectimage_set.all %}
         <section class="slideshow">
-            <nav>
-                <a href="#open" class="open">Open</a>
-                <a href="#close" class="close">Close</a>
-                <a href="#next" class="next">Next</a>
-                <a href="#prev" class="prev">Prev</a>
-            </nav>
             <ul class="slides">
             {% for image in project.projectimage_set.all %}
                 <li>
