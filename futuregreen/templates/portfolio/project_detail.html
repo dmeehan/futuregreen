@@ -122,12 +122,16 @@
 
     $(document).ready(function() {
         //Flex();
-        $('.slideshow').flexslider();
+        $('.flexslider').flexslider({
+              animation: "slide"
+        });
     });
 
     $(window).resize(function() {
         //Flex();
-        $('.slideshow').flexslider();
+         $('.flexslider').flexslider({
+              animation: "slide"
+        });
     });
 
     $("#open").click(function () {
