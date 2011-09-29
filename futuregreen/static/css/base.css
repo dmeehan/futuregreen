@@ -300,9 +300,9 @@ div.main section.featured article.project {
 
     .slideshow-container .flex-direction-nav a {
         position:absolute;
-        top:50%;
+        top:0;
         width:33%;
-        height:50%;
+        height:100%;
         z-index:1000;
     }
 
