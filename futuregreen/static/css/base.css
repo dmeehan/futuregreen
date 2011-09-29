@@ -236,29 +236,29 @@ div.main section.featured article.project {
 }
 
 /* slideshow */
-    .slideshow-container {
+    .slideshow {
         float:left;
         width:66.66667%;
         position: relative;
     }
 
-    .slideshow-container .slideshow {
+    .slideshow .carousel {
         position: relative;
         width:97.5%;
         margin:0 1.25%;
         padding: 0;
     }
 
-    .slideshow-container .slideshow .slides img {
+    .slideshow .carousel .slides img {
         width:100%;
         display:block;
     }
 
-    .slideshow-container .slideshow .slides li {
+    .slideshow .carousel .slides li {
         position:relative;
     }
 
-    .slideshow-container .slideshow .flex-caption {
+    .slideshow .carousel .flex-caption {
         position:absolute;
         bottom:0;
         left:0;
@@ -270,12 +270,12 @@ div.main section.featured article.project {
         width:97.34%;
     }
 
-    .slideshow-container .controls {
+    .slideshow .controls {
         margin:0 0 0 0;
         padding:0 0 0 0;
     }
 
-    .slideshow-container .controls li {
+    .slideshow .controls li {
         margin:0 0 0 0;
         padding:0 0 0 0;
         list-style: none;
@@ -286,19 +286,19 @@ div.main section.featured article.project {
         margin-right: 1.25%;
     }
 
-    .slideshow-container .controls img {
+    .slideshow .controls img {
         width:100%;
         opacity:0.3;
         filter:alpha(opacity=30); /* For IE8 and earlier */
     }
 
-    .slideshow-container .controls a.active img,
-    .slideshow-container .controls a:hover img {
+    .slideshow .controls a.active img,
+    .slideshow .controls a:hover img {
         opacity:1.0;
         filter:alpha(opacity=100); /* For IE8 and earlier */
     }
 
-    .slideshow-container .flex-direction-nav a {
+    .slideshow .flex-direction-nav a {
         position:absolute;
         top:0;
         width:33%;
@@ -306,12 +306,12 @@ div.main section.featured article.project {
         z-index:1000;
     }
 
-    .slideshow-container .flex-direction-nav .next {
+    .slideshow .flex-direction-nav .next {
         right:1.25%;
         text-align: right;
     }
 
-    .slideshow-container .flex-direction-nav .prev {
+    .slideshow .flex-direction-nav .prev {
         left:1.25%;
     }
 

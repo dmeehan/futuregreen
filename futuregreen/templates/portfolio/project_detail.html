@@ -3,8 +3,8 @@
 {% block content %}
     <article class="project">
     {% if project.projectimage_set.all %}
-        <section class="slideshow-container">
-            <div class="slideshow">
+        <section class="slideshow">
+            <div class="carousel">
                 <ul class="slides">
                 {% for image in project.projectimage_set.all %}
                     <li>
@@ -96,7 +96,7 @@
 <script type="text/javascript">
     function Flex() {
             if ($(".shim").length == 0) {
-                var a = $(".slideshow")
+                var a = $(".carousel")
             } else {
                 var a = $(".shim")
             }
@@ -160,6 +160,7 @@
     $(window).resize(function() {
         Flex();
         FlexMargin();
+        FlexBox();
     });
 
     $("#open").click(function () {
