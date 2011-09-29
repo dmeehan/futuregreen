@@ -64,7 +64,7 @@
             {% endif %}
         </section>
         <section class="thumbnails">
-            <ul>
+            <ul class="slide-controls">
                {% for image in project.projectimage_set.all %}
                     <li>
                         <img src="{{ image.thumbnail.url }}"
@@ -124,7 +124,7 @@
         //Flex();
         $('.slideshow').flexslider({
             animation: "slide",
-            manualControls: ".thumbnails",
+            manualControls: ".slide-controls"
         });
     });
 
