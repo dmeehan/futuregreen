@@ -373,6 +373,10 @@ div.main section.featured article.project {
 
     .size, .date, .designer {
         float:left;
+        width:20%;
+        height:80px;
+        background: #999;
+        margin: 10px 2.5%;
     }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
