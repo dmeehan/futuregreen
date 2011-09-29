@@ -385,6 +385,19 @@ div.main section.featured article.project {
         margin: 10px 2.5%;
     }
 
+    .categories li {
+        width:6.25%;
+        height:25px;
+    }
+
+    .categories .project-type {
+        background:#d27193;
+    }
+
+    .categories .landscape-type {
+        background:#7eac32;
+    }
+
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
         width:90%;
