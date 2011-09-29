@@ -310,14 +310,6 @@ div.main section.featured article.project {
         overflow:hidden;
     }
 
-
-
-    .more {
-        float:left;
-        width:36.54%;
-        margin:0;
-    }
-
     .size, .date, .designer {
         float:left;
     }
