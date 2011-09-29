@@ -96,14 +96,13 @@
 <script type="text/javascript">
     function Flex() {
             if ($(".shim").length == 0) {
-                var a = $(".slideshow")
+                var a = $(".slideshow-container")
             } else {
                 var a = $(".shim")
             }
-            var b = $(".thumbnails li");
-            var c = $(".thumbnails");
+            var b = $(".controls li");
+            var c = $(".controls");
             var d = $(".details");
-            var e = $(".thumbnails ul");
             var width = a.width();
             var height = width * .667;
             //var height = width * .75;
@@ -112,7 +111,6 @@
             var margin = total_width * .013331;
 
             a.css('height', height);
-            b.css('height', thumb_width);
             b.css('margin-top', margin);
             b.css('margin-bottom', margin);
             c.css('margin-bottom', margin);
