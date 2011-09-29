@@ -129,6 +129,10 @@ body {
         text-align:right;
     }
 
+    article.project {
+        background:url('images/top-left-bg.png') no-repeat top left;
+    }
+
 /********** HOMEPAGE ***********/
 .content > div {
     float:left;
@@ -242,7 +246,6 @@ div.main section.featured article.project {
         float:left;
         width:66.66667%;
         position: relative;
-        background:url('images/top-left-bg.png') no-repeat top left;
     }
 
     .slideshow .carousel {
