@@ -98,7 +98,7 @@
 {% endblock content %}
 
 {% block js_local %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.min.js"></script>
 <script type="text/javascript">
     function Flex() {
             if ($(".shim").length == 0) {
@@ -127,27 +127,13 @@
     }
 
     $(document).ready(function() {
-        //Flex();
-        ss = $(".slideshow");
-        list = $(".slideshow ul");
-        item = $(".slideshow li");
-        itemLen = item.size();
-        width = item.width();
-        ulSize = width * itemLen;
-
-        item.css({overflow:"hidden", float:"left", width:width});
-        list.css({width:ulSize+"px"});
-        ss.css({overflow: "hidden", width:width});
-
-        alert(ulSize);
-
-        //$(".slideshow").jCarouselLite({
-        //btnNext: ".slideshow .next",
-        //btnPrev: ".slideshow .prev"
+        Flex();
+        $('.slideshow').flexslider();
     });
 
     $(window).resize(function() {
-        //Flex();
+        Flex();
+        $('.slideshow').flexslider();
     });
 
     $("#open").click(function () {
