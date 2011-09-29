@@ -373,6 +373,7 @@ div.main section.featured article.project {
 
     .details h1 {
         font-size:1.8em;
+        font-weight:normal;
     }
 
     .details ul,
