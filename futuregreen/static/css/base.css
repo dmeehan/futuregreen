@@ -242,7 +242,8 @@ div.main section.featured article.project {
         float:left;
         width:66.66667%;
         position: relative;
-        background:url('images/top-left-bg.png') no-repeat -10px left;
+        background:url('images/top-left-bg.png') no-repeat top left;
+        overflow: auto;
     }
 
     .slideshow .carousel {
