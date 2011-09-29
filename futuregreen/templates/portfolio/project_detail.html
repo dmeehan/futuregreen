@@ -8,7 +8,7 @@
             {% for image in project.projectimage_set.all %}
                 <li>
                     <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
-                    {% if image.caption %}<p class="caption">{{ image.caption }}</p>{% endif %}
+                    {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
                 </li>
             {% endfor %}
             </ul>
@@ -122,12 +122,13 @@
 
     $(document).ready(function() {
         //Flex();
-        $('.slideshow').flexslider();
+        $('.slideshow').flexslider({
+            animation: "slide",
+        });
     });
 
     $(window).resize(function() {
         //Flex();
-        $('.slideshow').flexslider();
     });
 
     $("#open").click(function () {
