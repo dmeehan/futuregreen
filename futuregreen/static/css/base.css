@@ -372,7 +372,8 @@ div.main section.featured article.project {
     }
 
     .details h1 {
-        font-size:1.8em;
+        font-size:2em;
+        line-height:1.2em;
         font-weight:normal;
     }
 
@@ -390,6 +391,7 @@ div.main section.featured article.project {
     }
 
     .details ul, .details p {
+        overflow: auto;
         margin: 10px 2.5% 10px 2.5%;
     }
     .size, .date, .designer {
