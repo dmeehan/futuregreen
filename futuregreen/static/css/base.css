@@ -241,8 +241,10 @@ div.main section.featured article.project {
         float:left;
         width:60.14%;
         margin:0 0.83%;
-        position:relative;
-        background: #ccc;
+    }
+
+    .slideshow {
+        position: relative;
     }
 
     .slideshow .slides img {
