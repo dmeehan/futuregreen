@@ -371,12 +371,20 @@ div.main section.featured article.project {
         overflow:hidden;
     }
 
+    .details h1 {
+        font-weight: bold;
+    }
+
     .details ul,
     .details p,
     .details header {
-        margin:10px 2.5%;
+        clear:both;
+        margin:0 2.5%;
     }
 
+    .details ul, p {
+        margin: 10px 2.5% 10px 2.5%;
+    }
     .size, .date, .designer {
         float:left;
         width:20%;
