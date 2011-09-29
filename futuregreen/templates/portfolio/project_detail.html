@@ -32,12 +32,12 @@
                 <ul class="categories">
                     {% if project.project_types.all %}
                         {% for category in project.project_types.all %}
-                            <li class="project-type box"> {{ category.alternate_title }} </li>
+                            <li class="project-type box center"> {{ category.alternate_title }} </li>
                         {% endfor %}
                     {% endif %}
                     {% if project.landscape_types.all %}
                         {% for category in project.landscape_types.all %}
-                            <li class="landscape-type box"> {{ category.alternate_title }} </li>
+                            <li class="landscape-type box center"> {{ category.alternate_title }} </li>
                        {% endfor %}
                     {% endif %}
                 </ul>
@@ -128,6 +128,10 @@
             $('.box').each(function(i, obj){
                 width = $(this).width();
                 $(this).css('height',width);
+                $(this).css('line-height',width + "px");
+            });
+            $('.box.center').each(function(i, obj){
+                width = $(this).width();
                 $(this).css('line-height',width + "px");
             });
     }
