@@ -57,6 +57,8 @@ a:visited {
 
 
 body {
+        min-width:1024px;
+        max-width:1460px;
         padding:0;
         position:relative;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
@@ -445,7 +447,6 @@ div.main section.featured article.project {
   body {
     width:85%;
     margin: 0 7.5%;
-    max-width:1460px;
   }
 }
 
