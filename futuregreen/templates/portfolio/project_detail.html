@@ -118,6 +118,21 @@
             //d.css('margin-bottom', margin);
     }
 
+    function FlexMargin() {
+            var li = $(".controls li");
+            var div = $(".controls");
+            var li_width = li.width();
+            var div_width = div.width();
+            var margin = div_width * .0125;
+
+            //a.css('height', height);
+            li.css('margin-top', margin);
+            li.css('margin-bottom', margin);
+            div.css('margin-bottom', margin);
+            div.css('margin-top', margin);
+    }
+
+
     $(document).ready(function() {
         $('.slideshow').flexslider({
             animation: "slide",
@@ -139,11 +154,11 @@
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
-        Flex();
+        FlexMargin();
     });
 
     $(window).resize(function() {
-        Flex();
+        FlexMargin();
     });
 
     $("#open").click(function () {
