@@ -67,8 +67,8 @@
             <ul class="slide-controls">
                {% for image in project.projectimage_set.all %}
                     <li>
-                        <img src="{{ image.thumbnail.url }}"
-                             alt="{{ image.caption }}"/>
+                        <a><img src="{{ image.thumbnail.url }}"
+                             alt="{{ image.caption }}"/></a>
                    </li>
                {% endfor %}
             </ul>
@@ -123,8 +123,23 @@
     $(document).ready(function() {
         //Flex();
         $('.slideshow').flexslider({
-            animation: "slide",
-            //controlNav: false,
+            animation: "slide",              //Select your animation type (fade/slide)
+            slideshow: true,                //Should the slider animate automatically by default? (true/false)
+            slideshowSpeed: 7000,           //Set the speed of the slideshow cycling, in milliseconds
+            animationDuration: 600,         //Set the speed of animations, in milliseconds
+            directionNav: true,             //Create navigation for previous/next navigation? (true/false)
+            controlNav: true,               //Create navigation for paging control of each clide? (true/false)
+            keyboardNav: true,              //Allow for keyboard navigation using left/right keys (true/false)
+            touchSwipe: true,               //Touch swipe gestures for left/right slide navigation (true/false)
+            prevText: "Previous",           //Set the text for the "previous" directionNav item
+            nextText: "Next",               //Set the text for the "next" directionNav item
+            pausePlay: false,               //Create pause/play dynamic element (true/false)
+            randomize: false,               //Randomize slide order on page load? (true/false)
+            slideToStart: 0,                //The slide that the slider should start on. Array notation (0 = first slide)
+            animationLoop: true,            //Should the animation loop? If false, directionNav will received disabled classes when at either end (true/false)
+            pauseOnAction: true,            //Pause the slideshow when interacting with control elements, highly recommended. (true/false)
+            pauseOnHover: true,            //Pause the slideshow when hovering over slider, then resume when no longer hovering (true/false)
+            controlsContainer: ".thumbnails",          //Advanced property: Can declare which container the navigation elements should be appended too. Default container is the flexSlider element. Example use would be ".flexslider-container", "#container", etc. If the given element is not found, the default action will be taken.
             manualControls: ".slide-controls"
         });
     });
