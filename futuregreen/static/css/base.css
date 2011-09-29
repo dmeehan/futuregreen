@@ -298,27 +298,15 @@ div.main section.featured article.project {
         filter:alpha(opacity=100); /* For IE8 and earlier */
     }
 
-    .slideshow-container .flex-direction-nav {
+    .slideshow-container .flex-direction-nav .next {
         position:absolute;
         top:0;
-        left:0;
+        left:1.25%;
+        width:33%;
+        height:100%;
+        line-height:100%;
         z-index:1000;
     }
-
-/* details */
-
-    .details {
-        float:left;
-        width:33.33333%;
-        margin:0;
-        overflow:hidden;
-    }
-
-    .size, .date, .designer {
-        float:left;
-    }
-
-
 
 /* expanded slideshow styles */
     .min {
@@ -365,6 +353,19 @@ div.main section.featured article.project {
         float:left;
         width:60.14%;
         margin:0 0.83%;
+    }
+
+/* details */
+
+    .details {
+        float:left;
+        width:33.33333%;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .size, .date, .designer {
+        float:left;
     }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
