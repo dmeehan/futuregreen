@@ -239,7 +239,7 @@ div.main section.featured article.project {
 /* slideshow */
     .slideshow-container {
         float:left;
-        width:61.80%;
+        width:66.66667%;
         position: relative;
     }
 
@@ -247,6 +247,7 @@ div.main section.featured article.project {
         position: relative;
         width:97.5%;
         margin:0 1.25%;
+        padding: 0;
     }
 
     .slideshow .slides img {
@@ -304,8 +305,8 @@ div.main section.featured article.project {
 
     .details {
         float:left;
-        width:36.54%;
-        margin:0 0.83%;
+        width:33.33333%;
+        margin:0;
         overflow:hidden;
     }
 
