@@ -284,8 +284,8 @@ div.main section.featured article.project {
 
     .slideshow-container .controls img {
         width:100%;
-        opacity:0.6;
-        filter:alpha(opacity=60); /* For IE8 and earlier */
+        opacity:0.3;
+        filter:alpha(opacity=30); /* For IE8 and earlier */
     }
 
     .slideshow-container .controls a.active img {
