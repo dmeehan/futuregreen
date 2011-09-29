@@ -256,7 +256,7 @@ div.main section.featured article.project {
         left:10px;
     }
 
-    .slideshow .caption {
+    .slideshow .flex-caption {
         position:absolute;
         bottom:0;
         left:0;
