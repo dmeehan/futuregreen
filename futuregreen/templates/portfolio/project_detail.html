@@ -127,6 +127,8 @@
 
     $(document).ready(function() {
         //Flex();
+        w = $(".slideshow li").width();
+        alert(w);
     });
 
     $(window).resize(function() {
@@ -155,9 +157,9 @@
 </script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jcarousellite_1.0.1.min.js"></script>
 <script type="text/javascript">
-    $(".slideshow").jCarouselLite({
-        btnNext: ".slideshow .next",
-        btnPrev: ".slideshow .prev"
-    });
+    //$(".slideshow").jCarouselLite({
+        //btnNext: ".slideshow .next",
+        //btnPrev: ".slideshow .prev"
+    //});
 </script>
 {% endblock js_local %}
