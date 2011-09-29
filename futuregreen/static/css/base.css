@@ -421,6 +421,11 @@ div.main section.featured article.project {
         background:#7eac32;
     }
 
+    .people {
+        float:left;
+        width:50%;
+    }
+
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
         width:90%;

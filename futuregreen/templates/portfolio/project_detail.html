@@ -63,7 +63,8 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
-
+                  </div>
+                  <div class="people">
                     {% if project.collaborators.all %}
                     <h2>Collaborators</h2>
                     <ul>
@@ -72,7 +73,7 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
-                </div>
+                  </div>
             {% endif %}
             {% load easy_maps_tags %}
             {% easy_map project.address 180 180 %}
