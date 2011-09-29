@@ -121,7 +121,6 @@
     }
 
     $(document).ready(function() {
-        //Flex();
         $('.slideshow').flexslider({
             animation: "slide",
             slideshow: true,
@@ -142,10 +141,11 @@
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
+        Flex();
     });
 
     $(window).resize(function() {
-        //Flex();
+        Flex();
     });
 
     $("#open").click(function () {
