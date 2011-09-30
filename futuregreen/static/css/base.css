@@ -240,7 +240,7 @@ div.main section.featured article.project {
 /* slideshow */
     .slideshow {
         float:left;
-        width:66.66667%;
+        width:58.33333%;
         position: relative;
         overflow: auto;
     }
@@ -369,7 +369,7 @@ div.main section.featured article.project {
 
     .details {
         float:left;
-        width:33.33333%;
+        width:41.66667%;
         margin:0;
         overflow:hidden;
     }
