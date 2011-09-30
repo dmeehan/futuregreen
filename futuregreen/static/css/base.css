@@ -475,6 +475,15 @@ div.main section.featured article.project {
         text-align: center;
     }
 
+ .details .description .meta .categories li a {
+        color:#fff;
+        float:left;
+        width:100%;
+        font-weight: bold;
+        text-align: center;
+    }
+
+
     .details .meta .categories .project-type {
         background:#d27193;
     }
