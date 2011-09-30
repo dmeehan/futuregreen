@@ -430,19 +430,19 @@ div.main section.featured article.project {
     }
 
     .categories {
+        overflow: hidden;
         width:90%;
         margin: 0 5%;
     }
 
     .categories li {
+        overflow: hidden;
         float:left;
         width:20%;
         border-top: 1px solid #fff;
         border-right:  1px solid #fff;
-        height:30px;
         color:#fff;
         font-weight: bold;
-        line-height:30px;
         text-align: center;
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box;    /* Firefox, other Gecko */
