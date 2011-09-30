@@ -426,6 +426,11 @@ div.main section.featured article.project {
         font-size: 2.3em;
     }
 
+    .details .date .month,
+    .details .size .unit {
+        font-size: .9em;
+    }
+
     .details .description .meta {
         float:right;
         width:40%;
