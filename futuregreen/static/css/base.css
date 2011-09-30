@@ -479,6 +479,10 @@ div.main section.featured article.project {
         width:16.66667%;
     }
 
+     .details .meta .info-boxes ul {
+        overflow: auto;
+    }
+
     .details .meta .location {
         clear:both;
         width:90%;
