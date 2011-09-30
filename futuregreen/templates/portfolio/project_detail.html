@@ -65,6 +65,16 @@
                              </ul>
                             {% endif %}
                         </div>
+                        {% if external_url %}
+                            <p class="url"><a href="{{ project.external_url }}">project.external_url</a></p>
+                        {% endif %}
+                        {% if project.tags.all %}
+                            <ul class="tags">
+                            {% for tag in project.tags.all %}
+                                <li> {{ tag.name }} </li>
+                            {% endfor %}
+                            </ul>
+                    {% endif %}
                     {% endif %}
                     <div class="info-boxes">
                         <ul>
@@ -81,16 +91,6 @@
                 </div>
                 <div class="text flex-margin">
                     {{ project.description_html|safe }}
-                    {% if external_url %}
-                        <p class="url">{{ project.external_url }}</p>
-                    {% endif %}
-                    {% if project.tags.all %}
-                        <ul class="tags">
-                        {% for tag in project.tags.all %}
-                            <li> {{ tag.name }} </li>
-                        {% endfor %}
-                        </ul>
-                    {% endif %}
                 </div>
             </div>
             
