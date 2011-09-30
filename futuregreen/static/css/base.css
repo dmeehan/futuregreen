@@ -241,6 +241,7 @@ div.main section.featured article.project {
     article.project {
         position:relative;
         overflow: auto;
+        background: url('images/detail-bg-right.png') no-repeat top right;
     }
 
 /* slideshow */
