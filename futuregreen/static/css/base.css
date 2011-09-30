@@ -480,6 +480,7 @@ div.main section.featured article.project {
     }
 
     .details .meta .location {
+        clear:both;
         width:90%;
         margin: 0 5%;
     }
