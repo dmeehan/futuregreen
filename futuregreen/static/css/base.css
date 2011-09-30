@@ -442,8 +442,8 @@ div.main section.featured article.project {
     .details .description .meta .categories li {
         overflow: hidden;
         float:left;
-        width:15%;
-        margin: 0 2.5%;
+        width:17.5%;
+        margin: 0 1.25%;
         color:#fff;
         font-weight: bold;
         text-align: center;
