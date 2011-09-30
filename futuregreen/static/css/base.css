@@ -472,11 +472,13 @@ div.main section.featured article.project {
         margin:0 0 0 0;
     }
 
-    .details .meta .location {
+    .details .meta .info-boxes {
         position:absolute;
         bottom:0;
         right:0;
-        background: #ccc;
+    }
+
+    .details .meta .location {
         width:15%;
         margin: 0.83333%;
     }
