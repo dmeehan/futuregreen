@@ -481,7 +481,7 @@ div.main section.featured article.project {
         margin: 0.83333%;
     }
 
-    .details .meta .location div {
+    .details .meta .location .easy-map-googlemap {
         width:100%;
     }
 
