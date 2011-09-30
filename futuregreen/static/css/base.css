@@ -405,11 +405,10 @@ div.main section.featured article.project {
 
     .details .size, .details .date, .details .designer {
         float:left;
-        width:39%;
+        width:40%;
         height:80px;
         background: #ccc;
         margin: 10px 5%;
-        padding-right:1px;
     }
 
     .details .description .meta {
@@ -438,8 +437,9 @@ div.main section.featured article.project {
 
     .categories li {
         float:left;
-        width:20%;
+        width:19%;
         margin: 0;
+        padding-right:1%;
         height:30px;
         color:#fff;
         font-weight: bold;
