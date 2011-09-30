@@ -418,7 +418,8 @@ div.main section.featured article.project {
         color:#fff;
         text-transform: uppercase;
         text-align: center;
-        font-weight: bold;;
+        font-weight: bold;
+        line-height:1em;
     }
 
     .details .date .year,
