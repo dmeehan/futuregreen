@@ -443,8 +443,8 @@ div.main section.featured article.project {
         overflow: hidden;
         float:left;
         width:20%;
-        border-top: 1px solid #fff;
-        border-right:  1px solid #fff;
+        border-top: 5px solid #fff;
+        border-right:  5px solid #fff;
         color:#fff;
         font-weight: bold;
         text-align: center;
