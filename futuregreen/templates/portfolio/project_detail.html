@@ -25,7 +25,7 @@
                 </ul>
             </div>
         </section>
-        {% endif %}
+    {% endif %}
         <section class="details">
             <header><h1>{{ project.name }}</h1></header>
             <div class="description">
@@ -76,18 +76,17 @@
                 <div class="text flex-margin">
                     {{ project.description_html|safe }}
                     {% if external_url %}
-                    <p class="url">{{ project.external_url }}</p>
+                        <p class="url">{{ project.external_url }}</p>
                     {% endif %}
                     {% if project.tags.all %}
-                    <ul class="tags">
+                        <ul class="tags">
                         {% for tag in project.tags.all %}
-                        <li> {{ tag.name }} </li>
+                            <li> {{ tag.name }} </li>
                         {% endfor %}
-                    </ul>
+                        </ul>
+                    {% endif %}
                 </div>
-            {% endif %}
             </div>
-            {% endif %}
             
         </section>
     </article>
