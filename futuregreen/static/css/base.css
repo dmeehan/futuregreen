@@ -437,13 +437,16 @@ div.main section.featured article.project {
 
     .categories li {
         float:left;
-        width:19%;
-        margin-right: 1%;
+        width:20%;
+        margin-right: 1px;
         height:30px;
         color:#fff;
         font-weight: bold;
         line-height:30px;
         text-align: center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
     }
 
     .categories .project-type {
