@@ -442,15 +442,11 @@ div.main section.featured article.project {
     .details .description .meta .categories li {
         overflow: hidden;
         float:left;
-        width:20%;
-        border-top: 5px solid #fff;
-        border-right:  5px solid #fff;
+        width:15%;
+        margin: 0 2.5%
         color:#fff;
         font-weight: bold;
         text-align: center;
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-        box-sizing: border-box;         /* Opera/IE 8+ */
     }
 
     .details .meta .categories .project-type {
