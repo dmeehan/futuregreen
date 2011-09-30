@@ -312,14 +312,13 @@ div.main section.featured article.project {
         position:absolute;
         top:50%;
         width:33%;
-        padding: 33%;
         z-index:1000;
     }
 
     .slideshow .flex-direction-nav a {
-        position:relative;
+        /*position:relative;
         top:-50%;
-        height:50%;
+        height:50%;*/
     }
 
 
