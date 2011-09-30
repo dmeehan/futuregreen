@@ -314,6 +314,7 @@ div.main section.featured article.project {
         width:33%;
         height:50%;
         z-index:1000;
+        text-indent:-9999;
     }
 
     .slideshow .flex-direction-nav .next {
