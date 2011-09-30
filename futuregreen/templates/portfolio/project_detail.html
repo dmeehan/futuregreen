@@ -42,17 +42,20 @@
                     {% endif %}
                 </ul>
             {% endif %}
-            {{ project.description_html|safe }}
-            {% if external_url %}
+            <div class="description">
+                {{ project.description_html|safe }}
+                {% if external_url %}
                 <p class="url">{{ project.external_url }}</p>
-            {% endif %}
-            {% if project.tags.all %}
+                {% endif %}
+                {% if project.tags.all %}
                 <ul class="tags">
                     {% for tag in project.tags.all %}
                     <li> {{ tag.name }} </li>
                     {% endfor %}
                 </ul>
             {% endif %}
+            </div>
+
             {% if project.clients.all or project.collaborators.all %}
                 <div class="people">
                     {% if project.clients.all %}
