@@ -453,7 +453,7 @@ div.main section.featured article.project {
        margin:10px 5%;
     }
     .people ul {
-        margin-top:0;
+        margin:0 0 0 0;
     }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
