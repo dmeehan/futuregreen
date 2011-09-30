@@ -242,17 +242,14 @@ div.main section.featured article.project {
         float:left;
         width:66.66667%;
         position: relative;
-        background:url('images/top-bg.png') no-repeat top left;
         overflow: auto;
-        padding-top:1px;
     }
 
     .slideshow .carousel {
         position: relative;
         width:97.5%;
         margin:0 1.25%;
-        padding: 0 0 0 1px;
-        background:url('images/left-bg.png') no-repeat top left;
+        padding: 0;
     }
 
     .slideshow .carousel .slides img {
@@ -404,6 +401,10 @@ div.main section.featured article.project {
         height:80px;
         background: #999;
         margin: 10px 2.5%;
+    }
+
+    .catgeories {
+        overflow: auto;
     }
 
     .categories li {
