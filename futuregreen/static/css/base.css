@@ -424,15 +424,12 @@ div.main section.featured article.project {
 
     .details .description .text {
         float:left;
-        width:60%;
-    }
-
-    .details .description .text p {
+        width:53.33334%;
         margin: 10px 3.33333%;
     }
 
-    .details .description .text p:first-child {
-        margin-top: 0;
+    .details .description .text p {
+        margin-bottom:10px;
     }
 
     .details .description .meta .categories {
