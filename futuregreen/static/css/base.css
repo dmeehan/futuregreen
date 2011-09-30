@@ -422,7 +422,7 @@ div.main section.featured article.project {
     }
 
     .details .date .year,
-    .details .size .unit {
+    .details .size .number {
         font-size: 2.3em;
     }
 
