@@ -34,20 +34,20 @@
                         <ul class="categories flex-margin">
                             {% if project.project_types.all %}
                                 {% for category in project.project_types.all %}
-                                    <li class="project-type box center"> {{ category.alternate_title }} </li>
+                                    <li class="project-type flex-box center"> {{ category.alternate_title }} </li>
                                 {% endfor %}
                             {% endif %}
                             {% if project.landscape_types.all %}
                                 {% for category in project.landscape_types.all %}
-                                    <li class="landscape-type box center"> {{ category.alternate_title }} </li>
+                                    <li class="landscape-type flex-box center"> {{ category.alternate_title }} </li>
                                {% endfor %}
                             {% endif %}
                         </ul>
                     {% endif %}
                     {% if project.date_end %}
-                    <p class="date box flex-margin">{{ project.date_end|date:"F Y" }}</p>
+                    <p class="date flex-box flex-margin">{{ project.date_end|date:"F Y" }}</p>
                     {% endif %}
-                    <p class="size box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                    <p class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
                     {% if project.clients.all or project.collaborators.all %}
                     {% load easy_maps_tags %}
                     {% easy_map project.address %}
