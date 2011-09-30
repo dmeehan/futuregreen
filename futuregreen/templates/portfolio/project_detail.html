@@ -67,10 +67,12 @@
                         </div>
                     {% endif %}
                     <div class="info-boxes">
+                        <ul>
                         {% if project.date_end %}
-                            <p class="date flex-box flex-margin">{{ project.date_end|date:"F Y" }}</p>
+                            <li class="date flex-box flex-margin">{{ project.date_end|date:"F Y" }}</p>
                         {% endif %}
-                        <p class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                        <li class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                        </ul>
                         <div class="location flex-margin flex-box">
                             {% load easy_maps_tags %}
                             {% easy_map project.address using 'portfolio/map.html' %}
