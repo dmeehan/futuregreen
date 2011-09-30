@@ -17,7 +17,7 @@
             <div class="controls">
                 <ul>
                    {% for image in project.projectimage_set.all %}
-                        <li>
+                        <li class="flex-margin">
                             <a href="#"><img src="{{ image.thumbnail.url }}"
                                  alt="{{ image.caption }}"/></a>
                        </li>
@@ -31,7 +31,7 @@
             <div class="description">
                 <div class="meta">
                     {% if project.project_types.all or project.landscape_types.all %}
-                        <ul class="categories">
+                        <ul class="categories flex-margin">
                             {% if project.project_types.all %}
                                 {% for category in project.project_types.all %}
                                     <li class="project-type box center"> {{ category.alternate_title }} </li>
@@ -47,7 +47,7 @@
                     {% if project.date_end %}
                     <p class="date box flex-margin">{{ project.date_end|date:"F Y" }}</p>
                     {% endif %}
-                    <p class="size box">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                    <p class="size box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
                     {% if project.clients.all or project.collaborators.all %}
                     {% load easy_maps_tags %}
                     {% easy_map project.address %}
@@ -110,9 +110,10 @@
 
     function FlexMargin() {
             $('.flex-margin').each(function(i, obj){
-                alert($(this).margin().right);
+                margin = $(this).margin().right;
+                $(this).margin({bottom: margin, top: margin, left: margin, right: margin })
             });
-
+            /*
             var li = $(".controls li");
             var div = $(".controls");
             var li_width = li.width();
@@ -122,11 +123,11 @@
             li.css('margin-top', margin);
             li.css('margin-bottom', margin);
             div.css('margin-bottom', margin);
-            div.css('margin-top', margin);
+            div.css('margin-top', margin);*/
     }
 
     function FlexBox() {
-            $('.box').each(function(i, obj){
+            $('.flex-box').each(function(i, obj){
                 width = $(this).width();
                 $(this).css('height',width);
             });
