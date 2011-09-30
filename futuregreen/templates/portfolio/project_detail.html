@@ -90,7 +90,10 @@
                                 <span class="year">{{ project.date_end|date:"Y" }}</span>
                             </li>
                         {% endif %}
-                        <li class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                        <li class="size flex-box flex-margin">
+                            <span class="number">{{ project.area|floatformat }}</span>
+                            <span class="unit">{{ project.get_unit_display }}</span>
+                        </li>
                         </ul>
                         <div class="location flex-margin flex-box">
                             {% load easy_maps_tags %}
