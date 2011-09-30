@@ -16,7 +16,7 @@ class ProjectImageAdmin(admin.ModelAdmin):
 
 class ImageInline(admin.StackedInline):
     model = ProjectImage
-    fields = ('image', 'name', 'caption',
+    fields = ('image', 'name', 'caption', 'public',
               'is_main', 'crop_horz', 'crop_vert', 'order',)
     extra = 0
 
