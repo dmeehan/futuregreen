@@ -13,6 +13,7 @@ from taggit.managers import TaggableManager
 from categories.models import Category
 
 from images.models import RelatedImageAutoBase
+from images.managers import ImageManager
 
 from futuregreen.portfolio.managers import ProjectManager
 from futuregreen.people.models import Client, Collaborator, Employee
@@ -211,6 +212,8 @@ class ProjectImage(RelatedImageAutoBase):
         Images for a project.
 
     """
+    objects = ImageManager()
+
     project = models.ForeignKey(Project)
 
 
