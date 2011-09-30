@@ -425,6 +425,10 @@ div.main section.featured article.project {
         margin: 10px 3.33333%
     }
 
+    .details .description .text p:first-child {
+        margin-top: 0;
+    }
+
     .categories {
         overflow: auto;
     }
