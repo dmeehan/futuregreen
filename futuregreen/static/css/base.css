@@ -409,12 +409,16 @@ div.main section.featured article.project {
 
     .details .size, .details .date, .details .designer {
         float:left;
-        width:20%;
+        width:95%;
         height:80px;
         background: #999;
         margin: 10px 2.5%;
     }
 
+    .details .description .meta {
+        float:right;
+        width:20%
+    }
     .categories {
         overflow: auto;
     }

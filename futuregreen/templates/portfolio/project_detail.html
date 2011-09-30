@@ -43,6 +43,12 @@
                 </ul>
             {% endif %}
             <div class="description">
+                <div class="meta">
+                    {% if project.date_end %}
+                    <p class="date box">{{ project.date_end|date:"F Y" }}</p>
+                    {% endif %}
+                    <p class="size box">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                </div>
                 {{ project.description_html|safe }}
                 {% if external_url %}
                 <p class="url">{{ project.external_url }}</p>
@@ -80,10 +86,6 @@
             {% endif %}
             {% load easy_maps_tags %}
             {% easy_map project.address 180 180 %}
-            {% if project.date_end %}
-                <p class="date box">{{ project.date_end|date:"F Y" }}</p>
-            {% endif %}
-            <p class="size box">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
         </section>
     </article>
 {% endblock content %}
