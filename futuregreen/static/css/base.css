@@ -434,6 +434,7 @@ div.main section.featured article.project {
         overflow: hidden;
         width:90%;
         margin: 0 5%;
+        clear:both;
     }
 
     .categories li {
