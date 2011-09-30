@@ -424,6 +424,10 @@ div.main section.featured article.project {
         width:60%
     }
 
+    .details .description .text p {
+        margin: 10px 3.33333%
+    }
+
     .categories {
         overflow: auto;
     }
