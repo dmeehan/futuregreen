@@ -408,7 +408,7 @@ div.main section.featured article.project {
 
     .details .size, .details .date, .details .designer {
         float:left;
-        width:40%;
+        width:30%;
         height:80px;
         background: #999;
         margin: 10px 5%;
