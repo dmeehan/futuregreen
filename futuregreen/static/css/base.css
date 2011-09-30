@@ -242,7 +242,7 @@ div.main section.featured article.project {
         position:relative;
         overflow: auto;
         background: url('images/detail-bg-right.png') no-repeat top right,
-                    url('images/vertical-bg.png') no-repeat 57.5% 70%;
+                    url('images/vertical-bg.png') no-repeat 57.5% 60%;
     }
 
 /* slideshow */
