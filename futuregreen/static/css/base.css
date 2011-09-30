@@ -476,6 +476,9 @@ div.main section.featured article.project {
         position:absolute;
         bottom:0;
         right:0;
+        background: #ccc;
+        width:15%;
+        margin: 0.83333%;
     }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
