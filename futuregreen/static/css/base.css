@@ -415,6 +415,13 @@ div.main section.featured article.project {
         height:80px;
         background: #ccc;
         margin: 10px 5%;
+        color:#fff;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .details .date .year {
+        font-size: 2em;
     }
 
     .details .description .meta {
