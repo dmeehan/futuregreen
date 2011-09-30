@@ -481,6 +481,10 @@ div.main section.featured article.project {
         margin: 0.83333%;
     }
 
+    .details .meta .location div {
+        width:100%;
+    }
+
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
         width:90%;
