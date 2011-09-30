@@ -428,7 +428,7 @@ div.main section.featured article.project {
 
     .details .date .month,
     .details .size .unit {
-        font-size: .9em;
+        font-size: .85em;
     }
 
     .details .description .meta {
