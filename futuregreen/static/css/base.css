@@ -377,6 +377,7 @@ div.main section.featured article.project {
     .details h1 {
         font-size:2em;
         margin-bottom:10px;
+        line-height:1.1em;
     }
 
     .details h2 {
