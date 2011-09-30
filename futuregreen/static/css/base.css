@@ -449,7 +449,8 @@ div.main section.featured article.project {
     }
 
     .people {
-       
+       width:90%;
+       margin:10px 5%;
     }
     .people ul {
         margin-top:0;
