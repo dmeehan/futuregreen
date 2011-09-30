@@ -66,16 +66,20 @@
                             {% endif %}
                         </div>
                         {% if project.external_url %}
+                        <div class="link flex-margin">
                             <h2>Web Link</h2>
-                            <p class="url"><a href="{{ project.external_url }}">project.external_url</a></p>
+                            <p class="url"><a href="{{ project.external_url }}">{{ project.external_url }}</a></p>
+                        </div>
                         {% endif %}
                         {% if project.tags.all %}
+                        <div class="tags flex-margin">
                             <h2>Tags</h2>
                             <ul class="tags">
                             {% for tag in project.tags.all %}
                                 <li> {{ tag.name }} </li>
                             {% endfor %}
                             </ul>
+                        </div>
                     {% endif %}
                     {% endif %}
                     <div class="info-boxes">

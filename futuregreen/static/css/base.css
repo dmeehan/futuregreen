@@ -464,7 +464,9 @@ div.main section.featured article.project {
         background:#7eac32;
     }
 
-    .details .meta .people {
+    .details .meta .people,
+    .details .meta .link,
+    .details .meta .tags {
        width:90%;
        margin:10px 5%;
     }
