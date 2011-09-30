@@ -45,7 +45,7 @@
                         </ul>
                     {% endif %}
                     {% if project.date_end %}
-                    <p class="date box">{{ project.date_end|date:"F Y" }}</p>
+                    <p class="date box flex-margin">{{ project.date_end|date:"F Y" }}</p>
                     {% endif %}
                     <p class="size box">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
                     {% if project.clients.all or project.collaborators.all %}
@@ -94,6 +94,7 @@
 
 {% block js_local %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.sizes.min.js"></script>
 <script type="text/javascript">
     function Flex() {
             if ($(".shim").length == 0) {
@@ -109,7 +110,8 @@
 
     function FlexMargin() {
             $('.flex-margin').each(function(i, obj){
-                //test
+                this = $(this);
+                alert(this.border().right);
             });
 
             var li = $(".controls li");
