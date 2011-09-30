@@ -433,7 +433,7 @@ div.main section.featured article.project {
     .details .description .meta .categories {
         overflow: hidden;
         width:90%;
-        margin: 0 5%;
+        margin: 10px 5%;
         clear:both;
     }
 
