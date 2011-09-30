@@ -438,7 +438,8 @@ div.main section.featured article.project {
     .categories li {
         float:left;
         width:20%;
-        margin-right: 1px;
+        border-top: 1px solid #fff;
+        border-right:  1px solid #fff;
         height:30px;
         color:#fff;
         font-weight: bold;
