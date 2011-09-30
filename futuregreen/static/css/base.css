@@ -237,6 +237,12 @@ div.main section.featured article.project {
     margin: 0 2.5%;
 }
 
+/*********** PROJECT DETAIL ************/
+    article.project {
+        position:relative;
+        overflow: auto;
+    }
+
 /* slideshow */
     .slideshow {
         float:left;
@@ -464,6 +470,12 @@ div.main section.featured article.project {
     }
     .details .meta .people ul {
         margin:0 0 0 0;
+    }
+
+    .details .meta .location {
+        position:absolute;
+        bottom:0;
+        right:0;
     }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {

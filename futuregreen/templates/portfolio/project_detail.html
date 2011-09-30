@@ -70,8 +70,10 @@
                         <p class="date flex-box flex-margin">{{ project.date_end|date:"F Y" }}</p>
                     {% endif %}
                     <p class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
-                    {% load easy_maps_tags %}
-                    {% easy_map project.address 180 180 %}
+                    <div class="location">
+                        {% load easy_maps_tags %}
+                        {% easy_map project.address 180 180 %}
+                    </div>
                 </div>
                 <div class="text flex-margin">
                     {{ project.description_html|safe }}
