@@ -420,10 +420,12 @@ div.main section.featured article.project {
         text-align: center;
         font-weight: bold;
         line-height:1em;
+        display: table;
     }
 
-    .details .size p {
-
+    .details .size p,
+    .details .date p {
+        display: table-cell; vertical-align: middle;
     }
 
     .details .date .year,
