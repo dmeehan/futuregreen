@@ -125,7 +125,7 @@ body {
     body > footer > .contact {
         float:left;
         width:66.66668%;
-        margin: 0 .83333%;
+        margin: 10px .83333%;
         text-align:right;
     }
 
