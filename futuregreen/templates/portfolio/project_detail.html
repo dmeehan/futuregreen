@@ -49,16 +49,18 @@
                     {% endif %}
                     <p class="size box">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
                 </div>
-                {{ project.description_html|safe }}
-                {% if external_url %}
-                <p class="url">{{ project.external_url }}</p>
-                {% endif %}
-                {% if project.tags.all %}
-                <ul class="tags">
-                    {% for tag in project.tags.all %}
-                    <li> {{ tag.name }} </li>
-                    {% endfor %}
-                </ul>
+                <div class="text">
+                    {{ project.description_html|safe }}
+                    {% if external_url %}
+                    <p class="url">{{ project.external_url }}</p>
+                    {% endif %}
+                    {% if project.tags.all %}
+                    <ul class="tags">
+                        {% for tag in project.tags.all %}
+                        <li> {{ tag.name }} </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             {% endif %}
             </div>
 

@@ -419,6 +419,12 @@ div.main section.featured article.project {
         float:right;
         width:20%
     }
+
+    .details .description .text {
+        float:left;
+        width:80%
+    }
+
     .categories {
         overflow: auto;
     }
