@@ -29,7 +29,7 @@
         <section class="details">
             <header><h1>{{ project.name }}</h1></header>
             <div class="description">
-                <div class="meta">
+                <div class="meta flex-margin">
                     {% if project.project_types.all or project.landscape_types.all %}
                         <ul class="categories flex-margin">
                             {% if project.project_types.all %}
@@ -51,7 +51,7 @@
                     {% if project.clients.all or project.collaborators.all %}
                     {% load easy_maps_tags %}
                     {% easy_map project.address %}
-                <div class="people">
+                <div class="people flex-margin">
                     {% if project.clients.all %}
                     <h2>Clients</h2>
                     <ul>
@@ -61,7 +61,7 @@
                     </ul>
                     {% endif %}
                   </div>
-                  <div class="people">
+                  <div class="people flex-margin">
                     {% if project.collaborators.all %}
                     <h2>Collaborators</h2>
                     <ul>
@@ -72,7 +72,7 @@
                     {% endif %}
                   </div>
                 </div>
-                <div class="text">
+                <div class="text flex-margin">
                     {{ project.description_html|safe }}
                     {% if external_url %}
                     <p class="url">{{ project.external_url }}</p>
