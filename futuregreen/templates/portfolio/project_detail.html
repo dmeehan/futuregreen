@@ -30,10 +30,6 @@
             <header><h1>{{ project.name }}</h1></header>
             <div class="description">
                 <div class="meta">
-                    {% if project.date_end %}
-                        <p class="date flex-box flex-margin">{{ project.date_end|date:"F Y" }}</p>
-                    {% endif %}
-                    <p class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
                     {% if project.project_types.all or project.landscape_types.all %}
                         <ul class="categories flex-margin">
                             {% if project.project_types.all %}
@@ -48,8 +44,6 @@
                             {% endif %}
                         </ul>
                     {% endif %}
-                    {% load easy_maps_tags %}
-                    {% easy_map project.address %}
                     {% if project.clients.all or project.collaborators.all %}
                         <div class="people flex-margin">
                             {% if project.clients.all %}
@@ -72,6 +66,12 @@
                             {% endif %}
                         </div>
                     {% endif %}
+                    {% if project.date_end %}
+                        <p class="date flex-box flex-margin">{{ project.date_end|date:"F Y" }}</p>
+                    {% endif %}
+                    <p class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
+                    {% load easy_maps_tags %}
+                    {% easy_map project.address %}
                 </div>
                 <div class="text flex-margin">
                     {{ project.description_html|safe }}
