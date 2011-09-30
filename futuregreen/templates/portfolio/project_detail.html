@@ -71,7 +71,7 @@
                     {% endif %}
                     <p class="size flex-box flex-margin">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
                     {% load easy_maps_tags %}
-                    {% easy_map project.address %}
+                    {% easy_map project.address 180 180 %}
                 </div>
                 <div class="text flex-margin">
                     {{ project.description_html|safe }}
