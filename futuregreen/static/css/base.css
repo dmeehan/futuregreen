@@ -430,7 +430,6 @@ div.main section.featured article.project {
     }
 
     .categories {
-        overflow: auto;
         width:90%;
         margin: 0 5%;
     }
