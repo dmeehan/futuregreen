@@ -28,22 +28,22 @@
         {% endif %}
         <section class="details">
             <header><h1>{{ project.name }}</h1></header>
-            {% if project.project_types.all or project.landscape_types.all %}
-                <ul class="categories">
-                    {% if project.project_types.all %}
-                        {% for category in project.project_types.all %}
-                            <li class="project-type box center"> {{ category.alternate_title }} </li>
-                        {% endfor %}
-                    {% endif %}
-                    {% if project.landscape_types.all %}
-                        {% for category in project.landscape_types.all %}
-                            <li class="landscape-type box center"> {{ category.alternate_title }} </li>
-                       {% endfor %}
-                    {% endif %}
-                </ul>
-            {% endif %}
             <div class="description">
                 <div class="meta">
+                    {% if project.project_types.all or project.landscape_types.all %}
+                        <ul class="categories">
+                            {% if project.project_types.all %}
+                                {% for category in project.project_types.all %}
+                                    <li class="project-type box center"> {{ category.alternate_title }} </li>
+                                {% endfor %}
+                            {% endif %}
+                            {% if project.landscape_types.all %}
+                                {% for category in project.landscape_types.all %}
+                                    <li class="landscape-type box center"> {{ category.alternate_title }} </li>
+                               {% endfor %}
+                            {% endif %}
+                        </ul>
+                    {% endif %}
                     {% if project.date_end %}
                     <p class="date box">{{ project.date_end|date:"F Y" }}</p>
                     {% endif %}
