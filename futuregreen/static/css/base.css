@@ -276,6 +276,7 @@ div.main section.featured article.project {
     .slideshow .controls {
         margin:0 0 0 0;
         padding:0 0 0 0;
+        overflow: auto;
     }
 
     .slideshow .controls li {
