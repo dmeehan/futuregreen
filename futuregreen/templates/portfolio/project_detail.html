@@ -65,10 +65,12 @@
                              </ul>
                             {% endif %}
                         </div>
-                        {% if external_url %}
+                        {% if project.external_url %}
+                            <h2>Web Link</h2>
                             <p class="url"><a href="{{ project.external_url }}">project.external_url</a></p>
                         {% endif %}
                         {% if project.tags.all %}
+                            <h2>Tags</h2>
                             <ul class="tags">
                             {% for tag in project.tags.all %}
                                 <li> {{ tag.name }} </li>
