@@ -407,8 +407,9 @@ div.main section.featured article.project {
         float:left;
         width:40%;
         height:80px;
-        background: #999;
+        background: #ccc;
         margin: 10px 5%;
+        border: 1px solid #fff;
     }
 
     .details .description .meta {
@@ -431,6 +432,8 @@ div.main section.featured article.project {
 
     .categories {
         overflow: auto;
+        width:90%;
+        margin: 0 5%;
     }
 
     .categories li {
