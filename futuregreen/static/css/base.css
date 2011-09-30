@@ -484,6 +484,8 @@ div.main section.featured article.project {
         width:100%;
         font-weight: bold;
         text-align: center;
+        font-size:1.2em;
+        text-decoration: none;
     }
 
 
