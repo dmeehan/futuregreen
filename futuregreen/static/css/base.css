@@ -403,6 +403,10 @@ div.main section.featured article.project {
         font-size:.85em;
     }
 
+    .details ul {
+        font-size:.85em;
+    }
+
     .details .size, .details .date, .details .designer {
         float:left;
         width:20%;
@@ -434,6 +438,10 @@ div.main section.featured article.project {
         background:#7eac32;
     }
 
+    .people {
+        width:50%;
+        float:left;
+    }
     .people ul {
         margin-top:0;
     }

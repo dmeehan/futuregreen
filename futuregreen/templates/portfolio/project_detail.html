@@ -84,13 +84,6 @@
                 <p class="date box">{{ project.date_end|date:"F Y" }}</p>
             {% endif %}
             <p class="size box">{{ project.area|floatformat }} {{ project.get_unit_display }}</p>
-            {% if project.designers.all %}
-                <ul class="designer box">
-                    {% for designer in project.designers.all %}
-                    <li> {{ designer.name }} </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
         </section>
     </article>
 {% endblock content %}
