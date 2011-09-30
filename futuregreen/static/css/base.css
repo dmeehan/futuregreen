@@ -385,12 +385,9 @@ div.main section.featured article.project {
         font-weight:bold;
     }
 
-    .details ul,
-    .details p,
-    .details header,
-    .details h2 {
-        
-        
+    .details header {
+        width:96%;
+        margin:0 2%;
     }
 
     .details ul, .details p {
