@@ -378,7 +378,7 @@ div.main section.featured article.project {
         float:left;
         width:41.66667%;
         margin:0;
-        overflow:hidden;
+        background: url('images/top-bg.png') no-repeat top right;
     }
 
     .details h1 {
