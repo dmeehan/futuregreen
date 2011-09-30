@@ -383,9 +383,6 @@ div.main section.featured article.project {
         float:left;
         width:41.66667%;
         margin:0;
-        background-image: url('images/detail-bg-right.png'), url('images/top-bg.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: top right, top -40%;
     }
 
     .details h1 {
