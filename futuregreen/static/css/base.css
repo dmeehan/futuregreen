@@ -62,7 +62,6 @@ body {
         padding:0;
         position:relative;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
-        background: url('images/left-bg.png') no-repeat top left;
         -webkit-transition: all 0.5s ease-in;
     }
 
