@@ -476,11 +476,12 @@ div.main section.featured article.project {
         position:absolute;
         bottom:0;
         right:0;
+        width:16.66667%;
     }
 
     .details .meta .location {
-        width:15%;
-        margin: 0.83333%;
+        width:90%;
+        margin: 0 5%;
     }
 
     .details .meta .location .easy-map-googlemap {
