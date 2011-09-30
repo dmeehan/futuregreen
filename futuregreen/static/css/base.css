@@ -309,16 +309,14 @@ div.main section.featured article.project {
     }
 
     .slideshow .flex-direction-nav li {
+
+    }
+
+    .slideshow .flex-direction-nav a {
         position:absolute;
         top:50%;
         width:33%;
         z-index:1000;
-    }
-
-    .slideshow .flex-direction-nav a {
-        /*position:relative;
-        top:-50%;
-        height:50%;*/
     }
 
 
@@ -385,7 +383,9 @@ div.main section.featured article.project {
         float:left;
         width:41.66667%;
         margin:0;
-        background: url('images/detail-bg-right.png') no-repeat top right;
+        background-image: url('images/detail-bg-right.png'), url('images/top-bg.png');
+        background-repeat: no-repeat, no-repeat;
+        background-position: top right, top -40%;
     }
 
     .details h1 {
