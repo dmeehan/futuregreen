@@ -417,7 +417,6 @@ div.main section.featured article.project {
         margin: 10px 5%;
         color:#fff;
         text-transform: uppercase;
-        text-align: center;
         font-weight: bold;
         line-height:1em;
         display: table;
@@ -426,6 +425,7 @@ div.main section.featured article.project {
     .details .size p,
     .details .date p {
         display: table-cell; vertical-align: middle;
+        text-align: center;
     }
 
     .details .date .year,
