@@ -3,7 +3,7 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
     <div>
-        {% for project in project_list|slice:":0" %}
+        {% for project in project_list|slice:":1" %}
             <article style="float:left; width:16.6666667%" class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
