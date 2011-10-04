@@ -241,7 +241,7 @@ body > footer > .contact {
 .slideshow .carousel {
     position: relative;
     margin: 10px;
-    background:url('images/vertical-bg.png') no-repeat right 90%;
+    background:url('images/vertical-bg.png') no-repeat right bottom;
 }
 
 .slideshow .carousel .slides {
