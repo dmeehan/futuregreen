@@ -49,7 +49,7 @@
 {% endblock head %}
 </head>
 
-<body>
+<body class="{% block body_class %}default{% endblock body_class %}">
 {% block body %}
     {% block header %}
     <header>

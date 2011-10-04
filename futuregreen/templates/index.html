@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load generic_flatblocks %}
+{% block body_class %}home{% endblock body_class %}
 {% block content %}
     <div class="tertiary">
         {% for project in project_list|slice:":3" %}
