@@ -167,6 +167,7 @@ body {
 
 
 #home .content > div.one {
+    background:url('images/detail-bg-right.png') no-repeat right top;
     width:100%;
 }
 
