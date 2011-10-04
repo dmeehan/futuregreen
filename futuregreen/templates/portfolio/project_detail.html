@@ -37,7 +37,7 @@
                         {% if project.project_types.all %}
                             {% for category in project.project_types.all %}
                                 <li class="project-type flex box center">
-                                    <a href="#" title="{{ category.name }}" class="flex-box center">
+                                    <a href="#" title="{{ category.name }}" class="flex box center">
                                         {{ category.alternate_title }}
                                     </a>
                                 </li>
@@ -46,7 +46,7 @@
                         {% if project.landscape_types.all %}
                             {% for category in project.landscape_types.all %}
                                 <li class="landscape-type flex box center">
-                                    <a href="#" title="{{ category.name }}" class="flex-box center">
+                                    <a href="#" title="{{ category.name }}" class="flex box center">
                                         {{ category.alternate_title }}
                                     </a>
                                 </li>
@@ -155,11 +155,11 @@
     }
 
     function FlexBox() {
-            $('.flex').each(function(i, obj){
+            $('.flex').each(function(){
                 width = $(this).width();
                 $(this).css('height',width);
             });
-            $('.center').each(function(i, obj){
+            $('.center').each(function(){
                 width = $(this).width();
                 $(this).css('line-height',width + "px");
             });
