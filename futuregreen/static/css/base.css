@@ -232,8 +232,7 @@ body > footer > .contact {
 /* slideshow */
 .slideshow {
     background:url('images/corner-bg-top-right.png') no-repeat right top,
-               url('images/vertical-bg.png') no-repeat 10px 90%,
-               url('images/bottom-bg.png') no-repeat left bottom;
+               url('images/vertical-bg.png') no-repeat 10px 90%;
     float:left;
     width:58.33333%;
     position: relative;
@@ -243,7 +242,8 @@ body > footer > .contact {
 .slideshow .carousel {
     position: relative;
     margin: 10px;
-    background:url('images/vertical-bg.png') no-repeat right bottom;
+    background:url('images/vertical-bg.png') no-repeat right bottom,
+               url('images/bottom-bg.png') no-repeat left bottom;
 }
 
 .slideshow .carousel .slides {
