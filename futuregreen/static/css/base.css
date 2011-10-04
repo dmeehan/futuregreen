@@ -84,6 +84,7 @@ div,p,ul,ol,section,article {
 body > header {
     height:80px;
     width:100%;
+    background: #fff;
 }
 
 body > header > h1 {

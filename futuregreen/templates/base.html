@@ -52,7 +52,7 @@
 <body id="{% block body_id %}default{% endblock body_id%}">
 {% block body %}
     {% block header %}
-    <header>
+    <header class="box">
         <h1><a href="{% url home %}">Future Green Studio</a></h1>
         <nav>
             <ul>
@@ -64,7 +64,7 @@
     </header>
     {% endblock header %}
 
-    <div class="content">
+    <div class="content box">
     {% block content %}
     {% endblock content %}
     </div>
