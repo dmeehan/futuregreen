@@ -130,12 +130,12 @@ body {
     }
 
 /********** HOMEPAGE ***********/
-.content > div {
+#home .content > div {
     float:left;
     overflow: auto;
 }
 
-.content > div > section {
+#home .content > div > section {
     overflow: hidden;
 }
 
@@ -196,7 +196,7 @@ div.tertiary article.project {
     margin:0 5%;
 }
 
-article.project img {
+#home article.project img {
     width:100%;
     display:block;
 }
