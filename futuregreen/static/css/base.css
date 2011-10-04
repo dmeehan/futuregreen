@@ -531,8 +531,6 @@ body > footer > .contact {
 
 .details .meta .location {
     clear:both;
-    width:90%;
-    margin: 0 5%;
 }
 
 .details .meta .location .easy-map-googlemap {
