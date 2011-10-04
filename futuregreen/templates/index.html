@@ -55,7 +55,7 @@
     </div>
     <div style="width:50%; float:left;">
        {% for project in project_list|slice:"7:" %}
-            <article class="project" id="{{ project.slug }}">
+            <article style="width:33.33333%; float:left;" class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
@@ -64,7 +64,7 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-       <article>
+       <article style="width:66.66667%; float:left;>
                 <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
                 <h2>{{ item.title }}</h2>
                 {{ item.excerpt|truncatewords:20 }}
