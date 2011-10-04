@@ -167,7 +167,6 @@ body {
 
 
 #home .content > div.one {
-    background:url('images/detail-bg-right.png') no-repeat right top;
     width:100%;
 }
 
@@ -179,7 +178,6 @@ body {
     background:#7eac32 url('images/profile_bg.png') no-repeat left top;
     line-height:1.4em;
 }
-
 
 #home .content > div.one article.text h1 {
     font-weight:bold;
