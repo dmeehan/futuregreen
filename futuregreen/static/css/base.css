@@ -140,29 +140,23 @@ body {
     content: " \00BB";
 }
 
+.box {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     box-sizing: border-box;
+     padding: .714285714em;
+}
+
 /********** HOMEPAGE ***********/
 #home .content > div {
     overflow: auto;
 }
 
-#home .content > div > article {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: .714285714em;
-}
-
 #home .content > div > article.text > div {
     padding: .714285714em;
     color:#fff;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: .714285714em;
 }
 
 
@@ -248,9 +242,6 @@ body {
 
     .slideshow .carousel {
         position: relative;
-        /*width:97.14286%;
-        margin:0 1.42857%;*/
-        padding: 0;
     }
 
     .slideshow .carousel .slides img {
