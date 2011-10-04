@@ -389,6 +389,10 @@ body > footer > .contact {
     margin:.714285714em 0;
 }
 
+.details p {
+    text-align: justify;
+}
+
 .details p:first-child {
     margin-top:0;
 }
