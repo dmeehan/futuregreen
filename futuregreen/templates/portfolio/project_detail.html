@@ -4,7 +4,7 @@
     <article class="project">
     {% if project.projectimage_set.all %}
         <section class="slideshow">
-            <div class="carousel">
+            <div class="carousel box">
                 <ul class="slides">
                 {% for image in project.projectimage_set.all %}
                     <li>
@@ -17,7 +17,7 @@
             <div class="controls">
                 <ul>
                    {% for image in project.projectimage_set.all %}
-                        <li class="flex-margin">
+                        <li class="box">
                             <a href="#"><img src="{{ image.thumbnail.url }}"
                                  alt="{{ image.caption }}"/></a>
                        </li>
