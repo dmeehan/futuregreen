@@ -151,7 +151,7 @@ body {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    margin: .714285714em;
+    padding: .714285714em;
 }
 
 section.text .tease {
