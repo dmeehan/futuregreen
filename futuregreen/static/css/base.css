@@ -272,8 +272,6 @@ body {
 }
 
 .slideshow .controls li {
-    margin:0 0 0 0;
-    padding:0 0 0 0;
     list-style: none;
     float:left;
     width: 14.2857143%;
