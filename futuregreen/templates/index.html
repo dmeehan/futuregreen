@@ -4,7 +4,7 @@
 {% block content %}
     <div>
         {% for project in project_list|slice:":1" %}
-            <article style="float:left; width:16.6666667%; padding: .714285714em;" class="project" id="{{ project.slug }}">
+            <article style="float:left; width:16.6666667%; padding:" class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
