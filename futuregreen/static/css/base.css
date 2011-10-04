@@ -273,6 +273,7 @@ body > footer > .contact {
     list-style: none;
     float:left;
     width: 14.2857143%;
+    border: 1px solid #ccc;
 }
 
 .slideshow .controls img {
