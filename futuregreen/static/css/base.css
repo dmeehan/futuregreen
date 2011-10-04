@@ -231,7 +231,7 @@ body > footer > .contact {
 
 /* slideshow */
 .slideshow {
-    background:#7eac32 url('images/detail-bg-right.png') no-repeat right top;
+    background:url('images/detail-bg-right.png') no-repeat right top;
     float:left;
     width:58.33333%;
     position: relative;
@@ -240,7 +240,7 @@ body > footer > .contact {
 
 .slideshow .carousel {
     position: relative;
-    margin: .714285714em;
+    margin: 10px;
 }
 
 .slideshow .carousel .slides img {
