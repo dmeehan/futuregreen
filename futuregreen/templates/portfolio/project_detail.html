@@ -27,98 +27,95 @@
         </section>
     {% endif %}
         <section class="details">
-            <header class="flex-margin"><h1>{{ project.name }}</h1></header>
+            <header class="box"><h1>{{ project.name }}</h1></header>
             <div class="description">
-                <div class="meta">
-                    {% if project.project_types.all or project.landscape_types.all %}
-                        <ul class="categories flex-margin">
-                            {% if project.project_types.all %}
-                                {% for category in project.project_types.all %}
-                                    <li class="project-type flex-box center">
-                                        <a href="#" title="{{ category.name }}" class="flex-box center">
-                                            {{ category.alternate_title }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            {% endif %}
-                            {% if project.landscape_types.all %}
-                                {% for category in project.landscape_types.all %}
-                                    <li class="landscape-type flex-box center">
-                                        <a href="#" title="{{ category.name }}" class="flex-box center">
-                                            {{ category.alternate_title }}
-                                        </a>
-                                    </li>
-                               {% endfor %}
-                            {% endif %}
-                        </ul>
-                    {% endif %}
-                    {% if project.clients.all or project.collaborators.all %}
-                        <div class="people flex-margin">
-                            {% if project.clients.all %}
-                            <h2>Clients</h2>
-                            <ul>
-                            {% for client in project.clients.all %}
-                                <li> {{ client.name }} </li>
+                {{ project.description_html|safe }}
+            </div>
+            <div class="meta">
+                {% if project.project_types.all or project.landscape_types.all %}
+                    <ul class="categories">
+                        {% if project.project_types.all %}
+                            {% for category in project.project_types.all %}
+                                <li class="project-type flex-box center">
+                                    <a href="#" title="{{ category.name }}" class="flex-box center">
+                                        {{ category.alternate_title }}
+                                    </a>
+                                </li>
                             {% endfor %}
-                            </ul>
-                            {% endif %}
-                        </div>
-                        <div class="people flex-margin">
-                            {% if project.collaborators.all %}
-                            <h2>Collaborators</h2>
-                            <ul>
-                            {% for collaborator in project.collaborators.all %}
-                                <li> {{ collaborator.name }} </li>
-                            {% endfor %}
-                             </ul>
-                            {% endif %}
-                        </div>
-                        {% if project.external_url %}
-                        <div class="link flex-margin">
-                            <h2>Web Link</h2>
-                            <p class="url"><a href="{{ project.external_url }}">{{ project.external_url }}</a></p>
-                        </div>
                         {% endif %}
-                        {% if project.tags.all %}
-                        <div class="tags flex-margin">
-                            <h2>Tags</h2>
-                            <ul class="tags">
-                            {% for tag in project.tags.all %}
-                                <li> {{ tag.name }} </li>
-                            {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-                    {% endif %}
-                    <div class="info-boxes">
+                        {% if project.landscape_types.all %}
+                            {% for category in project.landscape_types.all %}
+                                <li class="landscape-type flex box center">
+                                    <a href="#" title="{{ category.name }}" class="flex-box center">
+                                        {{ category.alternate_title }}
+                                    </a>
+                                </li>
+                           {% endfor %}
+                        {% endif %}
+                    </ul>
+                {% endif %}
+                {% if project.clients.all or project.collaborators.all %}
+                    <div class="people box">
+                        {% if project.clients.all %}
+                        <h2>Clients</h2>
                         <ul>
-                        {% if project.date_end %}
-                            <li class="date flex-box flex-margin">
-                                <p>
-                                <span class="month">{{ project.date_end|date:"F" }}</span>
-                                <span class="year">{{ project.date_end|date:"Y" }}</span>
-                                </p>
-                            </li>
+                        {% for client in project.clients.all %}
+                            <li> {{ client.name }} </li>
+                        {% endfor %}
+                        </ul>
                         {% endif %}
-                        <li class="size flex-box flex-margin">
+                    </div>
+                    <div class="people box">
+                        {% if project.collaborators.all %}
+                        <h2>Collaborators</h2>
+                        <ul>
+                        {% for collaborator in project.collaborators.all %}
+                            <li> {{ collaborator.name }} </li>
+                        {% endfor %}
+                         </ul>
+                        {% endif %}
+                    </div>
+                    {% if project.external_url %}
+                    <div class="link box">
+                        <h2>Web Link</h2>
+                        <p class="url"><a href="{{ project.external_url }}">{{ project.external_url }}</a></p>
+                    </div>
+                    {% endif %}
+                    {% if project.tags.all %}
+                    <div class="tags box">
+                        <h2>Tags</h2>
+                        <ul class="tags">
+                        {% for tag in project.tags.all %}
+                            <li> {{ tag.name }} </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% endif %}
+                <div class="info-boxes">
+                    <ul>
+                    {% if project.date_end %}
+                        <li class="date flex-box flex-margin">
                             <p>
-                            <span class="number">{{ project.area|floatformat }}</span>
-                            <span class="unit">{{ project.get_unit_display }}</span>
+                            <span class="month">{{ project.date_end|date:"F" }}</span>
+                            <span class="year">{{ project.date_end|date:"Y" }}</span>
                             </p>
                         </li>
-                        </ul>
-                        <div class="location flex-margin flex-box">
-                            {% load easy_maps_tags %}
-                            {% easy_map project.address using 'portfolio/map.html' %}
-                        </div>
+                    {% endif %}
+                    <li class="size flex-box flex-margin">
+                        <p>
+                        <span class="number">{{ project.area|floatformat }}</span>
+                        <span class="unit">{{ project.get_unit_display }}</span>
+                        </p>
+                    </li>
+                    </ul>
+                    <div class="location flex-margin flex-box">
+                        {% load easy_maps_tags %}
+                        {% easy_map project.address using 'portfolio/map.html' %}
                     </div>
                 </div>
-                <div class="text flex-margin">
-                    {{ project.description_html|safe }}
-                </div>
             </div>
-            
-        </section>
+         </section>
     </article>
 {% endblock content %}
 
