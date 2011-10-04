@@ -157,6 +157,12 @@ body {
 #home .content > div > article.text > div {
     padding: .714285714em;
     color:#fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .714285714em;
 }
 
 
