@@ -231,7 +231,7 @@ body > footer > .contact {
 
 /* slideshow */
 .slideshow {
-    background:#7eac32 url('images/detail-bg-right.png') no-repeat left top;
+    background:#7eac32 url('images/detail-bg-right.png') no-repeat right top;
     float:left;
     width:58.33333%;
     position: relative;
