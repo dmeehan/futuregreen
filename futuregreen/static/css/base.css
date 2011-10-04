@@ -55,6 +55,9 @@ a:visited {
     color: #6699ff;
 }
 
+html {
+    background: #efefef;
+}
 
 body {
         min-width:1024px;
