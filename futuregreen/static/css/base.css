@@ -255,8 +255,8 @@ div.main section.featured article.project {
 
     .slideshow .carousel {
         position: relative;
-        width:97.14286%;
-        margin:0 1.42857%;
+        /*width:97.14286%;
+        margin:0 1.42857%;*/
         padding: 0;
     }
 
