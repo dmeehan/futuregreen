@@ -85,12 +85,6 @@ body > header {
     height:80px;
     width:100%;
     background: #fff;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: .714285714em;
 }
 
 body > header > h1 {
