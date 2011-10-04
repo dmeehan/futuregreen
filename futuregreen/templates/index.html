@@ -65,10 +65,12 @@
             </article>
         {% endfor %}
        <article style="width:66.66667%;float:left;">
+           <div style="height:100%; background:#d27193; color:white; padding: .714285714em;">
                 <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
                 <h2>{{ item.title }}</h2>
                 {{ item.excerpt|truncatewords:20 }}
                 <p><a href="#" class="tease">Read More</a></p>
+           </div>
        </article>
     </div>
 
