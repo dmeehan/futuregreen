@@ -386,7 +386,7 @@ body > footer > .contact {
 .details ul, .details p {
     overflow: auto;
     font-size:.85em;
-    margin: 0 .714285714em;;
+    margin:.714285714em 0;
 }
 
 .details p:first-child {
