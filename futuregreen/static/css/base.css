@@ -385,15 +385,12 @@ body > footer > .contact {
 
 .details ul, .details p {
     overflow: auto;
+    font-size:.85em;
+    margin: 0 .714285714em;;
 }
 
-.details p {
-    text-align: justify;
-    font-size:.85em;
-}
-
-.details ul {
-    font-size:.85em;
+.details p:first-child {
+    margin-top:0;
 }
 
 .details .size, .details .date, .details .designer {

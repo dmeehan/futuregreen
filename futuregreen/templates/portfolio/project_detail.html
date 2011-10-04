@@ -55,7 +55,7 @@
                     </ul>
                 {% endif %}
                 {% if project.clients.all or project.collaborators.all %}
-                    <div class="people box">
+                    <div class="people">
                         {% if project.clients.all %}
                         <h2>Clients</h2>
                         <ul>
@@ -65,7 +65,7 @@
                         </ul>
                         {% endif %}
                     </div>
-                    <div class="people box">
+                    <div class="people">
                         {% if project.collaborators.all %}
                         <h2>Collaborators</h2>
                         <ul>
@@ -76,7 +76,7 @@
                         {% endif %}
                     </div>
                     {% if project.external_url %}
-                    <div class="link box">
+                    <div class="link">
                         <h2>Web Link</h2>
                         <p class="url"><a href="{{ project.external_url }}">{{ project.external_url }}</a></p>
                     </div>
