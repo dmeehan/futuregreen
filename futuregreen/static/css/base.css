@@ -434,6 +434,7 @@ body > footer > .contact {
 .details .meta {
     float:right;
     width:40%;
+    background:url('images/line-bg-right.png') no-repeat right top;
 }
 
 .details .description {
