@@ -62,7 +62,7 @@ html {
 body {
         min-width:1024px;
         max-width:1460px;
-        padding:0;
+        padding:10px;
         position:relative;
         background: #fff;
         font: normal 87.5% "Segoe UI", "Lucida Sans", Arial, Helvetica, sans-serif;
