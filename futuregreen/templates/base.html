@@ -52,7 +52,7 @@
 <body id="{% block body_id %}default{% endblock body_id%}">
 {% block body %}
     {% block header %}
-    <header class="box">
+    <header>
         <h1><a href="{% url home %}">Future Green Studio</a></h1>
         <nav>
             <ul>
@@ -70,7 +70,7 @@
     </div>
     
     {% block footer %}
-    <footer class="box">
+    <footer>
         <span class="copyright">&copy; {% now "Y" %} Future Green Studio</span>
         <span class="contact">92 3rd Street Brooklyn, NY  |  718.855.8995  |  <a href=="mailto:info@futuregreenstudio.com">info@futuregreenstudio.com</a></span>
     </footer>
