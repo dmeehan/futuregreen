@@ -242,6 +242,7 @@ body {
 
 .slideshow .carousel {
     position: relative;
+    margin: .714285714em;
 }
 
 .slideshow .carousel .slides img {
