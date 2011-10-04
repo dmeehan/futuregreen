@@ -139,9 +139,9 @@
     }
 
     function FlexMargin() {
-            $('.flex-margin').each(function(i, obj){
-                margin = $(this).margin().right;
-                $(this).margin({bottom: margin, top: margin })
+            $('.flex-margin').each(function(){
+                m = $(this).margin().left;
+                $(this).margin({bottom: m, top: m })
             });
             /*
             var li = $(".controls li");
