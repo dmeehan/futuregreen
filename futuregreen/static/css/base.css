@@ -198,7 +198,11 @@ body {
 }
 
 #home .content > div.four > article.project {
-     padding: .714285714em;
+     width:33.33333%; float:left;
+}
+
+#home .content > div.four > article.text {
+     width:66.66667%; float:left;
 }
 
 #home .content > div.four > article.text div {
