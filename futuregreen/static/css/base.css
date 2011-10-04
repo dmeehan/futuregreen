@@ -301,7 +301,7 @@ body > footer > .contact {
 
 .slideshow .controls img {
     width:100%;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -314,6 +314,7 @@ body > footer > .contact {
 
 .slideshow .controls a.active img,
 .slideshow .controls a:hover img {
+    border: 1px solid #7eac32;
     opacity:1.0;
     filter:alpha(opacity=100); /* For IE8 and earlier */
 }
