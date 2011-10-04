@@ -170,6 +170,8 @@
 
 
     $(document).ready(function() {
+        FlexBox();
+        FlexMargin();
         $('.carousel').flexslider({
             animation: "slide",
             slideshow: true,
@@ -190,9 +192,7 @@
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
-        Flex();
-        FlexBox();
-        FlexMargin();
+
     });
 
     $(window).resize(function() {
