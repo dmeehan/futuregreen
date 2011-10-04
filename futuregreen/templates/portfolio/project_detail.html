@@ -95,21 +95,21 @@
                 <div class="info-boxes">
                     <ul>
                     {% if project.date_end %}
-                        <li class="date flex-box flex-margin">
+                        <li class="date flex box">
                             <p>
                             <span class="month">{{ project.date_end|date:"F" }}</span>
                             <span class="year">{{ project.date_end|date:"Y" }}</span>
                             </p>
                         </li>
                     {% endif %}
-                    <li class="size flex-box flex-margin">
+                    <li class="size flex box">
                         <p>
                         <span class="number">{{ project.area|floatformat }}</span>
                         <span class="unit">{{ project.get_unit_display }}</span>
                         </p>
                     </li>
                     </ul>
-                    <div class="location flex-margin flex-box">
+                    <div class="location flex box">
                         {% load easy_maps_tags %}
                         {% easy_map project.address using 'portfolio/map.html' %}
                     </div>
@@ -155,7 +155,7 @@
     }
 
     function FlexBox() {
-            $('.flex-box').each(function(i, obj){
+            $('.flex').each(function(i, obj){
                 width = $(this).width();
                 $(this).css('height',width);
             });
@@ -167,8 +167,7 @@
 
 
     $(document).ready(function() {
-        /*FlexBox();
-        FlexMargin();*/
+        FlexBox();
         $('.carousel').flexslider({
             animation: "slide",
             slideshow: true,
@@ -193,9 +192,7 @@
     });
 
     $(window).resize(function() {
-        /*Flex();
         FlexBox();
-        FlexMargin();*/
     });
 
     $("#open").click(function () {
