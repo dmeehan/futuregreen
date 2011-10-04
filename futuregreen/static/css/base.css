@@ -231,7 +231,7 @@ body > footer > .contact {
 
 /* slideshow */
 .slideshow {
-    background:url('images/corner-bg-top-right.png') no-repeat right top, url('images/vertical-bg.png') no-repeat right 70%;
+    background:url('images/corner-bg-top-right.png') no-repeat right top, url('images/vertical-bg.png') no-repeat right 90%;
     float:left;
     width:58.33333%;
     position: relative;
@@ -243,19 +243,23 @@ body > footer > .contact {
     margin: 10px;
 }
 
-.slideshow .carousel .slides img {
-    width:100%;
-    display:block;
-    box-sizing: border-box;
-}
-
-.slideshow .carousel .slides li {
-    position:relative;
+.slideshow .carousel .slides {
      border: 1px solid #ccc;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.slideshow .carousel .slides img {
+    width:100%;
+    display:block;
+
+}
+
+.slideshow .carousel .slides li {
+    position:relative;
 }
 
 .slideshow .carousel .flex-caption {
