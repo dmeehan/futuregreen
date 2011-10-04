@@ -36,7 +36,7 @@
                     <ul class="categories">
                         {% if project.project_types.all %}
                             {% for category in project.project_types.all %}
-                                <li class="project-type flex box center">
+                                <li class="project-type">
                                     <a href="#" title="{{ category.name }}" class="flex box center">
                                         {{ category.alternate_title }}
                                     </a>
@@ -45,7 +45,7 @@
                         {% endif %}
                         {% if project.landscape_types.all %}
                             {% for category in project.landscape_types.all %}
-                                <li class="landscape-type flex box center">
+                                <li class="landscape-type">
                                     <a href="#" title="{{ category.name }}" class="flex box center">
                                         {{ category.alternate_title }}
                                     </a>
