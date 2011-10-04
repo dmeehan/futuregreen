@@ -2,9 +2,9 @@
 {% load generic_flatblocks %}
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
-    <div style="overflow: auto;">
+    <div class="group one">
         {% for project in project_list|slice:":1" %}
-            <article style="float:left; width:16.6666667%; padding:" class="project" id="{{ project.slug }}">
+            <article class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}"><img src="{{ image.list.url }}" /></a>
@@ -12,14 +12,14 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-            <article style="float:left; width:50%; height:100%;" class="text" id="profile">
-                <div style="background:#7eac32 url('images/profile_bg.png') no-repeat left top; padding: .714285714em; height:100%; ">
+            <article class="text" id="profile">
+                <div>
                 {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
                 <a href="#" class="tease">Read More</a>
                 </div>
             </article>
            {% for project in project_list|slice:"1:3" %}
-                <article  style="float:left; width:16.6666667%" class="project" id="{{ project.slug }}">
+                <article class="project" id="{{ project.slug }}">
                     {% for image in project.projectimage_set.all %}
                         {% if image.is_main %}
                             <a href="{{ project.get_absolute_url }}">
@@ -29,7 +29,7 @@
                 </article>
             {% endfor %}
     </div>
-    <div style="width:16.66667%; float:left;">
+    <div class="group two">
        {% for project in project_list|slice:"3:5" %}
            <article class="project" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
@@ -43,7 +43,7 @@
        {% endfor %}
 
     </div>
-    <div style="width:33.33334%; float:left;">
+    <div class="group three">
         {% for project in project_list|slice:"5:6" %}
             <article class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
@@ -55,9 +55,9 @@
             </article>
         {% endfor %}
     </div>
-    <div style="width:50%; float:left;">
+    <div class="group four">
        {% for project in project_list|slice:"6:" %}
-            <article style="width:33.33333%; float:left;" class="project" id="{{ project.slug }}">
+            <article class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
@@ -66,8 +66,8 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-       <article style="width:66.66667%;float:left;">
-           <div style="height:100%; background:#d27193; color:white; padding: .714285714em;">
+       <article class="text">
+           <div>
                 <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
                 <h2>{{ item.title }}</h2>
                 {{ item.excerpt|truncatewords:20 }}
