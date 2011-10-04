@@ -3,7 +3,7 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
     <div>
-        {% for project in project_list|slice:":1" %}
+        {% for project in project_list|slice:":0" %}
             <article style="float:left; width:16.6666667%" class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -16,7 +16,7 @@
             {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
             <a href="#" class="tease">Read More</a>
             </article>
-           {% for project in project_list|slice:"2:4" %}
+           {% for project in project_list|slice:"1:3" %}
                 <article  style="float:left; width:16.6666667%" class="project" id="{{ project.slug }}">
                     {% for image in project.projectimage_set.all %}
                         {% if image.is_main %}
@@ -28,7 +28,7 @@
             {% endfor %}
     </div>
     <div style="width:16.66667%; float:left;">
-       {% for project in project_list|slice:"4:6" %}
+       {% for project in project_list|slice:"3:5" %}
            <article class="project" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
                    {% if image.is_main %}
@@ -42,7 +42,7 @@
 
     </div>
     <div style="width:33.33334%; float:left;">
-        {% for project in project_list|slice:"6:7" %}
+        {% for project in project_list|slice:"5:6" %}
             <article class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -54,7 +54,7 @@
         {% endfor %}
     </div>
     <div style="width:50%; float:left;">
-       {% for project in project_list|slice:"7:" %}
+       {% for project in project_list|slice:"6:" %}
             <article style="width:33.33333%; float:left;" class="project" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -64,7 +64,7 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-       <article style="width:66.66667%; float:left;>
+       <article style="width:66.66667%;float:left; background:#d27193;">
                 <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
                 <h2>{{ item.title }}</h2>
                 {{ item.excerpt|truncatewords:20 }}
