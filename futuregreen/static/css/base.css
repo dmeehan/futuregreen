@@ -137,6 +137,23 @@ body {
 
 #home .content > div > section {
     overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: .714285714em;
+}
+
+#home .content > div > section > article {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: .714285714em;
 }
 
 section.text .tease {
@@ -164,15 +181,12 @@ div.tertiary {
 
 div.secondary section.projects article.project {
     float:left;
-    width:45%;
-    margin:0 2.5%;
+    width:50%;
 }
 
 div.secondary section.text article {
     clear:both;
-    width:90%;
-    margin:0 2.5%;
-    padding: 0 2.5%;
+    width:100%;
     background:#d27193;
     color:white;
 }
@@ -192,8 +206,6 @@ div.secondary section.text article h2 {
 
 div.tertiary article.project {
     float:left;
-    width:90%;
-    margin:0 5%;
 }
 
 #home article.project img {
@@ -202,10 +214,7 @@ div.tertiary article.project {
 }
 
 div.main section.text article {
-    width:93.33333%;
-    margin: 0 1.66667%;
     background:#7eac32 url('images/profile_bg.png') no-repeat left top;
-    padding: 0 1.66667%;
     color:#fff;
     line-height:1.4em;
 }
@@ -223,8 +232,6 @@ div.main section.projects {
 
 div.main section.projects article.project {
     float:left;
-    width:90%;
-    margin: 0 5%;
 }
 
 div.main section.featured {
@@ -233,8 +240,6 @@ div.main section.featured {
 }
 
 div.main section.featured article.project {
-    width:95%;
-    margin: 0 2.5%;
 }
 
 /*********** PROJECT DETAIL ************/
