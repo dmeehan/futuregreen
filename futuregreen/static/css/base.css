@@ -406,6 +406,11 @@ body > footer > .contact {
     width:100%;
 }
 
+.max .slideshow .carousel {
+    width:100%;
+}
+
+
 .max .slideshow .controls li {
     width:8.33333333%
 }

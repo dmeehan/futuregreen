@@ -121,7 +121,7 @@
 
 {% block js_local %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.sizes.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>
 <script type="text/javascript">
     function Square() {
             $('.square').each(function(){
@@ -165,12 +165,9 @@
     });
 
     $("#open").click(function () {
-        $(".slideshow").css('height','auto');
         $(".content").addClass('max');
-        setTimeout(function(){
+        $(".slideshow").resize(function(){
             $.fn.flexslider.reset();
-          }, 1000);
-
     });
 
     $("#close").click(function () {
