@@ -138,7 +138,11 @@ body > footer > .contact {
     text-align:right;
 }
 
-.tease {
+.tease,
+.tease:visited,
+.tease:active,
+.tease:hover,
+.tease:link {
     font-weight:bold;
     text-transform: uppercase;
     text-decoration: none;
