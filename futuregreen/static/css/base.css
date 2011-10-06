@@ -258,6 +258,7 @@ body > footer > .contact {
 /*********** PROJECT LIST ************/
 .project-list article.project {
     width:16.66667%;
+    float:left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
