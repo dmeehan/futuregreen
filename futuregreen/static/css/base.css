@@ -432,8 +432,7 @@ body > footer > .contact {
     color:#fff;
     text-transform: uppercase;
     font-weight: bold;
-    line-height:1em;
-    display: table;
+    /*display: table;*/
 }
 
 .details .size p,
