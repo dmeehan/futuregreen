@@ -383,9 +383,9 @@ body > footer > .contact {
     top:50%;
     z-index:3000;
     text-align: center;
-    font-size:4em;
+    font-size:8em;
     text-decoration: none;
-    color:#fff;
+    color:rgba(255,255,255,0.5);
 }
 
 .slideshow .flex-direction-nav li {
