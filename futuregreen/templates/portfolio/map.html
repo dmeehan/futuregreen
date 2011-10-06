@@ -8,3 +8,10 @@
          class="easy-map-googlemap square">
     </div>
 {% endblock %}
+{% block map_options_js %}
+            var mapOptions = {
+                zoom: 3,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+{% endblock %}
