@@ -37,8 +37,8 @@
                     <ul class="categories">
                         {% if project.project_types.all %}
                             {% for category in project.project_types.all %}
-                                <li class="project-type">
-                                    <a href="#" title="{{ category.name }}" class="square box center">
+                                <li class="project-type class="square box center"">
+                                    <a href="#" title="{{ category.name }}">
                                         {{ category.alternate_title }}
                                     </a>
                                 </li>
