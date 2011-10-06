@@ -376,6 +376,13 @@ body > footer > .contact {
     filter:alpha(opacity=100); /* For IE8 and earlier */
 }
 
+.slideshow .zoom {
+    position:absolute;
+    width:33%;
+    left:33%;
+    top:50%;
+}
+
 .slideshow .flex-direction-nav li {
 
 }
