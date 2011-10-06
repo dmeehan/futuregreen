@@ -538,10 +538,8 @@ body > footer > .contact {
 
 .details .meta .location {
     clear:both;
-}
-
-.details .meta .location .easy-map-googlemap {
-    width:100%;
+    margin: 0 0 0 0;
+    border: none;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
