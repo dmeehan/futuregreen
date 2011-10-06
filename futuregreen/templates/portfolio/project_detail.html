@@ -46,8 +46,8 @@
                         {% endif %}
                         {% if project.landscape_types.all %}
                             {% for category in project.landscape_types.all %}
-                                <li class="landscape-type square center">
-                                    <a href="#" title="{{ category.name }}" class="square box center">
+                                <li class="square">
+                                    <a href="#" title="{{ category.name }}" class="landscape-type square center">
                                         {{ category.alternate_title }}
                                     </a>
                                 </li>
