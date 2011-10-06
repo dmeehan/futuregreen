@@ -267,6 +267,11 @@ body > footer > .contact {
     padding: 10px;
 }
 
+.project-list article.project img {
+    width:100%;
+    display:block;
+}
+
 /*********** PROJECT DETAIL ************/
 #detail article.project {
     position:relative;
