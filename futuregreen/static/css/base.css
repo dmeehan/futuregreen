@@ -388,49 +388,10 @@ body > footer > .contact {
 }
 
 /* expanded slideshow styles */
-.min {
-    position:relative;
-    float:left;
-    width:58.33333%;
-}
 
-.start {
-    float:none;
-    position:absolute;
-    top:100px;
-    z-index:1000;
-    overflow:visible;
-}
-
-.max {
-    top:10px;
-    left:0px;
+.max .slideshow {
     width:100%;
-    margin:0 0 0 0;
-    background: #fff;
-    -moz-box-shadow: 0px 0px 8px 2px #999;
-    -webkit-box-shadow: 0px 0px 8px 2px #999;
-    -o-box-shadow: 0px 0px 8px 2px #999;
-    -ms-box-shadow: 0px 0px 8px 2px #999;
-    box-shadow: 0px 0px 12px 4px #999;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    transition: all .5s ease-out;
-    overflow: hidden;
-}
-
-.return {
-    position:absolute;
-    top:100px;
-    width:58.33333%;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    transition: all .5s ease-out;
-}
-
-.shim {
-    float:left;
-    width:58.33333%;
+    float:none;
 }
 
 /* details */
