@@ -203,6 +203,7 @@ body > footer > .contact {
 
 #home .content > div.four {
      width:50%; float:left;
+     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
 #home .content > div.four > article.project {
