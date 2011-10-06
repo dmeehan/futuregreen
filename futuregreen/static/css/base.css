@@ -182,6 +182,7 @@ body > footer > .contact {
 
 #home .content > div.one article.text {
      float:left; width:50%; height:100%;
+    font-size:1.2em;
     background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
                url('images/vertical-bg.png') no-repeat 10px top,
