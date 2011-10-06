@@ -196,11 +196,11 @@
     });
 
     $("#open").click(function () {
-        var height = $(".slideshow").height();
-        $(".slideshow").removeClass('min');
-        $(".slideshow").removeClass('return');
-        $(".slideshow").addClass('start');
-        setTimeout(function() { $(".slideshow").addClass('max'); }, 50);
+        var height = $(".carousel").height();
+        $(".carousel").removeClass('min');
+        $(".carousel").removeClass('return');
+        $(".carousel").addClass('start');
+        setTimeout(function() { $(".carousel").addClass('max'); }, 50);
         $(".project").prepend('<div class="shim"></div>');
         $(".shim").css('height', height + 'px');
         $(".details").css('height', height + 'px');
