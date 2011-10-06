@@ -164,7 +164,7 @@ body > footer > .contact {
 }
 
 #home .content > div > article.text > div {
-    /*padding: 10px;*/
+    padding: 0 10px;
     color:#fff;
 }
 
@@ -179,7 +179,8 @@ body > footer > .contact {
     background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
                url('images/vertical-bg.png') no-repeat 10px top,
-               url('images/bottom-bg.png') no-repeat left 10px;
+               url('images/bottom-bg.png') no-repeat left 10px,
+               url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
 #home .content > div.one article.text div {
