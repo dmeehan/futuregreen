@@ -147,6 +147,8 @@ body > footer > .contact {
     text-transform: uppercase;
     text-decoration: none;
     color:#fff;
+    display:block;
+    margin-top:5px;
 }
 
 .tease:after {
