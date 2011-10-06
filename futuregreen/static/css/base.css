@@ -421,11 +421,11 @@ body > footer > .contact {
 .details ul, .details p {
     overflow: auto;
     font-size:.85em;
-    margin:.714285714em 0;
 }
 
 .details p {
     text-align: justify;
+    margin:10px 0;
 }
 
 .details p:first-child {
