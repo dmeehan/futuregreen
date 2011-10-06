@@ -121,7 +121,7 @@
 
 {% block js_local %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>
+<!--<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>-->
 <script type="text/javascript">
     function Square() {
             $('.square').each(function(){
@@ -168,7 +168,7 @@
         $(".content").addClass('max');
         setTimeout(function(){
             $.fn.flexslider.reset()
-        }, 900);
+        }, 700);
     });
 
     $("#close").click(function () {
