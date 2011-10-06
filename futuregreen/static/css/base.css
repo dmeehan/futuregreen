@@ -310,15 +310,15 @@ body > footer > .contact {
 .slideshow .carousel .slides img {
     width:100%;
     display:block;
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -transition: all 0.5s ease-in;
 }
 
 .slideshow .carousel .slides li {
     position:relative;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -transition: all 0.5s ease-in-out;
     
 
 }
