@@ -171,6 +171,7 @@ body > footer > .contact {
 
 #home .content > div.one {
     width:100%;
+    background:url('images/corner-bg-top-right.png') no-repeat right top;
 }
 
 #home .content > div.one article.text {
