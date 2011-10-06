@@ -172,6 +172,7 @@ body > footer > .contact {
 #home .content > div > article.text > div {
     padding: 0 10px;
     color:#fff;
+    text-transform: uppercase;
 }
 
 #home .content > div > article.text strong {
