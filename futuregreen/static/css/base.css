@@ -255,6 +255,16 @@ body > footer > .contact {
     display:block;
 }
 
+/*********** PROJECT LIST ************/
+.project-list article.project {
+    width:16.66667%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
 
 /*********** PROJECT DETAIL ************/
 #detail article.project {
