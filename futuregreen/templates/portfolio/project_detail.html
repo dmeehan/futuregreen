@@ -169,10 +169,15 @@
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
         });
+        $(".carousel img").removeClass('open');
+        $(".carousel img").addClass('close');
     });
 
     $("#close").click(function () {
         $(".content").removeClass('max');
+        $(".slideshow").resize(function() {
+            $.fn.flexslider.reset()
+        });
     });
 </script>
 {% endblock js_local %}
