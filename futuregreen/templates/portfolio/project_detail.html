@@ -96,15 +96,15 @@
                 <div class="info-boxes">
                     <ul>
                     {% if project.date_end %}
-                        <li>
-                            <p class="date square box">
+                        <li class="box">
+                            <p class="date square">
                             <span class="month">{{ project.date_end|date:"F" }}</span>
                             <span class="year">{{ project.date_end|date:"Y" }}</span>
                             </p>
                         </li>
                     {% endif %}
-                    <li>
-                        <p class="size square box">
+                    <li  class="box">
+                        <p class="size square">
                         <span class="number">{{ project.area|floatformat }}</span>
                         <span class="unit">{{ project.get_unit_display }}</span>
                         </p>
