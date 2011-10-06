@@ -542,8 +542,6 @@ body > footer > .contact {
     bottom:0;
     right:0;
     width:16.66667%;
-    background:url('images/vertical-bg.png') no-repeat 10px top,
-               url('images/bottom-bg.png') no-repeat left 10px;
 }
 
  .details .meta .info-boxes ul {
@@ -554,6 +552,8 @@ body > footer > .contact {
     clear:both;
     margin: 0 0 0 0;
     border: none;
+     background:url('images/vertical-bg.png') no-repeat 10px top,
+               url('images/bottom-bg.png') no-repeat left 10px;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
