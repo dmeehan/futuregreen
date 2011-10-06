@@ -205,6 +205,26 @@
         $(".project").prepend('<div class="shim"></div>');
         $(".shim").css('height', start_height);
         $(".details").css('height', start_height);
+        $('.carousel').flexslider({
+            animation: "slide",
+            slideshow: true,
+            slideshowSpeed: 7000,
+            animationDuration: 600,
+            directionNav: true,
+            controlNav: true,
+            keyboardNav: true,
+            touchSwipe: true,
+            prevText: "Previous",
+            nextText: "Next",
+            pausePlay: false,
+            randomize: false,
+            slideToStart: 0,
+            animationLoop: true,
+            pauseOnAction: true,
+            pauseOnHover: true,
+            controlsContainer:".controls",
+            manualControls: "ul li a"
+        });
     });
 
     $("#close").click(function () {
