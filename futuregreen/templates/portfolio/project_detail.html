@@ -171,10 +171,14 @@
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
         });
+        $("#open").hide();
+        $("#close").show();
     });
 
     $("#close").click(function () {
         $(".content").removeClass('max');
+        $("#open").show();
+        $("#close").hide();
     });
 </script>
 {% endblock js_local %}
