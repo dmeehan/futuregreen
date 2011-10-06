@@ -88,8 +88,8 @@ body > header {
 }
 
 body > header > h1 {
-    margin:0;
-    padding:80px 0 0 10px;
+    margin:0 0 0 10px;
+    padding:80px 0 0 0px;
     float:left;
     height:0;
     width:380px;
