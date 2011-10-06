@@ -55,26 +55,26 @@
                     </ul>
                 {% endif %}
                 {% if project.clients.all or project.collaborators.all %}
+                    {% if project.clients.all %}
                     <div class="people box">
-                        {% if project.clients.all %}
                         <h2>Clients</h2>
                         <ul>
                         {% for client in project.clients.all %}
                             <li> {{ client.name }} </li>
                         {% endfor %}
                         </ul>
-                        {% endif %}
-                    </div>
+                     </div>
+                    {% endif %}
+                    {% if project.collaborators.all %}
                     <div class="people box">
-                        {% if project.collaborators.all %}
                         <h2>Collaborators</h2>
                         <ul>
                         {% for collaborator in project.collaborators.all %}
                             <li> {{ collaborator.name }} </li>
                         {% endfor %}
                          </ul>
-                        {% endif %}
                     </div>
+                    {% endif %}
                     {% if project.external_url %}
                     <div class="link box">
                         <h2>Web Link</h2>
