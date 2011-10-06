@@ -489,6 +489,7 @@ body > footer > .contact {
 .details .meta .categories {
     overflow: hidden;
     clear:both;
+    margin: 10px 0;
 }
 
 .details .meta .categories li {
