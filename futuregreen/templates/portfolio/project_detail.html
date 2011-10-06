@@ -9,7 +9,7 @@
                 <ul class="slides">
                 {% for image in project.projectimage_set.all %}
                     <li>
-                        <img id="open" src="{{ image.detail.url }}" alt="{{ image.caption }}" />
+                        <img class="open" src="{{ image.detail.url }}" alt="{{ image.caption }}" />
                         {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
                     </li>
                 {% endfor %}
@@ -164,7 +164,7 @@
         Square();
     });
 
-    $("#open").click(function () {
+    $(".open").click(function () {
         $(".content").addClass('max');
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
@@ -173,7 +173,7 @@
         $(".carousel img").addClass('close');
     });
 
-    $("#close").click(function () {
+    $(".close").click(function () {
         $(".content").removeClass('max');
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
