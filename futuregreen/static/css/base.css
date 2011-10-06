@@ -89,7 +89,7 @@ body > header {
 
 body > header > h1 {
     margin:0;
-    padding:80px 0 0 0;
+    padding:80px 0 0 10px;
     float:left;
     height:0;
     width:380px;
@@ -116,7 +116,7 @@ body > .content {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    /*padding: .714285714em;*/
+    padding: 10px;
 }
 
 body > footer {
