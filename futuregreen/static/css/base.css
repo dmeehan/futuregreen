@@ -288,11 +288,11 @@ body > footer > .contact {
     width:58.33333%;
     position: relative;
     overflow: auto;
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -transition: all 0.5s ease-out;
 }
 
 .slideshow .carousel {
@@ -300,19 +300,11 @@ body > footer > .contact {
     margin: 10px;
     background:url('images/vertical-bg.png') no-repeat right bottom,
                url('images/bottom-bg.png') no-repeat left bottom;
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -transition: all 0.5s ease-in;
+
 }
 
 .slideshow .carousel .slides {
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -transition: all 0.5s ease-in;
+
 }
 
 .slideshow .carousel .slides img {
@@ -327,11 +319,7 @@ body > footer > .contact {
 
 .slideshow .carousel .slides li {
     position:relative;
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -transition: all 0.5s ease-in;
+    
 
 }
 
