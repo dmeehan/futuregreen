@@ -288,11 +288,7 @@ body > footer > .contact {
     width:58.33333%;
     position: relative;
     overflow: auto;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -transition: all 0.5s ease-out;
+    
 }
 
 .slideshow .carousel {
@@ -304,11 +300,7 @@ body > footer > .contact {
 }
 
 .slideshow .carousel .slides {
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -transition: all 0.5s ease-out;
+
 }
 
 .slideshow .carousel .slides img {
@@ -318,11 +310,7 @@ body > footer > .contact {
 
 .slideshow .carousel .slides li {
     position:relative;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -transition: all 0.5s ease-out;
+
 }
 
 .slideshow .carousel .flex-caption {
