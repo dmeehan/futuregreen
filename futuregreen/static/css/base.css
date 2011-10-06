@@ -452,6 +452,7 @@ body > footer > .contact {
 
 .details .size .unit {
     font-size: .85em;
+    line-height:1.3em;
 }
 
 .details .date .month {
