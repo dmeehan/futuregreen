@@ -55,7 +55,7 @@
                     </ul>
                 {% endif %}
                 {% if project.clients.all or project.collaborators.all %}
-                    <div class="people">
+                    <div class="people box">
                         {% if project.clients.all %}
                         <h2>Clients</h2>
                         <ul>
@@ -65,7 +65,7 @@
                         </ul>
                         {% endif %}
                     </div>
-                    <div class="people">
+                    <div class="people box">
                         {% if project.collaborators.all %}
                         <h2>Collaborators</h2>
                         <ul>
