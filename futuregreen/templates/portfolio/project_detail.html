@@ -166,9 +166,7 @@
 
     $("#open").click(function () {
         $(".content").addClass('max');
-        setTimeout(function(){
-            $.fn.flexslider.reset()
-        }, 300);
+        $.fn.flexslider.reset();
     });
 
     $("#close").click(function () {
