@@ -543,10 +543,10 @@ body > footer > .contact {
     background:#7eac32;
 }
 
-.details .meta .people,
-.details .meta .link,
-.details .meta .tags {
-  
+.details .meta .people p,
+.details .meta .link p,
+.details .meta .tags p {
+    margin: 0 0 0 0;
 }
 .details .meta .people ul {
     margin:0 0 0 0;
