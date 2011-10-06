@@ -425,6 +425,11 @@ body > footer > .contact {
     margin-top:0;
 }
 
+.details .info-boxes ul {
+    margin: 0 0 0 0;
+}
+
+
 .details .info-boxes ul li {
     overflow: auto;
     float:left;
