@@ -304,11 +304,11 @@ body > footer > .contact {
 }
 
 .slideshow .carousel .slides {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -transition: all 0.5s ease-out;
 }
 
 .slideshow .carousel .slides img {
