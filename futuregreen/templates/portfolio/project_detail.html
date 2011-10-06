@@ -120,7 +120,7 @@
 {% endblock content %}
 
 {% block js_local %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.sizes.min.js"></script>
 <script type="text/javascript">
     function Flex() {
@@ -197,6 +197,7 @@
 
     $("#open").click(function () {
         $(".content").addClass('max');
+        $.fn.flexslider.reset();
     });
 
     $("#close").click(function () {
