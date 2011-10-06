@@ -38,7 +38,7 @@
                         {% if project.project_types.all %}
                             {% for category in project.project_types.all %}
                                 <li class="project-type">
-                                    <a href="#" title="{{ category.name }}" class="flex box center">
+                                    <a href="#" title="{{ category.name }}" class="square box center">
                                         {{ category.alternate_title }}
                                     </a>
                                 </li>
@@ -47,7 +47,7 @@
                         {% if project.landscape_types.all %}
                             {% for category in project.landscape_types.all %}
                                 <li class="landscape-type">
-                                    <a href="#" title="{{ category.name }}" class="flex box center">
+                                    <a href="#" title="{{ category.name }}" class="square box center">
                                         {{ category.alternate_title }}
                                     </a>
                                 </li>
@@ -96,21 +96,21 @@
                 <div class="info-boxes">
                     <ul>
                     {% if project.date_end %}
-                        <li class="date flex box">
+                        <li class="date square box">
                             <p>
                             <span class="month">{{ project.date_end|date:"F" }}</span>
                             <span class="year">{{ project.date_end|date:"Y" }}</span>
                             </p>
                         </li>
                     {% endif %}
-                    <li class="size flex box">
+                    <li class="size square box">
                         <p>
                         <span class="number">{{ project.area|floatformat }}</span>
                         <span class="unit">{{ project.get_unit_display }}</span>
                         </p>
                     </li>
                     </ul>
-                    <div class="location flex box">
+                    <div class="location square box">
                         {% load easy_maps_tags %}
                         {% easy_map project.address using 'portfolio/map.html' %}
                     </div>
@@ -155,8 +155,8 @@
             div.css('margin-top', margin);
     }
 
-    function FlexBox() {
-            $('.flex').each(function(){
+    function Square() {
+            $('.square').each(function(){
                 width = $(this).width();
                 $(this).css('height',width);
             });
@@ -168,7 +168,7 @@
 
 
     $(document).ready(function() {
-        FlexBox();
+        Square();
         $('.carousel').flexslider({
             animation: "slide",
             slideshow: true,
@@ -193,7 +193,7 @@
     });
 
     $(window).resize(function() {
-        FlexBox();
+        Square();
     });
 
     $("#open").click(function () {

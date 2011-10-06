@@ -482,8 +482,8 @@ body > footer > .contact {
 .details .meta .categories li {
     overflow: hidden;
     float:left;
-    width:17.5%;
-    margin: 0 2.5% 0 0;
+    width:20%;
+    margin:0;
     color:#fff;
     font-weight: bold;
     text-align: center;
