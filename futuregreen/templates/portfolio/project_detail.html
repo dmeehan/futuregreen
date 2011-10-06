@@ -178,6 +178,8 @@
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
         });
+        $(".carousel img").addClass('open');
+        $(".carousel img").removeClass('close');
     });
 </script>
 {% endblock js_local %}
