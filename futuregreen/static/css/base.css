@@ -288,11 +288,11 @@ body > footer > .contact {
     width:58.33333%;
     position: relative;
     overflow: auto;
-    -webkit-transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    -ms-transition: all .3s ease-in;
-    -transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -transition: all .3s ease-out;
     
 }
 
@@ -315,11 +315,11 @@ body > footer > .contact {
 
 .slideshow .carousel .slides li {
     position:relative;
-    -webkit-transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    -ms-transition: all .3s ease-in;
-    -transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -transition: all .3s ease-out;
 }
 
 .slideshow .carousel .flex-caption {
