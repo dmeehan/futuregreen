@@ -425,24 +425,23 @@ body > footer > .contact {
     margin-top:0;
 }
 
-.details .size, .details .date, .details .designer {
+.details .info-boxes ul li {
+    overflow: auto;
     float:left;
     width:50%;
+    display: table;
+}
+
+.details .info-boxes ul li p {
     background: #ccc;
     color:#fff;
     text-transform: uppercase;
     font-weight: bold;
-    display: table;
-}
-
-.details .size p,
-.details .date p {
     display: table-cell; vertical-align: middle;
     text-align: center;
 }
 
-.details .size span,
-.details .date span {
+.details .info-boxes ul li span {
     display:block;
 }
 
