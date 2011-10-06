@@ -6,7 +6,8 @@
     {% if project.projectimage_set.all %}
         <section class="slideshow">
             <div class="carousel">
-                <a class="zoom open">zoom</a>
+                <a id="open">open</a>
+                <a id="close">close</a>
                 <ul class="slides">
                 {% for image in project.projectimage_set.all %}
                     <li>
@@ -165,19 +166,15 @@
         Square();
     });
 
-    $(".open").click(function () {
+    $("#open").click(function () {
         $(".content").addClass('max');
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
         });
-        $(".slideshow .zoom").removeClass('open');
-        $(".slideshow .zoom").addClass('close');
     });
 
-    $(".close").click(function () {
+    $("#close").click(function () {
         $(".content").removeClass('max');
-        $(".slideshow .zoom").addClass('open');
-        $(".slideshow .zoom").removeClass('close');
     });
 </script>
 {% endblock js_local %}
