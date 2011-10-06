@@ -273,8 +273,8 @@ body > footer > .contact {
 
 /*********** PROJECT DETAIL ************/
 #detail article.project {
-    /*position:relative;
-    overflow: auto;*/
+    position:relative;
+    overflow: auto;
     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
