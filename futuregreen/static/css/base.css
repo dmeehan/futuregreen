@@ -382,6 +382,10 @@ body > footer > .contact {
     left:33%;
     top:50%;
     z-index:3000;
+    text-align: center;
+    font-size:4em;
+    text-decoration: none;
+    color:#fff;
 }
 
 .slideshow .flex-direction-nav li {
