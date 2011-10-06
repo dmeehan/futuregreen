@@ -381,6 +381,7 @@ body > footer > .contact {
     width:33%;
     left:33%;
     top:50%;
+    z-index:3000;
 }
 
 .slideshow .flex-direction-nav li {
