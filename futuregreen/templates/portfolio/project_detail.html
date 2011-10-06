@@ -196,14 +196,36 @@
     });
 
     $("#open").click(function () {
+        var start_height = $(".slideshow").height();
         var height = $(".carousel").height();
         $(".slideshow").removeClass('min');
         $(".slideshow").removeClass('return');
         $(".slideshow").addClass('start');
+        $(".slideshow").height(height);
         setTimeout(function() { $(".slideshow").addClass('max'); }, 50);
         $(".project").prepend('<div class="shim"></div>');
-        $(".shim").css('height', height + 'px');
-        $(".details").css('height', height + 'px');
+        $(".shim").css('height', start_height);
+        $(".details").css('height', start_height);
+        $('.carousel').flexslider({
+            animation: "slide",
+            slideshow: true,
+            slideshowSpeed: 7000,
+            animationDuration: 600,
+            directionNav: true,
+            controlNav: true,
+            keyboardNav: true,
+            touchSwipe: true,
+            prevText: "Previous",
+            nextText: "Next",
+            pausePlay: false,
+            randomize: false,
+            slideToStart: 0,
+            animationLoop: true,
+            pauseOnAction: true,
+            pauseOnHover: true,
+            controlsContainer:".controls",
+            manualControls: "ul li a"
+        });
     });
 
     $("#close").click(function () {

@@ -416,6 +416,7 @@ body > footer > .contact {
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     transition: all .5s ease-out;
+    overflow: hidden;
 }
 
 .return {
