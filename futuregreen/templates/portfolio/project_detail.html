@@ -6,6 +6,7 @@
     {% if project.projectimage_set.all %}
         <section class="slideshow">
             <div class="carousel">
+                <a class="zoom">zoom</a>
                 <ul class="slides">
                 {% for image in project.projectimage_set.all %}
                     <li>
@@ -81,7 +82,6 @@
                         <p class="url"><a href="{{ project.external_url }}">{{ project.external_url }}</a></p>
                     </div>
                     {% endif %}
-                    <a class="close">close</a>
                     {% if project.tags.all %}
                     <div class="tags box">
                         <h2>Tags</h2>
@@ -170,18 +170,14 @@
         $(".slideshow").resize(function() {
             $.fn.flexslider.reset()
         });
-        $(".carousel img").removeClass('open');
-        $(".carousel img").addClass('close');
+        $(".slideshow .zoom").removeClass('open');
+        $(".slideshow .zoom").addClass('close');
     });
 
     $(".close").click(function () {
-        alert("test");
         $(".content").removeClass('max');
-        $(".slideshow").resize(function() {
-            $.fn.flexslider.reset()
-        });
-        $(".carousel img").addClass('open');
-        $(".carousel img").removeClass('close');
+        $(".slideshow .zoom").addClass('open');
+        $(".slideshow .zoom").removeClass('close');
     });
 </script>
 {% endblock js_local %}
