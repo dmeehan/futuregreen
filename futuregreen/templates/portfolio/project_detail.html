@@ -197,7 +197,10 @@
 
     $("#open").click(function () {
         $(".content").addClass('max');
-        //$.fn.flexslider.reset();
+        setTimeout(function(){
+            $.fn.flexslider.reset();
+          }, 600);
+
     });
 
     $("#close").click(function () {
