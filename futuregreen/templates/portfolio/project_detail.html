@@ -6,8 +6,8 @@
     {% if project.projectimage_set.all %}
         <section class="slideshow">
             <div class="carousel">
-                <a id="open" class="zoom">+</a>
-                <a id="close" class="zoom">-</a>
+                <a id="open" href="#zoomin" class="zoom">+</a>
+                <a id="close" class="zoom" href="#zoomout">-</a>
                 <ul class="slides">
                 {% for image in project.projectimage_set.all %}
                     <li>
