@@ -124,6 +124,7 @@ body > footer {
     color:#777;
     text-transform: uppercase;
     font-size:.85em;
+    margin-top:10px;
 }
 
 body > footer > .copyright {
@@ -132,8 +133,8 @@ body > footer > .copyright {
 }
 
 body > footer > .contact {
-    float:left;
-    width:66.66668%;
+    float:right;
+    width:70%;
     text-align:right;
 }
 
