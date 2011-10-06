@@ -197,6 +197,16 @@
 
     $("#open").click(function () {
         $(".content").addClass('max');
+
+        //FlexSlider: Resize Functions
+        slider.newSlides.width(slider.width());
+        slider.container.width(((slider.count + slider.cloneCount) * slider.width()) + 2000); //extra width to account for quirks
+
+        //Slider resize reset
+        clearTimeout(slider.sliderTimer);
+        slider.sliderTimer = setTimeout(function(){
+            slider.flexAnimate(slider.currentSlide);
+        }, 300);
     });
 
     $("#close").click(function () {
