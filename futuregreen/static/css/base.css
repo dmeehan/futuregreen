@@ -116,7 +116,7 @@ body > .content {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    padding: .714285714em;
+    /*padding: .714285714em;*/
 }
 
 body > footer {
@@ -163,7 +163,7 @@ body > footer > .contact {
 }
 
 #home .content > div > article.text > div {
-    padding: .714285714em;
+    padding: 10px;
     color:#fff;
 }
 
