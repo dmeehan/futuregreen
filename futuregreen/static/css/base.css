@@ -184,7 +184,6 @@ body > footer > .contact {
 
 #home .content > div.one article.text {
     float:left; width:50%; height:100%;
-    font-size:1.1em;
     background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
                url('images/vertical-bg.png') no-repeat 10px top,
@@ -193,8 +192,7 @@ body > footer > .contact {
 }
 
 #home .content > div.one article.text div {
-    background:#7eac32 url('images/profile_bg.png') no-repeat left top;
-    line-height:1.4em;
+    color:#444;
 }
 
 #home .content > div.one article.text h1 {
