@@ -439,7 +439,8 @@ body > footer > .contact {
 }
 
 .details h1 {
-    font-size:2em;
+    font-family: felt-tip-roman-1,felt-tip-roman-2;
+    font-size:3em;
     line-height:1.1em;
 }
 
