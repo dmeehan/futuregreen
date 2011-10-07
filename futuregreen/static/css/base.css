@@ -210,8 +210,9 @@ body > footer > .contact {
 }
 
 #home article.text h1 {
-    line-height:2em;
-    font-size:2em;
+    line-height:1em;
+    font-size:1.8em;
+    text-transform: uppercase;
 }
 
 #home article.project.featured {
