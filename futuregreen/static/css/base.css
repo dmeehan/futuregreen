@@ -196,7 +196,7 @@ body > footer > .contact {
 }
 
 #home .content > div.one article.text h1 {
-    font-weight:bold;
+    font-family: felt-tip-roman-1,felt-tip-roman-2;
     line-height:2em;
     font-size:1.5em;
 }
