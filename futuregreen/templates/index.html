@@ -22,12 +22,6 @@
         </article>
     </div>
      <div class="half">
-        <article class="text box full" id="profile">
-            <div>
-                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-                <a href="#" class="tease">Read More</a>
-            </div>
-        </article>
        {% for project in project_list|slice:"3:6" %}
             <article class="project box third" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
@@ -38,6 +32,12 @@
                 {%  endfor %}
             </article>
         {% endfor %}
+        <article class="text box full" id="profile">
+            <div>
+                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+                <a href="#" class="tease">Read More</a>
+            </div>
+        </article>
     </div>
     <div class="third">
         {% for project in project_list|slice:"2:3" %}
