@@ -77,6 +77,10 @@ h1 {
     /*text-transform: uppercase;*/
 }
 
+strong {
+    font-weight:bold;
+}
+
 div,p,ul,ol,section,article {
     font-size: 1em;
     line-height: 1.5em;
@@ -143,6 +147,22 @@ body > footer > .contact {
     text-align:right;
 }
 
+.sixth {
+    width:16.66667%; float:left;
+}
+
+.third {
+    width:33.33333%; float:left;
+}
+
+.half {
+    width:50%; float:left;
+}
+
+.full {
+    width:100%;
+}
+
 .tease,
 .tease:visited,
 .tease:active,
@@ -169,28 +189,22 @@ body > footer > .contact {
      padding: 10px;
 }
 
+
+
 /********** HOMEPAGE ***********/
 #home .content > div {
     overflow: auto;
 }
 
-#home .content > div > article.text > div {
+#home article.text > div {
     padding: 0 10px;
     color:#fff;
     font-size:1em;
 }
 
-#home .content > div > article.text strong {
-    font-weight:bold;
-}
-
-#home .content > div.one {
-    width:100%;
-    background:url('images/corner-bg-top-right.png') no-repeat right top;
-}
-
-#home .content > div.one article.text {
-    float:left; width:50%; height:100%;
+#home article#profile {
+    float:left;
+    color:#666;
     background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
                url('images/vertical-bg.png') no-repeat 10px top,
@@ -198,56 +212,30 @@ body > footer > .contact {
                url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
-#home .content > div.one article.text div {
-    color:#666;
-}
-
-#home .content > div.one article.text h1 {
+#home article.text h1 {
     font-family: octin-vintage-1,octin-vintage-2, sans-serif;
     line-height:2em;
     font-size:2em;
 }
 
-#home .content > div.one article.project {
-     float:left; width:16.6666667%; padding: .714285714em;
-}
-
-#home .content > div.two {
-    width:16.66667%; float:left;
-}
-
-#home .content > div.three {
-     width:33.33334%; float:left;
+#home article.project.featured {
      background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
                url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px;
 }
 
-#home .content > div.four {
-     width:50%; float:left;
-     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom;
-}
-
-#home .content > div.four > article.project {
-     width:33.33333%; float:left;
-}
-
-#home .content > div.four > article.text {
-     width:66.66667%; float:left;
-}
-
-#home .content > div.four > article.text div {
+#home article#news div {
     background:#d27193;
 }
 
-#home .content > div.four > article.text .date {
+#home article#news .date {
     font-weight:bold;
     line-height:1.8em;
     color:rgba(255,255,255,0.5);
 }
 
-#home .content > div.four > article.text h2 {
+#home article.text h2 {
     clear:both;
     font-weight:bold;
     font-size:1.2857em;
