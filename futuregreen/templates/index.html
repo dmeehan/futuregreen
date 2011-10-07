@@ -2,20 +2,7 @@
 {% load generic_flatblocks %}
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
-    <div class="sixth">
-       {% for project in project_list|slice:"0:2" %}
-           <article class="project box full" id="{{ project.slug }}">
-               {% for image in project.projectimage_set.all %}
-                   {% if image.is_main %}
-                       <a href="{{ project.get_absolute_url }}">
-                           <img alt="{{ project.title }}" src="{{ image.featured.url }}" />
-                       </a>
-                   {% endif %}
-               {%  endfor %}
-           </article>
-       {% endfor %}
-    </div>
-    <div class="half">
+     <div class="half">
        {% for project in project_list|slice:"3:6" %}
             <article class="project box third" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
@@ -32,7 +19,6 @@
                 <a href="#" class="tease">Read More</a>
             </div>
         </article>
-
     </div>
     <div class="third">
         {% for project in project_list|slice:"2:3" %}
@@ -45,6 +31,19 @@
                 {%  endfor %}
             </article>
         {% endfor %}
+     </div>
+    <div class="sixth">
+       {% for project in project_list|slice:"0:2" %}
+           <article class="project box full" id="{{ project.slug }}">
+               {% for image in project.projectimage_set.all %}
+                   {% if image.is_main %}
+                       <a href="{{ project.get_absolute_url }}">
+                           <img alt="{{ project.title }}" src="{{ image.featured.url }}" />
+                       </a>
+                   {% endif %}
+               {%  endfor %}
+           </article>
+       {% endfor %}
     </div>
      <div class="full">
         {% for project in project_list|slice:"6:" %}
