@@ -89,6 +89,10 @@ body > header {
 }
 
 body > header > h1 {
+    font-size:8px;
+}
+
+body > header > h1 a {
     margin:0 0 0 20px;
     padding:80px 0 0 0px;
     float:left;
