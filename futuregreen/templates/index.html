@@ -3,7 +3,7 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
     <div class="group one">
-        {% for project in project_list|slice:":1" %}
+        {% for project in project_list|slice:":5" %}
             <article class="project box" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -12,25 +12,10 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-            <article class="text box" id="profile">
-                <div>
-                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-                <a href="#" class="tease">Read More</a>
-                </div>
-            </article>
-           {% for project in project_list|slice:"1:3" %}
-                <article class="project box" id="{{ project.slug }}">
-                    {% for image in project.projectimage_set.all %}
-                        {% if image.is_main %}
-                            <a href="{{ project.get_absolute_url }}">
-                                <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
-                        {% endif %}
-                    {%  endfor %}
-                </article>
-            {% endfor %}
+
     </div>
     <div class="group two">
-       {% for project in project_list|slice:"3:5" %}
+       {% for project in project_list|slice:"5:7" %}
            <article class="project box" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
                    {% if image.is_main %}
@@ -44,7 +29,7 @@
 
     </div>
     <div class="group three">
-        {% for project in project_list|slice:"5:6" %}
+        {% for project in project_list|slice:"7:8" %}
             <article class="project box" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -56,7 +41,13 @@
         {% endfor %}
     </div>
     <div class="group four">
-       {% for project in project_list|slice:"6:" %}
+       <article class="text box" id="profile">
+                <div>
+                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+                <a href="#" class="tease">Read More</a>
+                </div>
+            </article>
+       {% for project in project_list|slice:"8:" %}
             <article class="project box" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
