@@ -59,7 +59,7 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-        {% for project in project_list|slice:"5:8" %}
+        {% for project in project_list|slice:"5:7" %}
            <article class="project box third" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
                    {% if image.is_main %}
