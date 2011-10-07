@@ -206,7 +206,6 @@ body > footer > .contact {
 
 #home article#profile {
     float:left;
-    color:#666;
     background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
                url('images/vertical-bg.png') no-repeat 10px top,
@@ -215,7 +214,6 @@ body > footer > .contact {
 }
 
 #home article.text h1 {
-    font-family: octin-vintage-1,octin-vintage-2, sans-serif;
     line-height:2em;
     font-size:2em;
 }
