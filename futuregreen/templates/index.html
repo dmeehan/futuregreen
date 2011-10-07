@@ -49,6 +49,8 @@
                 {%  endfor %}
             </article>
         {% endfor %}
+    </div>
+    <div class="half">
         {% for project in project_list|slice:"2:3" %}
             <article class="project box two-thirds featured" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
