@@ -30,8 +30,8 @@
             </div>
         </article>
     </div>
-    <div class="third">
-        <article class="text box full" id="news">
+    <div class="half">
+         <article class="text box two-thirds" id="news">
            <div>
                 <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
                 <h2>{{ item.title }}</h2>
@@ -39,8 +39,8 @@
                 <p><a href="#" class="tease">Read More</a></p>
            </div>
         </article>
-        {% for project in project_list|slice:"2:3" %}
-            <article class="project box full featured" id="{{ project.slug }}">
+         {% for project in project_list|slice:"2:3" %}
+            <article class="project box third featured" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
@@ -49,10 +49,18 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-     </div>
-    <div class="sixth">
-       {% for project in project_list|slice:"0:2" %}
-           <article class="project box full" id="{{ project.slug }}">
+        {% for project in project_list|slice:"2:3" %}
+            <article class="project box two-thirds featured" id="{{ project.slug }}">
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+            </article>
+        {% endfor %}
+        {% for project in project_list|slice:"0:2" %}
+           <article class="project box third" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
                    {% if image.is_main %}
                        <a href="{{ project.get_absolute_url }}">
