@@ -73,9 +73,16 @@ body {
 h1 {
     margin:0;
     padding:0;
-    font-size: 1.5em;        /* 24px / 16px = 1.5em */
+    font-size: 1.5em;
     font-weight:normal;
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
+}
+
+h2 {
+    margin:0;
+    padding:0;
+    font-size: 1.28571em;
+    font-weight:normal;
 }
 
 strong {
@@ -211,7 +218,7 @@ body > footer > .contact {
 
 #home article.text h1 {
     line-height:1em;
-    font-size:1.5em;
+    font-size:1.6em;
     margin-bottom:10px;
     text-transform: uppercase;
 }
