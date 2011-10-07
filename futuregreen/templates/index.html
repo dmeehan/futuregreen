@@ -47,15 +47,7 @@
 
     </div>
      <div class="full">
-        <article class="text box third" id="news">
-           <div>
-                <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
-                <h2>{{ item.title }}</h2>
-                {{ item.excerpt|truncatewords:20 }}
-                <p><a href="#" class="tease">Read More</a></p>
-           </div>
-       </article>
-        {% for project in project_list|slice:"7:" %}
+        {% for project in project_list|slice:"7:8" %}
             <article class="project box sixth" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -64,6 +56,24 @@
                 {%  endfor %}
             </article>
         {% endfor %}
+        <article class="text box third" id="news">
+           <div>
+                <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
+                <h2>{{ item.title }}</h2>
+                {{ item.excerpt|truncatewords:20 }}
+                <p><a href="#" class="tease">Read More</a></p>
+           </div>
+        </article>
+           {% for project in project_list|slice:"8:" %}
+                <article class="project box sixth" id="{{ project.slug }}">
+                    {% for image in project.projectimage_set.all %}
+                        {% if image.is_main %}
+                            <a href="{{ project.get_absolute_url }}">
+                                <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                        {% endif %}
+                    {%  endfor %}
+                </article>
+            {% endfor %}
     </div>
 {% endblock content %}
 {% block js_local %}
