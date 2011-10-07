@@ -3,7 +3,7 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
     <div class="sixth">
-       {% for project in project_list|slice:"1:3" %}
+       {% for project in project_list|slice:"0:2" %}
            <article class="project box full" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
                    {% if image.is_main %}
