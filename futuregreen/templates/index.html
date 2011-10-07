@@ -31,6 +31,14 @@
         </article>
     </div>
     <div class="third">
+        <article class="text box third" id="news">
+           <div>
+                <h1 class="date">{{ item.date_published|date:"M d, Y" }}</h1>
+                <h2>{{ item.title }}</h2>
+                {{ item.excerpt|truncatewords:20 }}
+                <p><a href="#" class="tease">Read More</a></p>
+           </div>
+        </article>
         {% for project in project_list|slice:"2:3" %}
             <article class="project box full featured" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
