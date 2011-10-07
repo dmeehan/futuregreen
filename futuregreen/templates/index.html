@@ -3,8 +3,8 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
      <div class="half">
-       {% for project in project_list|slice:"3:4" %}
-            <article class="project box two-thirds" id="{{ project.slug }}">
+       {% for project in project_list|slice:"0:1" %}
+            <article class="project box two-thirds featured" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
@@ -13,7 +13,7 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-        {% for project in project_list|slice:"4:6" %}
+        {% for project in project_list|slice:"1:3" %}
             <article class="project box third" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -31,8 +31,8 @@
         </article>
     </div>
     <div class="half">
-         {% for project in project_list|slice:"2:3" %}
-            <article class="project box third featured" id="{{ project.slug }}">
+         {% for project in project_list|slice:"3:4" %}
+            <article class="project box third" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
@@ -49,7 +49,7 @@
                 <p><a href="#" class="tease">Read More</a></p>
            </div>
         </article>
-        {% for project in project_list|slice:"2:3" %}
+        {% for project in project_list|slice:"4:5" %}
             <article class="project box two-thirds featured" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -59,7 +59,7 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-        {% for project in project_list|slice:"0:2" %}
+        {% for project in project_list|slice:"5:8" %}
            <article class="project box third" id="{{ project.slug }}">
                {% for image in project.projectimage_set.all %}
                    {% if image.is_main %}
