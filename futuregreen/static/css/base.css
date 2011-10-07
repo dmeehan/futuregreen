@@ -171,7 +171,7 @@ body > footer > .contact {
 #home .content > div > article.text > div {
     padding: 0 10px;
     color:#fff;
-    font-size:.85em;
+    font-size:1em;
 }
 
 #home .content > div > article.text strong {
@@ -197,9 +197,9 @@ body > footer > .contact {
 }
 
 #home .content > div.one article.text h1 {
-    font-family: proxima-nova-1,proxima-nova-2;
+    font-family: aviano-sans-1,aviano-sans-2
     line-height:2em;
-    font-size:2.8em;
+    font-size:2.4em;
 }
 
 #home .content > div.one article.project {
