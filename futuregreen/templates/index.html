@@ -3,7 +3,7 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
     <div class="full">
-        {% for project in project_list|slice:"6:8" %}
+        {% for project in project_list|slice:"6:" %}
             <article class="project box sixth" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -22,6 +22,12 @@
         </article>
     </div>
      <div class="half">
+        <article class="text box full" id="profile">
+            <div>
+                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+                <a href="#" class="tease">Read More</a>
+            </div>
+        </article>
        {% for project in project_list|slice:"3:6" %}
             <article class="project box third" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
@@ -32,12 +38,6 @@
                 {%  endfor %}
             </article>
         {% endfor %}
-        <article class="text box full" id="profile">
-            <div>
-                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-                <a href="#" class="tease">Read More</a>
-            </div>
-        </article>
     </div>
     <div class="third">
         {% for project in project_list|slice:"2:3" %}
