@@ -22,7 +22,17 @@
         </article>
     </div>
      <div class="half">
-       {% for project in project_list|slice:"3:6" %}
+       {% for project in project_list|slice:"3:4" %}
+            <article class="project box two-thirds" id="{{ project.slug }}">
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+            </article>
+        {% endfor %}
+        {% for project in project_list|slice:"4:6" %}
             <article class="project box third" id="{{ project.slug }}">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
