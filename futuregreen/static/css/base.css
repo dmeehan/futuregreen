@@ -75,6 +75,7 @@ h1 {
     padding:0;
     font-size: 1.5em;        /* 24px / 16px = 1.5em */
     font-weight:normal;
+    font-family: purista-web-1,purista-web-2;
     /*text-transform: uppercase;*/
 }
 
@@ -227,6 +228,8 @@ body > footer > .contact {
 
 #home article#news div {
     background:#d27193;
+    color:#fff;
+    font-size:.85em;
 }
 
 #home article#news .date {
