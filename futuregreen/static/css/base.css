@@ -414,21 +414,6 @@ body > footer > .contact {
     left:2.5%;
 }
 
-/* expanded slideshow styles */
-
-.max .slideshow {
-    width:100%;
-}
-
-.max .slideshow .carousel {
-    
-}
-
-
-.max .slideshow .controls li {
-    width:8.33333333%
-}
-
 /* details */
 
 .details {
@@ -440,7 +425,7 @@ body > footer > .contact {
 }
 
 .details h1 {
-    font-family: proxima-nova-1,proxima-nova-2
+    font-family: proxima-nova-1,proxima-nova-2;
     font-size:2.4em;
     line-height:1.1em;
     color:#777;
@@ -589,6 +574,33 @@ body > footer > .contact {
     border: none;
      background:url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px;
+}
+
+/* expanded detail styles */
+
+.max .slideshow {
+    width:100%;
+}
+
+.max .slideshow .carousel {
+
+}
+
+
+.max .slideshow .controls li {
+    width:8.33333333%
+}
+
+.max .details {
+    width:100%;
+}
+
+.max .details .description {
+    width:40%;
+}
+
+.max .details .meta {
+    width:60%;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
