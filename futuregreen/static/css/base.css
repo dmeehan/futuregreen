@@ -594,6 +594,7 @@ body > footer > .contact {
 .max .details {
     width:100%;
     background: none;
+    position:relative;
 }
 
 .max .details .description {
