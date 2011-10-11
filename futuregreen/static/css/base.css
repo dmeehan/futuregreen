@@ -598,6 +598,7 @@ body > footer > .contact {
 
 .max .details .description {
     width:50%;
+    column-count:2;
 }
 
 .max .details .meta {
