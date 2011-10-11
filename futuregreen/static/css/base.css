@@ -593,14 +593,19 @@ body > footer > .contact {
 
 .max .details {
     width:100%;
+    background: none;
 }
 
 .max .details .description {
-    width:40%;
+    width:50%;
 }
 
 .max .details .meta {
-    width:60%;
+    width:50%;
+}
+
+.max .details .meta .info-boxes {
+    position:relative;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
