@@ -71,9 +71,9 @@ body {
     }
 
 h1 {
+    font-size:1.71428em;
     margin:0;
     padding:0;
-    font-size: 1.5em;
     font-weight:normal;
     text-transform: uppercase;
 }
@@ -218,7 +218,6 @@ body > footer > .contact {
 
 #home article.text h1 {
     line-height:1em;
-    font-size:1.6em;
     margin-bottom:10px;
     text-transform: uppercase;
 }
@@ -422,14 +421,6 @@ body > footer > .contact {
     margin:0;
     background:url('images/corner-bg-top-right.png') no-repeat right top;
 
-}
-
-.details h1 {
-    color:#777;
-}
-
-.details h2 {
-    font-weight:bold;
 }
 
 .details header {
