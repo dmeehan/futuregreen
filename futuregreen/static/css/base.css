@@ -117,7 +117,7 @@ body > header > h1 a {
 }
 
 body > header > nav {
-    float:right;
+    float:left;
     width:480px;
 }
 
@@ -133,9 +133,14 @@ body > header > nav li a {
     font-weight:bold;
     font-size: 1.28571em;
     text-decoration:none;
-    color:#444;
 }
 
+body > header > nav li a:link,
+body > header > nav li a:visited,
+body > header > nav li a:hover,
+body > header > nav li a:active {
+    color:#444;
+}
 body > .content {
     overflow: auto;
     background: #fff;
