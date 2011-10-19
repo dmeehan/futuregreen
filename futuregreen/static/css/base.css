@@ -226,10 +226,6 @@ body > footer > .contact {
     overflow: auto;
 }
 
-#home article.text > div {
-    padding: 0 10px;
-}
-
 #home article#profile {
     float:left;
     background:url('images/corner-bg-top-right.png') no-repeat right top;
