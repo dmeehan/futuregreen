@@ -126,14 +126,13 @@ body > header > nav li {
     display:inline;
     line-height:80px;
     text-align: center;
+    width:33.33333%;
 }
 
 body > header > nav li a {
     font-family: purista-web-1,purista-web-2, sans-serif;
     text-transform:uppercase;
-    font-weight:bold;
     font-size: 1.28571em;
-    width:33.33333%;
     text-decoration:none;
 }
 
