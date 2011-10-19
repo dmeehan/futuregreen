@@ -132,6 +132,7 @@ body > header > nav li a {
     text-transform:uppercase;
     font-weight:bold;
     font-size: 1.28571em;
+    width:180px;
     text-decoration:none;
 }
 
