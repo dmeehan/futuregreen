@@ -237,7 +237,7 @@ body > footer > .contact {
 
 #home article.text h1 {
     line-height:1em;
-    /*margin-bottom:10px;*/
+    margin-bottom:10px;
     text-transform: uppercase;
 }
 
@@ -256,7 +256,6 @@ body > footer > .contact {
 
 #home article#news .date {
     font-weight:bold;
-    line-height:1.8em;
     color:rgba(255,255,255,0.5);
 }
 
