@@ -233,6 +233,7 @@ body > footer > .contact {
 
 #home article.text h1 {
     text-transform: uppercase;
+    margin-bottom:10px;
 }
 
 #home article.project.featured {
