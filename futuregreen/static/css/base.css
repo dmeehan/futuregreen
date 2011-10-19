@@ -152,6 +152,7 @@ body > .content {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px;
+    clear:both;
 }
 
 body > footer {
