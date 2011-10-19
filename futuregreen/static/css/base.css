@@ -70,19 +70,20 @@ body {
         color:#444;
     }
 
+h1, h2 {
+    font-family: purista-web-1,purista-web-2, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight:normal;
+}
+
 h1 {
     font-size:1.71428em;
-    margin:0;
-    padding:0;
-    font-weight:normal;
     text-transform: uppercase;
 }
 
 h2 {
-    margin:0;
-    padding:0;
     font-size: 1.28571em;
-    font-weight:normal;
 }
 
 strong {
@@ -118,6 +119,7 @@ body > header > h1 a {
 body > header > nav {
     float:right;
     width:480px;
+    font-family: purista-web-1,purista-web-2, sans-serif;
 }
 
 body > header > nav li {
