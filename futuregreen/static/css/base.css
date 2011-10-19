@@ -99,6 +99,7 @@ body > header {
     height:80px;
     width:100%;
     background: #fff;
+    overflow: hidden;
 }
 
 body > header > h1 {
