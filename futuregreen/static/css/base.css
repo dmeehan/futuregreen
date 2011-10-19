@@ -115,13 +115,12 @@ body > header > h1 a {
     height:0;
     font-size:8px;
     display:block;
-    background: url('images/logo.png')
+    background: url('images/logo.png') no-repeat;
 }
 
 body > header > nav {
     float:left;
     width:50%;
-    background: #ccc;
 }
 
 body > header > nav li {
