@@ -124,7 +124,6 @@ body > header > nav {
 body > header > nav li {
     display:inline;
     line-height:80px;
-    width:180px;
     text-align: center;
 }
 
@@ -133,6 +132,8 @@ body > header > nav li a {
     text-transform:uppercase;
     font-weight:bold;
     font-size: 1.28571em;
+    text-decoration:none;
+    color:#444;
 }
 
 body > .content {
