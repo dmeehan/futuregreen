@@ -264,6 +264,7 @@ body > footer > .contact {
     clear:both;
     font-weight:bold;
     font-size:1.2857em;
+    margin-bottom:5px;
 }
 
 #home article.project img {
