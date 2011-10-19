@@ -236,8 +236,6 @@ body > footer > .contact {
 }
 
 #home article.text h1 {
-    line-height:1em;
-    margin-bottom:10px;
     text-transform: uppercase;
 }
 
@@ -263,7 +261,6 @@ body > footer > .contact {
     clear:both;
     font-weight:bold;
     font-size:1.2857em;
-    margin:0 0 0 0;
 }
 
 #home article.project img {
