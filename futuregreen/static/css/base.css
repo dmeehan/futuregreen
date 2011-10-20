@@ -258,6 +258,10 @@ body > footer > .contact {
     padding-top:10px;
 }
 
+#home article#news .tease {
+    color:#fff;
+}
+
 #home article#news .date {
     font-weight:bold;
     color:rgba(255,255,255,0.5);
