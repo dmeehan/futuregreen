@@ -503,10 +503,12 @@ body > footer > .contact {
 
 .details .size .unit {
     font-size: .85em;
+    line-height:2em;
 }
 
 .details .date .month {
     font-size: 1em;
+    line-height:2em;
 }
 
 .details .meta {
