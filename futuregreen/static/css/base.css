@@ -566,6 +566,11 @@ body > footer > .contact {
     margin:0 0 0 0;
 }
 
+.details .meta .people h2 {
+    font-size:1em;
+}
+
+
 .details .meta .info-boxes {
     position:absolute;
     bottom:0;
