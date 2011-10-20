@@ -484,6 +484,7 @@ body > footer > .contact {
 
 .details .info-boxes ul li span {
     display:block;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .details .date .year,
