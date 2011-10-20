@@ -443,8 +443,9 @@ body > footer > .contact {
 
 }
 
-.details header {
-
+.details h1 {
+    padding-top:10px;
+    font-size:2.14285714em;
 }
 
 .details ul, .details p {
