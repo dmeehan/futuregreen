@@ -269,7 +269,7 @@ body > footer > .contact {
 
 #home article.text h2 {
     clear:both;
-    font-weight:bold;
+    font-weight:normal;
     font-size:1.2857em;
     margin-bottom:5px;
 }
