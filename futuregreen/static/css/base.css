@@ -488,7 +488,8 @@ body > footer > .contact {
 
 .slideshow nav.expand a span {
     position:absolute;
-    display:none;
+    display:block;
+    opacity:0;
     top:50%;
     width:33%;
     margin: 0 33%;
@@ -504,7 +505,7 @@ body > footer > .contact {
 }
 
 .slideshow nav.expand a:hover span {
-   display:block;
+   opacity:1.0;
    -webkit-transition: all .5s ease-in;
    -moz-transition: all .5s ease-in;
    -o-transition: all .5s ease-in;
