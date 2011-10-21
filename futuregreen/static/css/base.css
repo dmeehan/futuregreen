@@ -279,7 +279,7 @@ body > footer > .contact {
     padding: 0;
 }
 
-#home article.project h1:hover {
+#home article.project:hover h1 {
     display:block;
 }
 
