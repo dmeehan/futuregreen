@@ -259,6 +259,21 @@ body > footer > .contact {
     margin-bottom:10px;
 }
 
+#home article.project h1 {
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:0;
+    color:rgba(0,0,0,0.1);
+    line-height:1em;
+    margin: 0;
+    padding: 0;
+}
+
+#home article.project h1 {
+    position:relative;
+}
+
 #home article.project.featured {
      background:url('images/corner-bg-top-right.png') no-repeat right top,
                url('images/vertical-bg.png') no-repeat 10px 90%,
