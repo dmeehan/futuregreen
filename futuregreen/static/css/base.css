@@ -270,7 +270,8 @@ body > footer > .contact {
     right:0;
     z-index:0;
     color:rgba(255,255,255,0.2);
-    font-size:3em;
+    font-size:6em;
+    line-height:1em;
 
 }
 
