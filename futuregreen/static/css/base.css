@@ -285,11 +285,11 @@ body > footer > .contact {
     color:rgba(255,255,255,0.5);
 }
 
-#home article.text h2 {
+#home article#news h2 {
     clear:both;
     font-weight:normal;
     font-size:1.2857em;
-    margin-bottom:5px;
+    margin-bottom:10px;
 }
 
 #home article.project img {
