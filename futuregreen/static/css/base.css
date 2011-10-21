@@ -229,6 +229,7 @@ body > footer > .contact {
 #home article#profile {
     float:left;
     background:url('images/corner-bg-top-right.png') no-repeat right top;
+    position:relative;
 }
 
 #home article#profile p {
@@ -264,11 +265,14 @@ body > footer > .contact {
                url('images/bottom-bg.png') no-repeat left 10px;
 }
 
+#home article#news {
+    position:relative;
+}
+
 #home article#news div {
     background:#d27193;
     color:#fff;
     padding: 0 10px;
-    position:relative;
 }
 
 #home article#news p {
