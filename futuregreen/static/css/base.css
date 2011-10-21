@@ -475,7 +475,11 @@ body > footer > .contact {
     z-index:3000;
 }
 
-.slideshow nav.expand a {
+.slideshow nav.expand a,
+.slideshow nav.expand a:link,
+.slideshow nav.expand a:hover,
+.slideshow nav.expand a:active,
+.slideshow nav.expand a:visited {
     position:relative;
     display:block;
     width:100%;
