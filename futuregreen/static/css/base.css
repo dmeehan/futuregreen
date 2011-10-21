@@ -259,19 +259,20 @@ body > footer > .contact {
     margin-bottom:10px;
 }
 
+#home article.project {
+    position:relative;
+}
+
+
 #home article.project h1 {
     position:absolute;
     bottom:0;
     right:0;
-    z-index:0;
+    z-index:10;
     color:rgba(0,0,0,0.1);
     line-height:1em;
     margin: 0;
     padding: 0;
-}
-
-#home article.project h1 {
-    position:relative;
 }
 
 #home article.project.featured {
