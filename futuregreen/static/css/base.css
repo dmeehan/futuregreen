@@ -235,6 +235,23 @@ body > footer > .contact {
     padding-right:10px;
 }
 
+#home article#profile h1 {
+    position:absolute;
+    bottom:-5px;
+    right:-5px;
+    z-index:0;
+    color:rgba(0,0,0,0.1);
+    font-size:7em;
+    line-height:1em;
+    margin: 0;
+    padding: 0;
+}
+
+#home article#profile h2 {
+    font-size:1.71428em;
+    text-transform: uppercase;
+}
+
 #home article.text h1 {
     text-transform: uppercase;
     margin-bottom:10px;
