@@ -482,6 +482,7 @@ body > footer > .contact {
     height:100%;
     background: transparent;
     text-align:center;
+    text-decoration: none;
 }
 
 
@@ -493,8 +494,6 @@ body > footer > .contact {
     margin: 0 33%;
     color:#fff;
     font-size:8em;
-    line-height:8em;
-    text-decoration: none;
     -webkit-transition: all .5s ease-in;
     -moz-transition: all .5s ease-in;
     -o-transition: all .5s ease-in;
@@ -510,7 +509,6 @@ body > footer > .contact {
    -o-transition: all .5s ease-in;
    -ms-transition: all .5s ease-in;
    -transition: all .5s ease-in;
-    text-decoration: none;
 }
 
 
