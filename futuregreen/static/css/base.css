@@ -268,11 +268,19 @@ body > footer > .contact {
     position:absolute;
     top:10px;
     left:10px;
+    width:100%;
+    height:100%;
     z-index:10;
-    color:rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.5);
+    color:rgba(255,255,255,1.0);
     line-height:1em;
     margin: 0;
     padding: 0;
+}
+
+#home article.project img {
+    width:100%;
+    display:block;
 }
 
 #home article.project.featured {
@@ -328,11 +336,6 @@ body > footer > .contact {
     font-weight:normal;
     font-size:1.2857em;
     margin:5px 0;
-}
-
-#home article.project img {
-    width:100%;
-    display:block;
 }
 
 /*********** PROJECT LIST ************/
