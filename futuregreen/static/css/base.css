@@ -250,12 +250,28 @@ body > footer > .contact {
 #home article#news div {
     background:#d27193;
     color:#fff;
-    font-size:.85em;
     padding: 0 10px;
+    position:relative;
+}
+
+#home article#news p {
+    font-size:.85em;
+}
+
+#home article#news p.date {
+    font-family: purista-web-1,purista-web-2, sans-serif;
+    font-size:1.5em;
+    color:rgba(255,255,255,0.5);
 }
 
 #home article#news h1 {
-    padding-top:10px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:0;
+    color:rgba(255,255,255,0.2);
+    font-size:3em;
+
 }
 
 #home article#news .tease {
