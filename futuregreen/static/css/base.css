@@ -499,6 +499,7 @@ body > footer > .contact {
     -o-transition: all .5s ease-in;
     -ms-transition: all .5s ease-in;
     -transition: all .5s ease-in;
+    text-decoration: none;
 }
 
 .slideshow nav.expand a:hover span {
