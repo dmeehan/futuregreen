@@ -498,8 +498,7 @@ body > footer > .contact {
     width:33%;
     margin: 0 33%;
     font-size:8em;
-    color:rgba(255,255,255,0.7);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    color:#2f811b;
     -webkit-transition: all .5s ease-in;
     -moz-transition: all .5s ease-in;
     -o-transition: all .5s ease-in;
