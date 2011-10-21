@@ -34,7 +34,7 @@
     <div class="half">
          {% for project in project_list|slice:"3:4" %}
             <article class="project box third" id="{{ project.slug }}">
-                <h1>{{ project.name }}</h1>
+                <header><h1>{{ project.name }}</h1></header>
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
