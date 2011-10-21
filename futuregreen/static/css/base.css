@@ -477,11 +477,15 @@ body > footer > .contact {
 
 .slideshow nav.expand a {
     position:relative;
-    display:block;
+    display:none;
     width:100%;
     height:100%;
     background: transparent;
     text-align:center;
+}
+
+.slideshow nav.expand a:hover {
+    display:block;
 }
 
 .slideshow nav.expand a span {
