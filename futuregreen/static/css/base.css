@@ -269,10 +269,11 @@ body > footer > .contact {
     bottom:0;
     right:0;
     z-index:0;
-    color:rgba(255,255,255,0.2);
-    font-size:6em;
+    color:rgba(255,255,255,0.1);
+    font-size:8em;
     line-height:1em;
-
+    margin: 0;
+    padding: 0;
 }
 
 #home article#news .tease {
