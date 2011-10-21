@@ -266,8 +266,8 @@ body > footer > .contact {
 
 #home article#news h1 {
     position:absolute;
-    bottom:-10px;
-    right:-10px;
+    bottom:-5px;
+    right:-5px;
     z-index:0;
     color:rgba(255,255,255,0.1);
     font-size:7em;
