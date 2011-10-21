@@ -265,6 +265,7 @@ body > footer > .contact {
 
 
 #home article.project h1 {
+    display:none;
     position:absolute;
     top:10px;
     left:10px;
@@ -276,6 +277,10 @@ body > footer > .contact {
     line-height:1em;
     margin: 0;
     padding: 0;
+}
+
+#home article.project h1:hover {
+    display:block;
 }
 
 #home article.project img {
