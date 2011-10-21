@@ -510,8 +510,16 @@ body > footer > .contact {
     margin-top:0;
 }
 
+.details .info-boxes {
+    /*position:absolute;
+    bottom:0;
+    right:0;*/
+    width:16.66667%;
+}
+
 .details .info-boxes ul {
     margin: 0 0 0 0;
+    overflow: auto;
 }
 
 
@@ -616,18 +624,6 @@ body > footer > .contact {
 
 .details .meta h2 {
     font-size:1.14285714em;
-}
-
-
-.details .meta .info-boxes {
-    position:absolute;
-    bottom:0;
-    right:0;
-    width:16.66667%;
-}
-
- .details .meta .info-boxes ul {
-    overflow: auto;
 }
 
 .details .meta .location {
