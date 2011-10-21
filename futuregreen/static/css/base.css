@@ -489,6 +489,7 @@ body > footer > .contact {
     display:block;
     top:50%;
     width:33%;
+    margin: 0 33%;
     background:rgba(0,0,0,0.5);
     color:#fff;
     font-size:8em;
