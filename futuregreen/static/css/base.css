@@ -494,15 +494,15 @@ body > footer > .contact {
     background:rgba(0,0,0,0.5);
     color:#fff;
     font-size:8em;
-    -webkit-transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
-    -ms-transition: all .5s ease-in;
-    -transition: all .5s ease-in;
 }
 
 .slideshow nav.expand a:hover span {
    display:block;
+   -webkit-transition: all .5s ease-in;
+   -moz-transition: all .5s ease-in;
+   -o-transition: all .5s ease-in;
+   -ms-transition: all .5s ease-in;
+   -transition: all .5s ease-in;
 }
 
 
