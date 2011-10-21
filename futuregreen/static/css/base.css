@@ -238,8 +238,8 @@ body > footer > .contact {
 
 #home article#profile h1 {
     position:absolute;
-    bottom:-5px;
-    right:-5px;
+    bottom:0px;
+    right:0px;
     z-index:0;
     color:rgba(0,0,0,0.1);
     font-size:7em;
@@ -287,8 +287,8 @@ body > footer > .contact {
 
 #home article#news h1 {
     position:absolute;
-    bottom:-5px;
-    right:-5px;
+    bottom:0px;
+    right:0px;
     z-index:0;
     color:rgba(255,255,255,0.1);
     font-size:7em;
