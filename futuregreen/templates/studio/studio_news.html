@@ -1,0 +1,8 @@
+{% extends "studio/studio_base.html" %}
+{% block page_title %}: News{% endblock page_title %}
+{% load generic_flatblocks %}
+{% block content %}
+<article id="profile">
+    {%  gblock "firm_profile" for "content.ContentBlock" %}
+</article>
+{% endblock content %}
