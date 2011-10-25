@@ -1,6 +1,8 @@
 {% extends "studio/studio_base.html" %}
 {% load generic_flatblocks %}
-<article class="text box full" id="profile">
+{% block content %}
+<article id="profile">
     <h1>Studio</h1>
-    {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/flatblock.html" %}
+    {%  gblock "firm_profile" for "content.ContentBlock" %}
 </article>
+{% endblock content %}
