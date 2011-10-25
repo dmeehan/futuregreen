@@ -2,5 +2,5 @@
 {% load generic_flatblocks %}
 <article class="text box full" id="profile">
     <h1>Studio</h1>
-    {%  gblock "firm_profile" for "content.ContentBlock" %}
+    {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/flatblock.html" %}
 </article>
