@@ -734,7 +734,8 @@ body > footer > .contact {
 .max .details .meta .info-boxes,
 .max .details .meta .info-text {
     float:left;
-    width:33%;
+    width:20%;
+    margin: 0 0 0 0;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
