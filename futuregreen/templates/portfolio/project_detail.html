@@ -32,6 +32,9 @@
     {% endif %}
         <section class="details">
             <header class="box"><h1>{{ project.name }}</h1></header>
+            <div class="description box">
+                {{ project.description_html|safe }}
+            </div>
             <div class="meta">
                 {% if project.project_types.all or project.landscape_types.all %}
                     <ul class="categories">
@@ -115,9 +118,6 @@
                     </li>
                     </ul>
                 </div>
-            </div>
-            <div class="description box">
-                {{ project.description_html|safe }}
             </div>
          </section>
     </article>
