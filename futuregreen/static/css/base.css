@@ -725,6 +725,8 @@ body > footer > .contact {
 }
 
 .max .details .meta .categories,
+.max .details .meta .people,
+.max .details .meta .other,
 .max .details .meta .info-boxes {
     width:33.33333%;
     margin: 0 0 0 0;
