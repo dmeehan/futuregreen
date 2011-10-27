@@ -58,8 +58,26 @@
                         {% endif %}
                     </ul>
                 {% endif %}
-                <div class="info-text">
+                <div class="info-boxes">
+                    <ul>
+                    {% if project.date_end %}
+                        <li class="box">
+                            <p class="date square">
+                            <span class="month">{{ project.date_end|date:"F" }}</span>
+                            <span class="year">{{ project.date_end|date:"Y" }}</span>
+                            </p>
+                        </li>
+                    {% endif %}
+                    <li class="box">
+                        <p class="size square">
+                        <span class="number">{{ project.area|floatformat }}</span>
+                        <span class="unit">{{ project.get_unit_display }}</span>
+                        </p>
+                    </li>
+                    </ul>
+                </div>
                 {% if project.clients.all or project.collaborators.all %}
+                <div class="people">
                     {% if project.clients.all %}
                     <div class="box">
                         <h2>Clients</h2>
@@ -80,6 +98,9 @@
                          </ul>
                     </div>
                     {% endif %}
+                </div>
+                {% endif %}
+                <div class="other">
                     {% if project.external_url %}
                     <div class="box">
                         <h2>Web Link</h2>
@@ -96,26 +117,8 @@
                         </ul>
                     </div>
                 {% endif %}
-                {% endif %}
                 </div>
-                <div class="info-boxes">
-                    <ul>
-                    {% if project.date_end %}
-                        <li class="box">
-                            <p class="date square">
-                            <span class="month">{{ project.date_end|date:"F" }}</span>
-                            <span class="year">{{ project.date_end|date:"Y" }}</span>
-                            </p>
-                        </li>
-                    {% endif %}
-                    <li class="box">
-                        <p class="size square">
-                        <span class="number">{{ project.area|floatformat }}</span>
-                        <span class="unit">{{ project.get_unit_display }}</span>
-                        </p>
-                    </li>
-                    </ul>
-                </div>
+
             </div>
          </section>
     </article>
