@@ -715,22 +715,22 @@ body > footer > .contact {
 .max .details .description {
     width:83.33333%;
     -webkit-column-count:3;
-    -moz-column-count:3;
+    -moz-column-width:3;
     -o-column-count:3;
     -ms-column-count:3;
     column-count:3;
-    -moz-column-gap: 20px;
     -webkit-column-gap: 20px;
     -ms-column-gap: 20px;
     -o-column-gap: 20px;
-    column-gap: 20px;
+    -moz-column-gap: 20px;
     float:right;
     overflow: auto;
 }
 
 .max .details .description p {
-    -webkit-column-break-before: always;
+    margin: 0 0 0 0;
 }
+
 .max .details .meta {
     width:16.66667%;
 }
