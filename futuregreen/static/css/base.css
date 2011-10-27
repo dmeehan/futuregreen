@@ -732,7 +732,9 @@ body > footer > .contact {
     width:50%;
 }
 
-.max .details .meta .info-boxes {
+.max .details .meta .info-boxes,
+.max .details .meta .categories,
+.max .details .meta .people {
     float:left;
     width:33.33333%;
 }
