@@ -677,10 +677,10 @@ body > footer > .contact {
     background:#7eac32;
 }
 
-.details .meta .info-text p {
+.details .meta p {
     margin: 0 0 0 0;
 }
-.details .meta .info-text ul {
+.details .meta ul {
     margin:0 0 0 0;
 }
 
@@ -731,8 +731,7 @@ body > footer > .contact {
 }
 
 .max .details .meta .categories,
-.max .details .meta .info-boxes,
-.max .details .meta .info-text {
+.max .details .meta .info-boxes {
     float:left;
     width:33.33333%;
     margin: 0 0 0 0;
