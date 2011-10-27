@@ -573,60 +573,6 @@ body > footer > .contact {
     margin-top:0;
 }
 
-.details .info-boxes {
-    /*position:absolute;
-    bottom:0;
-    right:0;
-    width:16.66667%;*/
-}
-
-.details .info-boxes ul {
-    margin: 0 0 0 0;
-    overflow: auto;
-}
-
-
-.details .info-boxes ul li {
-    overflow: auto;
-    float:left;
-    width:50%;
-    display: table;
-}
-
-
-.details .info-boxes ul li p {
-    background: #ccc;
-    color:#fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: table-cell; vertical-align: middle;
-    text-align: center;
-}
-
-.details .info-boxes ul li span {
-    display:block;
-    font-family: Helvetica, Arial, sans-serif;
-    line-height:1em;
-}
-
-.details .date .year,
-.details .size .number {
-    font-size: 2.8em;
-}
-
-.details .size .unit {
-    font-size: .85em;
-}
-
-.details .date .month {
-    font-size: 1em;
-}
-
-.details .meta {
-    float:right;
-    width:40%;
-}
-
 .details .description {
     float:left;
     width:60%;
@@ -636,13 +582,30 @@ body > footer > .contact {
     margin-bottom:10px;
 }
 
-.details .categories {
+
+.details .meta {
+    float:right;
+    width:40%;
+}
+
+.details .meta p {
+    margin: 0 0 0 0;
+}
+.details .meta ul {
+    margin:0 0 0 0;
+}
+
+.details .meta h2 {
+    font-size:1.14285714em;
+}
+
+.details .meta .categories {
     overflow: hidden;
     clear:both;
     margin: 10px;
 }
 
-.details .categories li {
+.details .meta .categories li {
     overflow: hidden;
     float:left;
     width:20%;
@@ -658,7 +621,7 @@ body > footer > .contact {
     box-sizing: border-box;
 }
 
- .details .categories li a {
+ .details .meta .categories li a {
         color:#fff;
         float:left;
         width:100%;
@@ -669,23 +632,54 @@ body > footer > .contact {
     }
 
 
-.details .categories .project-type {
+.details .meta .categories .project-type {
     background:#d27193;
 }
 
-.details .categories .landscape-type {
+.details .meta .categories .landscape-type {
     background:#7eac32;
 }
 
-.details .meta p {
+.details .meta .info-boxes ul {
     margin: 0 0 0 0;
-}
-.details .meta ul {
-    margin:0 0 0 0;
+    overflow: auto;
 }
 
-.details .meta h2 {
-    font-size:1.14285714em;
+
+.details .meta .info-boxes ul li {
+    overflow: auto;
+    float:left;
+    width:50%;
+    display: table;
+}
+
+
+.details .meta .info-boxes ul li p {
+    background: #ccc;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: table-cell; vertical-align: middle;
+    text-align: center;
+}
+
+.details .meta .info-boxes ul li span {
+    display:block;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height:1em;
+}
+
+.details .meta .date .year,
+.details .meta .size .number {
+    font-size: 2.8em;
+}
+
+.details .meta .size .unit {
+    font-size: .85em;
+}
+
+.details .meta .date .month {
+    font-size: 1em;
 }
 
 .details .meta .location {
