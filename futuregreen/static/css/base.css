@@ -738,6 +738,10 @@ body > footer > .contact {
     margin: 0 0 0 0;
 }
 
+.max .details .meta .categories {
+    padding: 10px;
+}
+
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
         width:90%;
