@@ -724,6 +724,9 @@ body > footer > .contact {
     -ms-column-gap: 20px;
     -o-column-gap: 20px;
     -moz-column-gap: 20px;
+    -webkit-column-fill:balanced;
+    -moz-column-fill:balanced;
+    column-fill:balanced;
     float:right;
     overflow: auto;
 }
