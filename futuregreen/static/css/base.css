@@ -718,7 +718,6 @@ body > footer > .contact {
     -o-column-count:2;
     -ms-column-count:2;
     column-count:2;
-    float:right;
 }
 
 .max .details .meta {
