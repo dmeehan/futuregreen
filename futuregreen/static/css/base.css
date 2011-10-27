@@ -727,10 +727,6 @@ body > footer > .contact {
     overflow: auto;
 }
 
-.max .details .description p {
-    margin: 0 0 0 0;
-}
-
 .max .details .meta {
     width:16.66667%;
 }
