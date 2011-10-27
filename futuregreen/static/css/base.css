@@ -713,13 +713,12 @@ body > footer > .contact {
 }
 
 .max .details .description {
-    width:83.33333%;
-    -webkit-column-count:3;
-    -webkit-column-width:33%;
-    -moz-column-count:3;
-    -o-column-count:3;
-    -ms-column-count:3;
-    column-count:3;
+    width:50%;
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    -o-column-count:2;
+    -ms-column-count:2;
+    column-count:2;
     -webkit-column-gap: 20px;
     -ms-column-gap: 20px;
     -o-column-gap: 20px;
@@ -729,15 +728,16 @@ body > footer > .contact {
 }
 
 .max .details .meta {
-    width:16.66667%;
+    width:50%;
+    float:left;
 }
 
 .max .details .meta .categories,
 .max .details .meta .people,
 .max .details .meta .other,
 .max .details .meta .info-boxes {
-    
     margin: 0 0 0 0;
+    width:33%;
 }
 
 .max .details .meta .categories {
