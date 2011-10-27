@@ -636,13 +636,13 @@ body > footer > .contact {
     margin-bottom:10px;
 }
 
-.details .meta .categories {
+.details .categories {
     overflow: hidden;
     clear:both;
     margin: 10px;
 }
 
-.details .meta .categories li {
+.details .categories li {
     overflow: hidden;
     float:left;
     width:20%;
@@ -658,7 +658,7 @@ body > footer > .contact {
     box-sizing: border-box;
 }
 
- .details .meta .categories li a {
+ .details .categories li a {
         color:#fff;
         float:left;
         width:100%;
@@ -669,11 +669,11 @@ body > footer > .contact {
     }
 
 
-.details .meta .categories .project-type {
+.details .categories .project-type {
     background:#d27193;
 }
 
-.details .meta .categories .landscape-type {
+.details .categories .landscape-type {
     background:#7eac32;
 }
 
