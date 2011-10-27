@@ -719,7 +719,7 @@ body > footer > .contact {
     -o-column-count:3;
     -ms-column-count:3;
     column-count:3;
-    height:200px;
+    height:160px;
     float:right;
     overflow: auto;
 }
