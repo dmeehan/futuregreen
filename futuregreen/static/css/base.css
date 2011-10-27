@@ -738,6 +738,7 @@ body > footer > .contact {
 .max .details .meta .info-boxes {
     margin: 0 0 0 0;
     width:33%;
+    float:left;
 }
 
 .max .details .meta .categories {
