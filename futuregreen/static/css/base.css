@@ -732,15 +732,13 @@ body > footer > .contact {
     width:50%;
 }
 
-.max .details .meta .info-boxes,
-.max .details .meta .categories,
-.max .details .meta .people {
+.max .details .meta .categories {
     float:left;
     width:33.33333%;
 }
 
-.max .details .meta .categories {
-    width:33.3333%;
+.max .details .meta .info-boxes {
+    width:16.667%;
     float:left;
 }
 

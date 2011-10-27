@@ -60,7 +60,7 @@
                 {% endif %}
                 {% if project.clients.all or project.collaborators.all %}
                     {% if project.clients.all %}
-                    <div class="people box">
+                    <div class="box">
                         <h2>Clients</h2>
                         <ul>
                         {% for client in project.clients.all %}
@@ -70,7 +70,7 @@
                      </div>
                     {% endif %}
                     {% if project.collaborators.all %}
-                    <div class="people box">
+                    <div class="box">
                         <h2>Collaborators</h2>
                         <ul>
                         {% for collaborator in project.collaborators.all %}
@@ -80,13 +80,13 @@
                     </div>
                     {% endif %}
                     {% if project.external_url %}
-                    <div class="link box">
+                    <div class="box">
                         <h2>Web Link</h2>
                         <p class="url">{{ project.external_url|urlizetrunc:25 }}</p>
                     </div>
                     {% endif %}
                     {% if project.tags.all %}
-                    <div class="tags box">
+                    <div class="box">
                         <h2>Tags</h2>
                         <ul class="tags">
                         {% for tag in project.tags.all %}
