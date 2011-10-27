@@ -712,7 +712,7 @@ body > footer > .contact {
 }
 
 .max .details .description {
-    width:66.66667%;
+    width:83.33333%;
     -webkit-column-count:3;
     -moz-column-count:3;
     -o-column-count:3;
@@ -722,14 +722,13 @@ body > footer > .contact {
 }
 
 .max .details .meta {
-    width:50%;
+    width:16.66667%;
 }
 
 .max .details .meta .categories,
 .max .details .meta .people,
 .max .details .meta .other,
 .max .details .meta .info-boxes {
-    width:33.33333%;
     margin: 0 0 0 0;
 }
 
