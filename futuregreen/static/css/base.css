@@ -732,14 +732,11 @@ body > footer > .contact {
     width:50%;
 }
 
-.max .details .meta .categories {
+.max .details .meta .categories,
+.max .details .meta .info-boxes,
+.max .details .meta .info-text {
     float:left;
     width:33.33333%;
-}
-
-.max .details .meta .info-boxes {
-    width:16.667%;
-    float:left;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {

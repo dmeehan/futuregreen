@@ -58,6 +58,7 @@
                         {% endif %}
                     </ul>
                 {% endif %}
+                <div class="info-text">
                 {% if project.clients.all or project.collaborators.all %}
                     {% if project.clients.all %}
                     <div class="box">
@@ -96,6 +97,7 @@
                     </div>
                 {% endif %}
                 {% endif %}
+                </div>
                 <div class="info-boxes">
                     <ul>
                     {% if project.date_end %}
