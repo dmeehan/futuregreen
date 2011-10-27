@@ -728,6 +728,9 @@ body > footer > .contact {
     overflow: auto;
 }
 
+.max .details .description p {
+    -webkit-column-break-before: always;
+}
 .max .details .meta {
     width:16.66667%;
 }
