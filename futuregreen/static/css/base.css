@@ -700,9 +700,13 @@ body > footer > .contact {
 
 }
 
+.max .slideshow .controls {
+    width:25%;
+}
 
 .max .slideshow .controls li {
-    width:8.33333333%
+    /*width:8.33333333%*/
+    width:33%;
 }
 
 .max .details {
