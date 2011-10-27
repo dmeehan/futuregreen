@@ -715,7 +715,7 @@ body > footer > .contact {
 .max .details .description {
     /*width:83.33333%;*/
     width:400px;
-    -webkit-column-count:3;
+    -webkit-column-count:4;
     /*-webkit-column-count:3;
     -moz-column-count:3;
     -o-column-count:3;
