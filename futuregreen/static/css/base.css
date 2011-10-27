@@ -677,12 +677,10 @@ body > footer > .contact {
     background:#7eac32;
 }
 
-.details .meta .people p,
-.details .meta .link p,
-.details .meta .tags p {
+.details .meta .info-text p {
     margin: 0 0 0 0;
 }
-.details .meta .people ul {
+.details .meta .info-text ul {
     margin:0 0 0 0;
 }
 
