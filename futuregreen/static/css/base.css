@@ -617,12 +617,14 @@ body > footer > .contact {
    -o-transition: all .2s ease-in;
    -ms-transition: all .2s ease-in;
    -transition: all .2s ease-in;
+    overflow: hidden;
 }
 
 .slideshow .flex-direction-nav li {
     width:40px;
     float:right;
     background:rgba(0,0,0,0.6);
+    overflow: hidden;
 }
 
 .slideshow .flex-direction-nav li:first-child {
@@ -654,6 +656,7 @@ body > footer > .contact {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .slideshow .flex-direction-nav a:hover {
