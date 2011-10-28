@@ -590,6 +590,7 @@ body > footer > .contact {
     width: 14.2857143%;
     position:absolute;
     bottom:0;
+    right:10px;
     z-index:20000;
 }
 
