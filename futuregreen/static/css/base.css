@@ -231,16 +231,13 @@ body > footer > .contact {
 }
 
 #home article#profile div {
-    background:url('images/profile_bg.png') no-repeat right top;
-    background-size: 580px 180px contain;
+    background:url('images/profile_bg.png') no-repeat left bottom;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px;
-    width:100%;
-    height:100%;
     background-color:#efefef;
 }
 
