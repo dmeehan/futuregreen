@@ -588,17 +588,17 @@ body > footer > .contact {
 
 .slideshow .flex-direction-nav {
     width: 14.2857143%;
-}
-
-.slideshow .flex-direction-nav a {
     position:absolute;
     bottom:0;
     z-index:20000;
+}
+
+.slideshow .flex-direction-nav a {
     display:block;
     width:33%;
     height:40px;
     line-height:40px;
-    margin:0 10px 0 0;
+    margin:0;
     text-align:center;
     text-decoration: none;
     color: rgba(255,255,255,0.8);
@@ -620,11 +620,11 @@ body > footer > .contact {
 
 
 .slideshow .flex-direction-nav .next {
-    right:0;
+    float:right;
 }
 
 .slideshow .flex-direction-nav .prev {
-    left:0;
+    float:left;
 }
 
 /* details */
