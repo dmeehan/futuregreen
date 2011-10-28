@@ -536,7 +536,8 @@ body > footer > .contact {
 
 .slideshow nav.expand {
     position:absolute;
-    top:-40px;
+    display:none;
+    top:0;
     right:40px;
     width: 40px;
     background: transparent;
@@ -587,7 +588,7 @@ body > footer > .contact {
 }
 
 .slideshow:hover nav.expand {
-    top:0;
+   display:block;
 }
 
 .slideshow:hover .flex-direction-nav {
