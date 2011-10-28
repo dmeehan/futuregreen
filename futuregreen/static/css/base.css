@@ -296,6 +296,7 @@ body > footer > .contact {
 }
 
 #home article#news {
+    clear:both;
     /*position:relative;*/
 }
 
