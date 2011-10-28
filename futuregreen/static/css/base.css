@@ -535,7 +535,7 @@ body > footer > .contact {
 .slideshow nav.expand {
     position:absolute;
     bottom:0;
-    right:14.28571%;
+    right:4.76190333%;
     background: transparent;
     z-index:20000;
     text-align: center;
@@ -547,7 +547,7 @@ body > footer > .contact {
 .slideshow nav.expand a:active,
 .slideshow nav.expand a:visited {
     display:block;
-    width:14.28571%;
+    width:4.76190333%;
     margin:0;
     text-align:center;
     text-decoration: none;
@@ -557,7 +557,6 @@ body > footer > .contact {
     -o-transition: all .2s ease-in;
     -ms-transition: all .2s ease-in;
     -transition: all .2s ease-in;
-    background: rgba(0,0,0,0.7);
     font-family:monospace;
     font-size:2em;
     font-weight:bold;
