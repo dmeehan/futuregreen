@@ -158,9 +158,12 @@
             animationLoop: true,
             pauseOnAction: true,
             pauseOnHover: false,
-            //controlsContainer:".controls",
+            controlsContainer:".controls",
             manualControls: "ul li a"
         });
+
+        var offset = $(".controls").height();
+        $(".slideshow .flex-direction-nav a").css('bottom',offset);
 
     });
 
