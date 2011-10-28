@@ -590,7 +590,6 @@ body > footer > .contact {
     margin:0 10px 0 0;
     text-align:center;
     text-decoration: none;
-    line-height:40px;
     color: rgba(255,255,255,0.8);
     -webkit-transition: all .2s ease-in;
     -moz-transition: all .2s ease-in;
@@ -611,11 +610,11 @@ body > footer > .contact {
 
 
 .slideshow .flex-direction-nav .next {
-    right:9.52380667%;
+    right:0;
 }
 
 .slideshow .flex-direction-nav .prev {
-    right:0;
+    right:9.52380667%;
 }
 
 /* details */
