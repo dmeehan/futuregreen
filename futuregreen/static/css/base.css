@@ -582,22 +582,35 @@ body > footer > .contact {
 
 .slideshow .flex-direction-nav a {
     position:absolute;
-    /*display:none;*/
-    top:0;
-    left:0;
-    /*width:28.5714286%;*/
+    top:10px;
     z-index:20000;
+    display:block;
+    width:40px;
+    height:40px;
+    margin:0;
+    text-align:center;
+    text-decoration: none;
+    line-height:40px;
+    color: rgba(255,255,255,0.8);
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -transition: all .2s ease-in;
+    background: rgba(0,0,0,0.5);
+    font-family:monospace;
+    font-size:2em;
+    font-weight:bold;
 }
 
 
 
 .slideshow .flex-direction-nav .next {
-    right:10px;
-    text-align: right;
+    right:90px;
 }
 
 .slideshow .flex-direction-nav .prev {
-    left:10px;
+    right:10px;
 }
 
 /* details */
