@@ -231,7 +231,7 @@ body > footer > .contact {
 
 .image img {
     position: relative;
-    z-index: 99;
+    z-index: -1;
 }
 
 
