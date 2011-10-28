@@ -605,6 +605,11 @@ body > footer > .contact {
     float:right;
 }
 
+.slideshow .flex-direction-nav li:first-child {
+    float:left;
+}
+
+
 
 .slideshow .flex-direction-nav a {
     display:block;
