@@ -557,8 +557,7 @@ body > footer > .contact {
     -transition: all .2s ease-in;
     background: rgba(0,0,0,0.5);
     font-family:monospace;
-    font-size:3em;
-    opacity:.5;
+    font-size:2em;
 }
 
 .slideshow nav.expand a:hover {
@@ -568,7 +567,6 @@ body > footer > .contact {
    -ms-transition: all .2s ease-in;
    -transition: all .2s ease-in;
     font-size:6em;
-    line-height:80px;
     font-weight:bold;
 }
 
