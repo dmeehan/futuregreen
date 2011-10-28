@@ -321,7 +321,6 @@ body > footer > .contact {
 #home article.project img {
     width:100%;
     display:block;
-    -moz-box-shadow:inset 0 0 10px #000000;
 }
 
 #home article.project.featured {
@@ -427,7 +426,9 @@ body > footer > .contact {
 }
 
 .slideshow .carousel .slides {
-    
+    -moz-box-shadow: inset 0 0 5px #888;
+    -webkit-box-shadow: inset 0 0 5px#888;
+    box-shadow: inset 0 0 5px #888;
 }
 
 .slideshow .carousel .slides img {
