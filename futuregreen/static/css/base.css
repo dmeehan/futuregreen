@@ -621,11 +621,12 @@ body > footer > .contact {
 
 
 .slideshow .flex-direction-nav .next {
-
+    float:right;
 }
 
 .slideshow .flex-direction-nav .prev {
     margin-left:20px;
+    float:left;
 }
 
 /* details */
