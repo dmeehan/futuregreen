@@ -588,7 +588,7 @@ body > footer > .contact {
     width:120px;
     padding-left:20px;
     position:absolute;
-    top:0;
+    top:10px;
     right:10px;
     z-index:15000;
     -webkit-box-sizing: border-box;
