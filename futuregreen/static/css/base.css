@@ -586,8 +586,8 @@ body > footer > .contact {
     display:none;
 }
 
-.slideshow .flex-direction-nav li {
-
+.slideshow .flex-direction-nav {
+    width: 14.2857143%;
 }
 
 .slideshow .flex-direction-nav a {
@@ -595,7 +595,7 @@ body > footer > .contact {
     bottom:0;
     z-index:20000;
     display:block;
-    width:40px;
+    width:33%;
     height:40px;
     line-height:40px;
     margin:0 10px 0 0;
@@ -624,7 +624,7 @@ body > footer > .contact {
 }
 
 .slideshow .flex-direction-nav .prev {
-    right:9.52380667%;
+    left:0;
 }
 
 /* details */
