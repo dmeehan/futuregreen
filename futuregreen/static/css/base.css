@@ -534,7 +534,7 @@ body > footer > .contact {
 
 .slideshow nav.expand {
     position:absolute;
-    bottom:0;
+    top:0;
     right:4.76190333%;
     background: transparent;
     z-index:20000;
@@ -587,7 +587,7 @@ body > footer > .contact {
     z-index:20000;
     display:block;
     width:4.76190333%;
-    padding:0 10px 0 0;
+    margin:0 10px 0 0;
     text-align:center;
     text-decoration: none;
     line-height:40px;
