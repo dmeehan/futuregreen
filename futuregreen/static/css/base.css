@@ -499,12 +499,12 @@ body > footer > .contact {
     position:relative;
     display:block;
     top:50%;
-    width:100px;
-    height:100px;
+    width:80px;
+    height:80px;
     margin:-50px auto 0 auto;
     text-align:center;
     text-decoration: none;
-    line-height:100px;
+    line-height:80px;
     opacity:0;
     color:#fff;
     -webkit-transition: all .5s ease-in;
