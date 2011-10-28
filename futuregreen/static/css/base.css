@@ -646,8 +646,8 @@ body > footer > .contact {
    -ms-transition: all .2s ease-in;
    -transition: all .2s ease-in;
     overflow: hidden;
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.5);
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.5);
     box-shadow: 0 0 5px rgba(0,0,0,.5);
 }
 
