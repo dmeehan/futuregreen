@@ -549,7 +549,7 @@ body > footer > .contact {
     text-align:center;
     text-decoration: none;
     line-height:40px;
-    color:#fff;
+    color: rgba(255,255,255,0.8);
     -webkit-transition: all .2s ease-in;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
@@ -558,6 +558,7 @@ body > footer > .contact {
     background: rgba(0,0,0,0.5);
     font-family:monospace;
     font-size:2em;
+    font-weight:bold;
 }
 
 .slideshow nav.expand a:hover {
@@ -566,8 +567,7 @@ body > footer > .contact {
    -o-transition: all .2s ease-in;
    -ms-transition: all .2s ease-in;
    -transition: all .2s ease-in;
-    font-size:6em;
-    font-weight:bold;
+    font-size:4em;
 }
 
 .slideshow #close {
