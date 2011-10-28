@@ -548,7 +548,9 @@ body > footer > .contact {
 .slideshow nav.expand a:active,
 .slideshow nav.expand a:visited {
     display:block;
-    width:4.76190333%;
+    width:40px;
+    height:40px;
+    line-height:40px;
     margin:0;
     text-align:center;
     text-decoration: none;
@@ -587,7 +589,9 @@ body > footer > .contact {
     top:10px;
     z-index:20000;
     display:block;
-    width:4.76190333%;
+    width:40px;
+    height:40px;
+    line-height:40px;
     margin:0 10px 0 0;
     text-align:center;
     text-decoration: none;
