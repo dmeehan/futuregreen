@@ -620,7 +620,8 @@ body > footer > .contact {
     overflow: hidden;
 }
 
-.slideshow .flex-direction-nav li {
+.slideshow .flex-direction-nav li,
+.max .slideshow .flex-direction-nav li {
     width:40px;
     float:right;
     background:rgba(0,0,0,0.6);
@@ -633,8 +634,7 @@ body > footer > .contact {
 
 
 
-.slideshow .flex-direction-nav a,
-.max .slideshow .flex-direction-nav a {
+.slideshow .flex-direction-nav a {
     display:block;
     float:left;
     width:40px;
