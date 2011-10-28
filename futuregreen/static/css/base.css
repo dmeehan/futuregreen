@@ -536,10 +536,9 @@ body > footer > .contact {
 
 .slideshow nav.expand {
     position:absolute;
-    top:0;
+    top:-40px;
     right:40px;
     width: 40px;
-    margin-top:-40px;
     background: transparent;
     z-index:20000;
     text-align: center;
@@ -588,7 +587,7 @@ body > footer > .contact {
 }
 
 .slideshow:hover nav.expand {
-    margin-top:0;
+    top:0;
 }
 
 .slideshow:hover .flex-direction-nav {
@@ -611,6 +610,11 @@ body > footer > .contact {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     overflow: auto;
+    -webkit-transition: all .2s ease-in;
+   -moz-transition: all .2s ease-in;
+   -o-transition: all .2s ease-in;
+   -ms-transition: all .2s ease-in;
+   -transition: all .2s ease-in;
 }
 
 .slideshow .flex-direction-nav li {
