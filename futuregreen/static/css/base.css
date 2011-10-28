@@ -594,9 +594,16 @@ body > footer > .contact {
     z-index:20000;
 }
 
+.slideshow .flex-direction-nav li {
+    width:33%;
+    float:right;
+    overflow: hidden;
+}
+
+
 .slideshow .flex-direction-nav a {
     display:block;
-    width:33%;
+    width:100%;
     height:40px;
     line-height:40px;
     margin:0;
@@ -621,12 +628,11 @@ body > footer > .contact {
 
 
 .slideshow .flex-direction-nav .next {
-    float:right;
+    margin-left:33%;
 }
 
 .slideshow .flex-direction-nav .prev {
     margin-left:20px;
-    float:left;
 }
 
 /* details */
