@@ -558,7 +558,6 @@ body > footer > .contact {
     -ms-transition: all .2s ease-in;
     -transition: all .2s ease-in;
     font-family:monospace;
-    font-size:2em;
     font-weight:bold;
 }
 
@@ -598,7 +597,6 @@ body > footer > .contact {
     -transition: all .2s ease-in;
     background: rgba(0,0,0,0.7);
     font-family:monospace;
-    font-size:2em;
     font-weight:bold;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
