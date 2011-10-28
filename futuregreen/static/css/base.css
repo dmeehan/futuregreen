@@ -560,8 +560,8 @@ body > footer > .contact {
 .slideshow nav.expand a:active,
 .slideshow nav.expand a:visited {
     display:block;
-    height:0px;
-    line-height:40px;
+    height:0;
+    line-height:0;
     text-align:center;
     text-decoration: none;
     color: rgba(255,255,255,0.8);
@@ -588,10 +588,7 @@ body > footer > .contact {
 
 .slideshow:hover nav.expand a {
    height:40px;
-}
-
-.slideshow:hover .flex-direction-nav {
-    top:10px;
+   line-height:40px;
 }
 
 .slideshow #close {
@@ -601,7 +598,7 @@ body > footer > .contact {
 .slideshow .flex-direction-nav {
     width:120px;
     position:absolute;
-    top:-40px;
+    top:10px;
     right:10px;
     z-index:15000;
     -webkit-box-sizing: border-box;
@@ -633,8 +630,8 @@ body > footer > .contact {
     display:block;
     float:left;
     width:40px;
-    height:40px;
-    line-height:40px;
+    height:0;
+    line-height:0;
     margin:0;
     text-align:center;
     text-decoration: none;
@@ -654,7 +651,10 @@ body > footer > .contact {
     box-sizing: border-box;
 }
 
-
+.slideshow:hover .flex-direction-nav a {
+    height:40px;
+    line-height:40px;
+}
 
 .slideshow .flex-direction-nav .next {
    
