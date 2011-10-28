@@ -8,12 +8,14 @@
                <header>
                    <a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a>
                </header>
+               <div class="image">
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
                             <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
                     {% endif %}
                 {%  endfor %}
+               </div>
             </article>
         {% endfor %}
          <article class="text box half" id="profile">
