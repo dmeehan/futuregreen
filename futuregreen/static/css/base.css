@@ -486,7 +486,7 @@ body > footer > .contact {
     width:42.85714%;
     left:28.5714286%;
     height:100%;
-    background: red;
+    background: transparent;
     z-index:20000;
     text-align: center;
 }
