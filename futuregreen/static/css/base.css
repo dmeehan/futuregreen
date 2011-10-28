@@ -567,7 +567,9 @@ body > footer > .contact {
    -o-transition: all .2s ease-in;
    -ms-transition: all .2s ease-in;
    -transition: all .2s ease-in;
-    font-size:4em;
+    font-size:3em;
+    color: rgba(255,255,255,1.0);
+    background: rgba(0,0,0,0.8);
 }
 
 .slideshow #close {
