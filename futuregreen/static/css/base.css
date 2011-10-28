@@ -570,6 +570,7 @@ body > footer > .contact {
    -ms-transition: all .5s ease-in;
    -transition: all .5s ease-in;
     font-size:8em;
+    line-height:80px;
 }
 
 .slideshow #close {
