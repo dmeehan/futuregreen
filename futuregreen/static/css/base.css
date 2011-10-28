@@ -134,6 +134,8 @@ body > header > nav li a {
     font-family: purista-web-1,purista-web-2, sans-serif;
     text-transform:uppercase;
     font-size: 1.28571429em;
+    letter-spacing:2px;
+    font-weight:bold;
     text-decoration:none;
 }
 
@@ -160,7 +162,6 @@ body > footer {
     color:#777;
     text-transform: uppercase;
     font-size:.85em;
-    width:100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -259,6 +260,10 @@ body > footer > .contact {
     line-height:1em;
     margin: 0;
     padding: 0;
+}
+
+#home article#profile header a {
+    text-decoration:none;
 }
 
 #home article#profile h2 {
