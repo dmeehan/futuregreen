@@ -596,7 +596,7 @@ body > footer > .contact {
 
 .slideshow .flex-direction-nav li {
     width:33%;
-    float:right;
+    float:left;
     overflow: hidden;
 }
 
@@ -633,7 +633,6 @@ body > footer > .contact {
 
 .slideshow .flex-direction-nav .prev {
     margin-left:20px;
-    float:left;
 }
 
 /* details */
