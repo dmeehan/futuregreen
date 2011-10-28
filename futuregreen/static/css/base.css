@@ -596,7 +596,7 @@ body > footer > .contact {
 
 .slideshow .flex-direction-nav a {
     display:block;
-    position:absolute;
+    position:relative;
     width:33%;
     height:40px;
     line-height:40px;
