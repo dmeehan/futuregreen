@@ -60,15 +60,15 @@ html {
 }
 
 body {
-        min-width:1024px;
-        max-width:1460px;
-        padding:10px;
-        position:relative;
-        font-weight:normal;
-        font-size:87.5%;
-        font-family: kulturista-web-1,kulturista-web-2, Arial, Helvetica, sans-serif;
-        color:#444;
-    }
+    min-width:1024px;
+    max-width:1460px;
+    padding:10px;
+    position:relative;
+    font-weight:normal;
+    font-size:87.5%;
+    font-family: kulturista-web-1,kulturista-web-2, Arial, Helvetica, sans-serif;
+    color:#444;
+}
 
 h1, h2 {
     margin: 0;
@@ -77,7 +77,8 @@ h1, h2 {
 }
 
 h1 {
-    font-family: purista-web-1,purista-web-2, sans-serif;
+    font-family: orbitron-1,orbitron-2, Arial, Helvetica, sans-serif;
+    /*font-family: purista-web-1,purista-web-2, sans-serif;*/
     font-size:1.71428em;
     text-transform: uppercase;
 }
@@ -391,7 +392,7 @@ body > footer > .contact {
     float:left;
     width:58.33333%;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
@@ -538,6 +539,7 @@ body > footer > .contact {
     top:0;
     right:40px;
     width: 40px;
+    margin-top:-40px;
     background: transparent;
     z-index:20000;
     text-align: center;
@@ -546,6 +548,11 @@ body > footer > .contact {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: all .2s ease-in;
+   -moz-transition: all .2s ease-in;
+   -o-transition: all .2s ease-in;
+   -ms-transition: all .2s ease-in;
+   -transition: all .2s ease-in;
 }
 
 .slideshow nav.expand a,
@@ -578,6 +585,10 @@ body > footer > .contact {
    -transition: all .2s ease-in;
     font-size:3em;
     color: rgba(255,255,255,1.0);
+}
+
+.slideshow:hover nav.expand {
+    margin-top:0;
 }
 
 .slideshow #close {
