@@ -77,8 +77,7 @@ h1, h2 {
 }
 
 h1 {
-    font-family: orbitron-1,orbitron-2, Arial, Helvetica, sans-serif;
-    /*font-family: purista-web-1,purista-web-2, sans-serif;*/
+    font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
 }
