@@ -539,7 +539,6 @@ body > footer > .contact {
     top:0;
     right:40px;
     width: 40px;
-    height:0;
     background: transparent;
     z-index:20000;
     text-align: center;
@@ -561,7 +560,7 @@ body > footer > .contact {
 .slideshow nav.expand a:active,
 .slideshow nav.expand a:visited {
     display:block;
-    height:40px;
+    height:0px;
     line-height:40px;
     text-align:center;
     text-decoration: none;
@@ -587,7 +586,7 @@ body > footer > .contact {
     color: rgba(255,255,255,1.0);
 }
 
-.slideshow:hover nav.expand {
+.slideshow:hover nav.expand a {
    height:40px;
 }
 
