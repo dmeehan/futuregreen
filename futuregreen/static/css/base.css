@@ -592,7 +592,7 @@ body > footer > .contact {
     position:absolute;
     bottom:0;
     right:10px;
-    z-index:20000;
+    z-index:15000;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
