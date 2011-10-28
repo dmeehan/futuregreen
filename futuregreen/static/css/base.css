@@ -305,6 +305,12 @@ body > footer > .contact {
     color:rgba(255,255,255,0.8);
     width:100%;
     height:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 #home article.project header a {
