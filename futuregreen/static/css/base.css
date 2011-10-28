@@ -486,7 +486,7 @@ body > footer > .contact {
     width:42.85714%;
     left:28.5714286%;
     height:100%;
-    background: transparent;
+    background: red;
     z-index:20000;
     text-align: center;
 }
@@ -499,12 +499,12 @@ body > footer > .contact {
     position:relative;
     display:block;
     top:50%;
-    width:180px;
-    height:180px;
-    margin-top:-90px;
+    width:100px;
+    height:100px;
+    margin-top:-50px;
     text-align:center;
     text-decoration: none;
-    line-height:180px;
+    line-height:100px;
     opacity:0;
     color:#fff;
     -webkit-transition: all .5s ease-in;
@@ -513,7 +513,7 @@ body > footer > .contact {
     -ms-transition: all .5s ease-in;
     -transition: all .5s ease-in;
     background: rgba(0,0,0,0.5);
-    font-size:8em;
+    font-size:6em;
 }
 
 .slideshow nav.expand:hover a {
