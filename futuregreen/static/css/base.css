@@ -167,6 +167,7 @@ body > footer {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 body > footer > .copyright {
