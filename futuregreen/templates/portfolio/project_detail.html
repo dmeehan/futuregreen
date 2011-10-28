@@ -14,7 +14,7 @@
                 {% for image in project.projectimage_set.all %}
                     <li>
                         <img class="open" src="{{ image.detail.url }}" alt="{{ image.caption }}" />
-                        <p class="flex-caption">{{ image.caption }}&nbsp;</p>
+                        {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
                     </li>
                 {% endfor %}
                 </ul>
