@@ -586,8 +586,8 @@ body > footer > .contact {
     top:10px;
     z-index:20000;
     display:block;
-    width:14.28571%;
-    margin:0;
+    width:4.76190333%;
+    margin:0 10px 0 0;
     text-align:center;
     text-decoration: none;
     line-height:40px;
@@ -606,11 +606,11 @@ body > footer > .contact {
 
 
 .slideshow .flex-direction-nav .next {
-    right:90px;
+    right:9.52380667%;
 }
 
 .slideshow .flex-direction-nav .prev {
-    right:10px;
+    right:0;
 }
 
 /* details */
