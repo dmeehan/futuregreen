@@ -42,14 +42,14 @@
         {% for project in project_list|slice:"3:7" %}
             <article class="project box half" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
-                <div class="image">
+
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
                             <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
                     {% endif %}
                 {%  endfor %}
-                </div>
+                
             </article>
         {% endfor %}
     </div>
