@@ -633,7 +633,8 @@ body > footer > .contact {
 
 
 
-.slideshow .flex-direction-nav a {
+.slideshow .flex-direction-nav a,
+.max .flex-direction-nav a {
     display:block;
     float:left;
     width:40px;
@@ -830,11 +831,6 @@ body > footer > .contact {
     width:100%;
 }
 
-.max .slideshow .carousel {
-
-}
-
-
 .max .slideshow .controls li {
     width:8.33333333%
 }
@@ -872,7 +868,6 @@ body > footer > .contact {
 .max .details .meta .people,
 .max .details .meta .other,
 .max .details .meta .info-boxes {
-
     margin: 0 0 0 0;
 }
 
