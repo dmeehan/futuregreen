@@ -431,7 +431,7 @@ body > footer > .contact {
     width:100%;
     bottom:0;
     left:0;
-    background:rgba(0,0,0,0.7);
+    background:rgba(0,0,0,0.6);
     color:#fff;
     line-height:3em;
     padding:0 10px;
@@ -573,7 +573,6 @@ body > footer > .contact {
    -transition: all .2s ease-in;
     font-size:3em;
     color: rgba(255,255,255,1.0);
-    background: rgba(0,0,0,0.8);
 }
 
 .slideshow #close {
