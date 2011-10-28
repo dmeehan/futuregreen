@@ -592,7 +592,7 @@ body > footer > .contact {
 }
 
 .slideshow:hover .flex-direction-nav {
-    margin-top:0;
+    top:10px;
 }
 
 .slideshow #close {
@@ -602,9 +602,8 @@ body > footer > .contact {
 .slideshow .flex-direction-nav {
     width:120px;
     position:absolute;
-    top:10px;
+    top:-40px;
     right:10px;
-    margin-top:-40px;!important
     z-index:15000;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
