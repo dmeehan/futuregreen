@@ -313,6 +313,9 @@ body > footer > .contact {
     padding: 10px;
 }
 
+#home article.project.featured header h1 {
+    font-size:150%;
+}
 #home article.project header a {
     text-decoration:none;
 }
