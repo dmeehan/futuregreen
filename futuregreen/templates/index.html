@@ -7,26 +7,6 @@
             <article class="project box sixth" id="{{ project.slug }}">
                <header>
                    <a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a>
-                   <ul class="categories">
-                        {% if project.project_types.all %}
-                            {% for category in project.project_types.all %}
-                                <li class="square">
-                                    <a href="#" title="{{ category.name }}" class="project-type square center">
-                                        {{ category.alternate_title }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        {% endif %}
-                        {% if project.landscape_types.all %}
-                            {% for category in project.landscape_types.all %}
-                                <li class="square">
-                                    <a href="#" title="{{ category.name }}" class="landscape-type square center">
-                                        {{ category.alternate_title }}
-                                    </a>
-                                </li>
-                           {% endfor %}
-                        {% endif %}
-                    </ul>
                </header>
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
