@@ -238,7 +238,7 @@ body > footer > .contact {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px 10px 0 10px;
-    background-color:#efefef;
+    margin: 0;
 }
 
 #home article#profile p {
