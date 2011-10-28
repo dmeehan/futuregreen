@@ -544,7 +544,7 @@ body > footer > .contact {
     position:absolute;
     display:none;
     /*width:28.5714286%;*/
-    z-index:1000;
+    z-index:20000;
 }
 
 
