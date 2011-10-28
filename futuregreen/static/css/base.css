@@ -537,7 +537,7 @@ body > footer > .contact {
     position:absolute;
     top:0;
     right:40px;
-    width: 40px;
+    width:40px;
     background: transparent;
     z-index:20000;
     text-align: center;
@@ -605,7 +605,7 @@ body > footer > .contact {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: hidden;
     -webkit-transition: all .2s ease-in;
    -moz-transition: all .2s ease-in;
    -o-transition: all .2s ease-in;
@@ -648,6 +648,10 @@ body > footer > .contact {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.slideshow .flex-direction-nav a:hover {
+    font-size:2em;
 }
 
 .slideshow:hover .flex-direction-nav a {
