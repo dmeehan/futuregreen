@@ -549,28 +549,27 @@ body > footer > .contact {
     text-align:center;
     text-decoration: none;
     line-height:40px;
-    font-weight:bold;
     color:#fff;
-    -webkit-transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
-    -ms-transition: all .5s ease-in;
-    -transition: all .5s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -transition: all .2s ease-in;
     background: rgba(0,0,0,0.5);
     font-family:monospace;
     font-size:3em;
+    opacity:.5;
 }
 
 .slideshow nav.expand a:hover {
-   width:80px;
-   height:80px;
-   -webkit-transition: all .5s ease-in;
-   -moz-transition: all .5s ease-in;
-   -o-transition: all .5s ease-in;
-   -ms-transition: all .5s ease-in;
-   -transition: all .5s ease-in;
+   -webkit-transition: all .2s ease-in;
+   -moz-transition: all .2s ease-in;
+   -o-transition: all .2s ease-in;
+   -ms-transition: all .2s ease-in;
+   -transition: all .2s ease-in;
     font-size:6em;
     line-height:80px;
+    font-weight:bold;
 }
 
 .slideshow #close {
