@@ -15,7 +15,6 @@
             </article>
         {% endfor %}
          <article class="text box half" id="profile">
-                <h1>Studio</h1>
                 {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
                 <a href="{% url studio %}" class="tease">Read More</a>
         </article>
@@ -71,10 +70,12 @@
            </article>
        {% endfor %}
         <article class="text box full" id="news">
+           <div>
            <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
            <h2>{{ item.title }}</h2>
            {{ item.excerpt_html|safe|truncatewords_html:20 }}
            <p><a href="#" class="tease">Read More</a></p>
+           </div>
         </article>
     </div>
 {% endblock content %}
