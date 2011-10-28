@@ -227,6 +227,17 @@ body > footer > .contact {
     box-shadow: inset 0 0 5px #888;
 }
 
+.image {
+    -moz-box-shadow: inset 0 0 5px #888;
+    -webkit-box-shadow: inset 0 0 5px#888;
+    box-shadow: inset 0 0 5px #888;
+}
+
+.image img {
+    position: relative;
+    z-index: -1;
+}
+
 /********** HOMEPAGE ***********/
 #home .content > div {
     overflow: hidden;
