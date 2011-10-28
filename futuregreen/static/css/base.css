@@ -536,10 +536,17 @@ body > footer > .contact {
 .slideshow nav.expand {
     position:absolute;
     bottom:0;
-    right:4.76190333%;
+    right:0;
+    width: 14.2857143%;
+    padding-left:10px;
     background: transparent;
     z-index:20000;
     text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .slideshow nav.expand a,
@@ -548,10 +555,10 @@ body > footer > .contact {
 .slideshow nav.expand a:active,
 .slideshow nav.expand a:visited {
     display:block;
-    width:40px;
+    width:30%;
     height:40px;
     line-height:40px;
-    margin:0;
+    margin:0 auto;
     text-align:center;
     text-decoration: none;
     color: rgba(255,255,255,0.8);
