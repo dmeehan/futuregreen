@@ -227,7 +227,7 @@ body > footer > .contact {
 }
 
 #home article#profile {
-
+    url('images/corner-bg-top-right.png') no-repeat right top;
 }
 
 #home article#profile div {
@@ -258,15 +258,17 @@ body > footer > .contact {
 }
 
 #home article#profile h2 {
+    font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
-    padding-bottom:10px;
+    padding:10px 0;
 }
 
 #home article.text h1 {
     text-transform: uppercase;
     margin-bottom:10px;
 }
+
 
 #home article.project {
     position:relative;
