@@ -172,12 +172,10 @@ body > footer {
 
 body > footer > .copyright {
     float:left;
-    width:30%;
 }
 
 body > footer > .contact {
     float:right;
-    width:70%;
     text-align:right;
 }
 
