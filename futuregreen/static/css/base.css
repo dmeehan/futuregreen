@@ -98,7 +98,7 @@ div,p,ul,ol,section,article {
 body > header {
     height:80px;
     width:100%;
-    background: #fff;
+    background: transparent;
     overflow: hidden;
 }
 
@@ -146,7 +146,7 @@ body > header > nav li a:active {
 }
 body > .content {
     overflow: auto;
-    background: #fff;
+    background: transparent;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -231,8 +231,8 @@ body > footer > .contact {
 }
 
 .image img {
-    position: absolute;
-    z-index: 1;
+    position: relative;
+    z-index: -1;
 }
 
 
