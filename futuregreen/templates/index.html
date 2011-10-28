@@ -71,13 +71,10 @@
            </article>
        {% endfor %}
         <article class="text box full" id="news">
-           <div>
-                <h1>News</h1>
-                <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
-                <h2>{{ item.title }}</h2>
-                {{ item.excerpt_html|safe|truncatewords_html:20 }}
-                <p><a href="#" class="tease">Read More</a></p>
-           </div>
+           <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
+           <h2>{{ item.title }}</h2>
+           {{ item.excerpt_html|safe|truncatewords_html:20 }}
+           <p><a href="#" class="tease">Read More</a></p>
         </article>
     </div>
 {% endblock content %}
