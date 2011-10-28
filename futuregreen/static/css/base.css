@@ -533,7 +533,7 @@ body > footer > .contact {
 
 
 .slideshow #close {
-    display:none;
+    /*display:none;*/
 }
 
 .slideshow .flex-direction-nav li {
