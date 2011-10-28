@@ -46,7 +46,7 @@
     </div>
     <div class="third">
         {% for project in project_list|slice:"7:8" %}
-            <article class="project box two-thirds featured" id="{{ project.slug }}">
+            <article class="project box full featured" id="{{ project.slug }}">
                 <h1>{{ project.name }}</h1>
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
