@@ -426,9 +426,7 @@ body > footer > .contact {
 }
 
 .slideshow .carousel .slides {
-    -moz-box-shadow: inset 0 0 5px #888;
-    -webkit-box-shadow: inset 0 0 5px#888;
-    box-shadow: inset 0 0 5px #888;
+
 }
 
 .slideshow .carousel .slides img {
@@ -443,6 +441,9 @@ body > footer > .contact {
     -o-transition: all .3s ease-out;
     -ms-transition: all .3s ease-out;
     -transition: all .3s ease-out;
+    -moz-box-shadow: inset 0 0 5px #888;
+    -webkit-box-shadow: inset 0 0 5px#888;
+    box-shadow: inset 0 0 5px #888;
 }
 
 .slideshow .carousel .flex-caption {
