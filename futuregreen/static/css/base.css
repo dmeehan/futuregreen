@@ -237,7 +237,7 @@ body > footer > .contact {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px 10px 0 10px;
+    padding: 0 10px;
     margin: 0;
 }
 
@@ -305,7 +305,7 @@ body > footer > .contact {
 
 #home article#news {
     clear:both;
-    /*position:relative;*/
+    position:relative;
 }
 
 #home article#news div {
@@ -321,7 +321,7 @@ body > footer > .contact {
 #home article#news p.date {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.5em;
-    /*color:rgba(255,255,255,0.5);*/
+    color:rgba(255,255,255,0.5);
 }
 
 #home article#news h1 {
@@ -337,7 +337,7 @@ body > footer > .contact {
 }
 
 #home article#news .tease {
-    /*color:#fff;*/
+    color:#fff;
 }
 
 #home article#news h2 {
