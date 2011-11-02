@@ -43,9 +43,11 @@ class ProjectBase(models.Model):
     short_description = models.TextField()
     description = models.TextField()
     date_start = models.DateField("start date",
-                                  blank=True, null=True)
+                                  blank=True, null=True,
+                                  help_text="Leave blank if project is in promo.")
     date_end = models.DateField("end date",
-                                help_text="Enter a future estimated end date if project is in progress.")
+                                blank=True, null=True,
+                                help_text="Leave blank if project is in progress.")
 
     external_url = models.URLField(blank=True,help_text="Optional.")
     
