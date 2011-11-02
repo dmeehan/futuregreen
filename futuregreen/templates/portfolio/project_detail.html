@@ -122,15 +122,15 @@
                     </li>
                     </ul>
                 </div>
-                <ul id="project-nav">
+                <ul id="project-nav" class="box">
 
-                <li>
+                <li><h2>Next Project</h2>
                     <a class="next-proj tease"
                        title="Next Project: {{ project.get_previous_by_date_end.name }}"
                        href="{{ project.get_previous_by_date_end.get_absolute_url }}">{{ project.get_previous_by_date_end.name }}</a>
                 </li>
                 
-                <li>
+                <li><h2>Previous Project</h2>
                     <a class="prev-proj tease"
                        title="Previous Project: {{ project.get_next_by_date_end.name }}"
                        href="{{ project.get_next_by_date_end.get_absolute_url }}">{{ project.get_next_by_date_end.name }}</a>
