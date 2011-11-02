@@ -855,11 +855,11 @@ body > footer > .contact {
                url('images/bottom-bg.png') no-repeat left 10px;
 }
 
-.prev-proj .tease:after {
+.prev-proj.tease:after {
     content: "";
 }
 
-.prev-proj .tease:before {
+.prev-proj.tease:before {
     content: "content: " \00AB";";
 }
 
