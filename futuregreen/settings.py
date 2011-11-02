@@ -133,7 +133,7 @@ INSTALLED_APPS = (
     'futuregreen.people',
     'futuregreen.content',
     'futuregreen.news',
-    'futuregreen.common_tags',
+    'futuregreen.templatetags',
 )
 
 #==============================================================================
