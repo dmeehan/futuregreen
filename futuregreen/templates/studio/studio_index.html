@@ -7,7 +7,7 @@
 </article>
 <article id="news">
     <h1>Recent News</h1>
-    {% get_latest news.newsitem 1 as news %}
+    {% get_latest news.item 1 as news %}
     {% for item in news %}
         <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
         <h2>{{ item.title }}</h2>
