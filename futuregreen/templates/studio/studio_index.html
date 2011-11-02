@@ -1,7 +1,17 @@
 {% extends "studio/studio_base.html" %}
 {% load generic_flatblocks %}
+{% load futuregreen_tags %}
 {% block content %}
 <article id="profile">
     {%  gblock "firm_profile" for "content.ContentBlock" %}
+</article>
+<article id="news">
+    {% get_latest news.newsitem 1 as news %}
+    {% for item in news %}
+        <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
+        <h2>{{ item.title }}</h2>
+        {{ item.excerpt_html|safe|truncatewords_html:20 }}
+        <p><a href="#" class="tease">Read More</a></p>
+    {%  endfor %}
 </article>
 {% endblock content %}
