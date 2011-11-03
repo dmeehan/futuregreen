@@ -16,6 +16,14 @@
     </article>
 </section>
 <section class="third">
+    <h1>People</h1>
+    {% for employee in employee_list %}
+        <article class="quarter box">
+            <img style="border: 1px solid #efefef" class="flex" src="{{ employee.list.url }}">
+        </article>
+    {%  endfor %}
+</section>
+<section class="third">
     <article class="box" id="news">
         <div>
         <h1>News</h1>
@@ -25,13 +33,5 @@
         <p><a href="#" class="tease">Read More</a></p>
         </div>
     </article>
-</section>
-<section class="third">
-    <h1>People</h1>
-    {% for employee in employee_list %}
-        <article class="half box">
-            <img style="border: 1px solid #efefef" class="flex" src="{{ employee.list.url }}">
-        </article>
-    {%  endfor %}
 </section>
 {% endblock content %}
