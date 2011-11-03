@@ -726,7 +726,7 @@ body > footer > .contact {
 
 .details ul, .details p {
     overflow: auto;
-    font-size:.85em;
+    /*font-size:.85em;*/
 }
 
 .details p {
