@@ -11,6 +11,8 @@
     {% for employee in employee_list %}
         <article>
         <h2>{{ employee.name }}</h2>
+        <p>{{ employee.job_title }}</p>
+        {{ employee.description_html|safe }}
         </article>
     {%  endfor %}
 </section>
