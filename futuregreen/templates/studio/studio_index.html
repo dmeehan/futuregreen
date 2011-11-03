@@ -32,7 +32,7 @@
         <h1>News</h1>
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
         <h2>{{ news.title }}</h2>
-        {% for image in item.itemimage_set.all %}
+        {% for image in news.itemimage_set.all %}
            {% if image.is_main %}
                <a href="{{ project.get_absolute_url }}">
                     <img src="{{ image.list.url }}"
