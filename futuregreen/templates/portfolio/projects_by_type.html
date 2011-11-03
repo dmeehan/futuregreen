@@ -1,5 +1,5 @@
 {% extends 'portfolio/portfolio_base.html' %}
-
+{% block content %}
     {% block content_header %}
     <header>
     {% load category_tags %}
@@ -14,4 +14,5 @@
         {% include "portfolio/project_snippet.html" %}
     {% endfor %}
  {% endblock main %}
+{% endblock content %}
 
