@@ -2,13 +2,13 @@
 {% load generic_flatblocks %}
 {% block content %}
 <section class="two-thirds">
-    <article class="box project">
+    <article class="box">
         <h1>Future Green Studio</h1>
         {% for project in project_list %}
             {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ project.get_absolute_url }}">
-                            <img alt="{{ project.title }}" src="{{ image.article.url }}" /></a>
+                            <img class="flex" alt="{{ project.title }}" src="{{ image.article.url }}" /></a>
                     {% endif %}
             {%  endfor %}
         {%  endfor %}

@@ -246,7 +246,9 @@ body > footer > .contact {
     line-height:1.5em;
     margin: 20px 0;
 }
-
+ img.flex {
+     width:100%;
+ }
 
 /********** HOMEPAGE ***********/
 #home .content > div {
