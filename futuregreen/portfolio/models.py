@@ -74,10 +74,10 @@ class ProjectBase(models.Model):
         return ('portfolio_project_detail', [str(self.slug)])
 
     def get_next_project(self):
-        return self.get_next_by_pub_date(status=self.model.STATUS_LIVE)
+        return self.get_next_by_date_end(status=self.model.STATUS_LIVE)
 
     def get_previous_project(self):
-        return self.get_previous_by_pub_date(status=self.model.STATUS_LIVE)
+        return self.get_previous_by_date_end(status=self.model.STATUS_LIVE)
 
     def __unicode__(self):
         return u'%s' % self.name
