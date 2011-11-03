@@ -19,12 +19,11 @@
     <h1 style="margin: 0;" class="box">People</h1>
     {% for employee in employee_list %}
         <article class="{% if employee.employee_type == "Principal" %}half {% else %}quarter {% endif %}{ box">
-            <img
-                    title="{{ employee.name }}"
-                    alt="{{ employee.name }}"
-                    style="border: 1px solid #efefef"
-                    class="flex"
-                    src="{{ employee.list.url }}" />
+            <img title="{{ employee.name }}"
+                 alt="{{ employee.name }}"
+                 style="border: 1px solid #efefef"
+                 class="flex"
+                 src="{{ employee.list.url }}" />
         </article>
 
     {%  endfor %}
