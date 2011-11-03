@@ -123,19 +123,20 @@
                     </ul>
                 </div>
                 <ul id="project-nav">
-
+                {%  if project.get_next_project %}
                 <li class="box"><h2>Next Project</h2>
                     <a class="next-proj tease"
                        title="Next Project: {{ project.get_next_project.name }}"
                        href="{{ project.get_next_project.get_absolute_url }}">{{ project.get_next_project.name }}</a>
                 </li>
-                
+                {%  endif %}
+                {%  if project.get_previous_project %}
                 <li  class="box"><h2>Previous Project</h2>
                     <a class="prev-proj tease"
                        title="Previous Project: {{ project.get_previous_project.name }}"
                        href="{{ project.get_previous_project.get_absolute_url }}">{{ project.get_previous_project.name }}</a>
                 </li>
-
+                {%  endif %}
             </ul>
             </div>
 
