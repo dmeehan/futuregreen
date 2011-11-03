@@ -6,7 +6,7 @@
         {%  gblock "firm_profile" for "content.ContentBlock" %}
     </article>
     {% for project in project_list %}
-    <article class="project quarter box">
+    <article class="quarter box">
        {% for image in project.projectimage_set.all %}
            {% if image.is_main %}
                <a href="{{ project.get_absolute_url }}">
