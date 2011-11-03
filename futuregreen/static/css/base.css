@@ -242,6 +242,10 @@ body > footer > .contact {
     overflow: hidden;
 }
 
+#home .content p {
+    margin: 0;
+}
+
 #home article#profile {
     url('images/corner-bg-top-right.png') no-repeat right top;
 }
