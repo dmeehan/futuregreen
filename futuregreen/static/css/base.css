@@ -236,6 +236,11 @@ body > footer > .contact {
     margin: 10px 0;
 }
 
+.pullquote {
+    font-size:1.5em;
+    color:#999;
+}
+
 
 /********** HOMEPAGE ***********/
 #home .content > div {
