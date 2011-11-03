@@ -10,9 +10,11 @@
    </header>
     {% endblock content_header %}
 {% block main %}
+    <section class="project-list">
     {% for project in category.projecttype.project_set.all %}
         {% include "portfolio/project_snippet.html" %}
     {% endfor %}
+    </section>
  {% endblock main %}
 {% endblock content %}
 
