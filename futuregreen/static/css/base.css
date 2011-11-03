@@ -239,6 +239,8 @@ body > footer > .contact {
 .pullquote {
     font-size:1.5em;
     color:#999;
+    line-height:1.8em;
+    margin: 20px 0;
 }
 
 
