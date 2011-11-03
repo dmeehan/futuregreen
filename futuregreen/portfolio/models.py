@@ -72,7 +72,13 @@ class ProjectBase(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('portfolio_project_detail', [str(self.slug)])
-        
+
+    def get_next_project(self):
+        return self.get_next_by_pub_date().filter(status=self.model.STATUS_LIVE)
+
+    def get_previous_project(self):
+        return self.get_previous_by_pub_date().filter(status=self.model.STATUS_LIVE)
+
     def __unicode__(self):
         return u'%s' % self.name
     
