@@ -180,6 +180,10 @@ body > footer > .contact {
     width:16.66667%; float:left;
 }
 
+.quarter {
+    width:25%; float:left;
+}
+
 .third {
     width:33.33333%; float:left;
 }

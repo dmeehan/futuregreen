@@ -2,9 +2,20 @@
 {% load generic_flatblocks %}
 {% block content %}
 <section class="two-thirds">
-<article class="box">
-    {%  gblock "firm_profile" for "content.ContentBlock" %}
-</article>
+    <article class="box">
+        {%  gblock "firm_profile" for "content.ContentBlock" %}
+    </article>
+    {% for project in project_list %}
+    <article class="project quarter box">
+       {% for image in project.projectimage_set.all %}
+           {% if image.is_main %}
+               <a href="{{ project.get_absolute_url }}">
+                    <img src="{{ image.list.url }}"
+                         alt="{{ image.caption }}" />
+               </a>
+           {% endif %}
+       {% endfor %}
+    </article>
 </section>
 <section class="box third">
     <h1>People</h1>

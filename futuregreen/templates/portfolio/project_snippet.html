@@ -1,6 +1,6 @@
 <article class="project">
         <header style="display:none;"><h1>{{ project.name }}</h1></header>
-        <section class="image">
+        <section>
             {% for image in project.projectimage_set.all %}
                 {% if image.is_main %}
                     <a href="{{ project.get_absolute_url }}">
