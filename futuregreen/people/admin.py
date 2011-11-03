@@ -27,7 +27,7 @@ class EmployeeAdmin(admin.ModelAdmin):
     list_display = ('name', 'employee_type', 'job_title', 'status')
     fieldsets = (
         (None, {
-            'fields': ('contact_type', 'name', 'description',
+            'fields': ('contact_type', 'name', 'description', 'image',
                        'employee_type', 'job_title', 'status')
         }),
         ('Contact Info', {
