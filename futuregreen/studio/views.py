@@ -6,6 +6,6 @@ from futuregreen.news.models import Item
 
 def index(request):
     news = Item._default_manager.latest('date_published')
-    employee_list = Employee._default_manager.filter(status=employee.STATUS_FULL)
+    employee_list = Employee._default_manager.filter(status=Employee.STATUS_FULL)
     return render(request, 'studio/studio_index.html', {'employee_list': employee_list,
                                           'news': news })
