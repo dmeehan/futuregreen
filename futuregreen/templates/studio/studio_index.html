@@ -18,9 +18,15 @@
 <section class="third">
     <h1 style="margin: 0;" class="box">People</h1>
     {% for employee in employee_list %}
-        <article class="quarter box">
-            <img style="border: 1px solid #efefef" class="flex" src="{{ employee.list.url }}">
+        <article class="{% if employee.employee_type == "Principal" %}half {% else %}quarter {% endif %}{ box">
+            <img
+                    title="{{ employee.name }}"
+                    alt="{{ employee.name }}"
+                    style="border: 1px solid #efefef"
+                    class="flex"
+                    src="{{ employee.list.url }}" />
         </article>
+
     {%  endfor %}
 </section>
 <section class="third">
