@@ -942,12 +942,6 @@ body > footer > .contact {
 }
 
 /******** STUDIO *********/
-article#news div {
-    /*background:#d27193;*/
-    background:#7eac32;
-    color:#fff;
-    padding: 0 10px;
-}
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
