@@ -3,7 +3,16 @@
 {% block content %}
 <section class="two-thirds">
     <article class="box">
-        {%  gblock "firm_profile" for "content.ContentBlock" %}
+        <h1>Future Green Studio</h1>
+        {% for project in project_list %}
+            {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.article.url }}" /></a>
+                    {% endif %}
+            {%  endfor %}
+        {%  endfor %}
+        {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/body.html" %}
     </article>
 </section>
 <section class="box third">
@@ -12,7 +21,6 @@
         <article>
         <h2>{{ employee.name }}</h2>
         <p>{{ employee.job_title }}</p>
-        {{ employee.description_html|safe }}
         </article>
     {%  endfor %}
 </section>

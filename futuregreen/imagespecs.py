@@ -28,6 +28,11 @@ class ResizeFeatured(processors.Resize):
     height = 760
     crop = True
 
+class ResizeArticle(processors.Resize):
+    width = 1200
+    height = 300
+    crop = True
+
 class EnhanceSmall(processors.Adjustment):
     contrast = 1.2
     sharpness = 1.1
@@ -56,3 +61,7 @@ class Detail(ImageSpec):
 class Featured(ImageSpec):
     pre_cache = False
     processors = [ResizeFeatured]
+
+class Article(ImageSpec):
+    pre_cache = False
+    processors = [ResizeArticle]
