@@ -724,9 +724,10 @@ body > footer > .contact {
     line-height: 1.2em;
 }
 
-.details ul, .details p {
+.details .description > ul, .details .description > p,
+.details .meta > ul, .details .meta > p,{
     overflow: auto;
-    /*font-size:.85em;*/
+    font-size:.85em;
 }
 
 .details p {
