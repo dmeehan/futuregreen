@@ -1,7 +1,7 @@
 # studio/views.py
 from django.shortcuts import render
 
-from futuregreen.people.models import *
+from futuregreen.people.models import Employee
 from futuregreen.news.models import Item
 
 def index(request):

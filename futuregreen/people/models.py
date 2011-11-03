@@ -1,4 +1,4 @@
-# studio/models.py
+# people/models.py
 
 from django.db import models
 
