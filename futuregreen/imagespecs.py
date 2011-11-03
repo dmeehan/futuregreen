@@ -30,7 +30,7 @@ class ResizeFeatured(processors.Resize):
 
 class ResizeArticle(processors.Resize):
     width = 1200
-    height = 270
+    height = 277
     crop = True
 
 class EnhanceSmall(processors.Adjustment):
