@@ -6,7 +6,7 @@
     {%  gblock "firm_profile" for "content.ContentBlock" %}
 </article>
 </section>
-    <section class="box third">
+<section class="box third">
     <h1>People</h1>
     {% for employee in employee_list %}
         <article>
@@ -14,7 +14,7 @@
         </article>
     {%  endfor %}
 </section>
-<section>
+<section class="box third">
     <article>
         <h1>News</h1>
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
