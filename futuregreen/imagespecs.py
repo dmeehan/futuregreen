@@ -28,9 +28,14 @@ class ResizeFeatured(processors.Resize):
     height = 760
     crop = True
 
-class ResizeArticle(processors.Resize):
+class ResizeTwoThirds(processors.Resize):
     width = 1200
     height = 277
+    crop = True
+
+class ResizeThird(processors.Resize):
+    width = 720
+    height = 341
     crop = True
 
 class EnhanceSmall(processors.Adjustment):
@@ -62,6 +67,6 @@ class Featured(ImageSpec):
     pre_cache = False
     processors = [ResizeFeatured]
 
-class Article(ImageSpec):
+class TwoThirds(ImageSpec):
     pre_cache = False
-    processors = [ResizeArticle]
+    processors = [ResizeTwoThirds]
