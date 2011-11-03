@@ -2,7 +2,7 @@
 {% load generic_flatblocks %}
 {% block content %}
 <section class="two-thirds">
-<article id="profile" class="box">
+<article class="box">
     {%  gblock "firm_profile" for "content.ContentBlock" %}
 </article>
 </section>
@@ -14,8 +14,8 @@
         </article>
     {%  endfor %}
 </section>
-<section class="box third">
-    <article>
+<section class="third">
+    <article class="box">
         <h1>News</h1>
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
         <h2>{{ news.title }}</h2>
