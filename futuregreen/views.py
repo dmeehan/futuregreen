@@ -7,5 +7,6 @@ def index(request):
     projects = Project._default_manager.live().filter(featured=True).order_by('?')
     project_list = list(projects)
     item = Item._default_manager.latest('date_published')
+    employees = Employee._default_manager.filter()
     return render(request, 'index.html', {'project_list': project_list,
                                           'item': item })

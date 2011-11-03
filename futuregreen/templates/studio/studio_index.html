@@ -1,13 +1,11 @@
 {% extends "studio/studio_base.html" %}
 {% load generic_flatblocks %}
-{% load futuregreen_tags %}
 {% block content %}
 <article id="profile">
     {%  gblock "firm_profile" for "content.ContentBlock" %}
 </article>
 <article id="news">
-    <h1>Recent News</h1>
-    {% get_latest news.item 1 as news %}
+    <h1>News</h1>
     {% for item in news %}
         <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
         <h2>{{ item.title }}</h2>
@@ -15,4 +13,11 @@
         <p><a href="#" class="tease">Read More</a></p>
     {%  endfor %}
 </article>
+<section id="people">
+    <h1>People</h1>
+    {% for employee in employee_list %}
+        <h2>{{ employee.name }}</h2>
+    {%  endfor %}
+</article>
+</section>
 {% endblock content %}
