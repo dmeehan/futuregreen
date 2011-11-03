@@ -1,21 +1,26 @@
 {% extends "studio/studio_base.html" %}
 {% load generic_flatblocks %}
 {% block content %}
-<article id="profile">
+<section class="two-thirds">
+<article id="profile" class="box">
     {%  gblock "firm_profile" for "content.ContentBlock" %}
 </article>
-<article id="news">
-    <h1>News</h1>
-    <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-    <h2>{{ news.title }}</h2>
-    {{ news.excerpt_html|safe|truncatewords_html:20 }}
-    <p><a href="#" class="tease">Read More</a></p>
-</article>
-<section id="people">
+</section>
+    <section class="box third">
     <h1>People</h1>
     {% for employee in employee_list %}
+        <article>
         <h2>{{ employee.name }}</h2>
+        </article>
     {%  endfor %}
-</article>
+</section>
+<section>
+    <article>
+        <h1>News</h1>
+        <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
+        <h2>{{ news.title }}</h2>
+        {{ news.excerpt_html|safe|truncatewords_html:20 }}
+        <p><a href="#" class="tease">Read More</a></p>
+    </article>
 </section>
 {% endblock content %}
