@@ -19,7 +19,7 @@
     <h1 style="margin: 0;" class="box">People</h1>
     {% for employee in employee_list %}
         <article class="{% if employee.employeetype.name == "Principal" %}half {% else %}quarter {% endif %}{ box">
-            <img title="{{ employee.name }}"
+            <img title="{{ employee.employeetype }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
