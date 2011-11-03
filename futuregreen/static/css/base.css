@@ -67,7 +67,7 @@ body {
     font-weight:normal;
     font-size:87.5%;
     font-family: kulturista-web-1,kulturista-web-2, Arial, Helvetica, sans-serif;
-    color:#444;
+    color:#666;
 }
 
 h1, h2 {
@@ -142,7 +142,7 @@ body > header > nav li a:link,
 body > header > nav li a:visited,
 body > header > nav li a:hover,
 body > header > nav li a:active {
-    color:#777;
+    color:#444;
 }
 body > .content {
     overflow: auto;
