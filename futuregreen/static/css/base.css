@@ -232,6 +232,10 @@ body > footer > .contact {
     z-index: -1;
 }
 
+.content p {
+    margin: 10px 0;
+}
+
 
 /********** HOMEPAGE ***********/
 #home .content > div {
