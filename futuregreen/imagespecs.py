@@ -70,3 +70,7 @@ class Featured(ImageSpec):
 class TwoThirds(ImageSpec):
     pre_cache = False
     processors = [ResizeTwoThirds]
+
+class Third(ImageSpec):
+    pre_cache = False
+    processors = [ResizeThird]
