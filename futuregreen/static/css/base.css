@@ -142,7 +142,7 @@ body > header > nav li a:link,
 body > header > nav li a:visited,
 body > header > nav li a:hover,
 body > header > nav li a:active {
-    color:#444;
+    color:#777;
 }
 body > .content {
     overflow: auto;
