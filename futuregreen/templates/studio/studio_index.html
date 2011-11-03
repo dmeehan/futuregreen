@@ -3,7 +3,7 @@
 {% block content %}
 <section class="two-thirds">
     <article class="box">
-        <h1>Future Green Studio</h1>
+        <h1>What We Do</h1>
         {% for project in project_list %}
             {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -16,7 +16,7 @@
     </article>
 </section>
 <section class="box third">
-    <h1>People</h1>
+    <h1>Who We Are</h1>
     {% for employee in employee_list %}
         <article>
         <h2>{{ employee.name }}</h2>
@@ -27,7 +27,7 @@
 <section class="third">
     <article class="box" id="news">
         <div>
-        <h1>News</h1>
+        <h1>What We're Up To</h1>
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
         <h2>{{ news.title }}</h2>
         {{ news.excerpt_html|safe }}
