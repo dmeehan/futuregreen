@@ -347,7 +347,8 @@ body > footer > .contact {
 }
 
 #home article#news div {
-    background:#d27193;
+    /*background:#d27193;*/
+    background:#7eac32;
     color:#fff;
     padding: 0 10px;
 }
