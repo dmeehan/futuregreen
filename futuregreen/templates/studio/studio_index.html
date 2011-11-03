@@ -33,14 +33,14 @@
     <article class="box" id="news">
         <div>
         <h1>News</h1>
-        <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-        <h2>{{ news.title }}</h2>
         {% for image in news.itemimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ news.get_absolute_url }}">
                             <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
                     {% endif %}
         {%  endfor %}
+        <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
+        <h2>{{ news.title }}</h2>
         {{ news.excerpt_html|safe }}
         <p><a href="#" class="tease">Read More</a></p>
         </div>
