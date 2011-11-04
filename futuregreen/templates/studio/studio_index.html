@@ -54,15 +54,13 @@
 <section class="third">
     <article class="box" id="news">
         <div>
-        <a href="{% url news_list %}">
         {% for image in news.itemimage_set.all %}
                     {% if image.is_main %}
-                        <a href="{{ news.get_absolute_url }}">
+                        <a href="{% url news_list %}">
                             <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
                     {% endif %}
         {%  endfor %}
         <h1 class="overlay">News</h1>
-        </a>
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
         <h2>{{ news.title }}</h2>
         {{ news.excerpt_html|safe }}
