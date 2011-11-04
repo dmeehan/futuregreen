@@ -3,17 +3,19 @@
 {% block main %}
 <section class="two-thirds">
     {% block content_header %}
-    <header>
-        {% block content_title %}
-        <h1 class="box quarter">All Projects</h1>
-        {% endblock content_title %}
-    </header>
+        <header>
+            {% block content_title %}
+            <h1 class="box quarter">All Projects</h1>
+            {% endblock content_title %}
+        </header>
     {% endblock content_header %}
+    {% block projects %}
     <section class="project-list">
     {% for project in project_list %}
         {% include "portfolio/project_snippet.html" %}
     {% endfor %}
     </section>
+    {% endblock projects %}
 </section>
 {% endblock main %}
 {% block aside %}

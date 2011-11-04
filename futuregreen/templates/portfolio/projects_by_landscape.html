@@ -1,8 +1,5 @@
-{% extends 'portfolio/portfolio_base.html' %}
-{% block content %}
-{% block main %}
-<section class="two-thirds">
-    {% block content_header %}
+{% extends 'portfolio/project_list.html' %}
+{% block content_header %}
     <header class="square box quarter" style="background:#8ec42a;">
     {% load category_tags %}
         {% block content_title %}
@@ -10,22 +7,13 @@
             <p>{{ category.title }}</p>
         {% endblock content_title %}
    </header>
-    {% endblock content_header %}
-    <section class="project-list">
+{% endblock content_header %}
+{% block projects %}
     {% for project in category.landscapetype.project_set.all %}
-        <article class="box quarter">
         {% include "portfolio/project_snippet.html" %}
-        </article>
     {% endfor %}
     </section>
- </section>
- {% endblock main %}
- {% block aside %}
-     <aside class="third">
-
-     </aside>
- {% endblock aside %}
-{% endblock content %}
+{% endblock projects %}
 {% block js_local %}
 <script type="text/javascript">
     function Square() {
