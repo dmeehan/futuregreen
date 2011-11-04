@@ -15,8 +15,9 @@
     </article>
 </section>
 <section class="third">
+    {%  gblock "people_image" for "content.ContentBlock" %}
     {% for employee in principal_list %}
-        <article class="half box">
+        <article class="quarter box">
             <a href="#"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
