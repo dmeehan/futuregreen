@@ -2,25 +2,24 @@
 {% block content %}
     {% block aside %}
         <aside class="sixth">
-
+            {% block content_header %}
+                <header>
+                    {% block content_title %}
+                    <h1 class="box full">All Projects</h1>
+                    {% endblock content_title %}
+                </header>
+            {% endblock content_header %}
         </aside>
     {% endblock aside %}
     {% block main %}
-    <section class="five-sixths">
-        {% block content_header %}
-            <header>
-                {% block content_title %}
-                <h1 class="box quarter">All Projects</h1>
-                {% endblock content_title %}
-            </header>
-        {% endblock content_header %}
-        {% block projects %}
-        <section class="project-list">
-        {% for project in project_list %}
-            {% include "portfolio/project_snippet.html" %}
-        {% endfor %}
+        <section class="five-sixths">
+            {% block projects %}
+            <section class="project-list">
+            {% for project in project_list %}
+                {% include "portfolio/project_snippet.html" %}
+            {% endfor %}
+            </section>
+            {% endblock projects %}
         </section>
-        {% endblock projects %}
-    </section>
     {% endblock main %}
 {% endblock content %}
