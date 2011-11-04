@@ -21,7 +21,7 @@ class ProjectListView(ListView):
         context = super(ProjectListView, self).get_context_data(**kwargs)
         # Add in a QuerySet of all the categories
         context['projecttype_list'] = ProjectType._default_manager.all()
-        context['landscapetype_list'] = LandscaoeType._default_manager.all()
+        context['landscapetype_list'] = LandscapeType._default_manager.all()
         return context
 
 class ProjectSizeAscListView(ProjectListView):
