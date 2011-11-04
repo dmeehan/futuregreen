@@ -431,6 +431,50 @@ body > footer > .contact {
     margin:5px 0;
 }
 
+/*********** PROJECT STYLES **********/
+.categories {
+    overflow: hidden;
+    clear:both;
+    margin: 10px;
+}
+
+.categories li {
+    overflow: hidden;
+    float:left;
+    width:25%;
+    padding:2px 2px 0 0;
+    margin:0;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.categories li a {
+        color:#fff;
+        float:left;
+        width:100%;
+        font-weight: bold;
+        text-align: center;
+        font-size:1.3em;
+        text-decoration: none;
+}
+
+
+.categories .project-type {
+    /*background:#d27193;*/
+    background:#3d6e31;
+}
+
+.categories .landscape-type {
+    /*background:#7eac32;*/
+    background:#8ec42a;
+}
+
 /*********** PROJECT LIST ************/
 .project-list article.project {
     
@@ -796,49 +840,6 @@ body > footer > .contact {
 }
 .details .meta ul {
     margin:0 0 0 0;
-}
-
-.details .meta .categories {
-    overflow: hidden;
-    clear:both;
-    margin: 10px;
-}
-
-.details .meta .categories li {
-    overflow: hidden;
-    float:left;
-    width:25%;
-    padding:2px 2px 0 0;
-    margin:0;
-    color:#fff;
-    font-weight: bold;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
- .details .meta .categories li a {
-        color:#fff;
-        float:left;
-        width:100%;
-        font-weight: bold;
-        text-align: center;
-        font-size:1.3em;
-        text-decoration: none;
-    }
-
-
-.details .meta .categories .project-type {
-    /*background:#d27193;*/
-    background:#3d6e31;
-}
-
-.details .meta .categories .landscape-type {
-    /*background:#7eac32;*/
-    background:#8ec42a;
 }
 
 .details .meta .info-boxes ul {

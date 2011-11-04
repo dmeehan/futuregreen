@@ -11,14 +11,20 @@
             {% endblock content_header %}
             {% block filter_nav %}
                 <nav>
-                    <ul>
+                    <h2>Filter By Project Type</h2>
+                    <ul class="categories">
                         {% for type in projecttype_list %}
-                            <li class="half box">{{ type.alternate_title }}</li>
-                        {% endfor %}
-                        {% for type in landscapetype_list %}
-                            <li class="half box">{{ type.alternate_title }}</li>
+                            <li class="half box square project-type">{{ type.alternate_title }}</li>
                         {% endfor %}
                     </ul>
+                     <h2>Filter By Landscape Type</h2>
+                     <ul class="categories">
+                        {% for type in landscapetype_list %}
+                            <li class="half box square landscape-type">{{ type.alternate_title }}</li>
+                        {% endfor %}
+                    </ul>
+                    <h2>Sort By Date</h2>
+                    <h2>Sort By Size</h2>
                 </nav>
             {% endblock filter_nav %}
         </aside>
@@ -35,3 +41,27 @@
         </section>
     {% endblock main %}
 {% endblock content %}
+{% block js_local %}
+<script type="text/javascript">
+    function Square() {
+            $('.square').each(function(){
+                width = $(this).width();
+                $(this).css('height',width);
+            });
+            $('.center').each(function(){
+                width = $(this).width();
+                $(this).css('line-height',width + "px");
+            });
+    }
+
+
+    $(document).ready(function() {
+        Square();
+    });
+
+    $(window).resize(function() {
+        Square();
+    });
+
+</script>
+{% endblock js_local %}
