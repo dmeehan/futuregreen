@@ -11,11 +11,13 @@
                     {% endif %}
             {%  endfor %}
         {%  endfor %}
+    <h1>Future Green Studio</h1>
         {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/body.html" %}
     </article>
 </section>
 <section class="third">
     {%  gblock "people_image" for "content.ContentBlock" with "content/contentblock/image_aside.html" %}
+    <h1>People</h1>
     {% for employee in principal_list %}
         <article class="quarter box">
             <a href="#"><img title="{{ employee.name }}"
