@@ -53,7 +53,7 @@
                         {% endif %}
                         {% if project.landscape_types.all %}
                             {% for category in project.landscape_types.all %}
-                                <li class="square">
+                                <li class="square quarter">
                                     <a href="{% url portfolio_projects_by_landscape category.slug %}" title="{{ category.name }}" class="landscape-type square center">
                                         {{ category.alternate_title }}
                                     </a>
