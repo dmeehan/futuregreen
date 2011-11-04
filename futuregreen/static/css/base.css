@@ -140,6 +140,7 @@ body > header > nav li a {
     font-size: 1.28571429em;
     letter-spacing:1px;
     text-decoration:none;
+    padding: 10px;
 }
 
 body > header > nav li a:link,
@@ -148,6 +149,11 @@ body > header > nav li a:hover,
 body > header > nav li a:active {
     color:#444;
 }
+
+body#studio > header > nav li a.studio {
+     background: url('images/corner-bg-top-right.png') no-repeat right top;
+}
+
 body > .content {
     overflow: auto;
     background: transparent;
@@ -286,11 +292,12 @@ h1.overlay {
 }
 
 #home article#profile {
-    url('images/corner-bg-top-right.png') no-repeat right top;
+
 }
 
 #home article#profile div {
-    background:url('images/profile_bg.png') no-repeat left bottom;
+    background:url('images/profile_bg.png') no-repeat left bottom,
+               url('images/corner-bg-top-right.png') no-repeat right top;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
