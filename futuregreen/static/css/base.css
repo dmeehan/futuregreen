@@ -330,10 +330,10 @@ h1.overlay {
 
 #home article#profile h2 {
     font-family: purista-web-1,purista-web-2, sans-serif;
-    font-size:2.14285em;
+    font-size:2em;
     text-transform: uppercase;
     padding:10px 10px 15px 10px;
-    color:#8ec42a;
+    color:#3d6e31;
 }
 
 #home article.text h1 {
