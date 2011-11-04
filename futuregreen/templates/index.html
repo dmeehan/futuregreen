@@ -21,7 +21,7 @@
          <article class="text box half" id="profile">
              <div>
                 {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-                <a href="{% url studio %}" class="tease">Read More</a>
+                <p><a href="{% url studio %}" class="tease">Read More</a></p>
              </div>
         </article>
         {% for project in project_list|slice:"1:3" %}
