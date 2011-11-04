@@ -3,6 +3,7 @@
 {% block content %}
 <section class="two-thirds">
     <header class="box">
+        <a href="{% url studio_people %}"
         {%  gblock "studio_image" for "content.ContentBlock" with "content/contentblock/image.html" %}
         <h1 class="overlay">Studio</h1>
     </header>
