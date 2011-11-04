@@ -27,8 +27,10 @@
                 <ul>
                    {% for image in project.projectimage_set.all %}
                         <li class="box">
+                            <div class="image">
                             <a href="#"><img src="{{ image.thumbnail.url }}" alt="{{ image.caption }}"/></a>
-                       </li>
+                            </div>
+                        </li>
                    {% endfor %}
                 </ul>
             </div>
