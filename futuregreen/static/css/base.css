@@ -308,12 +308,12 @@ h1.overlay {
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0;
     margin: 0;
 }
 
 #home article#profile p {
-    padding-right:10px;
+    padding:0 10px;
 }
 
 #home article#profile h1 {
@@ -332,7 +332,7 @@ h1.overlay {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:2.14285em;
     text-transform: uppercase;
-    padding:10px 0;
+    padding:10px 10px 15px 10px;
     color:#8ec42a;
 }
 
