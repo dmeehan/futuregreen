@@ -1,7 +1,7 @@
 {% extends "portfolio/portfolio_base.html" %}
 {% block page_title %}: {{ project.name }}{% endblock page_title %}
 {% block content %}
-    <article class="project">
+    <article class="project detail">
     {% if project.projectimage_set.all %}
         <section class="slideshow">
             <div class="carousel">

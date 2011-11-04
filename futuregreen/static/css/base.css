@@ -505,7 +505,7 @@ h1.overlay {
 }
 
 /*********** PROJECT DETAIL ************/
-#detail article.project {
+#portfolio article.project.detail {
     position:relative;
     overflow: auto;
     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom;
