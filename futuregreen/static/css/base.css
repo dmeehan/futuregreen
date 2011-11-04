@@ -832,11 +832,12 @@ body > footer > .contact {
 
 .details .meta .categories .project-type {
     /*background:#d27193;*/
-    background:#63973d;
+    background:#3d6e31;
 }
 
 .details .meta .categories .landscape-type {
-    background:#7eac32;
+    /*background:#7eac32;*/
+    background:#8ec42a;
 }
 
 .details .meta .info-boxes ul {
