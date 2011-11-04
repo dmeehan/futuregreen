@@ -1,8 +1,9 @@
 {% extends 'portfolio/portfolio_base.html' %}
 {% block content %}
 {% block main %}
+<section class="two-thirds">
     {% block content_header %}
-    <header class="square box sixth" style="background:#8ec42a;">
+    <header class="square box quarter" style="background:#8ec42a;">
     {% load category_tags %}
         {% block content_title %}
             <h1 class="square box sixth">{{ category.alternate_title }}</h1>
@@ -12,10 +13,18 @@
     {% endblock content_header %}
     <section class="project-list">
     {% for project in category.landscapetype.project_set.all %}
+        <article class="box quarter">
         {% include "portfolio/project_snippet.html" %}
+        </article>
     {% endfor %}
     </section>
+ </section>
  {% endblock main %}
+ {% block aside %}
+     <aside class="third">
+
+     </aside>
+ {% endblock aside %}
 {% endblock content %}
 {% block js_local %}
 <script type="text/javascript">

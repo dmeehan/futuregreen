@@ -425,14 +425,7 @@ body > footer > .contact {
 
 /*********** PROJECT LIST ************/
 .project-list article.project {
-    width:16.66667%;
-    float:left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px;
+    
 }
 
 .project-list article.project img {
