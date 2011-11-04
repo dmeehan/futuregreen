@@ -140,7 +140,7 @@ body > header > nav li a {
     font-size: 1.28571429em;
     letter-spacing:1px;
     text-decoration:none;
-    height:80px;
+    padding: 10px 20px;
 }
 
 body > header > nav li a:link,
@@ -151,11 +151,9 @@ body > header > nav li a:active {
 }
 
 body#studio > header > nav li a.studio {
-     background:url('images/vertical-bg.png') no-repeat right top,
-                url('images/vertical-bg.png') no-repeat left 10px,
-                url('images/bottom-bg.png') no-repeat left 10px,
-                url('images/bottom-bg.png') no-repeat left 70px;
-}
+     background:url('images/vertical-bg.png') no-repeat 10px top,
+               url('images/bottom-bg.png') no-repeat left 10px,
+               url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 
 body > .content {
     overflow: auto;
