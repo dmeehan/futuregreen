@@ -296,12 +296,12 @@ h1.overlay {
 }
 
 #home article#profile {
-
+    background:url('images/vertical-bg.png') no-repeat 10px top,
+               url('images/bottom-bg.png') no-repeat left 10px,
+               url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
 #home article#profile div {
-    background:url('images/profile_bg.png') no-repeat left bottom,
-               url('images/corner-bg-top-right.png') no-repeat right top;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
