@@ -1,9 +1,9 @@
 {% extends 'portfolio/project_list.html' %}
 {% block content_header %}
-    <header>
+    <header class="square box full">
     {% load category_tags %}
         {% block content_title %}
-            <h1 class="square box full" style="background:#8ec42a;">{{ category.alternate_title }}</h1>
+            <h1 style="background:#8ec42a;">{{ category.alternate_title }}</h1>
             <p>{{ category.name }}</p>
         {% endblock content_title %}
    </header>
