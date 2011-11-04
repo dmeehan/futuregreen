@@ -56,7 +56,7 @@
         <div>
         {% for image in news.itemimage_set.all %}
                     {% if image.is_main %}
-                        <a href="{% url news_list %}">
+                        <a href="{% url news_item_list %}">
                             <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
                     {% endif %}
         {%  endfor %}
@@ -64,7 +64,7 @@
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
         <h2>{{ news.title }}</h2>
         {{ news.excerpt_html|safe }}
-        <p><a href="#" class="tease">Read More</a></p>
+        <p><a href="{{ item.get_absolute_url }}" class="tease">Read More</a></p>
         </div>
     </article>
 </section>
