@@ -831,7 +831,8 @@ body > footer > .contact {
 
 
 .details .meta .categories .project-type {
-    background:#d27193;
+    /*background:#d27193;*/
+    background:#63973d;
 }
 
 .details .meta .categories .landscape-type {
