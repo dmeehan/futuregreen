@@ -3,14 +3,7 @@
 {% block content %}
 <section class="two-thirds">
     <article class="box">
-        {% for project in project_list %}
-            {% for image in project.projectimage_set.all %}
-                    {% if image.is_main %}
-                        <a title="{{ project.name }}" href="{{ project.get_absolute_url }}">
-                            <img class="flex" alt="{{ project.title }}" src="{{ image.main.url }}" /></a>
-                    {% endif %}
-            {%  endfor %}
-        {%  endfor %}
+        {%  gblock "studio_image" for "content.ContentBlock" with "content/contentblock/image.html" %}
         <h1 style="font-size:2.4em; line-height:1em; margin:-1em 0 0 10px; color:#fff;">Studio</h1>
         {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/body.html" %}
     </article>
