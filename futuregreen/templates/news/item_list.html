@@ -8,7 +8,7 @@
         {% for image in news.itemimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ news.get_absolute_url }}">
-                            <img class="flex" alt="{{ news.title }}" src="{{ image.detail.url }}" /></a>
+                            <img class="flex" alt="{{ news.title }}" src="{{ image.main.url }}" /></a>
                     {% endif %}
         {%  endfor %}
         <h1 class="overlay">News</h1>
