@@ -64,7 +64,7 @@
         <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
         <h2>{{ news.title }}</h2>
         {{ news.excerpt_html|safe }}
-        <p><a href="{{ item.get_absolute_url }}" class="tease">Read More</a></p>
+        <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
         </div>
     </article>
 </section>
