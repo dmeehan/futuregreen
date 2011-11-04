@@ -43,7 +43,7 @@
             </div>
             <div class="meta">
                 {% if project.project_types.all or project.landscape_types.all %}
-                    <ul class="categories">
+                    <ul class="categories box">
                         {% if project.project_types.all %}
                             {% for category in project.project_types.all %}
                                 <li class="square">
