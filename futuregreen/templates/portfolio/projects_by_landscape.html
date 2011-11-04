@@ -1,15 +1,15 @@
 {% extends 'portfolio/portfolio_base.html' %}
 {% block content %}
+{% block main %}
     {% block content_header %}
-    <header>
+    <header class="square box sixth" style="background:#8ec42a;">
     {% load category_tags %}
-        <p>{% breadcrumbs category ">" %}</p>
         {% block content_title %}
-            <h1>{{ category }} Projects</h1>
+            <h1 class="square box sixth">{{ category.alternate_title }}</h1>
+            <p>{{ category.title }}</p>
         {% endblock content_title %}
    </header>
     {% endblock content_header %}
-{% block main %}
     <section class="project-list">
     {% for project in category.landscapetype.project_set.all %}
         {% include "portfolio/project_snippet.html" %}
