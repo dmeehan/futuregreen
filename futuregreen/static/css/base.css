@@ -140,7 +140,7 @@ body > header > nav li a {
     font-size: 1.28571429em;
     letter-spacing:1px;
     text-decoration:none;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 body > header > nav li a:link,
