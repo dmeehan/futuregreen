@@ -9,6 +9,18 @@
                     {% endblock content_title %}
                 </header>
             {% endblock content_header %}
+            {% block filter_nav %}
+                <nav>
+                    <ul>
+                        {% for type in projecttype_list %}
+                            <li class="half box">{{ type.alternate_title }}</li>
+                        {% endfor %}
+                        {% for type in landscapetype_list %}
+                            <li class="half box">{{ type.alternate_title }}</li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endblock filter_nav %}
         </aside>
     {% endblock aside %}
     {% block main %}
