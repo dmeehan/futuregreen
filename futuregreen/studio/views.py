@@ -16,3 +16,4 @@ def index(request):
                                                         'staff_list': staff_list,
                                                         'project_list': project_list,
                                                         'news': news })
+

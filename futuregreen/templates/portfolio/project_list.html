@@ -1,17 +1,24 @@
 {% extends "portfolio/portfolio_base.html" %}
 {% block content %}
-{% block content_header %}
-<header>
-{% block content_title %}
-    <h1 class="full">All Projects</h1>
-{% endblock content_title %}
-</header>
-{% endblock content_header %}
 {% block main %}
+<section class="two-thirds">
+    {% block content_header %}
+    <header>
+        {% block content_title %}
+        <h1 class="box quarter">All Projects</h1>
+        {% endblock content_title %}
+    </header>
+    {% endblock content_header %}
     <section class="project-list">
     {% for project in project_list %}
         {% include "portfolio/project_snippet.html" %}
     {% endfor %}
     </section>
+</section>
 {% endblock main %}
+{% block aside %}
+    <aside class="third">
+    
+    </aside>
+{% endblock aside %}
 {% endblock content %}

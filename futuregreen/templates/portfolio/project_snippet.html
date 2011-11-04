@@ -1,42 +1,43 @@
+<article class="box quarter">
+    <header style="display:none;"><h1>{{ project.name }}</h1></header>
+    <section>
+        {% for image in project.projectimage_set.all %}
+            {% if image.is_main %}
+                <a href="{{ project.get_absolute_url }}">
+                    <img class="flex" src="{{ image.list.url }}"
+                         alt="{{ image.caption }}" />
+                </a>
+            {% endif %}
+        {% endfor %}
+    </section>
+    <section class="description" style="display:none">
+        <p>{{ project.short_description }}</p>
+        {% if project.date_start %}<p>{{ project.date_start }}</p>{% endif %}
+        {% if project.date_end %}<p>{{ project.date_end }}</p>{% endif %}
+        {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
+        <p>{{ project.area|floatformat }} {{ project.get_unit_display }} </p>
+        <p style="width:{{ project.relative_size|floatformat }}%; height:20px; background: Red;">
+            {{ project.relative_size|floatformat }}
+        </p>
+    </section>
 
-<header style="display:none;"><h1>{{ project.name }}</h1></header>
-<section>
-    {% for image in project.projectimage_set.all %}
-        {% if image.is_main %}
-            <a href="{{ project.get_absolute_url }}">
-                <img class="flex" src="{{ image.list.url }}"
-                     alt="{{ image.caption }}" />
-            </a>
+     {% if project.tags.all or project.categories.all %}
+    <section class="classification" style="display:none">
+        {% if project.tags.all %}
+        <ul>
+            {% for tag in project.tags.all %}
+            <li> {{ tag.name }} </li>
+            {% endfor %}
+        </ul>
         {% endif %}
-    {% endfor %}
-</section>
-<section class="description" style="display:none">
-    <p>{{ project.short_description }}</p>
-    {% if project.date_start %}<p>{{ project.date_start }}</p>{% endif %}
-    {% if project.date_end %}<p>{{ project.date_end }}</p>{% endif %}
-    {% if external_url %}<p>{{ project.external_url }}</p>{% endif %}
-    <p>{{ project.area|floatformat }} {{ project.get_unit_display }} </p>
-    <p style="width:{{ project.relative_size|floatformat }}%; height:20px; background: Red;">
-        {{ project.relative_size|floatformat }}
-    </p>
-</section>
-
- {% if project.tags.all or project.categories.all %}
-<section class="classification" style="display:none">
-    {% if project.tags.all %}
-    <ul>
-        {% for tag in project.tags.all %}
-        <li> {{ tag.name }} </li>
-        {% endfor %}
-    </ul>
+        {% if project.categories.all %}
+        <ul>
+            {% for category in project.categories.all %}
+            <li> {{ category.name }} </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>
     {% endif %}
-    {% if project.categories.all %}
-    <ul>
-        {% for category in project.categories.all %}
-        <li> {{ category.name }} </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-</section>
-{% endif %}
-<p style="display:none"><a href="{{ project.get_absolute_url }}">View project</a> </p>
+    <p style="display:none"><a href="{{ project.get_absolute_url }}">View project</a> </p>
+</article>
