@@ -7,7 +7,7 @@
         {% for project in project_list %}
             {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}">
+                        <a title="{{ project.name }}" href="{{ project.get_absolute_url }}">
                             <img class="flex" alt="{{ project.title }}" src="{{ image.main.url }}" /></a>
                     {% endif %}
             {%  endfor %}
