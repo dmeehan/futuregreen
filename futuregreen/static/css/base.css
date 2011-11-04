@@ -140,7 +140,7 @@ body > header > nav li a {
     font-size: 1.28571429em;
     letter-spacing:1px;
     text-decoration:none;
-    padding: 10px 20px;
+    height:80px;
 }
 
 body > header > nav li a:link,
@@ -152,9 +152,9 @@ body > header > nav li a:active {
 
 body#studio > header > nav li a.studio {
      background:url('images/vertical-bg.png') no-repeat right top,
-                url('images/vertical-bg.png') no-repeat left top,
-                url('images/bottom-bg.png') no-repeat left top,
-                url('images/bottom-bg.png') no-repeat left bottom;
+                url('images/vertical-bg.png') no-repeat left 10px,
+                url('images/bottom-bg.png') no-repeat left 10px,
+                url('images/bottom-bg.png') no-repeat left 70px;
 }
 
 body > .content {
