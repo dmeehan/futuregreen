@@ -151,9 +151,10 @@ body > header > nav li a:active {
 }
 
 body#studio > header > nav li a.studio {
-     background:url('images/vertical-bg.png') no-repeat 10px 90%,
-                url('images/vertical-bg.png') no-repeat 10px top,
-                url('images/bottom-bg.png') no-repeat left 10px;
+     background:url('images/vertical-bg.png') no-repeat right top,
+                url('images/vertical-bg.png') no-repeat left top,
+                url('images/bottom-bg.png') no-repeat left top,
+                url('images/bottom-bg.png') no-repeat left bottom;
 }
 
 body > .content {
