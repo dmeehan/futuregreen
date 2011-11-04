@@ -67,7 +67,7 @@ body {
     font-weight:normal;
     font-size:87.5%;
     font-family: kulturista-web-1,kulturista-web-2, Arial, Helvetica, sans-serif;
-    color:#666;
+    color:#444;
 }
 
 h1, h2 {
@@ -163,6 +163,11 @@ body > footer {
     font-size:.85em;
     width:100%;
     overflow: hidden;
+}
+
+body > footer > .contact a:link,
+body > footer > .contact a:visited {
+    color:#777;
 }
 
 body > footer > .copyright {
