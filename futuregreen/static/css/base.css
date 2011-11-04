@@ -269,6 +269,14 @@ body > footer > .contact {
      display:block;
  }
 
+h1.overlay {
+    padding: 0 0 0 0;
+    font-size:2.4em;
+    line-height:1em;
+    margin:-.98em 0 0 10px;
+    color:#fff;"
+}
+
 /********** HOMEPAGE ***********/
 #home .content > div {
     overflow: hidden;
