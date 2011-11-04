@@ -302,7 +302,7 @@ h1.overlay {
 }
 
 #home article#profile div {
-    background:url('images/profile_bg.png') no-repeat 10px top;
+    /*background:url('images/profile_bg.png') no-repeat 10px top;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
