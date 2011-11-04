@@ -1,43 +1,8 @@
-{% extends 'portfolio/project_list.html' %}
-{% block content_header %}
-    <header class="square box full">
-    {% load category_tags %}
-        {% block content_title %}
-            <div class="box" style="background:#8ec42a; width:100%; height:100%;">
-                <h1>{{ category.alternate_title }}</h1>
-                <p>{{ category.name }}</p>
-            </div>
-        {% endblock content_title %}
-   </header>
-{% endblock content_header %}
+{% extends 'portfolio/projects_by_category.html' %}
 {% block projects %}
     {% for project in category.projecttype.project_set.all %}
         {% include "portfolio/project_snippet.html" %}
     {% endfor %}
     </section>
 {% endblock projects %}
-{% block js_local %}
-<script type="text/javascript">
-    function Square() {
-            $('.square').each(function(){
-                width = $(this).width();
-                $(this).css('height',width);
-            });
-            $('.center').each(function(){
-                width = $(this).width();
-                $(this).css('line-height',width + "px");
-            });
-    }
-
-
-    $(document).ready(function() {
-        Square();
-    });
-
-    $(window).resize(function() {
-        Square();
-    });
-
-</script>
-{% endblock js_local %}
 
