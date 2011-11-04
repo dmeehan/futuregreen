@@ -13,6 +13,8 @@ class Item(ArticleBase):
     """
         An article entry for a news item
     """
+    class Meta:
+        ordering = ('-date_published',)
 
     @permalink
     def get_absolute_url(self):
