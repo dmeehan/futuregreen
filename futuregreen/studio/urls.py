@@ -7,4 +7,5 @@ from django.views.generic import ListView, DetailView, TemplateView
 urlpatterns = patterns('',
     url(r'^$', 'futuregreen.studio.views.index', name = 'studio'),
     url(r'^news/$', TemplateView.as_view(template_name="studio/studio_news.html"), name='studio_news'),
+    url(r'^people/$', TemplateView.as_view(template_name="studio/studio_people.html"), name='studio_people'),
 )
