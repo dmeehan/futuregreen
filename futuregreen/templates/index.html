@@ -88,7 +88,7 @@
            <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
            <h2>{{ item.title }}</h2>
            {{ item.excerpt_html|safe|truncatewords_html:20 }}
-           <p><a href="#" class="tease">Read More</a></p>
+           <p><a href="{{ item.get_absolute_url }}" class="tease">Read More</a></p>
            </div>
         </article>
     </div>
