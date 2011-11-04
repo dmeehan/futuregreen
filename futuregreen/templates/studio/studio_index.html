@@ -3,7 +3,7 @@
 {% block content %}
 <section class="two-thirds">
     <article class="box">
-        <h1>Future Green Studio</h1>
+        <h1>What We Do</h1>
         {% for project in project_list %}
             {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -16,7 +16,7 @@
     </article>
 </section>
 <section class="third">
-    <h1 style="margin: 0;" class="box">People</h1>
+    <h1 style="margin: 0;" class="box">Who We Are</h1>
     {% for employee in principal_list %}
         <article class="half box">
             <a href="#"><img title="{{ employee.name }}"
@@ -51,7 +51,7 @@
 <section class="third">
     <article class="box" id="news">
         <div>
-        <h1>News</h1>
+        <h1>What We're Up To</h1>
         {% for image in news.itemimage_set.all %}
                     {% if image.is_main %}
                         <a href="{{ news.get_absolute_url }}">
