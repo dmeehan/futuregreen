@@ -11,16 +11,24 @@
             {% endblock content_header %}
             {% block filter_nav %}
                 <nav>
-                    <h2>Filter By Project Type</h2>
+                    <h2>Project Type</h2>
                     <ul class="categories">
                         {% for type in projecttype_list %}
-                            <li class="square project-type">{{ type.alternate_title }}</li>
+                            <li class="square">
+                                <a href="{% url portfolio_projects_by_type category.slug %}" title="{{ category.name }}" class="project-type square center">
+                                    {{ category.alternate_title }}
+                                </a>
+                            </li>
                         {% endfor %}
                     </ul>
-                     <h2>Filter By Landscape Type</h2>
+                     <h2>Landscape Type</h2>
                      <ul class="categories">
                         {% for type in landscapetype_list %}
-                            <li class="square landscape-type">{{ type.alternate_title }}</li>
+                            <li class="square">
+                                <a href="{% url portfolio_projects_by_landscape category.slug %}" title="{{ category.name }}" class="landscape-type square center">
+                                    {{ category.alternate_title }}
+                                </a>
+                            </li>
                         {% endfor %}
                     </ul>
                     <h2>Sort By Date</h2>
