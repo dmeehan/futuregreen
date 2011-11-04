@@ -52,7 +52,8 @@ a:link,
 a:active,
 a:hover,
 a:visited {
-    color: #6699ff;
+    /*color: #6699ff;*/
+    color:#3d6e31;
 }
 
 html {
