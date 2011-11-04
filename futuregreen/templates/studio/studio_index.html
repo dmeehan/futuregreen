@@ -36,7 +36,8 @@
                  src="{{ employee.list.url }}" />
             </a>
         </article>
-        {% for employee in staff_list %}
+    {%  endfor %}
+    {% for employee in staff_list %}
         <article class="quarter box">
             <a href="#"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
