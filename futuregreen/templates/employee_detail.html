@@ -1,0 +1,21 @@
+{% extends "studio/studio_base.html" %}
+{% block page_title %}: People: {{ employee.name }}{% endblock page_title %}
+{% block content %}
+<section class="two-thirds">
+    <article>
+        <section class="quarter">
+        {% for image in item.itemimage_set.all %}
+           <img class="flex" alt="{{ item.title }}" src="{{ image.list.url }}" />
+        {%  endfor %}
+        </section>
+        <section class="three-quarters"></section>
+            <h1>{{ employee.name }}</h1>
+            <h2>{{ employee.job_title }}</h2>
+            {{ employee.description_html|safe }}
+        </section>
+    </article>
+</section>
+<aside>
+    <h1>People</h1>
+</aside>
+{% endblock content %}
