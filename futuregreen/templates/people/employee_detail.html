@@ -14,6 +14,8 @@
     </article>
 </section>
 <aside>
-    <h1>People</h1>
+    {% for employee in employee_list %}
+        <img class="flex quarter box" alt="{{ employee.name }}" src="{{ employee.list.url }}" />
+    {% endfor %}
 </aside>
 {% endblock content %}
