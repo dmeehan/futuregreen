@@ -12,7 +12,7 @@ class EmployeeDetailView(DetailView):
         context = super(EmployeeDetailView, self).get_context_data(**kwargs)
         # Add in a QuerySet of all the categories
         context['employee_list'] = Employee._default_manager.exclude(status=Employee.STATUS_FORMER)\
-                                                            .exclude(slug==self.args[0])\
+                                                            .exclude(slug=self.args[0])\
                                                             .order_by(employee_type)
         return context
 
