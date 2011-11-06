@@ -125,7 +125,6 @@ body > header > h1 a {
 body > header > nav {
     float:left;
     width:50%;
-    padding-right:10px;
 }
 
 body > header > nav li {
