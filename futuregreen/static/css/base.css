@@ -108,7 +108,7 @@ body > header {
 
 body > header > h1 {
     font-size:8px;
-    width:33.33333%;
+    width:50%;
     overflow: hidden;
     float:left;
 }
@@ -124,14 +124,14 @@ body > header > h1 a {
 
 body > header > nav {
     float:left;
-    width:66.66667%;
+    width:50%;
 }
 
 body > header > nav li {
     float:left;
     line-height:80px;
     text-align: center;
-    width:25%;
+    width:33.33333%;
 }
 
 body > header > nav li a {
