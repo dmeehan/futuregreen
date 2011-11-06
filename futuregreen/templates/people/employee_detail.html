@@ -3,10 +3,10 @@
 {% block content %}
 <section class="two-thirds">
     <article>
-        <section class="quarter">
+        <section class="quarter box">
             <img class="flex" alt="{{ employee.name }}" src="{{ employee.list.url }}" />
         </section>
-        <section class="three-quarters"></section>
+        <section class="three-quarters box">
             <h1>{{ employee.name }}</h1>
             <h2>{{ employee.job_title }}</h2>
             {{ employee.description_html|safe }}
