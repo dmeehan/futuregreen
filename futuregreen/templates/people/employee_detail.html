@@ -15,7 +15,14 @@
 </section>
 <aside class="third">
     {% for employee in employee_list %}
-        <img class="flex quarter box" alt="{{ employee.name }}" src="{{ employee.list.url }}" />
+        <article class="quarter box">
+            <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
+                 alt="{{ employee.name }}"
+                 style="border: 1px solid #efefef"
+                 class="flex"
+                 src="{{ employee.list.url }}" />
+            </a>
+        </article>
     {% endfor %}
 </aside>
 {% endblock content %}
