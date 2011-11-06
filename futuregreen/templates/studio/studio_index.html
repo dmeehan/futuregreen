@@ -21,7 +21,7 @@
     </header>
     {% for employee in principal_list %}
         <article class="quarter box">
-            <a href="#"><img title="{{ employee.name }}"
+            <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
@@ -31,7 +31,7 @@
     {%  endfor %}
     {% for employee in associate_list %}
         <article class="quarter box">
-            <a href="#"><img title="{{ employee.name }}"
+            <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
@@ -41,7 +41,7 @@
     {%  endfor %}
     {% for employee in staff_list %}
         <article class="quarter box">
-            <a href="#"><img title="{{ employee.name }}"
+            <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
