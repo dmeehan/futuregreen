@@ -4,9 +4,7 @@
 <section class="two-thirds">
     <article>
         <section class="quarter">
-        {% for image in item.itemimage_set.all %}
-           <img class="flex" alt="{{ item.title }}" src="{{ image.list.url }}" />
-        {%  endfor %}
+            <img class="flex" alt="{{ employee.name }}" src="{{ employee.list.url }}" />
         </section>
         <section class="three-quarters"></section>
             <h1>{{ employee.name }}</h1>
