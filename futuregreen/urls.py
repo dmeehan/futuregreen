@@ -18,7 +18,10 @@ urlpatterns = patterns('',
     # studio
     (r'^studio/', include('futuregreen.studio.urls')),
 
-     # studio
+    # research
     (r'^research/', include('futuregreen.research.urls')),
+
+    # contact
+    url(r'^contact/', TemplateView.as_view(template_name="contact.html"), name='contact'),
     
 )
