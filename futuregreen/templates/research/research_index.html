@@ -8,7 +8,7 @@
     <article class="box">
         <h2>{{ entry.title }}</h2>
         <p>{{ entry.date_published }}</p>
-        <p>{{ entry.posted_by }}</p>
+        <p>Posted by: {{ entry.posted_by }}</p>
         {{ entry.body_html|safe }}
     </article>
 </section>
