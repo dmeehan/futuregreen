@@ -277,6 +277,8 @@ body > footer > .contact {
     font-size:1.5em;
     color:#999;
     line-height:1.5em;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
  img.flex {
      width:100%;
