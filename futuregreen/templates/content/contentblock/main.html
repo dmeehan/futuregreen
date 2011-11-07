@@ -7,5 +7,7 @@
     {% endif %}
 </header>
 {% if object.body_html %}
-{{ object.body_html|safe }}
+<section class="body">
+    {{ object.body_html|safe }}
+</section>
 {% endif %}

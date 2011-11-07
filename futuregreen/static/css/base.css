@@ -1032,7 +1032,7 @@ ul#project-nav {
     margin: 0 7.5%;
   }
 
-  #studio .content .main {
+  #studio .content .main article section.body {
     -webkit-column-count:2;
     -moz-column-count:2;
     -o-column-count:2;
@@ -1042,14 +1042,6 @@ ul#project-nav {
     -ms-column-gap: 20px;
     -o-column-gap: 20px;
     -moz-column-gap: 20px;
-    }
-
-    #studio .content .main .pullquote {
-        -webkit-column-count:1;
-        -moz-column-count:1;
-        -o-column-count:1;
-        -ms-column-count:1;
-        column-count:1;
     }
 
 }
