@@ -970,7 +970,7 @@ ul#project-nav {
     -webkit-column-fill:balanced;
     -moz-column-fill:balanced;
     column-fill:balanced;
-    float:right;
+    float:left;
 }
 
 .max .details .meta {
