@@ -213,6 +213,10 @@ body > footer > .contact {
     width:33.33333%; float:left;
 }
 
+.two-fifths {
+    width:40%;
+}
+
 .half {
     width:50%; float:left;
 }

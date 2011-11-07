@@ -2,13 +2,6 @@
 {% block content %}
     {% block aside %}
         <aside class="sixth">
-            {% block content_header %}
-                <header>
-                    {% block content_title %}
-                    <h1 class="box full">All Projects</h1>
-                    {% endblock content_title %}
-                </header>
-            {% endblock content_header %}
             {% block filter_nav %}
                 <nav>
                     <h2>Project Type</h2>
@@ -39,6 +32,13 @@
     {% endblock aside %}
     {% block main %}
         <section class="five-sixths">
+            {% block content_header %}
+                <header class="two-fifths">
+                    {% block content_title %}
+                    <h1 class="box full">All Projects</h1>
+                    {% endblock content_title %}
+                </header>
+            {% endblock content_header %}
             {% block projects %}
             <section class="project-list">
             {% for project in project_list %}
