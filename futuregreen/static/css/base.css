@@ -273,7 +273,7 @@ body > footer > .contact {
     margin: 10px 0;
 }
 
-.pullquote {
+.content .pullquote {
     font-size:1.5em;
     color:#999;
     line-height:1.5em;
