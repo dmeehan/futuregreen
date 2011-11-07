@@ -1001,7 +1001,7 @@ ul#project-nav {
 }
 
 #studio .content {
-    background:url('images/corner-bg-bottom-right.png') no-repeat right bottom,
+    background:url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
 #studio .content .main article section.body {
