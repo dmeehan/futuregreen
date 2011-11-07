@@ -1018,12 +1018,7 @@ ul#project-nav {
     padding-top:20px;
 }
 
-@media screen and (max-width: 1240px) and (min-width: 1120px) {
-    body {
-        width:90%;
-        margin: 0 5%;
-    }
-
+@media screen and (max-width: 1024px) {
     section.text article {
         font-size:0.92857em;
     }
@@ -1040,10 +1035,22 @@ ul#project-nav {
     }
 }
 
-@media screen and (min-width: 1360px) {
+@media screen and (max-width: 1240px) and (min-width: 1120px) {
+    body {
+        width:90%;
+        margin: 0 5%;
+    }
+
+    section.text article {
+        font-size:0.92857em;
+    }
+}
+
+
+@media screen and (min-width: 1240px) and (min-width: 1440px) {
   body {
-    width:70%;
-    margin: 0 15%;
+    width:80%;
+    margin: 0 10%;
   }
 
   #studio .content .main article section.body {
@@ -1059,8 +1066,10 @@ ul#project-nav {
     }
 
 }
-@media screen and (max-width: 1024px) {
-    section.text article {
-        font-size:0.92857em;
+
+@media screen and (min-width: 1440px) {
+     body {
+        width:70%;
+        margin: 0 15%;
     }
 }
