@@ -1,0 +1,29 @@
+{% extends "studio/studio_base.html" %}
+{% block page_title %}: People: {{ employee.name }}{% endblock page_title %}
+{% block content %}
+<section class="two-thirds">
+    <article>
+        <section class="quarter box">
+            <img class="flex" style="border: 1px solid #efefef" alt="{{ employee.name }}" src="{{ employee.list.url }}" />
+        </section>
+        <section class="three-quarters box">
+            <h1>{{ employee.name }}</h1>
+            <h2>{{ employee.job_title }}</h2>
+            {{ employee.description_html|safe }}
+        </section>
+    </article>
+</section>
+<aside class="third">
+    <h1 class="box" style="margin: 0">Future Green Team</h1>
+    {% for employee in employee_list %}
+        <article class="quarter box">
+            <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
+                 alt="{{ employee.name }}"
+                 style="border: 1px solid #efefef"
+                 class="flex"
+                 src="{{ employee.list.url }}" />
+            </a>
+        </article>
+    {% endfor %}
+</aside>
+{% endblock content %}

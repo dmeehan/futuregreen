@@ -1,6 +1,7 @@
 # people/models.py
 
 from django.db import models
+from django.db.models import permalink
 
 from contacts.models import ContactBase
 from images.models import ImageFieldAutoMixin
@@ -48,6 +49,10 @@ class Employee(ImageFieldAutoMixin, Contact):
     job_title = models.CharField(max_length=250)
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_FULL)
+
+    @permalink
+    def get_absolute_url(self):
+        return ('people_person_detail', [str(self.slug)])
 
     def save(self, force_insert=False, force_update=False):
         self.contact_type = self.TYPE_PERSON
