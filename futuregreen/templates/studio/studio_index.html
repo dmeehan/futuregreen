@@ -11,7 +11,7 @@
         {%  gblock "people" for "content.ContentBlock" with "content/contentblock/aside.html" %}
     </header>
     {% for employee in principal_list %}
-        <article class="quarter box">
+        <article class="sixth box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
@@ -21,7 +21,7 @@
         </article>
     {%  endfor %}
     {% for employee in associate_list %}
-        <article class="quarter box">
+        <article class="sixth box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
@@ -31,7 +31,7 @@
         </article>
     {%  endfor %}
     {% for employee in staff_list %}
-        <article class="quarter box">
+        <article class="sixth box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
