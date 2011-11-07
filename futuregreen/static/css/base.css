@@ -65,7 +65,7 @@ html {
 
 body {
     min-width:1024px;
-    max-width:1280px;
+    max-width:1460px;
     padding:10px;
     position:relative;
     font-weight:normal;
@@ -1031,7 +1031,18 @@ ul#project-nav {
     width:85%;
     margin: 0 7.5%;
   }
-}
+
+  #studio .content .main p {
+    -webkit-column-count:3;
+    -moz-column-count:3;
+    -o-column-count:3;
+    -ms-column-count:3;
+    column-count:3;
+    -webkit-column-gap: 20px;
+    -ms-column-gap: 20px;
+    -o-column-gap: 20px;
+    -moz-column-gap: 20px;
+    }
 
 @media screen and (max-width: 1024px) {
     section.text article {
