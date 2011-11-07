@@ -5,5 +5,8 @@
         {% load generic_flatblocks %}
         {%  gblock "research_title" for "content.ContentBlock" %}
     </article>
+    <article class="box">
+        {{ entry.title }}
+    </article>
 </section>
 {%  endblock main %}
