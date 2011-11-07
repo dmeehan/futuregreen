@@ -8,8 +8,7 @@
 </section>
 <section class="third">
     <header class="box">
-        {%  gblock "people_image" for "content.ContentBlock" with "content/contentblock/aside.html" %}
-        <h1 class="overlay">People</h1>
+        {%  gblock "people" for "content.ContentBlock" with "content/contentblock/aside.html" %}
     </header>
     {% for employee in principal_list %}
         <article class="quarter box">
