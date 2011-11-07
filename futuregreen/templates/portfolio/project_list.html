@@ -18,7 +18,10 @@
                      <ul class="categories">
                         {% for type in landscapetype_list %}
                             <li style="float:none; width:100%">
-                                <a href="{% url portfolio_projects_by_landscape type.slug %}" title="{{ type.name }}" class="landscape-type square center">
+                                <a href="{% url portfolio_projects_by_landscape type.slug %}"
+                                   title="{{ type.name }}"
+                                   class="landscape-type square center"
+                                   style="width:20%;">
                                     {{ type.alternate_title }}
                                 </a>
                                 <span style="color:#444;">{{ type.name }}</span>
