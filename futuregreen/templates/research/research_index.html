@@ -2,6 +2,7 @@
 {%  block main %}
 <section class="two-thirds">
     <article class="box">
+        {% load generic_flatblocks %}
         {%  gblock "research_title" for "content.ContentBlock" with "content/contentblock/body.html" %}
     </article>
 </section>
