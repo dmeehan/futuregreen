@@ -400,6 +400,7 @@ h1.overlay {
     -moz-box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
     -webkit-box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
     box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
+    padding: 10px;
 }
 #home article.project header a {
     text-decoration:none;
