@@ -920,7 +920,7 @@ h1.overlay {
                url('images/bottom-bg.png') no-repeat left 10px;
 }
 
-ul.project-nav {
+ul#project-nav {
     position:absolute;
     bottom:0;
 }
