@@ -1,0 +1,12 @@
+<header>
+    {% if object.image %}
+        <img class="flex" src="{{ object.image.url }}" />
+    {% endif %}
+    {% if object.title %}
+    <h1 class="overlay">{{ object.title }}</h1>
+    {% endif %}
+</header>
+{% endif %}
+{% if object.body_html %}
+{{ object.body_html|safe }}
+{% endif %}
