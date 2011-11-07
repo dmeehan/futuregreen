@@ -6,7 +6,10 @@
         {%  gblock "research_title" for "content.ContentBlock" %}
     </article>
     <article class="box">
-        {{ entry.title }}
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.date_published }}</p>
+        <p>{{ entry.posted_by.name }}</p>
+        {{ entry.body_html|safe }}
     </article>
 </section>
 {%  endblock main %}
