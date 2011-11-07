@@ -4,8 +4,8 @@ from django.views.generic import ListView, DetailView
 
 from futuregreen.news.models import *
 
-class EmployeeDetailView(DetailView):
+class NewsDetailView(DetailView):
     model = Item
 
-class EmployeeListView(ListView):
+class NewsListView(ListView):
     model = Item
