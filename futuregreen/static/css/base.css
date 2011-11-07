@@ -1004,6 +1004,10 @@ ul#project-nav {
     background:url('images/corner-bg-bottom-right.png') no-repeat right bottom,
 }
 
+#studio .content .main article section.body {
+    margin-top:10px;
+}
+
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
     body {
         width:90%;
