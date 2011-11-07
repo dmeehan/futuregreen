@@ -380,7 +380,10 @@ h1.overlay {
 
 #home article.project header h1 {
     line-height:1em;
-    background:rgba(0,0,0,0.3);
+    /*background:rgba(0,0,0,0.3);*/
+    -moz-box-shadow: inset 0px 0px 18px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0px 0px 18px rgba(0,0,0,.5);
+    box-shadow: inset 0px 0px 18px rgba(0,0,0,.5);
     color:rgba(255,255,255,0.6);
     width:100%;
     height:100%;
