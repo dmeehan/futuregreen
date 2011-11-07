@@ -25,6 +25,7 @@ class Collaborator(Contact):
 
 class EmployeeType(models.Model):
     name =  models.CharField(max_length=255)
+    level = models.PositiveSmallIntegerField()
     description = models.TextField(blank=True)
 
     slug = models.SlugField(unique=True,
