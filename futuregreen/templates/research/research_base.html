@@ -6,7 +6,10 @@
     {% block aside %}
         <aside class="third">
         {% load generic_flatblocks %}
+        <section class="box">
         {%  gblock "research_projects" for "content.ContentBlock" %}
+        </section>
+        <section>
         {%  for project in project_list %}
             <article class="half box">
                 <section>
@@ -21,6 +24,7 @@
                 </section>  
             </article>
         {%  endfor %}
+        </section>
         </aside>
     {% endblock aside %}
 
