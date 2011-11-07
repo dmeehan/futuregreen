@@ -397,6 +397,9 @@ h1.overlay {
 
 #home article.project.featured header h1 {
     font-size:3.42856em;
+    -moz-box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
+    -webkit-box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
 }
 #home article.project header a {
     text-decoration:none;
