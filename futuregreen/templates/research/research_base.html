@@ -8,7 +8,7 @@
         {% load generic_flatblocks %}
         {%  gblock "research_projects" for "content.ContentBlock" %}
         {%  for project in project_list %}
-            <article class="half">
+            <article class="half box">
                 <section>
                     {% for image in project.projectimage_set.all %}
                         {% if image.is_main %}
