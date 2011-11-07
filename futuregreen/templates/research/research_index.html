@@ -1,1 +1,8 @@
 {% extends "research/research_base.html" %}
+{%  block main %}
+<section class="two-thirds">
+    <article class="box">
+        {%  gblock "research_title" for "content.ContentBlock" with "content/contentblock/body.html" %}
+    </article>
+</section>
+{%  endblock main %}
