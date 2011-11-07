@@ -1007,7 +1007,7 @@ ul#project-nav {
 }
 
 #studio .content .main article section.body {
-    /*padding-top:20px;*/
+    padding-top:10px;
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1120px) {
