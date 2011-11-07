@@ -6,7 +6,10 @@ from django.db.models import Max
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 
+from categories.views import CategoryDetailView, CategoryRelatedList
+
 from futuregreen.portfolio.models import Project, ProjectType, LandscapeType
+
 
 
 class ProjectDetailView(DetailView):
