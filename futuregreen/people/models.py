@@ -51,6 +51,7 @@ class Employee(ImageFieldAutoMixin, Contact):
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_FULL)
 
+
     @permalink
     def get_absolute_url(self):
         return ('people_person_detail', [str(self.slug)])

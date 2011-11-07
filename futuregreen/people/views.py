@@ -11,7 +11,8 @@ class EmployeeDetailView(DetailView):
         # Call the base implementation first to get a context
         context = super(EmployeeDetailView, self).get_context_data(**kwargs)
         # Add in a QuerySet of all the categories
-        context['employee_list'] = Employee._default_manager.exclude(status=Employee.STATUS_FORMER)
+        context['employee_list'] = Employee._default_manager.exclude(status=Employee.STATUS_FORMER)\
+                                                            .order_by('employee_type__level', 'last_name')
         return context
 
 class EmployeeListView(ListView):
