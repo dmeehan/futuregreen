@@ -5,6 +5,8 @@
     {% block main %}{%  endblock main %}
     {% block aside %}
         <aside class="third">
+        {% load generic_flatblocks %}
+        {%  gblock "research_projects" for "content.ContentBlock" %}
         {%  for project in project_list %}
             <article>
                 {{ project.name }}
