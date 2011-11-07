@@ -920,6 +920,11 @@ h1.overlay {
                url('images/bottom-bg.png') no-repeat left 10px;
 }
 
+ul.project-nav {
+    position:absolute;
+    bottom:0;
+}
+
 .prev-proj.tease:after {
     content: "";
 }
