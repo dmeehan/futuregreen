@@ -8,8 +8,17 @@
         {% load generic_flatblocks %}
         {%  gblock "research_projects" for "content.ContentBlock" %}
         {%  for project in project_list %}
-            <article>
-                {{ project.name }}
+            <article class="half">
+                <section>
+                    {% for image in project.projectimage_set.all %}
+                        {% if image.is_main %}
+                            <a href="{{ project.get_absolute_url }}">
+                                <img class="flex" src="{{ image.list.url }}"
+                                     alt="{{ image.caption }}" />
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </section>  
             </article>
         {%  endfor %}
         </aside>
