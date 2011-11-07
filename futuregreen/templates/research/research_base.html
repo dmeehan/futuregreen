@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block section_title %}: Research{% endblock section_title %}
+{% block body_id %}research{% endblock body_id %}
+{% block content %}
+    {% block main %}{%  endblock main %}
+    {% block aside %}
+        <aside class="third">
+        {%  for project in project_list %}
+            <article>
+                {{ project.name }}
+            </article>
+        {%  endfor %}
+        </aside>
+    {% endblock aside %}
+
+{% endblock content %}
