@@ -992,6 +992,9 @@ ul#project-nav {
     box-sizing: border-box;
 }
 
+.max ul#project-nav {
+    position:static;
+}
 /******** STUDIO *********/
 #studio h1:first-child {
     margin-bottom:20px;
