@@ -3,12 +3,12 @@
 {% block content %}
 <section class="two-thirds">
     <article class="box">
-        {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/image_header.html" %}
+        {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/main.html" %}
     </article>
 </section>
 <section class="third">
     <header class="box">
-        {%  gblock "people_image" for "content.ContentBlock" with "content/contentblock/image_aside.html" %}
+        {%  gblock "people_image" for "content.ContentBlock" with "content/contentblock/aside.html" %}
         <h1 class="overlay">People</h1>
     </header>
     {% for employee in principal_list %}
