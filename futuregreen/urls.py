@@ -17,5 +17,8 @@ urlpatterns = patterns('',
 
     # studio
     (r'^studio/', include('futuregreen.studio.urls')),
+
+     # studio
+    (r'^research/', include('futuregreen.research.urls')),
     
 )

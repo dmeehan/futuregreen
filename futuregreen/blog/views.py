@@ -1,11 +1,13 @@
 # blog/views.py
-from django.views.generic import ListView, DetailView
+
+from django.views.generic import ArchiveIndexView, DateDetailView
 
 from futuregreen.blog.models import *
 
-class EntryDetailView(DetailView):
-    model = Item
+class EntryDetailView(DateDetailView):
+    queryset = Entry._default_manager.live()
+    date_field="date_published"
 
-class EntryListView(ListView):
-    model = Item
+class EntryIndexView(ArchiveIndexView):
+    queryset = Entry._default_manager.live()
 
