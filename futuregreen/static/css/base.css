@@ -511,6 +511,9 @@ h1.overlay {
 }
 
 /*********** PROJECT LIST ************/
+#portfolio aside > nav {
+    font-size:.85em;
+}
 .project-list article.project {
     
 }
