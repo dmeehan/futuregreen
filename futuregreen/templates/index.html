@@ -3,21 +3,9 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
      <div class="full">
-       {% for project in project_list|slice:"0:1" %}
-            <article class="project box sixth" id="{{ project.slug }}">
-               <header>
-                   <a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a>
-               </header>
-
-                {% for image in project.projectimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}">
-                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
-                    {% endif %}
-                {%  endfor %}
-               
-            </article>
-        {% endfor %}
+         <article class="project box sixth"">
+            <img alt="Future Green Studio" src="{{ STATIC_URL }}css/images/logo_square.png" />
+         </article>
          <article class="text box half" id="profile">
              <div>
                 {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
