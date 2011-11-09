@@ -1,4 +1,4 @@
-<article class="box fifth {% for type in project.projecttypes.all %}{{ type.name }}{% endfor %}">
+<article class="box fifth {% for type in project.project_types.all %}{{ type.name }}{% endfor %}">
     <header style="display:none;"><h1>{{ project.name }}</h1></header>
     <section>
         {% for image in project.projectimage_set.all %}
