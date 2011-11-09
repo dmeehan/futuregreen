@@ -2,6 +2,7 @@
 {% block page_title %}: News: {{ item.name }}{% endblock page_title %}
 {% block content %}
 <section class="two-thirds">
+    <h1>News</h1>
     <article class="box" id="news">
         {% for image in item.itemimage_set.all %}
            <img class="flex" alt="{{ item.title }}" src="{{ image.main.url }}" />
@@ -11,4 +12,7 @@
         {{ item.body_html|safe }}
     </article>
 </section>
+<aside class="third">
+     <h1>Archive/h1>
+</aside>
 {% endblock content %}
