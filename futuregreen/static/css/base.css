@@ -175,6 +175,7 @@ body > footer {
     clear:both;
     color:#777;
     text-transform: uppercase;
+    font-size:.85em;
     width:100%;
     overflow: hidden;
     font-family: purista-web-1,purista-web-2, sans-serif;
