@@ -4,15 +4,15 @@
 <section class="two-thirds">
     <h1>News</h1>
     <article class="box" id="news">
+        <p classM="date">{{ item.date_published|date:"M d, Y" }}</p>
+        <h2>{{ item.title }}</h2>
         {% for image in item.itemimage_set.all %}
            <img class="flex" alt="{{ item.title }}" src="{{ image.main.url }}" />
         {%  endfor %}
-        <p class="date">{{ item.date_published|date:"M d, Y" }}</p>
-        <h2>{{ item.title }}</h2>
         {{ item.body_html|safe }}
     </article>
 </section>
 <aside class="third">
-     <h1>Archive/h1>
+     <h1>Archive</h1>
 </aside>
 {% endblock content %}
