@@ -104,6 +104,7 @@ body > header {
     width:100%;
     background: transparent;
     overflow: hidden;
+    font-family: purista-web-1,purista-web-2, sans-serif;
 }
 
 body > header > h1 {
@@ -135,7 +136,6 @@ body > header > nav li {
 }
 
 body > header > nav li a {
-    font-family: purista-web-1,purista-web-2, sans-serif;
     text-transform:uppercase;
     font-size: 1.14285714em;
     letter-spacing:1px;
@@ -178,6 +178,7 @@ body > footer {
     font-size:.85em;
     width:100%;
     overflow: hidden;
+    font-family: purista-web-1,purista-web-2, sans-serif;
 }
 
 body > footer > .contact a:link,
