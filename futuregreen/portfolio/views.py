@@ -31,7 +31,7 @@ class ProjectSizeAscListView(ProjectListView):
     queryset = Project._default_manager.size_asc()
 
 class ProjectSizeListView(ProjectListView):
-    queryset = Project._default_manager.live()
+    queryset = Project._default_manager.live().order_by('area_normalized')
 
 class ProjectSizeDescListView(ProjectListView):
     queryset = Project._default_manager.size_desc()
