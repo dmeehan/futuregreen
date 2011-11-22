@@ -16,7 +16,7 @@
                         {% endfor %}
                         {% for type in landscapetype_list %}
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
-                                <a href="{% url portfolio_projects_by_type type.slug %}"
+                                <a href="{% url portfolio_projects_by_landscape type.slug %}"
                                    title="{{ type.name }}"
                                    class="landscape-type square center">
                                    {{ type.alternate_title }}
