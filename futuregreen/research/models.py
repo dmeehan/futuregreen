@@ -13,7 +13,7 @@ from images.models import RelatedImageAutoBase
 
 class Article(ArticleBase):
     """
-        An article entry for the research
+        A research article authored by Future Green Studio
     """
     enable_comments = models.BooleanField(default=True)
     url = models.URLField(blank=True)
@@ -34,7 +34,7 @@ class Article(ArticleBase):
     
 class ArticleImage(RelatedImageAutoBase):
     """
-        Images for a research entry.
+        Images for a research article.
     """
-    entry = models.ForeignKey(Entry)
+    article = models.ForeignKey(Entry)
 
