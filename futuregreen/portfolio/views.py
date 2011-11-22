@@ -48,7 +48,7 @@ class ProjectCompletedListView(ProjectListView):
 class ProjectProjectTypeListView(ProjectListView):
     def get_queryset(self):
         project_type = get_object_or_404(ProjectType, slug=self.args[0])
-        return Project._default_manager.filter(project_types=project_type)
+        return Project._default_manager.live().filter(project_types=project_type)
 
 class ProjectLandscapeTypeListView(ProjectListView):
     def get_queryset(self):
