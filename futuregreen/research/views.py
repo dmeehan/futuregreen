@@ -1,4 +1,4 @@
-# blog/views.py
+# research/views.py
 
 from django.views.generic import ArchiveIndexView, DateDetailView
 
