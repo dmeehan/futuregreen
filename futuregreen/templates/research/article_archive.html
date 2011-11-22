@@ -5,6 +5,9 @@
         {% load generic_flatblocks %}
         {%  gblock "research_title" for "content.ContentBlock" with "content/contentblock/main.html" %}
     </article>
+    {%  for article in article_list %}
+        {{ article.title }}
+    {% endfor %}
 </section>
 <section class="third">
    
