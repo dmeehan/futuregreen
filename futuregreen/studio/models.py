@@ -29,5 +29,5 @@ class NewsItemImage(RelatedImageAutoBase):
     """
         Images for a research entry.
     """
-    item = models.ForeignKey(Item)
+    news_item = models.ForeignKey(NewsItem)
 
