@@ -6,7 +6,7 @@
                 <nav>
                     <ul class="categories">
                         {% for type in projecttype_list %}
-                            <li {% if type.slug == slug %}class="active"{% endif %}>
+                            <li {% if type.slug == path %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }}"
                                    class="project-type square center">
@@ -15,7 +15,7 @@
                             </li>
                         {% endfor %}
                         {% for type in landscapetype_list %}
-                            <li {% if type.slug == slug %}class="active"{% endif %}>
+                            <li {% if type.slug == path %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }}"
                                    class="landscape-type square center">
