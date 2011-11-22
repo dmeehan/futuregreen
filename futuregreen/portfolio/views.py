@@ -14,7 +14,7 @@ class ProjectDetailView(DetailView):
     model = Project
 
 class ProjectListView(ListView):
-    queryset = Project._default_manager.live()
+    queryset = Project._default_manager.filter(status=Project.STATUS_LIVE)
     paginate_by = settings.PROJECT_PAGINATE_BY
 
     def get_context_data(self, **kwargs):
