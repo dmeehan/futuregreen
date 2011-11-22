@@ -53,10 +53,12 @@ class TypeDetailView(CategoryDetailView):
         context['landscapetype_list'] = LandscapeType._default_manager.all()
         return context
 
-class ProjectProjectTypeDetailView(TypeDetailView):
+class ProjectTypeDetailView(TypeDetailView):
     model = ProjectType
+    template_name = 'portfolio/projects_by_type.html'
 
 
-class ProjectLandscapeTypeListView(TypeDetailView):
+class LandscapeTypeListView(TypeDetailView):
     model = LandscapeType
+    template_name = 'portfolio/projects_by_landscape.html'
     
