@@ -6,14 +6,10 @@
                 <nav>
                     <ul class="categories">
                         {% for type in projecttype_list %}
-                            <li>
+                            <li {% if type.slug == slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }}"
-                                   class="
-                                   {% if type.slug == slug %}
-                                   active
-                                   {% endif %}
-                                   project-type square center">
+                                   class="project-type square center">
                                    {{ type.alternate_title }}
                                 </a>
                             </li>
