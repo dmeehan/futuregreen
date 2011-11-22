@@ -3,7 +3,7 @@
 {% block body_id %}home{% endblock body_id %}
 {% block content %}
      <div class="full">
-         <article class="project box sixth"">
+         <article class="project list box sixth"">
             <img alt="Future Green Studio" src="{{ STATIC_URL }}css/images/logo_square.png" />
          </article>
          <article class="text box half" id="profile">
@@ -13,7 +13,7 @@
              </div>
         </article>
         {% for project in project_list|slice:"1:3" %}
-            <article class="project box sixth" id="{{ project.slug }}">
+            <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
@@ -28,7 +28,7 @@
      </div>
     <div class="third">
         {% for project in project_list|slice:"3:7" %}
-            <article class="project box half" id="{{ project.slug }}">
+            <article class="project list box half" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
@@ -43,7 +43,7 @@
     </div>
     <div class="third">
         {% for project in project_list|slice:"7:8" %}
-            <article class="project box full featured" id="{{ project.slug }}">
+            <article class="project list box full featured" id="{{ project.slug }}">
                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
@@ -58,7 +58,7 @@
     </div>
     <div class="third">
         {% for project in project_list|slice:"8:" %}
-           <article class="project box half" id="{{ project.slug }}">
+           <article class="project list box half" id="{{ project.slug }}">
                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                {% for image in project.projectimage_set.all %}
