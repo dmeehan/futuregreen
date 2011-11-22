@@ -2,10 +2,10 @@
 
 from django.contrib import admin
 
-from futuregreen.research.models import Entry, Link, EntryImage, LinkImage
+from futuregreen.research.models import Article, ArticleImage
 
 class ImageInline(admin.StackedInline):
-    model = EntryImage
+    model = ArticleImage
     fields = ('image', 'name', 'caption',
               'is_main', 'crop_horz', 'crop_vert', 'order' )
     extra = 0
@@ -14,12 +14,9 @@ class ImageInline(admin.StackedInline):
     allow_add = True
     sortable_field_name = "order"
 
-class EntryAdmin(admin.ModelAdmin):
+class ArticleAdmin(admin.ModelAdmin):
     inlines = [
        ImageInline,
     ]
 
-admin.site.register(Entry, EntryAdmin)
-admin.site.register(Link)
-admin.site.register(EntryImage)
-admin.site.register(LinkImage)
+admin.site.register(Article, ArticleAdmin)
