@@ -7,28 +7,24 @@
                     <h2 class="box">Project Type</h2>
                     <ul class="categories">
                         {% for type in projecttype_list %}
-                            <li style="float:none; width:100%; text-align: left;">
+                            <li>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }}"
-                                   class="project-type square center"
-                                   style="width:20%;">
+                                   class="project-type square center">
                                    {{ type.alternate_title }}
                                 </a>
-                                <span style="color:#444; font-weight:normal;">{{ type.name }}</span>
                             </li>
                         {% endfor %}
                     </ul>
                      <h2 class="box">Landscape Type</h2>
                      <ul class="categories">
                         {% for type in landscapetype_list %}
-                            <li style="float:none; width:100%; text-align: left;">
-                                <a href="{% url portfolio_projects_by_landscape type.slug %}"
+                            <li>
+                                <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }}"
-                                   class="landscape-type square center"
-                                   style="width:20%;">
-                                    {{ type.alternate_title }}
+                                   class="project-type square center">
+                                   {{ type.alternate_title }}
                                 </a>
-                                <span style="color:#444; font-weight:normal;">{{ type.name }}</span>
                             </li>
                         {% endfor %}
                     </ul>
@@ -38,14 +34,16 @@
             {% endblock filter_nav %}
         </aside>
     {% block main %}
-        <section class="five-sixths">
+        <section class="sixth">
             {% block content_header %}
-                <header class="two-fifths">
+                <header class="full">
                     {% block content_title %}
                     <h1 class="box full">All Projects</h1>
                     {% endblock content_title %}
                 </header>
             {% endblock content_header %}
+        </section>
+        <section class="two-thirds">
             {% block projects %}
             <section class="project-list">
             {% for project in project_list %}

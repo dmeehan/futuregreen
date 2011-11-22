@@ -1,4 +1,4 @@
-<article class="box fifth square {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
+<article class="box quarter square {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
     <header style="display:none"><h1>{{ project.name }}</h1></header>
     <section>
         {% for image in project.projectimage_set.all %}
