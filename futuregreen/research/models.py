@@ -36,5 +36,5 @@ class ArticleImage(RelatedImageAutoBase):
     """
         Images for a research article.
     """
-    article = models.ForeignKey(Entry)
+    article = models.ForeignKey(Article)
 
