@@ -19,4 +19,6 @@ class ArticleAdmin(admin.ModelAdmin):
        ImageInline,
     ]
 
+    prepopulated_fields = {"slug": ("title",)}
+
 admin.site.register(Article, ArticleAdmin)

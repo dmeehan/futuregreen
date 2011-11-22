@@ -19,4 +19,6 @@ class NewsItemAdmin(admin.ModelAdmin):
        NewsImageInline,
     ]
 
+    prepopulated_fields = {"slug": ("title",)}
+
 admin.site.register(NewsItem, NewsItemAdmin)
