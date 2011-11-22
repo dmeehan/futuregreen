@@ -489,6 +489,10 @@ h1.overlay {
     box-sizing: border-box;
 }
 
+.categories li.active {
+    width:50%;
+}
+
 .categories li a {
         color:#fff;
         float:left;
