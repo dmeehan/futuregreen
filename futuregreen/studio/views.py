@@ -3,7 +3,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
-from futuregreen.news.models import NewsItem
+from futuregreen.studio.models import NewsItem
 from futuregreen.people.models import Employee
 from futuregreen.portfolio.models import Project
 
