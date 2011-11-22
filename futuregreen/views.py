@@ -3,7 +3,7 @@
 from django.shortcuts import render
 
 from futuregreen.portfolio.models import Project
-from futuregreen.news.models import Newsitem
+from futuregreen.news.models import NewsItem
 
 def index(request):
     projects = Project._default_manager.live().filter(featured=True).order_by('?')
