@@ -1,3 +1,17 @@
 {% extends "base.html" %}
 {% block section_title %}: Research{% endblock section_title %}
 {% block body_id %}research{% endblock body_id %}
+{% block content %}
+{% block main %}
+{% endblock main %}
+{% block aside %}
+    <section class="third">
+        <h2>Latest Projects</h2>
+        <h2>Latest Articles</h2>
+        {% get_latest_articles 10 as article_list %}
+        {%  for article in article_list %}
+            <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+        {%  endfor %}
+    </section>
+{% endblock aside %}
+{% endblock content %}
