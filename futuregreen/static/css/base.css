@@ -298,6 +298,12 @@ h1.overlay {
     color:#fff;"
 }
 
+
+article.project.list {
+    position:relative;
+    background: transparent;
+}
+
 article.project.list header {
     display:none;
     opacity:0;
@@ -411,17 +417,6 @@ article.project.list img {
     margin-bottom:10px;
 }
 
-
-#home article.project {
-    position:relative;
-    background: transparent;
-}
-
-
-
-
-#home article.project.featured {
-}
 
 #home article#news {
     clear:both;
