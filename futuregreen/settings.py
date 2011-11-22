@@ -100,7 +100,7 @@ MIDDLEWARE_CLASSES = (
 
 INSTALLED_APPS = (
     # admin
-    #'grappelli.dashboard',
+    'grappelli.dashboard',
     'grappelli',
     'django.contrib.admin',
     'django.contrib.admindocs',
