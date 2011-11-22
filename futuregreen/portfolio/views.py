@@ -58,7 +58,7 @@ class ProjectTypeDetailView(TypeDetailView):
     template_name = 'portfolio/projects_by_type.html'
 
 
-class LandscapeTypeListView(TypeDetailView):
+class LandscapeTypeDetailView(TypeDetailView):
     model = LandscapeType
     template_name = 'portfolio/projects_by_landscape.html'
     

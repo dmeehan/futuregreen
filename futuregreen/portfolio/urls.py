@@ -7,7 +7,6 @@ from django.views.generic import ListView, DetailView
 from categories.views import CategoryDetailView, CategoryRelatedList
 
 from futuregreen.portfolio.views import *
-from futuregreen.portfolio.models import ProjectType
 
 urlpatterns = patterns('',
     url(r'^projects/$', ProjectListView.as_view(), name='portfolio_project_list'),
