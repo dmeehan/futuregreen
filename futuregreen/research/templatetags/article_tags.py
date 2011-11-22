@@ -46,4 +46,4 @@ Example usage::
     if not m:
         raise template.TemplateSyntaxError, "%s tag had invalid arguments" % tag_name
     format_string, var_name = m.groups()
-    return Latestarticles(format_string, var_name)
+    return LatestArticles(format_string, var_name)
