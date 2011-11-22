@@ -1,4 +1,4 @@
-# blog/models.py  
+# research/models.py
 
 from django.conf import settings
 from django.db import models
@@ -10,20 +10,13 @@ from categories.models import Category
 from blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase
 
-class Link(LinkBase):
-    """
-        A link entry for the blog
-    """
-    # taxonomy
-    tags = TaggableManager(blank=True)
 
-
-class Entry(ArticleBase):
+class Article(ArticleBase):
     """
-        An article entry for the blog
+        An article entry for the research
     """
     enable_comments = models.BooleanField(default=True)
-    links = models.ManyToManyField(Link, blank=True)
+    url = models.URLField(blank=True)
 
     # taxonomy
     tags = TaggableManager(blank=True)
@@ -31,7 +24,7 @@ class Entry(ArticleBase):
 
     @permalink
     def get_absolute_url(self):
-        return ('blog_entry_detail', None, {
+        return ('research_article_detail', None, {
             'year': self.date_published.year,
             'month': self.date_published.strftime('%b').lower(),
             'day': self.date_published.day,
@@ -39,16 +32,9 @@ class Entry(ArticleBase):
         })
 
     
-class EntryImage(RelatedImageAutoBase):
+class ArticleImage(RelatedImageAutoBase):
     """
-        Images for a blog entry.
+        Images for a research entry.
     """
     entry = models.ForeignKey(Entry)
 
-
-
-class LinkImage(RelatedImageAutoBase):
-    """
-        Images for a link.
-    """
-    link = models.ForeignKey(Link)

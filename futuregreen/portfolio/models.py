@@ -178,7 +178,8 @@ class PhysicalMixin(models.Model):
     @property
     def relative_size(self):
         max = self._default_manager.live().aggregate(Max('area_normalized'))['area_normalized__max']
-        return (self.area_normalized/max)*100
+        rel =  (self.area_normalized/max)*100
+        
 
     def save(self, force_insert=False, force_update=False):
         self.area_normalized = self.convert(self.UNIT_SQUAREFOOT)

@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from futuregreen.blog.models import Entry, Link, EntryImage, LinkImage
+from futuregreen.research.models import Entry, Link, EntryImage, LinkImage
 
 class ImageInline(admin.StackedInline):
     model = EntryImage

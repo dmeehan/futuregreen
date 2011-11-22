@@ -6,7 +6,7 @@ from django import template
 from django.conf import settings
 from django.db import models
 
-Entry = models.get_model('blog', 'entry')
+Entry = models.get_model('research', 'entry')
 
 register = template.Library()
 

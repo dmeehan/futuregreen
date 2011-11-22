@@ -1,11 +1,11 @@
-# news/admin.py
+# studio/admin.py
 
 from django.contrib import admin
 
-from futuregreen.news.models import Item, ItemImage
+from futuregreen.studio.models import NewsItem, NewsItemImage
 
-class ImageInline(admin.StackedInline):
-    model = ItemImage
+class NewsImageInline(admin.StackedInline):
+    model = NewsItemImage
     fields = ('image', 'name', 'caption',
               'is_main', 'crop_horz', 'crop_vert', 'order' )
     extra = 0
@@ -14,10 +14,9 @@ class ImageInline(admin.StackedInline):
     allow_add = True
     sortable_field_name = "order"
 
-class ItemAdmin(admin.ModelAdmin):
+class NewsItemAdmin(admin.ModelAdmin):
     inlines = [
        ImageInline,
     ]
 
-admin.site.register(Item, ItemAdmin)
-admin.site.register(ItemImage)
+admin.site.register(NewsItem, NewsItemAdmin)

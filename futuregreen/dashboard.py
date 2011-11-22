@@ -50,7 +50,7 @@ class CustomIndexDashboard(Dashboard):
                 modules.ModelList(
                     css_classes=('collapse open',),
                     title='Blog',
-                    models=('futuregreen.blog.*',)
+                    models=('futuregreen.research.*',)
                 ),
             ]
         ))

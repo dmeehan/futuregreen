@@ -129,10 +129,10 @@ INSTALLED_APPS = (
 
     # local apps
     'futuregreen.portfolio',
-    'futuregreen.blog',
+    'futuregreen.research',
     'futuregreen.people',
     'futuregreen.content',
-    'futuregreen.news',
+    'futuregreen.studio',
     'futuregreen.templatetags',
 )
 

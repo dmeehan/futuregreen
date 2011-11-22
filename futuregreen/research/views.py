@@ -1,12 +1,12 @@
-# research/views.py
+# blog/views.py
 
-from django.shortcuts import render
+from django.views.generic import ArchiveIndexView, DateDetailView
 
-from futuregreen.blog.models import Entry
-from futuregreen.portfolio.models import Project
+from futuregreen.research.models import Article
 
-def index(request):
-    entry = Entry._default_manager.latest('date_published')
-    project_list = Project._default_manager.live().filter(project_types__name='Research')
-    return render(request, 'research/research_index.html', {'project_list': project_list,
-                                                        'entry': entry })
+class ArticleyDetailView(DateDetailView):
+    queryset = Article._default_manager.live()
+    date_field="date_published"
+
+class ArticleIndexView(ArchiveIndexView):
+    queryset = Article._default_manager.live()
