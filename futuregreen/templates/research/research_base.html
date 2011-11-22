@@ -6,6 +6,7 @@
 {% endblock main %}
 {% block aside %}
     <section class="third">
+        {% load article_tags %}
         <h2>Latest Projects</h2>
         <h2>Latest Articles</h2>
         {% get_latest_articles 10 as article_list %}
