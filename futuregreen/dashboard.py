@@ -39,18 +39,18 @@ class CustomIndexDashboard(Dashboard):
                 ),
                 modules.ModelList(
                     css_classes=('collapse open',),
+                    title='Studio',
+                    models=('futuregreen.studio.*',)
+                ),
+                modules.ModelList(
+                    css_classes=('collapse open',),
+                    title='Research',
+                    models=('futuregreen.research.*',)
+                ),
+                modules.ModelList(
+                    css_classes=('collapse open',),
                     title='Content Blocks',
                     models=('futuregreen.content.*',)
-                ),
-                modules.ModelList(
-                    css_classes=('collapse open',),
-                    title='News',
-                    models=('futuregreen.news.*',)
-                ),
-                modules.ModelList(
-                    css_classes=('collapse open',),
-                    title='Blog',
-                    models=('futuregreen.research.*',)
                 ),
             ]
         ))
