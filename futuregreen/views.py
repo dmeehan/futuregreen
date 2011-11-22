@@ -1,8 +1,9 @@
 # futuregreen/views.py
+
 from django.shortcuts import render
 
 from futuregreen.portfolio.models import Project
-from futuregreen.news.models import Item
+from futuregreen.news.models import Newsitem
 
 def index(request):
     projects = Project._default_manager.live().filter(featured=True).order_by('?')
