@@ -6,9 +6,10 @@
 {% endblock main %}
 {% block aside %}
     <section class="third">
-        {% load article_tags %}
         <h2>Latest Projects</h2>
+        {% load category_tags %}
         <h2>Latest Articles</h2>
+        {% load article_tags %}
         <ul>
         {% get_latest_articles 10 as article_list %}
         {%  for article in article_list %}

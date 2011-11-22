@@ -67,7 +67,7 @@ class ProjectBase(models.Model):
     
     class Meta:
         abstract = True
-        ordering = ('-date_end','name',)
+        ordering = ('date_end','name',)
 
     @permalink
     def get_absolute_url(self):
