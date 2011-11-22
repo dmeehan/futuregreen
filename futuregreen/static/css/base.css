@@ -491,6 +491,7 @@ h1.overlay {
 
 .categories li.active {
     width:50%;
+    font-size:2em;
 }
 
 .categories li a {
