@@ -10,8 +10,6 @@ from categories.views import CategoryDetailView, CategoryRelatedList
 
 from futuregreen.portfolio.models import Project, ProjectType, LandscapeType
 
-
-
 class ProjectDetailView(DetailView):
     model = Project
 
@@ -45,8 +43,20 @@ class ProjectCurrentListView(ProjectListView):
 class ProjectCompletedListView(ProjectListView):
     pass
 
-class ProjectProjectTypeListView(CategoryDetailView):
+class TypeDetailView(CategoryDetailView):
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(TypeDetailView, self).get_context_data(**kwargs)
+        # Add in a QuerySet of all the categories
+        context['projecttype_list'] = ProjectType._default_manager.all()
+        context['landscapetype_list'] = LandscapeType._default_manager.all()
+        return context
+
+class ProjectProjectTypeDetailView(TypeDetailView):
     model = ProjectType
 
-class ProjectLandscapeTypeListView(CategoryDetailView):
+
+class ProjectLandscapeTypeListView(TypeDetailView):
     model = LandscapeType
+    
