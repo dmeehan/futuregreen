@@ -7,11 +7,7 @@
     </article>
 </section>
 <section class="third">
-    {% load category_tags %}
-    {% get_latest_objects_by_category research portfolio project date_published 5 as project_list %}
-    {%  for project in project_list %}
-        {{ project.name }}
-    {%  endfor %}
+   
 </section>
 
 {% endblock content %}
