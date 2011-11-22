@@ -16,7 +16,7 @@ class NewsImageInline(admin.StackedInline):
 
 class NewsItemAdmin(admin.ModelAdmin):
     inlines = [
-       ImageInline,
+       NewsImageInline,
     ]
 
 admin.site.register(NewsItem, NewsItemAdmin)
