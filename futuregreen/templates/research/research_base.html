@@ -9,10 +9,12 @@
         {% load article_tags %}
         <h2>Latest Projects</h2>
         <h2>Latest Articles</h2>
+        <ul>
         {% get_latest_articles 10 as article_list %}
         {%  for article in article_list %}
-            <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+            <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
         {%  endfor %}
+        </ul>
     </section>
 {% endblock aside %}
 {% endblock content %}
