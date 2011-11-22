@@ -20,7 +20,7 @@ urlpatterns = patterns('',
 
     url(r'^projects/projecttypes/$', ListView.as_view(queryset = ProjectType._default_manager.filter(level=0)),
         name = 'categories_tree_list'),
-    url(r'^projects/projecttypes/(?P<path>.+)/$',
+    url(r'^projects/projecttypes/(?P<slug>[-\w]+))/$',
         ProjectProjectTypeListView.as_view(template_name = 'portfolio/projects_by_type.html'),
         name = 'portfolio_projects_by_type'),
     url(r'^projects/landscapetypes/(?P<path>.+)/$',
