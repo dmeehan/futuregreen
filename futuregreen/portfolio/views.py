@@ -46,9 +46,7 @@ class ProjectCompletedListView(ProjectListView):
     pass
 
 class ProjectProjectTypeListView(CategoryDetailView):
-    queryset = Project._default_manager.live()
+    model = ProjectType
 
-class ProjectLandscapeTypeListView(ProjectListView):
-    def get_queryset(self):
-        landscape_type = get_object_or_404(LandscapeType, slug=self.args[0])
-        return Project._default_manager.filter(landscape_types=landscape_type)
+class ProjectLandscapeTypeListView(CategoryDetailView):
+    model = LandscapeType
