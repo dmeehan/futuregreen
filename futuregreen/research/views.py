@@ -10,3 +10,4 @@ class ArticleyDetailView(DateDetailView):
 
 class ArticleIndexView(ArchiveIndexView):
     queryset = Article._default_manager.live()
+    date_field="date_published"
