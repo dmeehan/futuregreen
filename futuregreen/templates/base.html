@@ -88,28 +88,7 @@
     {% endblock js_frameworks %}
 
     {% block js_global %}
-    <script type="text/javascript">
-        function Square() {
-                $('.square').each(function(){
-                    width = $(this).width();
-                    $(this).css('height',width);
-                });
-                $('.center').each(function(){
-                    width = $(this).width();
-                    $(this).css('line-height',width + "px");
-                });
-        }
-
-
-        $(document).ready(function() {
-            Square();
-        });
-
-        $(window).resize(function() {
-            Square();
-        });
-
-    </script>
+    
     {% endblock js_global %}
 
     {% block js_local %}
