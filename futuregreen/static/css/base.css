@@ -285,16 +285,17 @@ body > footer > .contact {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
- img.flex {
+
+img.flex {
      width:100%;
      display:block;
- }
+}
 
 h1.overlay {
     padding: 0 0 0 0;
     font-size:2.4em;
     line-height:1em;
-    margin:-.98em 0 0 10px;
+    margin:-.97em 0 0 10px;
     color:#fff;"
 }
 
