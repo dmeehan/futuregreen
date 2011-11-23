@@ -7,11 +7,11 @@
     </article>
     {%  for article in latest %}
     <article>
-        <section class="meta box quarter">
+        <section class="meta box sixth">
             <p>{{ article.date_published }}</p>
             <p>{{ artcile.posted_by }}</p>
         </section>
-        <section class="meta box three-quarters">
+        <section class="meta box five-sixths">
             <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
             {{ article.excerpt_html|safe }}
         <section>
