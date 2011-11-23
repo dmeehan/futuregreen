@@ -33,3 +33,15 @@
     {% endfor %}
 </section>
 {% endblock main%}
+
+{% block js_local %}
+        <script type="text/javascript">
+         $(document).ready(function() {
+            Square();
+        });
+
+        $(window).resize(function() {
+            Square();
+        });
+     </script>
+    {% endblock js_local %}
