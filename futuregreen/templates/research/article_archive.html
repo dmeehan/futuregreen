@@ -8,7 +8,10 @@
     {%  for article in latest %}
     <article>
         <section class="meta box sixth">
-            <p>{{ article.date_published }}</p>
+            <p class="date square center">
+                <span class="month">{{ news.date_published|date:"M" }}</span>
+                <span class="day">{{ news.date_published|date:"d" }}</span>
+            </p>
             <p>{{ artcile.posted_by }}</p>
         </section>
         <section class="meta box five-sixths">
