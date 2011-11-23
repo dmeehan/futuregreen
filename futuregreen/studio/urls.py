@@ -10,6 +10,6 @@ urlpatterns = patterns('',
     (r'^people/', include('futuregreen.people.urls')),
     url(r'^news/', ListView.as_view(model=NewsItem, context_object_name = "news_list"), name = 'newsitem_list'),
     url(r'^news/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$',
-        DateDetailView.as_view(model=NewsItem, context_object_name = "item", date_field="date_published"),
+        DateDetailView.as_view(model=NewsItem, context_object_name = "newsitem", date_field="date_published"),
         name = 'newsitem_detail'),
 )
