@@ -376,15 +376,15 @@ article.project.list img {
 
 p.date {
     display:table;
-}
-
-p.date ul {
     background: #ccc;
     color:#fff;
     text-transform: uppercase;
     font-weight: bold;
+     text-align: center;
+}
+
+p.date ul {
     display: table-cell; vertical-align: middle;
-    text-align: center;
 }
 
 p.date li {
