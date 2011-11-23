@@ -3,7 +3,7 @@
 <section class="main two-thirds">
     <article class="box">
         {% load generic_flatblocks %}
-        {%  gblock "research_title" for "content.ContentBlock" with "content/contentblock/main.html" %}
+        {%  gblock "research_title" for "content.ContentBlock" %}
     </article>
     {%  for article in latest %}
     <article>
