@@ -1029,7 +1029,7 @@ ul#project-nav {
     padding-top:20px;
 }
 
-#studio p.date {
+p.date {
     background: #ccc;
     color:#fff;
     text-transform: uppercase;
@@ -1038,17 +1038,17 @@ ul#project-nav {
     text-align: center;
 }
 
-#studio p.date span {
+p.date span {
     display:block;
     font-family: Helvetica, Arial, sans-serif;
     line-height:1em;
 }
 
-#studio p.date .day {
+p.date .day {
     font-size: 2.4em;
 }
 
-#studio p.date .month {
+p.date .month {
     font-size: .85em;
 }
 
