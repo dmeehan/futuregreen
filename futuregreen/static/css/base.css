@@ -1072,6 +1072,11 @@ ul#project-nav {
     background:url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
+#research ul.tags {
+    margin: 0;
+    padding: 0;
+}
+
 #research ul.tags li {
     display:inline;
     font-size:.85em;
