@@ -45,17 +45,24 @@
 <section class="third">
     <article class="box" id="news">
         <div>
-        {% for image in news.newsitemimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{{ news.get_absolute_url }}">
-                            <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
-                    {% endif %}
-        {%  endfor %}
-        <h1 class="overlay">News</h1>
-        <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-        <h2>{{ news.title }}</h2>
-        {{ news.excerpt_html|safe }}
-        <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+            {% for image in news.newsitemimage_set.all %}
+                        {% if image.is_main %}
+                            <a href="{{ news.get_absolute_url }}">
+                                <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
+                        {% endif %}
+            {%  endfor %}
+            <h1 class="overlay">News</h1>
+            <section class="box third">
+                <p class="date">
+                    <span class="month">{{ news.date_published|date:"M" }}</span>
+                    <span class="day">{{ news.date_published|date:"d" }}</span>
+                </p>
+            </section>
+            <section class="box two-thirds">
+                <h2>{{ news.title }}</h2>
+                {{ news.excerpt_html|safe }}
+                <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+            </section>
         </div>
     </article>
 </section>
