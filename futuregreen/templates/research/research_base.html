@@ -2,6 +2,10 @@
 {% block section_title %}: Research{% endblock section_title %}
 {% block body_id %}research{% endblock body_id %}
 {% block content %}
+    <article class="box two-thirds">
+        {% load generic_flatblocks %}
+        {%  gblock "research_title" for "content.ContentBlock" %}
+    </article>
 {% block main %}
 {% endblock main %}
 {% block aside %}
