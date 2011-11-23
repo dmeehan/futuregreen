@@ -374,6 +374,33 @@ article.project.list img {
     display:block;
 }
 
+p.date {
+    display:table;
+}
+
+p.date ul {
+    background: #ccc;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: table-cell; vertical-align: middle;
+    text-align: center;
+}
+
+p.date li {
+    display:block;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height:1em;
+}
+
+p.date .day {
+    font-size: 2.4em;
+}
+
+p.date .month {
+    font-size: .85em;
+}
+
 /********** HOMEPAGE ***********/
 #home .content > div {
     overflow: hidden;
@@ -1035,29 +1062,6 @@ ul#project-nav {
 
 #studio .content .main article section.body {
     padding-top:20px;
-}
-
-p.date {
-    background: #ccc;
-    color:#fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    /*display: table-cell; vertical-align: middle;*/
-    text-align: center;
-}
-
-p.date span {
-    display:block;
-    font-family: Helvetica, Arial, sans-serif;
-    line-height:1em;
-}
-
-p.date .day {
-    font-size: 2.4em;
-}
-
-p.date .month {
-    font-size: .85em;
 }
 
 

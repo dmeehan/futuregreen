@@ -9,8 +9,10 @@
     <article>
         <section class="box eighth">
             <p class="date square">
-                <span class="month">{{ article.date_published|date:"M" }}</span>
-                <span class="day">{{ article.date_published|date:"d" }}</span>
+                <ul>
+                    <li class="month">{{ article.date_published|date:"M" }}</li>
+                    <li class="day">{{ article.date_published|date:"d" }}</li>
+                </ul>
             </p>
             <p>{{ article.posted_by }}</p>
         </section>
