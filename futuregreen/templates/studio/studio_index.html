@@ -47,7 +47,7 @@
         <div>
         {% for image in news.newsitemimage_set.all %}
                     {% if image.is_main %}
-                        <a href="{% url news_item_list %}">
+                        <a href="{% url newsitem_list %}">
                             <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
                     {% endif %}
         {%  endfor %}
