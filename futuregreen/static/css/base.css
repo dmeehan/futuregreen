@@ -376,6 +376,7 @@ article.project.list img {
 
 div.date {
     display:table;
+    width:100%;
 }
 
 div.date ul {
@@ -385,7 +386,6 @@ div.date ul {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    width:100%;
 }
 
 div.date li {
