@@ -6,11 +6,15 @@
         {%  gblock "research_title" for "content.ContentBlock" with "content/contentblock/main.html" %}
     </article>
     {%  for article in latest %}
-    <article class="box">
-        <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
-        <p>{{ article.date_published }}</p>
-        <p>{{ artcile.posted_by }}</p>
-        {{ article.excerpt_html|safe }}
+    <article>
+        <section class="meta box quarter">
+            <p>{{ article.date_published }}</p>
+            <p>{{ artcile.posted_by }}</p>
+        </section>
+        <section class="meta box three-quarters">
+            <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+            {{ article.excerpt_html|safe }}
+        <section>
     </article>
     {% endfor %}
 </section>
