@@ -375,7 +375,7 @@ article.project.list img {
 }
 
 div.date {
-    display:table;
+    /*display:table;*/
     background: #ccc;
     color:#fff;
     text-transform: uppercase;
@@ -384,7 +384,7 @@ div.date {
 }
 
 div.date ul {
-    display: table-cell; vertical-align: middle;
+    /*display: table-cell; vertical-align: middle;*/
 }
 
 div.date li {
