@@ -1030,19 +1030,11 @@ ul#project-nav {
 }
 
 #studio p.date {
-    overflow: auto;
-    float:left;
-    width:50%;
-    display: table;
-}
-
-
-#studio p.date {
     background: #ccc;
     color:#fff;
     text-transform: uppercase;
     font-weight: bold;
-    display: table-cell; vertical-align: middle;
+    /*display: table-cell; vertical-align: middle;*/
     text-align: center;
 }
 
