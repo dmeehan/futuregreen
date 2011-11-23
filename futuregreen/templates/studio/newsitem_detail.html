@@ -2,7 +2,6 @@
 {% block page_title %}: News: {{ newsitem.name }}{% endblock page_title %}
 {% block content %}
 <section class="two-thirds">
-    <h1>News</h1>
     <article class="box" id="news">
         <section class="quarter">
             <p class="date">
@@ -10,7 +9,7 @@
                 <span class="day">{{ news.date_published|date:"d" }}</span>
             </p>
         </section>
-        <h2>{{ news.title }}</h2>
+        <h1>{{ news.title }}</h1>
         {% for image in news.newsitemimage_set.all %}
            <img class="flex" alt="{{ news.title }}" src="{{ image.main.url }}" />
         {%  endfor %}
