@@ -19,7 +19,7 @@
             <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
             <ul class="tags">
                 {% for tag in article.tags.all %}
-                <li> {{ tag.name }} </li>
+                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
                 {% endfor %}
             </ul>
             {{ article.excerpt_html|safe }}
