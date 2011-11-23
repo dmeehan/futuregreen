@@ -18,6 +18,7 @@
         <section class="box seven-eighths">
             <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
             {{ article.excerpt_html|safe }}
+            <p class="tease"><a href="{{ article.get_absolute_url }}">Read More</a></p>
         <section>
     </article>
     {% endfor %}
