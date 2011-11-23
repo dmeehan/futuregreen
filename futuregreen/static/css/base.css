@@ -332,6 +332,7 @@ article.project.list:hover header {
 }
 
 article.project.list header h1 {
+    font-size: 1.28571em;
     line-height:1em;
     /*background:rgba(0,0,0,0.3);*/
     -moz-box-shadow: inset 0px 0px 96px rgba(0,0,0,0.9);
@@ -349,7 +350,7 @@ article.project.list header h1 {
 }
 
 article.project.list.featured header h1 {
-    font-size:3.42856em;
+    font-size:2.56642em;
     -moz-box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
     -webkit-box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
     box-shadow: inset 0px 0px 144px rgba(0,0,0,0.9);
