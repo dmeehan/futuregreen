@@ -198,6 +198,10 @@ body > footer > .contact {
     margin-right:20px;
 }
 
+.eighth {
+    width:12.5%; float:left;
+}
+
 .sixth {
     width:16.66667%; float:left;
 }
@@ -232,6 +236,10 @@ body > footer > .contact {
 
 .five-sixths {
     width:83.33333%; float:left;
+}
+
+.seven-eighths {
+    width:87.5%; float:left;
 }
 
 .full {
