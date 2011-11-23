@@ -8,9 +8,9 @@
     {%  for article in latest %}
     <article>
         <section class="box sixth">
-            <p>
-                <span>{{ article.date_published|date:"M" }}</span>
-                <span>{{ article.date_published|date:"d" }}</span>
+            <p class="date">
+                <span class="month">{{ article.date_published|date:"M" }}</span>
+                <span class="day">{{ article.date_published|date:"d" }}</span>
             </p>
             <p>{{ article.posted_by }}</p>
         </section>
