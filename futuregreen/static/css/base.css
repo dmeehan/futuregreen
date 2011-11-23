@@ -374,7 +374,7 @@ article.project.list img {
     display:block;
 }
 
-p.date {
+div.date {
     /*display:table;*/
     background: #ccc;
     color:#fff;
@@ -383,21 +383,21 @@ p.date {
     text-align: center;
 }
 
-p.date ul {
+div.date ul {
     /*display: table-cell; vertical-align: middle;*/
 }
 
-p.date li {
+div.date li {
     display:block;
     font-family: Helvetica, Arial, sans-serif;
     line-height:1em;
 }
 
-p.date .day {
+div.date .day {
     font-size: 2.4em;
 }
 
-p.date .month {
+div.date .month {
     font-size: .85em;
 }
 
