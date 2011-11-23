@@ -375,16 +375,16 @@ article.project.list img {
 }
 
 div.date {
-    /*display:table;*/
+    display:table;
+}
+
+div.date ul {
+    display: table-cell; vertical-align: middle;
     background: #ccc;
     color:#fff;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-}
-
-div.date ul {
-    /*display: table-cell; vertical-align: middle;*/
 }
 
 div.date li {
