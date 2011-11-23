@@ -8,7 +8,19 @@
     <section class="third">
         <h2>Latest Projects</h2>
             {% for project in project_list %}
-                {{ project.name }}
+                <article class="project list box quarter {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
+                    <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+                    <section>
+                        {% for image in project.projectimage_set.all %}
+                            {% if image.is_main %}
+                                <a href="{{ project.get_absolute_url }}">
+                                    <img class="flex" src="{{ image.list.url }}"
+                                         alt="{{ image.caption }}" />
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </section>
+                </article>
             {% endfor %}
         <h2>Latest Articles</h2>
         {% load article_tags %}
