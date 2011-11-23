@@ -7,8 +7,9 @@
 {% block aside %}
     <section class="third">
         <h2>Latest Projects</h2>
-        {% load category_tags %}
-        {% get_latest_objects_by_category research portfolio project date_published 10 as project_list %}
+            {% for project in project_list %}
+                {{ project.name }}
+            {% endfor %}
         <h2>Latest Articles</h2>
         {% load article_tags %}
         <ul>
