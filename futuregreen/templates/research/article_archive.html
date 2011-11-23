@@ -9,10 +9,10 @@
     <article>
         <section class="box sixth">
             <p>
-                <span>{{ news.date_published|date:"M" }}</span>
-                <span>{{ news.date_published|date:"d" }}</span>
+                <span>{{ article.date_published|date:"M" }}</span>
+                <span>{{ article.date_published|date:"d" }}</span>
             </p>
-            <p>{{ artcile.posted_by }}</p>
+            <p>{{ article.posted_by }}</p>
         </section>
         <section class="box five-sixths">
             <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
