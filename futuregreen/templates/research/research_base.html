@@ -10,7 +10,7 @@
 {% endblock main %}
 {% block aside %}
     <section class="third">
-        <h2 class="box">Research Projects</h2>
+        <h2 class="box">Projects</h2>
             {% for project in project_list %}
                 <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
                     <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
@@ -26,8 +26,9 @@
                     </section>
                 </article>
             {% endfor %}
-        <h2 style="clear:both;" class="box">Recent Articles</h2>
+        <h2 style="clear:both;" class="box">Article Archive</h2>
         {% load article_tags %}
+        <h3>Recent Articles</h3>
         <ul class="box">
         {% get_latest_articles 10 as article_list %}
         {%  for article in article_list %}
