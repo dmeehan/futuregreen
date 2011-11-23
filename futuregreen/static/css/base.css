@@ -1050,7 +1050,8 @@ ul#project-nav {
     top:0;
     right:0;
 }
-}
+
+
 /******** STUDIO *********/
 #studio h1:first-child {
     margin-bottom:20px;
@@ -1063,6 +1064,15 @@ ul#project-nav {
 #studio .content .main article section.body {
     padding-top:20px;
 }
+
+
+/******** RESEARCH *********/
+
+#research .content {
+    background:url('images/corner-bg-bottom-right.png') no-repeat right bottom;
+}
+
+
 
 
 /******** MEDIA QUERIES **********/
