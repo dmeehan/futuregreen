@@ -14,14 +14,23 @@
                     <li class="day">{{ article.date_published|date:"d" }}</li>
                 </ul>
             </div>
+            {% if forloop.first %}
+                <ul class="tags">
+                {% for tag in article.tags.all %}
+                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
+                {% endfor %}
+            {% endif %}
+            </ul>
         </section>
         <section class="box seven-eighths">
             <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+            {% if not forloop.first %}
             <ul class="tags">
                 {% for tag in article.tags.all %}
                 <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
                 {% endfor %}
             </ul>
+            {% endif %}
             {% if forloop.first %}
             {{ article.body_html|safe }}
             {%  else %}
