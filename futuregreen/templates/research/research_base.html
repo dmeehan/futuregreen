@@ -28,7 +28,7 @@
             {% endfor %}
         <h2 style="clear:both;" class="box">Article Archive</h2>
         {% load article_tags %}
-        <h3>Recent Articles</h3>
+        <h3 class="box">Recent Articles</h3>
         <ul class="box">
         {% get_latest_articles 10 as article_list %}
         {%  for article in article_list %}
