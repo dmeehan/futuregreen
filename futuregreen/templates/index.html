@@ -70,7 +70,10 @@
         </article>
      </div>
     <div class="half">
-        {% for project in project_list|slice:"3:6" %}
+        <article class="text box third">
+                <div></div>
+        </article>
+        {% for project in project_list|slice:"3:5" %}
             <article class="project list box third" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
