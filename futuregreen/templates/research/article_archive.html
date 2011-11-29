@@ -27,7 +27,7 @@
             </ul>
             {{ article.body_html|safe }}
             {%  for item in article.articleproject_set.all %}
-                <article class="project list">
+                <article class="project related">
                     <figure class="seventh">
                         {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
@@ -39,7 +39,7 @@
                             {% endif %}
                         {% endfor %}
                     </figure>
-                    <section class="sixth-sevenths" style="padding-left:10px;">
+                    <section class="sixth-sevenths">
                         <h3>{{ item.project.name }}</h3>
                         <p style="font-size:.85em;">{{ item.project.short_description|safe }}</p>
                     </section>
