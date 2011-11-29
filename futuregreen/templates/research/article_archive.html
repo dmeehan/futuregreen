@@ -20,11 +20,11 @@
             </figure>
             {%  endif %}
             {%  endfor %}
-            {% for image in article.articleimage_set.all %}
-            <figure>
-                <img style="width:100%;" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
-            </figure>
-            {%  endfor %}
+            <ul class="tags">
+                {% for tag in article.tags.all %}
+                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
+                {% endfor %}
+            </ul>
             {{ article.body_html|safe }}
          </section>
     </article>
