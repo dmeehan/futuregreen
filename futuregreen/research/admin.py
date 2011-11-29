@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from futuregreen.research.models import Article, ArticleImage
+from futuregreen.research.models import Article, ArticleImage, ArticleProject
 
 class ImageInline(admin.StackedInline):
     model = ArticleImage
@@ -14,9 +14,17 @@ class ImageInline(admin.StackedInline):
     allow_add = True
     sortable_field_name = "order"
 
+class ProjectInline(admin.StackedInline):
+    model = ArticleProject
+    extra = 0
+
+    # Grappelli options
+    allow_add = True
+
 class ArticleAdmin(admin.ModelAdmin):
     inlines = [
        ImageInline,
+       ProjectInline
     ]
 
     prepopulated_fields = {"slug": ("title",)}
