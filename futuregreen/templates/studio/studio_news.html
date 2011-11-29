@@ -11,8 +11,9 @@
 {% block main %}
 {% endblock main %}
 {% block aside %}
+{% load news_tags portfolio_tags%}
     <aside class="third">
-       <h2 class="box">Latest Projects</h2>
+        <h2 class="box">Latest Projects</h2>
         {% get_latest_projects 8 as project_list %}
         {%  for project in project_list %}
             <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
@@ -30,7 +31,6 @@
                 </article>
         {%  endfor %}
         <h2 class="box">News Archive</h2>
-        {% load news_tags portfolio_tags%}
         <h3 class="box">Recent News</h3>
         <ul class="box linked-list">
         {% get_latest_news 10 as news_list %}
