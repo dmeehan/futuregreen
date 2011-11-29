@@ -3,8 +3,8 @@
 <section class="main two-thirds">
     {%  for article in latest %}
     <article>
-         <section class="box quarter" style="text-align: right;">
-            <div class="date">
+         <section class="box quarter">
+            <div class="date" style="float:right;">
                 <ul class="square half" style="text-align: center;">
                     <li class="month">{{ article.date_published|date:"M" }}</li>
                     <li class="day">{{ article.date_published|date:"d" }}</li>
