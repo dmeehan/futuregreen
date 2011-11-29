@@ -80,12 +80,22 @@
            </div>
            </a>
         </article>
-        <article class="text box third">
-                <div></div>
-        </article>
+         {% for project in project_list|slice:"5:6" %}
+            <article class="project list box third" id="{{ project.slug }}">
+                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+
+            </article>
+        {% endfor %}
     </div>
     <div class="third">
-        {% for project in project_list|slice:"5:8" %}
+        {% for project in project_list|slice:"6:7" %}
             <article class="project list box full featured" id="{{ project.slug }}">
                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -100,7 +110,7 @@
         {% endfor %}
     </div>
     <div class="sixth">
-        {% for project in project_list|slice:"6:8" %}
+        {% for project in project_list|slice:"7:9" %}
             <article class="project list box" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -113,22 +123,6 @@
 
             </article>
         {% endfor %}
-    </div>
-    <div class="third">
-        {% for project in project_list|slice:"8:" %}
-           <article class="project list box half" id="{{ project.slug }}">
-               <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
-
-               {% for image in project.projectimage_set.all %}
-                   {% if image.is_main %}
-                       <a href="{{ project.get_absolute_url }}">
-                           <img alt="{{ project.title }}" src="{{ image.featured.url }}" />
-                       </a>
-                   {% endif %}
-               {%  endfor %}
-
-           </article>
-       {% endfor %}
     </div>
 {% endblock content %}
 {% block js_local %}
