@@ -10,6 +10,8 @@ from categories.models import Category
 from blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase
 
+from futuregreen.portfolio.models import Project
+
 
 class Article(ArticleBase):
     """
@@ -36,5 +38,12 @@ class ArticleImage(RelatedImageAutoBase):
     """
         Images for a research article.
     """
+    article = models.ForeignKey(Article)
+
+class ArticleProject(models.Model):
+    """
+        A project related to the article
+    """
+    project = models.ForeignKey(Project)
     article = models.ForeignKey(Article)
 
