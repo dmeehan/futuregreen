@@ -19,7 +19,23 @@
 
             </article>
         {% endfor %}
-        {% for project in project_list|slice:"2:6" %}
+        {% for project in project_list|slice:"2:5" %}
+            <article class="project list box sixth" id="{{ project.slug }}">
+                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+
+            </article>
+        {% endfor %}
+        <article class="text box sixth">
+                <div></div>
+        </article>
+        {% for project in project_list|slice:"5:6" %}
             <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
