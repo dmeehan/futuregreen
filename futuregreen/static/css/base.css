@@ -409,6 +409,9 @@ article.project.related section {
     box-sizing: border-box;
 }
 
+article.project.related section p {
+    color:#999;
+}
 div.date {
     display:table;
     width:100%;
