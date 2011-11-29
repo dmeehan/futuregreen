@@ -8,7 +8,7 @@
             </div>
         </section>
         <section class="box three-quarters">
-            <h2><a href="{{ article.get_absolute_url }}{{ article.title }}</a></h2>
+            <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
             <ul class="tags">
                 {% for tag in article.tags.all %}
                 <li><a href="{% url articles_by_tag slug=tag.slug %}">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}</li>
