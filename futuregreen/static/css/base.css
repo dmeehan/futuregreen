@@ -309,7 +309,7 @@ h1.overlay {
 
 .linked-list {
     list-style-type: square;
-    padding-left:20px;
+    padding:0 0 5px 30px;
 }
 
 
