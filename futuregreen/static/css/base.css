@@ -1132,16 +1132,9 @@ ul#project-nav {
     font-size:.85em;
 }
 
-#research article.article ul.tags li a:link,
-#research article.article ul.tags li a:visited {
+#research article.article ul.tags li a:link {
     color:#666;
     text-decoration: none;
-}
-
-#research article.article ul.tags li a:hover,
-#research article.article ul.tags li a:active {
-    color:inherit;
-    text-decoration: inherit;
 }
 
 
