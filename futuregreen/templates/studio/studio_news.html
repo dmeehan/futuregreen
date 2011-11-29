@@ -26,7 +26,7 @@
          <ul class="box linked-list">
         {% get_latest_projects 8 as project_list %}
         {%  for project in project_list %}
-            <li><a href="{{ news.get_absolute_url }}">{{ project.title }}</a></li>
+            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
         {%  endfor %}
         </ul>
     </aside>
