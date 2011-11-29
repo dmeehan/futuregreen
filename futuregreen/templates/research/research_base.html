@@ -30,7 +30,7 @@
         {% get_taglist as tags for 'research.article' %}
         <ul class="box tags">
             {% for tag in tags %}
-            <li><a href="#">{{tag}}</a>{% if not forloop.last %}, {% endif %}</li>
+            <li><a href="{% url articles_by_tag slug=tag.slug %}">{{tag}}</a>{% if not forloop.last %}, {% endif %}</li>
             {% endfor %}
         </ul>
         <h2 class="box">Research Projects</h2>

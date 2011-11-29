@@ -6,6 +6,8 @@ from django.views.generic import YearArchiveView, MonthArchiveView,\
     WeekArchiveView, DayArchiveView, TodayArchiveView, \
     DetailView, ListView, TemplateView
 
+from taggit.views import tagged_object_list
+
 from futuregreen.research.models import Article
 from futuregreen.research.views import ArticleIndexView, ArticleDetailView
 
@@ -30,5 +32,11 @@ urlpatterns = patterns('',
         queryset=Article._default_manager.live(),
         date_field="date_published"),
         name='article_archive_year'
+    ),
+    url(r'^tag/(?P<slug>[-\w]+)/$',
+        tagged_object_list(queryset=Article._default_manager.live(),
+                           template_name='articles_by_tag.html',
+                           template_object_name='article'),
+        name='articles_by_tag'
     ),
 )
