@@ -1,10 +1,12 @@
 {% extends "research/research_base.html" %}
 {% block main %}
 <section class="main two-thirds">
+    <header>
     <h2 class="box">Writing & Teaching</h2>
-    {%  for article in latest %}
+    </header>
+    {%  for article in article_list %}
     <article>
-         <section class="box quarter">
+        <section class="box quarter">
             <div class="date half">
                 <ul class="square">
                     <li class="month">{{ article.date_published|date:"M" }}</li>
