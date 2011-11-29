@@ -2,10 +2,12 @@
 {% block section_title %}: Research{% endblock section_title %}
 {% block body_id %}research{% endblock body_id %}
 {% block content %}
-    <article class="box two-thirds">
+    <header class="box two-thirds">
+    {% block content_title %}
         {% load generic_flatblocks %}
         {%  gblock "research_title" for "content.ContentBlock" %}
-    </article>
+    {% endblock content_title %}
+    </header>
 {% block main %}
 {% endblock main %}
 {% block aside %}
@@ -52,3 +54,15 @@
     </aside>
 {% endblock aside %}
 {% endblock content %}
+
+{% block js_local %}
+        <script type="text/javascript">
+         $(document).ready(function() {
+            Square();
+        });
+
+        $(window).resize(function() {
+            Square();
+        });
+     </script>
+{% endblock js_local %}

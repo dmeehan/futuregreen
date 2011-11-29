@@ -1,46 +1,10 @@
 {% extends "research/research_base.html" %}
 {% block main %}
 <section class="main two-thirds">
-    <header>
-    <h2 class="box">Writing & Teaching</h2>
-    </header>
+    {%  block article_list %}
     {%  for article in article_list %}
-    <article>
-        <section class="box quarter">
-            <div class="date half">
-                <ul class="square">
-                    <li class="month">{{ article.date_published|date:"M" }}</li>
-                    <li class="day">{{ article.date_published|date:"d" }}</li>
-                </ul>
-            </div>
-            <ul class="tags">
-                {% for tag in article.tags.all %}
-                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
-                {% endfor %}
-            </ul>
-        </section>
-        <section class="box three-quarters">
-            <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
-            {% if forloop.first %}
-            {{ article.body_html|safe }}
-            {%  else %}
-            {{ article.excerpt_html|safe }}
-            <p class="tease"><a href="{{ article.get_absolute_url }}">Read More</a></p>
-            {% endif %}
-        </section>
-    </article>
+        {% include "research/includes/excerpt.html" %}
     {% endfor %}
+    {%  endblock article_list %}
 </section>
 {% endblock main%}
-
-{% block js_local %}
-        <script type="text/javascript">
-         $(document).ready(function() {
-            Square();
-        });
-
-        $(window).resize(function() {
-            Square();
-        });
-     </script>
-{% endblock js_local %}

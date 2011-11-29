@@ -1119,6 +1119,10 @@ ul#project-nav {
     display:inline;
 }
 
+#research article.article {
+    clear:both;
+}
+
 #research article.article ul.tags {
     margin: 0;
     padding: 0;

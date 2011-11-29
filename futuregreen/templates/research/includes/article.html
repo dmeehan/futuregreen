@@ -1,0 +1,46 @@
+<article class="article detail">
+         <section class="box eighth">
+            <div class="date">
+                <ul class="square">
+                    <li class="month">{{ article.date_published|date:"M" }}</li>
+                    <li class="day">{{ article.date_published|date:"d" }}</li>
+                </ul>
+            </div>
+        </section>
+        <section class="box three-quarters">
+            <h2>{{ article.title }}</h2>
+            <ul class="tags">
+                {% for tag in article.tags.all %}
+                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
+                {% endfor %}
+            </ul>
+            {% for image in article.articleimage_set.all %}
+            {% if image.main %}
+            <figure style="margin-top:10px;">
+                <img class="flex" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
+            </figure>
+            {%  endif %}
+            {%  endfor %}
+            {{ article.body_html|safe }}
+            {%  for item in article.articleproject_set.all %}
+                <article class="project related">
+                    <figure class="seventh">
+                        {% for image in item.project.projectimage_set.all %}
+                            {% if image.is_main %}
+                                <a href="{{ item.project.get_absolute_url }}">
+                                    <img class="flex" src="{{ image.list.url }}"
+                                         alt="{{ item.project.name }}"
+                                         title="{{ item.project.name }}" />
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </figure>
+                    <section class="sixth-sevenths">
+                        <h3><a href="{{ item.project.get_absolute_url }}">{{ item.project.name }}</a></h3>
+                        <p style="font-size:.85em;">{{ item.project.short_description|safe }}</p>
+                    </section>
+
+                </article>
+            {%  endfor %}
+         </section>
+    </article>
