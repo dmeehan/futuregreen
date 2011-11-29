@@ -32,7 +32,7 @@
             {% for tag in tags %}
             <li>{{tag}} ({{tag.num_times}}){% if not forloop.last %}, {% endif %}</li>
             {% endfor %}
-        <ul>
+        </ul>
         <h2 class="box">Research Projects</h2>
             {% for project in project_list %}
                 <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
