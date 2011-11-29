@@ -309,7 +309,11 @@ h1.overlay {
 
 .linked-list {
     list-style-type: square;
-    margin:0 0 10px 20px;
+    margin-left:20px;
+}
+
+.linked-list li {
+    margin-bottom:5px;
 }
 
 

@@ -86,7 +86,7 @@
                     {% if project.clients.all %}
                     <div class="box">
                         <h2>Clients</h2>
-                        <ul>
+                        <ul class="linked-list">
                         {% for client in project.clients.all %}
                             <li> {{ client.name }} </li>
                         {% endfor %}
@@ -96,7 +96,7 @@
                     {% if project.collaborators.all %}
                     <div class="box">
                         <h2>Collaborators</h2>
-                        <ul>
+                        <ul class="linked-list">
                         {% for collaborator in project.collaborators.all %}
                             <li> {{ collaborator.name }} </li>
                         {% endfor %}
