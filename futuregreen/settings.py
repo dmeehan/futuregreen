@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'easy_maps',
     'categories',
     'editor',
+    'oembed',
 
     # backbeat apps
     'images',
