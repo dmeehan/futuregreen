@@ -35,6 +35,7 @@ urlpatterns = patterns('',
     ),
     url(r'^tag/(?P<slug>[-\w]+)/$',
         tagged_object_list(queryset=Article._default_manager.live(),
+                           slug=slug,
                            template_name='articles_by_tag.html',
                            template_object_name='article'),
         name='articles_by_tag'
