@@ -11,13 +11,19 @@
 {% block aside %}
     <aside class="third">
         <h2 style="clear:both;" class="box">Article Archive</h2>
-        {% load article_tags %}
+        {% load article_tags archive_tags %}
         <h3 class="box">Recent Articles</h3>
         <ul class="box linked-list">
         {% get_latest_articles 10 as article_list %}
         {%  for article in article_list %}
             <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
         {%  endfor %}
+        </ul>
+        {% get_article_archive as dates %}
+        <ul class="box linked-list">
+            {% for date in dates %}
+            <li><a href="{% url blog_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+            {% endfor %}
         </ul>
         <h2 class="box">Projects</h2>
             {% for project in project_list %}
