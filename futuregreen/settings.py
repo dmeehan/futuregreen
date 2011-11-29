@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     # third party apps
     'south',
     'taggit',
+    'taggit_templatetags',
     'imagekit',
     'django_generic_flatblocks',
     'easy_maps',
