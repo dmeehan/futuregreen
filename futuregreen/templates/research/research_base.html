@@ -28,7 +28,7 @@
         </ul>
         <h2 class="box">Tags</h2>
         {% get_taglist as tags for 'research.article' %}
-        <ul class="box">
+        <ul class="box tags" style="font-size:1em;">
             {% for tag in tags %}
             <li>{{tag}} ({{tag.num_times}}){% if not forloop.last %}, {% endif %}</li>
             {% endfor %}
