@@ -15,7 +15,7 @@
             <h2>{{ article.title }}</h2>
             {% for image in article.articleimage_set.all %}
             {% if image.main %}
-            <figure style="margin-top:10px;">
+            <figure style="margin-top:10px; padding-right:10px;">
                 <img style="width:100%;" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
             </figure>
             {%  endif %}
