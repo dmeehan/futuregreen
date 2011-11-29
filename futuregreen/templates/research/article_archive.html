@@ -3,9 +3,9 @@
 <section class="main two-thirds">
     {%  for article in latest %}
     <article>
-         <section class="box quarter">
-            <div class="date half" style="padding-left:50%">
-                <ul class="square half">
+         <section class="box eight">
+            <div class="date">
+                <ul class="square">
                     <li class="month">{{ article.date_published|date:"M" }}</li>
                     <li class="day">{{ article.date_published|date:"d" }}</li>
                 </ul>
@@ -16,7 +16,7 @@
                 {% endfor %}
             </ul>
         </section>
-        <section class="box three-quarters">
+        <section class="box seven-eighths">
             <h2>{{ article.title }}</h2>
             {{ article.body_html|safe }}
          </section>
