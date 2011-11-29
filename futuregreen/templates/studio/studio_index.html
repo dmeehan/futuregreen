@@ -48,8 +48,9 @@
             <section class="box">
             {% for image in news.newsitemimage_set.all %}
                         {% if image.is_main %}
-                            <a href="{{ news.get_absolute_url }}">
-                                <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
+                            <a href="{% url newsitem_list %}">
+                                <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" />
+                            </a>
                         {% endif %}
             {%  endfor %}
             <h1 class="overlay">News</h1>
