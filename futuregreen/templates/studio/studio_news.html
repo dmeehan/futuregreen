@@ -22,7 +22,7 @@
             <li><a href="#" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
             {% endfor %}
         </ul>
-        <h2 class="box">Recently Completed Projects</h2>
+        <h2 class="box">Latest Projects</h2>
          <ul class="box linked-list">
         {% get_latest_projects 8 as project_list %}
         {%  for project in project_list %}
