@@ -28,7 +28,7 @@
             {{ article.body_html|safe }}
             <h3>Related Projects</h3>
             {%  for item in article.articleproject_set.all %}
-                <article class="project list box quarter">
+                <article class="project list quarter">
                     <header><a href="{{ item.project.get_absolute_url }}"><h1>{{ item.project.name }}</h1></a></header>
                     <section>
                         {% for image in item.project.projectimage_set.all %}
