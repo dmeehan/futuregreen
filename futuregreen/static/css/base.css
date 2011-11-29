@@ -473,7 +473,7 @@ body.studio .content {
 }
 
 body.research .main,
-body.news .main{
+body.studio.news .main{
     background:url('images/corner-bg-top-right.png') no-repeat right top;
 }
 
