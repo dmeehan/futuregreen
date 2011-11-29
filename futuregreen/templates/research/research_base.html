@@ -26,7 +26,7 @@
             <li><a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
             {% endfor %}
         </ul>
-        <h2 class="box">Projects</h2>
+        <h2 class="box">Research Projects</h2>
             {% for project in project_list %}
                 <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
                     <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
