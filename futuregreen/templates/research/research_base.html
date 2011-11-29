@@ -28,7 +28,7 @@
         </ul>
         <h2 class="box">Research Projects</h2>
             {% for project in project_list %}
-                <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
+                <article class="project list box quarter{% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
                     <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
                     <section>
                         {% for image in project.projectimage_set.all %}
