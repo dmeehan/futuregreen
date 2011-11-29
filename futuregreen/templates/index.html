@@ -54,6 +54,16 @@
         </article>
      </div>
     <div class="half">
+         <article class="text box two-thirds" id="news">
+           <a class="wraplink" href="{{ news.get_absolute_url }}">
+           <div>
+           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
+           <h2>{{ news.title }}</h2>
+           {{ news.excerpt_html|safe|truncatewords_html:20 }}
+           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+           </div>
+           </a>
+        </article>
         <article class="text box third">
                 <div></div>
         </article>
@@ -70,16 +80,6 @@
                 
             </article>
         {% endfor %}
-         <article class="text box two-thirds" id="news">
-           <a class="wraplink" href="{{ news.get_absolute_url }}">
-           <div>
-           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-           <h2>{{ news.title }}</h2>
-           {{ news.excerpt_html|safe|truncatewords_html:20 }}
-           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
-           </div>
-           </a>
-        </article>
          {% for project in project_list|slice:"5:6" %}
             <article class="project list box third" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
