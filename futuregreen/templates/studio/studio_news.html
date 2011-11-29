@@ -26,7 +26,19 @@
          <ul class="box linked-list">
         {% get_latest_projects 8 as project_list %}
         {%  for project in project_list %}
-            <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+            <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
+                    <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+                    <section>
+                        {% for image in project.projectimage_set.all %}
+                            {% if image.is_main %}
+                                <a href="{{ project.get_absolute_url }}">
+                                    <img class="flex" src="{{ image.list.url }}"
+                                         alt="{{ image.caption }}" />
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </section>
+                </article>
         {%  endfor %}
         </ul>
     </aside>
