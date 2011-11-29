@@ -7,7 +7,7 @@ from django.views.generic import YearArchiveView, MonthArchiveView,\
     DetailView, ListView, TemplateView
 
 from futuregreen.research.models import Article
-from futuregreen.research.views import ArticleIndexView, ArticleDetailView
+from futuregreen.research.views import ArticleIndexView, ArticleDetailView, ArticleMonthArchiveView
 
 urlpatterns = patterns('',
     url(r'^$', ArticleIndexView.as_view() , name = 'research'),
