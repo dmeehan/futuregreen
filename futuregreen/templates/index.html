@@ -110,7 +110,10 @@
         {% endfor %}
     </div>
     <div class="sixth">
-        {% for project in project_list|slice:"7:9" %}
+           <article class="text box square">
+                <div></div>
+        </article>
+        {% for project in project_list|slice:"7:8" %}
             <article class="project list box" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -133,10 +136,12 @@
         }
         $(document).ready(function() {
             Flex();
+            Square();
         });
 
         $(window).resize(function() {
             Flex();
+            Sqaure();
         });
     </script>
 {% endblock js_local %}
