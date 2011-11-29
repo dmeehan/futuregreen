@@ -3,7 +3,7 @@
     {% block aside %}
         <aside class="sixth">
             {% block filter_nav %}
-                <nav>
+                <nav class="box">
                     <ul class="categories">
                         {% for type in projecttype_list %}
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
