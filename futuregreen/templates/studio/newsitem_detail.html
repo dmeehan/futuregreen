@@ -1,8 +1,8 @@
-{% extends "studio/studio_base.html" %}
+{% extends "studio/studio_news.html" %}
 {% block page_title %}: News: {{ newsitem.name }}{% endblock page_title %}
-{% block content %}
+{% block main %}
 <section class="two-thirds">
-    <article class="box" id="news">
+    <article class="box" class="news detail">
         <section class="quarter">
             <p class="date">
                 <span class="month">{{ news.date_published|date:"M" }}</span>
@@ -16,7 +16,4 @@
         {{ news.body_html|safe }}
     </article>
 </section>
-<aside class="third">
-     <h1>Archive</h1>
-</aside>
-{% endblock content %}
+{% endblock main %}

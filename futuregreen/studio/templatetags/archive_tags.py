@@ -1,8 +1,5 @@
-# research/templatetags/archive_tags.py
-
 import re
 from django import template
-
 from futuregreen.research.models import Article
 
 register = template.Library()

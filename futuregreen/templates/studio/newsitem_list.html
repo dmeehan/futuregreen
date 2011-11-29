@@ -1,6 +1,5 @@
-{% extends "studio/studio_base.html" %}
-{% block page_title %}: News{% endblock page_title %}
-{% block content %}
+{% extends "studio/studio_news.html" %}
+{% block main %}
 <section class="two-thirds">
     {%  for news in news_list %}
     <article class="box" id="news">
@@ -20,4 +19,4 @@
     </article>
     {%  endfor %}
 </section>
-{% endblock content %}
+{% endblock main %}

@@ -1,4 +1,4 @@
-# portfolio/templatetags/porfolio_tags.py
+# studio/templatetags/news_tags.py
 
 import re
 
@@ -7,28 +7,18 @@ from django.conf import settings
 from django.db import models
 
 
-from futuregreen.portfolio.models import Project
+from futuregreen.studio.models import NewsItem
 
 register = template.Library()
 
-def compose_featured(parser, token):
-    return FeaturedNode()
 
-class FeaturedNode(template.Node):
-    def render(self, context):
-        context['featured_project_list'] = Project._default_manager.live().filter(featured=True)
-        return ''
-	
-register.tag('get_featured_projects', compose_featured)
-
-
-class LatestProjects(template.Node):
+class LatestNews(template.Node):
     def __init__(self, limit, var_name):
         self.limit = int(limit)
         self.var_name = var_name
 
     def render(self, context):
-        news = Project._default_manager.live()[:self.limit]
+        news = NewsItem._default_manager.live()[:self.limit]
         if news and (self.limit == 1):
             context[self.var_name] = news[0]
         else:
@@ -37,17 +27,17 @@ class LatestProjects(template.Node):
 
 
 @register.tag
-def get_latest_projects(parser, token):
+def get_latest_news(parser, token):
     """
-Gets any number of latest projects and stores them in a variable.
+Gets any number of latest news items and stores them in a variable.
 
 Syntax::
 
-{% get_latest_projects [limit] as [var_name] %}
+{% get_latest_news [limit] as [var_name] %}
 
 Example usage::
 
-{% get_latest_projects 10 as latest_project_list %}
+{% get_latest_news 10 as latest_news_list %}
 """
     try:
         tag_name, arg = token.contents.split(None, 1)
@@ -57,21 +47,21 @@ Example usage::
     if not m:
         raise template.TemplateSyntaxError, "%s tag had invalid arguments" % tag_name
     format_string, var_name = m.groups()
-    return LatestProjects(format_string, var_name)
+    return LatestNews(format_string, var_name)
 
 
-class ProjectArchive(template.Node):
+class NewsArchive(template.Node):
     def __init__(self, var_name):
         self.var_name = var_name
 
     def render(self, context):
-        dates = Project._default_manager.live().dates('date_published', 'month', order='DESC')
+        dates = NewsItem._default_manager.live().dates('date_published', 'month', order='DESC')
         if dates:
             context[self.var_name] = dates
         return ''
 
 @register.tag
-def get_project_archive(parser, token):
+def get_news_archive(parser, token):
     try:
         tag_name, arg = token.contents.split(None, 1)
     except ValueError:
@@ -80,7 +70,4 @@ def get_project_archive(parser, token):
     if not m:
         raise template.TemplateSyntaxError, "%s tag had invalid arguments" % tag_name
     var_name = m.groups()[0]
-    return ProjectArchive(var_name)
-
-
-
+    return NewsArchive(var_name)

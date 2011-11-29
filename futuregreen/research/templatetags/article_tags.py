@@ -1,4 +1,4 @@
-# blog/templatetags/blog_tags.py
+# research/templatetags/article_tags.py
 
 import re
 
