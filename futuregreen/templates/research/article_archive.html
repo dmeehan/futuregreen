@@ -16,7 +16,7 @@
             {% for image in article.articleimage_set.all %}
             {% if image.main %}
             <figure style="margin-top:10px;">
-                <img style="width:100%;" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
+                <img class="flex" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
             </figure>
             {%  endif %}
             {%  endfor %}
@@ -26,6 +26,22 @@
                 {% endfor %}
             </ul>
             {{ article.body_html|safe }}
+            <h3>Related Projects</h3>
+            {%  for project in article.articleproject_set.all %}
+                <article class="project list box quarter {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
+                    <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+                    <section>
+                        {% for image in project.projectimage_set.all %}
+                            {% if image.is_main %}
+                                <a href="{{ project.get_absolute_url }}">
+                                    <img class="flex" src="{{ image.list.url }}"
+                                         alt="{{ image.caption }}" />
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </section>
+                </article>
+            {%  endfor %}
          </section>
     </article>
     {% endfor %}
