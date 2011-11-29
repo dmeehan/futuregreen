@@ -23,7 +23,6 @@
             {% endfor %}
         </ul>
         <h2 class="box">Latest Projects</h2>
-         <ul class="box linked-list">
         {% get_latest_projects 8 as project_list %}
         {%  for project in project_list %}
             <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
@@ -40,7 +39,6 @@
                     </section>
                 </article>
         {%  endfor %}
-        </ul>
     </aside>
 {% endblock aside %}
 {% endblock content %}
