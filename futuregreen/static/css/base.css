@@ -206,6 +206,10 @@ body > footer > .contact {
     width:14.28571%; float:left;
 }
 
+.two-sevenths {
+    width:28.57142%; float:left;
+}
+
 .sixth {
     width:16.66667%; float:left;
 }

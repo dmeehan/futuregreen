@@ -28,7 +28,7 @@
             {{ article.body_html|safe }}
             <h3>Related Projects</h3>
             {%  for item in article.articleproject_set.all %}
-                <article class="project list seventh">
+                <article class="project list two-sevenths">
                     <section>
                         {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
