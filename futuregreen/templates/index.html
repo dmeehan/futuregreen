@@ -26,8 +26,8 @@
             </article>
         {% endfor %}
      </div>
-    <div class="third">
-        {% for project in project_list|slice:"3:7" %}
+    <div class="sixth">
+        {% for project in project_list|slice:"3:5" %}
             <article class="project list box half" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -42,9 +42,24 @@
         {% endfor %}
     </div>
     <div class="third">
-        {% for project in project_list|slice:"7:8" %}
+        {% for project in project_list|slice:"5:6" %}
             <article class="project list box full featured" id="{{ project.slug }}">
                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+
+            </article>
+        {% endfor %}
+    </div>
+    <div class="sixth">
+        {% for project in project_list|slice:"6:8" %}
+            <article class="project list box half" id="{{ project.slug }}">
+                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
