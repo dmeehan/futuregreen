@@ -2,7 +2,7 @@
 {% block main %}
 <section class="main two-thirds">
     {%  for article in latest %}
-    <article style="clear:both;">
+    <article class="article detail" style="clear:both;">
          <section class="box eighth">
             <div class="date">
                 <ul class="square">
@@ -13,6 +13,11 @@
         </section>
         <section class="box three-quarters">
             <h2>{{ article.title }}</h2>
+            <ul class="tags">
+                {% for tag in article.tags.all %}
+                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
+                {% endfor %}
+            </ul>
             {% for image in article.articleimage_set.all %}
             {% if image.main %}
             <figure style="margin-top:10px;">
@@ -20,11 +25,6 @@
             </figure>
             {%  endif %}
             {%  endfor %}
-            <ul class="tags">
-                {% for tag in article.tags.all %}
-                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
-                {% endfor %}
-            </ul>
             {{ article.body_html|safe }}
             {%  for item in article.articleproject_set.all %}
                 <article class="project related">
