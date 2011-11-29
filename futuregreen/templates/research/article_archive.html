@@ -11,7 +11,6 @@
                     <li class="day">{{ article.date_published|date:"d" }}</li>
                 </ul>
             </div>
-            <p>{{ article.posted_by }}</p>
             <ul class="tags">
                 {% for tag in article.tags.all %}
                 <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
@@ -19,14 +18,9 @@
             </ul>
         </section>
         <section class="box three-quarters">
-            <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
-            {% if forloop.first %}
+            <h2>{{ article.title }}</h2>
             {{ article.body_html|safe }}
-            {%  else %}
-            {{ article.excerpt_html|safe }}
-            <p class="tease"><a href="{{ article.get_absolute_url }}">Read More</a></p>
-            {% endif %}
-        </section>
+         </section>
     </article>
     {% endfor %}
 </section>
