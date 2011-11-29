@@ -597,7 +597,7 @@ div.date .month {
     font-size:.85em;
 }
 .project-list article.project {
-    
+
 }
 
 .project-list article.project img {
@@ -628,7 +628,7 @@ div.date .month {
     -o-transition: all .3s ease-out;
     -ms-transition: all .3s ease-out;
     -transition: all .3s ease-out;
-    
+
 }
 
 .slideshow .carousel {
@@ -682,7 +682,7 @@ div.date .month {
     background:url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px,
                url('images/corner-bg-bottom-right.png') no-repeat right bottom;
-    
+
 }
 
 .slideshow .controls ul {
@@ -904,11 +904,11 @@ div.date .month {
 }
 
 .slideshow .flex-direction-nav .next {
-   
+
 }
 
 .slideshow .flex-direction-nav .prev {
-   
+
 }
 
 /* details */
@@ -1087,7 +1087,7 @@ ul#project-nav {
 }
 
 .max ul#project-nav {
-    margin-top:40px;
+    margin:40px 10px 0 0;
     top:0;
     right:0;
 }
