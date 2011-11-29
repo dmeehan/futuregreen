@@ -33,7 +33,7 @@ urlpatterns = patterns('',
     ),
     url(r'^tag/(?P<slug>[-\w]+)/$','taggit.views.tagged_object_list',
         {'queryset': Article._default_manager.live(),
-         'template_name': 'articles_by_tag.html',
+         'template_name': 'research/articles_by_tag.html',
          'template_object_name': 'article'},
         name='articles_by_tag'
     ),
