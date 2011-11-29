@@ -2,7 +2,7 @@
 {% block main %}
 <section class="main two-thirds">
     {%  for article in latest %}
-    <article>
+    <article style="clear:both;">
          <section class="box eighth">
             <div class="date">
                 <ul class="square">
@@ -10,14 +10,14 @@
                     <li class="day">{{ article.date_published|date:"d" }}</li>
                 </ul>
             </div>
+        </section>
+        <section class="box three-quarters">
+            <h2>{{ article.title }}</h2>
             <ul class="tags">
                 {% for tag in article.tags.all %}
                 <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
                 {% endfor %}
             </ul>
-        </section>
-        <section class="box three-quarters">
-            <h2>{{ article.title }}</h2>
             {{ article.body_html|safe }}
          </section>
     </article>
