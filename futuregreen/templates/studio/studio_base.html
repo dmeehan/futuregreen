@@ -1,3 +1,14 @@
 {% extends "base.html" %}
 {% block section_title %}: Studio{% endblock section_title %}
 {% block body_id %}studio{% endblock body_id %}
+{% block js_local %}
+        <script type="text/javascript">
+         $(document).ready(function() {
+            Square();
+        });
+
+        $(window).resize(function() {
+            Square();
+        });
+     </script>
+{% endblock js_local %}

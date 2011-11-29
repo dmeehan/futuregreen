@@ -14,7 +14,7 @@
                 <li><a href="{% url articles_by_tag slug=tag.slug %}">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}</li>
                 {% endfor %}
             </ul>
-            {% for image in article.articleimage_set.all %}
+            {% for image in news.newsimage_set.all %}
             {% if image.main %}
             <figure style="margin-top:10px;">
                 <img class="flex" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
