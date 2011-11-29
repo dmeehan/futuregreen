@@ -491,12 +491,7 @@ body.studio.news .main{
     margin: 0;
 }
 
-.home article#profile {
-    background: url('images/corner-bg-bottom-right.png') no-repeat right bottom;
-}
-
 .home article#profile div {
-    background:url('images/profile_bg.png') no-repeat left top;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
