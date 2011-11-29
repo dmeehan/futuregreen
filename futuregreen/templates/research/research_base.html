@@ -19,6 +19,7 @@
             <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
         {%  endfor %}
         </ul>
+        <h3 class="box">Past Articles</h3>
         {% get_article_archive as dates %}
         <ul class="box linked-list">
             {% for date in dates %}
