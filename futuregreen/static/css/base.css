@@ -155,10 +155,10 @@ body > header > nav li a:active {
     color:#444;
 }
 
-body#studio > header > nav li a.studio,
-body#portfolio > header > nav li a.portfolio,
-body#research > header > nav li a.research,
-body#contact > header > nav li a.contact {
+body.studio > header > nav li a.studio,
+body.portfolio > header > nav li a.portfolio,
+body.research > header > nav li a.research,
+body.contact > header > nav li a.contact {
      background:url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px,
                url('images/corner-bg-bottom-right.png') no-repeat right bottom;
@@ -467,28 +467,30 @@ div.date .month {
     font-size: .85em;
 }
 
-#research .content {
+body.research .content,
+body.studio .content {
     background:url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
-#research .main {
+body.research .main,
+body.news .main{
     background:url('images/corner-bg-top-right.png') no-repeat right top;
 }
 
 /********** HOMEPAGE ***********/
-#home .content > div {
+.home .content > div {
     overflow: hidden;
 }
 
-#home .content p {
+.home .content p {
     margin: 0;
 }
 
-#home article#profile {
+.home article#profile {
     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
-#home article#profile div {
+.home article#profile div {
     background:url('images/profile_bg.png') no-repeat left top;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -499,11 +501,11 @@ div.date .month {
     margin: 0;
 }
 
-#home article#profile p {
+.home article#profile p {
     padding:0 10px;
 }
 
-#home article#profile h1 {
+.home article#profile h1 {
     position:absolute;
     bottom:0;
     right:10px;
@@ -515,7 +517,7 @@ div.date .month {
     padding: 0;
 }
 
-#home article#profile h2 {
+.home article#profile h2 {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
@@ -523,35 +525,35 @@ div.date .month {
     color:#3d6e31;
 }
 
-#home article.text h1 {
+.home article.text h1 {
     text-transform: uppercase;
     margin-bottom:10px;
 }
 
 
-#home article#news {
+.home article#news {
     clear:both;
     position:relative;
 }
 
-#home article#news div {
+.home article#news div {
     background:#7eac32;
     color:#fff;
     padding: 0 10px;
 }
 
-#home article#news p {
+.home article#news p {
     font-size:.85em;
 }
 
-#home article#news p.date {
+.home article#news p.date {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.5em;
     color:rgba(255,255,255,0.5);
     font-weight:bold;
 }
 
-#home article#news h1 {
+.home article#news h1 {
     position:absolute;
     bottom:0;
     right:0;
@@ -563,11 +565,11 @@ div.date .month {
     padding: 0;
 }
 
-#home article#news .tease {
+.home article#news .tease {
     color:#fff;
 }
 
-#home article#news h2 {
+.home article#news h2 {
     clear:both;
     font-weight:normal;
     font-size:1.2857em;
@@ -627,7 +629,7 @@ div.date .month {
 }
 
 /*********** PROJECT LIST ************/
-#portfolio aside > nav {
+.portfolio aside > nav {
     font-size:.85em;
 }
 .project-list article.project {
@@ -640,7 +642,7 @@ div.date .month {
 }
 
 /*********** PROJECT DETAIL ************/
-#portfolio article.project.detail {
+.portfolio article.project.detail {
     position:relative;
     overflow: auto;
     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom,
@@ -1129,45 +1131,45 @@ ul#project-nav {
 
 
 /******** STUDIO *********/
-#studio h1:first-child {
+.studio h1:first-child {
     margin-bottom:20px;
 }
 
-#studio .content {
+.studio .content {
     background:url('images/corner-bg-bottom-right.png') no-repeat right bottom;
 }
 
-#studio .content .main article section.body {
+.studio .content .main article section.body {
     padding-top:20px;
 }
 
 
 /******** RESEARCH *********/
 
-#research ul.tags {
+.research ul.tags {
    margin-top:0;
    padding-top:0;
 }
 
 
-#research ul.tags li {
+.research ul.tags li {
     display:inline;
 }
 
-#research article.article {
+.research article.article {
     clear:both;
 }
 
-#research article.article h2 a {
+.research article.article h2 a {
     text-decoration: none;
 }
 
-#research article.article ul.tags {
+.research article.article ul.tags {
     margin: 0;
     padding: 0;
 }
 
-#research article.article ul.tags li {
+.research article.article ul.tags li {
     font-size:.85em;
 }
 
@@ -1202,7 +1204,7 @@ ul#project-nav {
 }
 
 @media screen and (min-width: 1240px) {
-  #studio .content .main article section.body {
+  .studio .content .main article section.body {
     -webkit-column-count:2;
     -moz-column-count:2;
     -o-column-count:2;
@@ -1227,7 +1229,7 @@ ul#project-nav {
     margin: 0 10%;
   }
 
-  #studio .content .main article section.body {
+  .studio .content .main article section.body {
     -webkit-column-count:2;
     -moz-column-count:2;
     -o-column-count:2;
