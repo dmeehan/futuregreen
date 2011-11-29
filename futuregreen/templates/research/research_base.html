@@ -26,9 +26,9 @@
             <li><a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
             {% endfor %}
         </ul>
-        <h3 class="box">Tags</h3>
+        <h2 class="box">Tags</h2>
         {% get_taglist as tags for 'research.article' %}
-        <ul class="box tags">
+        <ul class="box">
             {% for tag in tags %}
             <li>{{tag}} ({{tag.num_times}}){% if not forloop.last %}, {% endif %}</li>
             {% endfor %}
