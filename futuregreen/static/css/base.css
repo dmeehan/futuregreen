@@ -334,6 +334,11 @@ h1.overlay {
     margin-bottom:5px;
 }
 
+a.wraplink {
+    text-decoration: none;
+    color:inherit;
+}
+
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
