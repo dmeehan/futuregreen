@@ -2,7 +2,9 @@
 
 from django.conf import settings
 from django.conf.urls.defaults import *
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import YearArchiveView, MonthArchiveView,\
+    WeekArchiveView, DayArchiveView, TodayArchiveView, \
+    DetailView, ListView, TemplateView
 
 from futuregreen.research.views import ArticleIndexView, ArticleDetailView
 
