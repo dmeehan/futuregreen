@@ -352,6 +352,12 @@ h1.overlay {
 	height: 100%;
 }
 
+article.detail,
+article.list {
+    clear:both;
+}
+
+
 
 article.project.list {
     position:relative;
@@ -431,6 +437,7 @@ article.project.related section {
 article.project.related section p {
     color:#666;
 }
+
 div.date {
     display:table;
     width:100%;
