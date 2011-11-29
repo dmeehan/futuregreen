@@ -1115,13 +1115,16 @@ ul#project-nav {
     background:url('images/corner-bg-top-right.png') no-repeat right top;
 }
 
-#research ul.tags {
+#research ul.tags li {
+    display:inline;
+}
+
+#research article.article ul.tags {
     margin: 0;
     padding: 0;
 }
 
-#research ul.tags li {
-    display:inline;
+#research article.article ul.tags li {
     font-size:.85em;
     color:#666;
 }
