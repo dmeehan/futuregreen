@@ -609,7 +609,7 @@ div.date .month {
     position:relative;
     overflow: auto;
     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom,
-                url('images/corner-bg-top-right.png') no-repeat right top;
+                url('images/corner-bg-top-right_sm.png') no-repeat right top;
 }
 
 /* slideshow */
