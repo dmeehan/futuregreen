@@ -7,7 +7,7 @@
 {% block aside %}
     <aside class="third">
         <h2 class="box">News Archive</h2>
-        {% load news_tags project_tags%}
+        {% load news_tags portfolio_tags%}
         <h3 class="box">Recent News</h3>
         <ul class="box linked-list">
         {% get_latest_news 10 as news_list %}
