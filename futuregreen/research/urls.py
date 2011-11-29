@@ -6,6 +6,7 @@ from django.views.generic import YearArchiveView, MonthArchiveView,\
     WeekArchiveView, DayArchiveView, TodayArchiveView, \
     DetailView, ListView, TemplateView
 
+from futuregreen.research.models import Article
 from futuregreen.research.views import ArticleIndexView, ArticleDetailView
 
 urlpatterns = patterns('',
