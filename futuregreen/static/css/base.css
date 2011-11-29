@@ -1132,8 +1132,7 @@ ul#project-nav {
     font-size:.85em;
 }
 
-#research article.article ul.tags li a:link {
-    color:#666;
+#research article.article ul.tags li a {
     text-decoration: none;
 }
 
