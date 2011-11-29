@@ -13,7 +13,10 @@
         </section>
         <section class="box three-quarters">
             {% for image in articleimage_set.all %}
+            {% if image.main %}
             <img src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
+            {%  endif %}
+            {%  endfor %}
             <h2>{{ article.title }}</h2>
             <ul class="tags">
                 {% for tag in article.tags.all %}
