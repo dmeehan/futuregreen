@@ -13,17 +13,17 @@
         </section>
         <section class="box three-quarters">
             <h2>{{ article.title }}</h2>
-            <ul class="tags">
-                {% for tag in article.tags.all %}
-                <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
-                {% endfor %}
-            </ul>
             {% for image in article.articleimage_set.all %}
             {% if image.main %}
             <figure>
                 <img style="width:100%;" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
             </figure>
             {%  endif %}
+            {%  endfor %}
+            {% for image in article.articleimage_set.all %}
+            <figure>
+                <img style="width:100%;" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
+            </figure>
             {%  endfor %}
             {{ article.body_html|safe }}
          </section>
