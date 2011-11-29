@@ -7,10 +7,10 @@ from futuregreen.studio.models import NewsItem
 
 urlpatterns = patterns('',
     url(r'^$', 'futuregreen.studio.views.index', name = 'studio'),
-    (r'^people/', include('futuregreen.people.urls')),
-    url(r'^news/', ListView.as_view(model=NewsItem, context_object_name = "news_list"), name = 'newsitem_list'),
+    url(r'^news/$', ListView.as_view(model=NewsItem, context_object_name = "news_list"), name = 'newsitem_list'),
     url(r'^news/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$',
         DateDetailView.as_view(model=NewsItem, context_object_name = "news",
                                date_field="date_published", template_name = "studio/newsitem_detail.html"),
         name = 'newsitem_detail'),
+    (r'^people/', include('futuregreen.people.urls')),
 )
