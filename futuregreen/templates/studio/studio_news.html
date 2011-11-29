@@ -13,6 +13,21 @@
 {% block aside %}
 {% load news_tags portfolio_tags%}
     <aside class="third">
+        <h2 class="box">News Archive</h2>
+        <h3 class="box">Recent News</h3>
+        <ul class="box linked-list">
+        {% get_latest_news 10 as news_list %}
+        {%  for news in news_list %}
+            <li><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></li>
+        {%  endfor %}
+        </ul>
+        <h3 class="box">Past News</h3>
+        {% get_news_archive as dates %}
+        <ul class="box linked-list">
+            {% for date in dates %}
+            <li><a href="#" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+            {% endfor %}
+        </ul>
         <h2 class="box">Latest Projects</h2>
         {% get_latest_projects 8 as project_list %}
         {%  for project in project_list %}
@@ -30,21 +45,6 @@
                     </section>
                 </article>
         {%  endfor %}
-        <h2 class="box">News Archive</h2>
-        <h3 class="box">Recent News</h3>
-        <ul class="box linked-list">
-        {% get_latest_news 10 as news_list %}
-        {%  for news in news_list %}
-            <li><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></li>
-        {%  endfor %}
-        </ul>
-        <h3 class="box">Past News</h3>
-        {% get_news_archive as dates %}
-        <ul class="box linked-list">
-            {% for date in dates %}
-            <li><a href="#" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
-            {% endfor %}
-        </ul>
     </aside>
 {% endblock aside %}
 {% endblock content %}
