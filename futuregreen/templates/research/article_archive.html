@@ -28,14 +28,14 @@
             {{ article.body_html|safe }}
             <h3>Related Projects</h3>
             {%  for item in article.articleproject_set.all %}
-                <article class="project list quarter">
-                    <header><a href="{{ item.project.get_absolute_url }}"><h1>{{ item.project.name }}</h1></a></header>
+                <article class="project list seventh">
                     <section>
                         {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
                                 <a href="{{ project.get_absolute_url }}">
                                     <img class="flex" src="{{ image.list.url }}"
-                                         alt="{{ image.caption }}" />
+                                         alt="{{ item.project.name }}"
+                                         title="{{ item.project.name }}" />
                                 </a>
                             {% endif %}
                         {% endfor %}
