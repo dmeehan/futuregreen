@@ -6,7 +6,7 @@
         <article class="text box sixth">
                 <div></div>
         </article>
-        {% for project in project_list|slice:"1:4" %}
+        {% for project in project_list|slice:"1:3" %}
             <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -22,7 +22,7 @@
         <article class="text box sixth">
                 <div></div>
         </article>
-        {% for project in project_list|slice:"4:5" %}
+        {% for project in project_list|slice:"4:6" %}
             <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
