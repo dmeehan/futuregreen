@@ -3,6 +3,9 @@
 {% block body_class %}home{% endblock body_class%}
 {% block content %}
      <div class="full">
+        <article class="text box sixth">
+                <div></div>
+        </article>
         {% for project in project_list|slice:"1:2" %}
             <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
@@ -16,9 +19,6 @@
 
             </article>
         {% endfor %}
-        <article class="text box sixth">
-                <div></div>
-        </article>
         {% for project in project_list|slice:"2:6" %}
             <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
