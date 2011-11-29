@@ -40,8 +40,8 @@
                         {% endfor %}
                     </figure>
                     <section class="sixth-sevenths">
-                        <h3>{{ project.name }}</h3>
-                        <p>{{ project.short_description|safe }}</p>
+                        <h3>{{ item.project.name }}</h3>
+                        <p>{{ item.project.short_description|safe }}</p>
                     </section>
 
                 </article>
