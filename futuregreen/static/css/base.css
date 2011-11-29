@@ -1140,7 +1140,6 @@ ul#project-nav {
 
 #research article.article ul.tags li a:hover,
 #research article.article ul.tags li a:active {
-    font-size:.85em;
     color:inherit;
     text-decoration: inherit;
 }
