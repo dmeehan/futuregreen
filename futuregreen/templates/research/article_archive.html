@@ -31,7 +31,7 @@
                     <figure class="seventh">
                         {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
-                                <a href="{{ project.get_absolute_url }}">
+                                <a href="{{ item.project.get_absolute_url }}">
                                     <img class="flex" src="{{ image.list.url }}"
                                          alt="{{ item.project.name }}"
                                          title="{{ item.project.name }}" />
@@ -40,7 +40,7 @@
                         {% endfor %}
                     </figure>
                     <section class="sixth-sevenths">
-                        <h3>{{ item.project.name }}</h3>
+                        <h3><a href="{{ item.project.get_absolute_url }}">{{ item.project.name }}</a></h3>
                         <p style="font-size:.85em;">{{ item.project.short_description|safe }}</p>
                     </section>
 
