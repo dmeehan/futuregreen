@@ -544,7 +544,7 @@ div.date .month {
 .categories {
     overflow: hidden;
     clear:both;
-    margin: 10px;
+    /*margin: 10px;*/
 }
 
 .categories li {
