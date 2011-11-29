@@ -29,7 +29,7 @@
         <h2 style="clear:both;" class="box">Article Archive</h2>
         {% load article_tags %}
         <h3 class="box">Recent Articles</h3>
-        <ul class="box">
+        <ul class="box linked-list">
         {% get_latest_articles 10 as article_list %}
         {%  for article in article_list %}
             <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>

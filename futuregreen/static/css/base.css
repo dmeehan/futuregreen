@@ -307,6 +307,11 @@ h1.overlay {
     color:#fff;"
 }
 
+.linked-list {
+    list-style-type: square;
+    padding-left:20px;
+}
+
 
 article.project.list {
     position:relative;

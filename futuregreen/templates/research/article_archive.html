@@ -11,6 +11,7 @@
                     <li class="day">{{ article.date_published|date:"d" }}</li>
                 </ul>
             </div>
+            <p>{{ article.posted_by }}</p>
             <ul class="tags">
                 {% for tag in article.tags.all %}
                 <li> {{ tag.name }}{% if not forloop.last %}, {% endif %}</li>
