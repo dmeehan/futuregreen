@@ -23,12 +23,19 @@
         {% get_article_archive as dates %}
         <ul class="box linked-list">
             {% for date in dates %}
-            <li><a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+            <li>
+                <a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">
+                <p class="date square">
+                    <span class="month">{{ project.date_end|date:"F" }}</span>
+                    <span class="year">{{ project.date_end|date:"Y" }}</span>
+                </p>
+                </a>
+            </li>
             {% endfor %}
         </ul>
         <h2 class="box">Research Projects</h2>
             {% for project in project_list %}
-                <article class="project list box quarter {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
+                <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
                     <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
                     <section>
                         {% for image in project.projectimage_set.all %}
