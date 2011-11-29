@@ -4,8 +4,8 @@
     {%  for article in latest %}
     <article>
          <section class="box quarter">
-            <div class="date">
-                <ul class="square half" style="padding-left:50%">
+            <div class="date half" style="padding-left:50%">
+                <ul class="square half">
                     <li class="month">{{ article.date_published|date:"M" }}</li>
                     <li class="day">{{ article.date_published|date:"d" }}</li>
                 </ul>
