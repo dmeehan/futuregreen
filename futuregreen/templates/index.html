@@ -16,11 +16,10 @@
 
             </article>
         {% endfor %}
-        <article class="text box sixth" id="profile">
-
-             <div></div>
+        <article class="text box sixth">
+                <div></div>
         </article>
-        {% for project in project_list|slice:"2:6" %}
+        {% for project in project_list|slice:"2:4" %}
             <article class="project list box sixth" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -33,6 +32,16 @@
 
             </article>
         {% endfor %}
+         <article class="text box full" id="news">
+           <a class="wraplink" href="{{ news.get_absolute_url }}">
+           <div>
+           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
+           <h2>{{ news.title }}</h2>
+           {{ news.excerpt_html|safe|truncatewords_html:20 }}
+           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+           </div>
+           </a>
+        </article>
      </div>
      <div class="full">
         {% for project in project_list|slice:"1:2" %}
@@ -130,16 +139,6 @@
 
            </article>
        {% endfor %}
-        <article class="text box full" id="news">
-           <a class="wraplink" href="{{ news.get_absolute_url }}">
-           <div>
-           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-           <h2>{{ news.title }}</h2>
-           {{ news.excerpt_html|safe|truncatewords_html:20 }}
-           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
-           </div>
-           </a>
-        </article>
     </div>
 {% endblock content %}
 {% block js_local %}
