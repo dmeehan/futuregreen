@@ -1123,6 +1123,10 @@ ul#project-nav {
     clear:both;
 }
 
+#research article.article h1 a {
+    text-decoration: none;
+}
+
 #research article.article ul.tags {
     margin: 0;
     padding: 0;
@@ -1131,12 +1135,6 @@ ul#project-nav {
 #research article.article ul.tags li {
     font-size:.85em;
 }
-
-#research article.article ul.tags li a {
-    text-decoration: none;
-}
-
-
 
 
 /******** MEDIA QUERIES **********/
