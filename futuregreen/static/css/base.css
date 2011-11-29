@@ -1117,6 +1117,12 @@ ul#project-nav {
     background:url('images/corner-bg-top-right.png') no-repeat right top;
 }
 
+#research ul.tags {
+   margin-top:0;
+   padding-top:0;
+}
+
+
 #research ul.tags li {
     display:inline;
 }
