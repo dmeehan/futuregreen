@@ -21,16 +21,9 @@
         </ul>
         <h3 class="box">Past Articles</h3>
         {% get_article_archive as dates %}
-        <ul>
+        <ul class="box linked-list">
             {% for date in dates %}
-            <li class="box quarter">
-                <a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">
-                <p class="date square">
-                    <span class="month">{{ project.date_end|date:"F" }}</span>
-                    <span class="year">{{ project.date_end|date:"Y" }}</span>
-                </p>
-                </a>
-            </li>
+            <li><a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
             {% endfor %}
         </ul>
         <h2 class="box">Research Projects</h2>
