@@ -22,7 +22,7 @@
         {% get_article_archive as dates %}
         <ul class="box linked-list">
             {% for date in dates %}
-            <li><a href="{% url blog_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+            <li><a href="{% url article_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
             {% endfor %}
         </ul>
         <h2 class="box">Projects</h2>
