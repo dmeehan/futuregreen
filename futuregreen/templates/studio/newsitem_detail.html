@@ -1,19 +1,7 @@
 {% extends "studio/studio_news.html" %}
 {% block page_title %}: News: {{ newsitem.name }}{% endblock page_title %}
 {% block main %}
-<section class="two-thirds">
-    <article class="box" class="news detail">
-        <section class="quarter">
-            <p class="date">
-                <span class="month">{{ news.date_published|date:"M" }}</span>
-                <span class="day">{{ news.date_published|date:"d" }}</span>
-            </p>
-        </section>
-        <h1>{{ news.title }}</h1>
-        {% for image in news.newsitemimage_set.all %}
-           <img class="flex" alt="{{ news.title }}" src="{{ image.main.url }}" />
-        {%  endfor %}
-        {{ news.body_html|safe }}
-    </article>
+<section class="main two-thirds">
+   {% include "studio/includes/news.html" %}
 </section>
 {% endblock main %}
