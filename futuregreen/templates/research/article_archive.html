@@ -26,10 +26,9 @@
                 {% endfor %}
             </ul>
             {{ article.body_html|safe }}
-            <h3>Related Projects</h3>
             {%  for item in article.articleproject_set.all %}
-                <article class="project list two-sevenths">
-                    <section>
+                <article class="project list">
+                    <figure class="seventh">
                         {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
                                 <a href="{{ project.get_absolute_url }}">
@@ -39,7 +38,12 @@
                                 </a>
                             {% endif %}
                         {% endfor %}
+                    </figure>
+                    <section class="sixth-sevenths">
+                        <h3>{{ project.name }}</h3>
+                        <p>{{ project.short_description|safe }}</p>
                     </section>
+
                 </article>
             {%  endfor %}
          </section>
