@@ -34,14 +34,6 @@
 
             </article>
         {% endfor %}
-         <article class="text box half" id="profile">
-             <a class="wraplink" href="{% url studio %}">
-             <div>
-                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-                <p><a href="{% url studio %}" class="tease">Read More</a></p>
-             </div>
-             </a>
-        </article>
          <article class="text box third" id="news">
            <a class="wraplink" href="{{ news.get_absolute_url }}">
            <div>
@@ -90,7 +82,14 @@
 
             </article>
         {% endfor %}
-
+         <article class="text box" id="profile">
+             <a class="wraplink" href="{% url studio %}">
+             <div>
+                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+                <p><a href="{% url studio %}" class="tease">Read More</a></p>
+             </div>
+             </a>
+        </article>
     </div>
     <div class="sixth">
         {% for project in project_list|slice:"7:8" %}
