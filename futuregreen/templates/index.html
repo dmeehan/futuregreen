@@ -28,7 +28,7 @@
      </div>
     <div class="sixth">
         {% for project in project_list|slice:"3:5" %}
-            <article class="project list box half" id="{{ project.slug }}">
+            <article class="project list box" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
@@ -58,7 +58,7 @@
     </div>
     <div class="sixth">
         {% for project in project_list|slice:"6:8" %}
-            <article class="project list box half" id="{{ project.slug }}">
+            <article class="project list box" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
