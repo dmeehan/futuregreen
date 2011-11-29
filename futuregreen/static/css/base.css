@@ -1128,7 +1128,8 @@ ul#project-nav {
     padding: 0;
 }
 
-#research article.article ul.tags li a:link {
+#research article.article ul.tags li a:link,
+#research article.article ul.tags li a:visited {
     font-size:.85em;
     color:#666;
     text-decoration: none;
