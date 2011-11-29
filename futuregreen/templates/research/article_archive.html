@@ -27,11 +27,11 @@
             </ul>
             {{ article.body_html|safe }}
             <h3>Related Projects</h3>
-            {%  for project in article.articleproject_set.all %}
-                <article class="project list box quarter {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
-                    <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+            {%  for item in article.articleproject_set.all %}
+                <article class="project list box quarter">
+                    <header><a href="{{ item.project.get_absolute_url }}"><h1>{{ item.project.name }}</h1></a></header>
                     <section>
-                        {% for image in project.projectimage_set.all %}
+                        {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
                                 <a href="{{ project.get_absolute_url }}">
                                     <img class="flex" src="{{ image.list.url }}"
