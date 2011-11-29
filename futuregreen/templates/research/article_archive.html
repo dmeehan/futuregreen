@@ -13,7 +13,9 @@
         </section>
         <section class="box three-quarters">
             {% for image in article.articleimage_set.all %}
-            <img src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
+            <figure>
+                <img style="width:100%;" src="{{ image.detail.url }}" title="{{ image.name }}" alt="{{ image.caption }}" />
+            </figure>
             {%  endfor %}
             <h2>{{ article.title }}</h2>
             <ul class="tags">
