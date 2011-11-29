@@ -20,9 +20,7 @@ urlpatterns = patterns('',
         name='article_archive_day'
     ),
     url(r'^(?P<year>\d{4})/(?P<month>\w{3})/$',
-        MonthArchiveView.as_view(
-        queryset=Article._default_manager.live(),
-        date_field="date_published"),
+        ArticleMonthArchiveView.as_view(),
         name='article_archive_month'
     ),
     url(r'^(?P<year>\d{4})/$',
