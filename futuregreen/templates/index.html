@@ -69,9 +69,9 @@
            </a>
         </article>
      </div>
-    <div class="sixth">
+    <div class="third">
         {% for project in project_list|slice:"3:5" %}
-            <article class="project list box" id="{{ project.slug }}">
+            <article class="project list box half" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
@@ -83,6 +83,16 @@
                 
             </article>
         {% endfor %}
+         <article class="text box" id="news">
+           <a class="wraplink" href="{{ news.get_absolute_url }}">
+           <div>
+           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
+           <h2>{{ news.title }}</h2>
+           {{ news.excerpt_html|safe|truncatewords_html:20 }}
+           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+           </div>
+           </a>
+        </article>
     </div>
     <div class="third">
         {% for project in project_list|slice:"5:8" %}
