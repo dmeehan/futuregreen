@@ -1,6 +1,6 @@
 # research/views.py
 
-from django.views.generic import ArchiveIndexView, DateDetailView, MonthArchiveView
+from django.views.generic import View, ArchiveIndexView, DateDetailView, MonthArchiveView
 
 from futuregreen.research.models import Article
 from futuregreen.portfolio.models import Project
