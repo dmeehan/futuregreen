@@ -1178,6 +1178,7 @@ ul#project-nav {
 
 #contact-info {
     position:relative;
+    overflow: hidden;
 }
 
 #contact-info img {
@@ -1186,8 +1187,8 @@ ul#project-nav {
 }
 
 #contact-info div {
-    /*position:absolute;
-    z-index:1;*/
+    position:absolute;
+    z-index:1;
     background: rgba(255,255,255,0.8);
 }
 
