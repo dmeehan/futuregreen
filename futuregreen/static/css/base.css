@@ -1182,8 +1182,8 @@ ul#project-nav {
 }
 
 #contact-info img {
-    position:absolute;
-    z-index:0;
+    /*position:absolute;
+    z-index:0;*/
 }
 
 #contact-info div {
