@@ -1183,7 +1183,13 @@ ul#project-nav {
     overflow: hidden;
 }
 
-#contact-info img {
+#contact-info h1 {
+    color:#3d6e31;
+    margin-bottom:15px;
+}
+
+#contact-info p {
+    margin-top:5px;
 }
 
 #contact-info div {
