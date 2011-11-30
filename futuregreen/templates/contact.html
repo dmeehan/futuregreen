@@ -59,8 +59,8 @@
 {% block js_local %}
     <script type="text/javascript">
         function Flex() {
-            var height = $("section.sixth").width();
-            $("#contact-info").css('min-height', height);
+            var height = $(".sixth").width();
+            $("#contact-info div").css('min-height', height);
         }
         $(document).ready(function() {
             Flex();
