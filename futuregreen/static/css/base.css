@@ -314,6 +314,8 @@ body > footer > .contact {
 img.flex {
      width:100%;
      display:block;
+     margin: 0;
+     padding: 0;
 }
 
 h1.overlay {
@@ -1182,8 +1184,8 @@ ul#project-nav {
 }
 
 #contact-info img {
-    /*position:absolute;
-    z-index:0;*/
+    position:absolute;
+    z-index:0;
 }
 
 #contact-info div {
