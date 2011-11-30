@@ -3,7 +3,8 @@
 {% block body_class %}home{% endblock body_class%}
 {% block content %}
      <div class="two-thirds">
-        {% for project in project_list|slice:"1:6" %}
+        <div class="full">
+        {% for project in project_list|slice:"1:5" %}
             <article class="project list box quarter" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -15,6 +16,21 @@
                 {%  endfor %}
             </article>
         {% endfor %}
+        </div>
+        <div class="full">
+            {% for project in project_list|slice:"5:6" %}
+            <article class="project list box quarter" id="{{ project.slug }}">
+                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+
+                {% for image in project.projectimage_set.all %}
+                    {% if image.is_main %}
+                        <a href="{{ project.get_absolute_url }}">
+                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
+                    {% endif %}
+                {%  endfor %}
+            </article>
+        {% endfor %}
+
         <article class="text box three-quarters" id="profile">
              <a class="wraplink" href="{% url studio %}">
              <div>
@@ -23,6 +39,8 @@
              </div>
              </a>
         </article>
+        </div>
+     <div class="full">
          <article class="text box three-quarters update" id="article">
            <a class="wraplink" href="{{ article.get_absolute_url }}">
            <div>
@@ -45,6 +63,7 @@
                 {%  endfor %}
             </article>
         {% endfor %}
+        </div>
      </div>
      <div class="third">
          <article class="text box full update" id="news">
