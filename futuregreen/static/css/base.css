@@ -544,7 +544,7 @@ body.studio.news .main{
     font-size:.85em;
 }
 
-.home article.update p.date {
+.home article.update h1 {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.5em;
     color:rgba(255,255,255,0.5);
