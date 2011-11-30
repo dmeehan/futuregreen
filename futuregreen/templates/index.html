@@ -23,7 +23,7 @@
              </div>
              </a>
         </article>
-         <article class="text box half update" id="article">
+         <article class="text box three-quarters update" id="article">
            <a class="wraplink" href="{{ article.get_absolute_url }}">
            <div>
            <h1>Research</h1>
@@ -33,7 +33,7 @@
            </div>
            </a>
         </article>
-         {% for project in project_list|slice:"6:8" %}
+         {% for project in project_list|slice:"6:7" %}
             <article class="project list box quarter" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
@@ -57,7 +57,7 @@
            </div>
            </a>
         </article>
-        {% for project in project_list|slice:"8:9" %}
+        {% for project in project_list|slice:"7:8" %}
             <article class="project list box full featured" id="{{ project.slug }}">
                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
