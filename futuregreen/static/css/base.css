@@ -531,28 +531,27 @@ body.studio.news .main{
 }
 
 
-.home article#news {
+.home article.update {
     position:relative;
 }
 
-.home article#news div {
-    background:#7eac32;
+.home article.update div {
     color:#fff;
     padding: 0 10px;
 }
 
-.home article#news p {
+.home article.update p {
     font-size:.85em;
 }
 
-.home article#news p.date {
+.home article.update p.date {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.5em;
     color:rgba(255,255,255,0.5);
     font-weight:bold;
 }
 
-.home article#news h1 {
+.home article.update h1 {
     position:absolute;
     bottom:0;
     right:0;
@@ -564,21 +563,23 @@ body.studio.news .main{
     padding: 0;
 }
 
-.home article#news .tease {
+.home article.update .tease {
     color:#fff;
 }
 
-.home article#news h2 {
+.home article.update h2 {
     clear:both;
     font-weight:normal;
     font-size:1.2857em;
     margin:5px 0;
 }
 
+.home article#news div {
+    background:#7eac32;
+}
+
 .home article#article div {
-    background:#ccc;
-    color:#fff;
-    padding: 0 10px;
+    background:#3d6e31;
 }
 
 /*********** PROJECT STYLES **********/

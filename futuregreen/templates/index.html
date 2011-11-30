@@ -23,13 +23,13 @@
              </div>
              </a>
         </article>
-         <article class="text box half" id="news">
-           <a class="wraplink" href="{{ news.get_absolute_url }}">
+         <article class="text box half update" id="article">
+           <a class="wraplink" href="{{ article.get_absolute_url }}">
            <div>
-           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-           <h2>{{ news.title }}</h2>
-           {{ news.excerpt_html|safe|truncatewords_html:20 }}
-           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+           <p class="date">Research</p>
+           <h2>{{ article.title }}</h2>
+           {{ article.excerpt_html|safe|truncatewords_html:20 }}
+           <p><a href="{{ article.get_absolute_url }}" class="tease">Read More</a></p>
            </div>
            </a>
         </article>
@@ -47,7 +47,7 @@
         {% endfor %}
      </div>
      <div class="third">
-         <article class="text box full" id="news">
+         <article class="text box full update" id="news">
            <a class="wraplink" href="{{ news.get_absolute_url }}">
            <div>
            <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
