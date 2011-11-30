@@ -575,6 +575,12 @@ body.studio.news .main{
     margin:5px 0;
 }
 
+.home article#article div {
+    background:#ccc;
+    color:#fff;
+    padding: 0 10px;
+}
+
 /*********** PROJECT STYLES **********/
 .categories {
     overflow: hidden;
