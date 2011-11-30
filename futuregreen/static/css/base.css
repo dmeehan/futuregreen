@@ -545,23 +545,16 @@ body.studio.news .main{
 }
 
 .home article.update h1 {
-    font-family: purista-web-1,purista-web-2, sans-serif;
-    font-size:1.5em;
-    color:rgba(255,255,255,0.5);
-    font-weight:bold;
-}
-
-/*.home article.update h1 {
     position:absolute;
     bottom:0;
     right:0;
     z-index:0;
-    color:rgba(255,255,255,0.1);
-    font-size:7em;
+    color:rgba(255,255,255,0.5);
+    font-size:5em;
     line-height:1em;
     margin: 0;
     padding: 0;
-}*/
+}
 
 .home article.update .tease {
     color:#fff;
