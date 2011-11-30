@@ -545,11 +545,12 @@ body.studio.news .main{
 }
 
 .home article.update h1 {
+    font-weight:bold;
     position:absolute;
     bottom:0;
     right:0;
     z-index:0;
-    color:rgba(255,255,255,0.5);
+    color:rgba(255,255,255,0.1);
     font-size:5em;
     line-height:1em;
     margin: 0;
