@@ -2,12 +2,9 @@
 {% load generic_flatblocks %}
 {% block body_class %}home{% endblock body_class%}
 {% block content %}
-     <div class="full">
-        <article class="text box sixth">
-                <div></div>
-        </article>
+     <div class="two-thirds">
         {% for project in project_list|slice:"1:6" %}
-            <article class="project list box sixth" id="{{ project.slug }}">
+            <article class="project list box quarter" id="{{ project.slug }}">
                 <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
@@ -16,14 +13,31 @@
                             <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
                     {% endif %}
                 {%  endfor %}
-
             </article>
         {% endfor %}
+        <article class="text box three-quarters" id="profile">
+             <a class="wraplink" href="{% url studio %}">
+             <div>
+                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+                <p><a href="{% url studio %}" class="tease">Read More</a></p>
+             </div>
+             </a>
+        </article>
+         <article class="text box half" id="news">
+           <a class="wraplink" href="{{ news.get_absolute_url }}">
+           <div>
+           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
+           <h2>{{ news.title }}</h2>
+           {{ news.excerpt_html|safe|truncatewords_html:20 }}
+           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+           </div>
+           </a>
+        </article>
      </div>
-     <div class="full">
-        {% for project in project_list|slice:"5:6" %}
-            <article class="project list box sixth" id="{{ project.slug }}">
-                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
+     <div class="third">
+        {% for project in project_list|slice:"6:7" %}
+            <article class="project list box full featured" id="{{ project.slug }}">
+               <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
                 {% for image in project.projectimage_set.all %}
                     {% if image.is_main %}
@@ -45,82 +59,8 @@
            </a>
         </article>
      </div>
-    <div class="half">
-        {% for project in project_list|slice:"3:4" %}
-            <article class="project list box third" id="{{ project.slug }}">
-                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
 
-                {% for image in project.projectimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}">
-                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
-                    {% endif %}
-                {%  endfor %}
 
-            </article>
-        {% endfor %}
-         <article class="text box two-thirds" id="article">
-           <a class="wraplink" href="{{ news.get_absolute_url }}">
-           <div>
-           <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-           <h2>{{ news.title }}</h2>
-           {{ news.excerpt_html|safe|truncatewords_html:20 }}
-           <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
-           </div>
-           </a>
-        </article>
-        {% for project in project_list|slice:"4:5" %}
-            <article class="project list box third" id="{{ project.slug }}">
-                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
-
-                {% for image in project.projectimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}">
-                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
-                    {% endif %}
-                {%  endfor %}
-
-            </article>
-        {% endfor %}
-         <article class="text box full" id="profile">
-             <a class="wraplink" href="{% url studio %}">
-             <div>
-                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-                <p><a href="{% url studio %}" class="tease">Read More</a></p>
-             </div>
-             </a>
-        </article>
-    </div>
-    <div class="sixth">
-        {% for project in project_list|slice:"7:8" %}
-            <article class="project list box" id="{{ project.slug }}">
-                <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
-
-                {% for image in project.projectimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}">
-                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
-                    {% endif %}
-                {%  endfor %}
-
-            </article>
-        {% endfor %}
-     </div>
-     <div class="third">
-        {% for project in project_list|slice:"6:7" %}
-            <article class="project list box full featured" id="{{ project.slug }}">
-               <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
-
-                {% for image in project.projectimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{{ project.get_absolute_url }}">
-                            <img alt="{{ project.title }}" src="{{ image.list.url }}" /></a>
-                    {% endif %}
-                {%  endfor %}
-
-            </article>
-        {% endfor %}
-    </div>
 {% endblock content %}
 {% block js_local %}
     <script type="text/javascript">
