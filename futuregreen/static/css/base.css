@@ -1174,6 +1174,22 @@ ul#project-nav {
     font-size:.85em;
 }
 
+/******** CONTACT *********/
+
+#contact-info {
+    position:relative;
+}
+
+#contact-info img {
+    position:absolute;
+    z-index:0;
+}
+
+#contact-info div {
+    position:absolute;
+    z-index:1;
+    background: rgba(255,255,255,0.5);
+}
 
 /******** MEDIA QUERIES **********/
 @media screen and (max-width: 1024px) {
