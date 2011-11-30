@@ -1188,7 +1188,7 @@ ul#project-nav {
 #contact-info div {
     position:absolute;
     z-index:1;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.8);
 }
 
 /******** MEDIA QUERIES **********/
