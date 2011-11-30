@@ -565,8 +565,8 @@ body.studio.news .main{
     clear:both;
     font-weight:normal;
     font-size:1.2857em;
-    margin:10px 0 0 0;
-    padding: 0;
+    margin:0;
+    padding: 10px 0 0 0;
 }
 
 .home article#news div {
