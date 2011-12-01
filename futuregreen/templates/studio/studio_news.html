@@ -17,9 +17,9 @@
         <h3 class="box">Recent News</h3>
         <ul class="box linked-list">
         {% get_latest_news 10 as news_list %}
-        {%  for news in news_list %}
-            <li><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></li>
-        {%  endfor %}
+        {%  for n in news_list %}
+            <li><a href="{{ n.get_absolute_url }}">{{ n.title }}</a></li>
+        {% endfor %}
         </ul>
         <h3 class="box">Past News</h3>
         {% get_news_archive as dates %}

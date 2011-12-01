@@ -79,7 +79,7 @@
             var newHref = "#" + thisClass
             thisLink.attr("href", newHref);
 
-            // create click functions to sort by type
+            // create click functions to filter by type
             $("nav.filter").find(currentClass).click(function () {
                 if (currentClass != '.all') {
                     $(".project").addClass('hide')
@@ -95,9 +95,9 @@
                     $(".project").addClass('show')
                     $(".hide").hide(1000)
                     $(".show").show(1000)
-                    $("#subnav li").removeClass('active')
-                    $(".all").parent().addClass('active')
-                    $("#footer").show()
+                    $("nav.filter li").removeClass('active')
+                    $("#all").parent().addClass('active')
+                    $("footer").show()
                 }
             });
         });
