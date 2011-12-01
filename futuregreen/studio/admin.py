@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from futuregreen.studio.models import NewsItem, NewsItemImage, NewsItemProject, NewsItemFile
+from futuregreen.studio.models import NewsItem, NewsItemImage, NewsProject, NewsItemFile
 
 class NewsImageInline(admin.StackedInline):
     model = NewsItemImage
@@ -15,7 +15,7 @@ class NewsImageInline(admin.StackedInline):
     sortable_field_name = "order"
 
 class ProjectInline(admin.StackedInline):
-    model = NewsItemProject
+    model = NewsProject
     extra = 0
 
     # Grappelli options
