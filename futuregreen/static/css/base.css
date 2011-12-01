@@ -508,7 +508,7 @@ body.studio.news .main{
 }
 
 .home article#profile p {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
 }
 
 .home article.text h1 {
