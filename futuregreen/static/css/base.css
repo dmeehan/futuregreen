@@ -622,7 +622,7 @@ body.studio.news .main{
 /*********** PROJECT DETAIL ************/
 .portfolio article.project.detail {
     position:relative;
-    overflow: auto;
+    overflow: hidden;
     background: url('images/corner-bg-bottom-right.png') no-repeat right bottom,
                 url('images/corner-bg-top-right_sm.png') no-repeat right top;
 }
@@ -969,6 +969,7 @@ body.studio.news .main{
 .details .meta {
     float:left;
     width:40%;
+    overflow: hidden;
 }
 
 .details .meta p {
