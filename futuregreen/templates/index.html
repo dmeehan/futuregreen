@@ -41,14 +41,13 @@
     </div>
     <div class="full">
         <article class="text box three-quarters update" id="article">
-            <a class="wraplink" href="{{ article.get_absolute_url }}">
+
             <div>
             <h1>Research</h1>
             <h2>{{ article.title }}</h2>
             {{ article.excerpt_html|safe|truncatewords_html:30 }}
             <p>Read More</p>
             </div>
-            </a>
         </article>
         {% for project in project_list|slice:"6:7" %}
         <article class="project list box quarter" id="{{ project.slug }}">
