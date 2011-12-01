@@ -41,7 +41,7 @@ class NewsItemFile(models.Model):
     file = models.FileField(upload_to='files/news/', blank=True)
     news_item = models.ForeignKey(NewsItem)
 
-class NewsProject(models.Model):
+class NewsItemProject(models.Model):
     """
         A project related to the article
     """
