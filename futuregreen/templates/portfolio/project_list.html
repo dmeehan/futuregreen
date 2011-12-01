@@ -5,7 +5,7 @@
             {% block filter_nav %}
                 <nav class="box">
                     <ul class="categories">
-                        <li{% if not type.slug %}class="active"{% endif %}>
+                        <li {% if not type.slug %}class="active"{% endif %}>
                             <a href="{% url portfolio_project_list %}"
                                class="square center">ALL</a></li>
                         {% for type in projecttype_list %}
