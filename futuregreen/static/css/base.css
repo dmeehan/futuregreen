@@ -1251,10 +1251,10 @@ ul#project-nav {
 }
 
 @media screen and (min-width: 1680px) {
-     body {
+     /*body {
         width:70%;
         margin: 0 20%;
-    }
+    }*/
 
     .home article.text {
         font-size:110%;
