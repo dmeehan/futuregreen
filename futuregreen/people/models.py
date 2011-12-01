@@ -50,7 +50,7 @@ class Employee(ImageFieldAutoMixin, Contact):
     job_title = models.CharField(max_length=250)
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_FULL)
-    resume = models.FileField(upload_to='files/employee', blank=True)
+    resume = models.FileField(upload_to='files/employee', blank=True, null=True)
 
     @permalink
     def get_absolute_url(self):
