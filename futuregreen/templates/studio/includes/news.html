@@ -17,5 +17,25 @@
             {%  endif %}
             {%  endfor %}
             {{ news.body_html|safe }}
+             {%  for item in news.newsproject_set.all %}
+                <article class="project related">
+                    <figure class="seventh">
+                        {% for image in item.project.projectimage_set.all %}
+                            {% if image.is_main %}
+                                <a href="{{ item.project.get_absolute_url }}">
+                                    <img class="flex" src="{{ image.list.url }}"
+                                         alt="{{ item.project.name }}"
+                                         title="{{ item.project.name }}" />
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </figure>
+                    <section class="sixth-sevenths">
+                        <h3><a href="{{ item.project.get_absolute_url }}">{{ item.project.name }}</a></h3>
+                        <p style="font-size:.85em;">{{ item.project.short_description|safe }}</p>
+                    </section>
+
+                </article>
+            {%  endfor %}
          </section>
     </article>

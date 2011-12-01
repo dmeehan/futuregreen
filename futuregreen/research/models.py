@@ -40,6 +40,13 @@ class ArticleImage(RelatedImageAutoBase):
     """
     article = models.ForeignKey(Article)
 
+class ArticleFile(models.Model):
+    """
+        Files for a news item.
+    """
+    file = models.FileField(upload_to='files/article/', blank=True)
+    news_item = models.ForeignKey(Article)
+
 class ArticleProject(models.Model):
     """
         A project related to the article

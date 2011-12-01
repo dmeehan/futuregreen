@@ -1,8 +1,8 @@
-# blog/admin.py
+# research/admin.py
 
 from django.contrib import admin
 
-from futuregreen.research.models import Article, ArticleImage, ArticleProject
+from futuregreen.research.models import Article, ArticleImage, ArticleProject, ArticleFile
 
 class ImageInline(admin.StackedInline):
     model = ArticleImage
@@ -21,10 +21,18 @@ class ProjectInline(admin.StackedInline):
     # Grappelli options
     allow_add = True
 
+class FileInline(admin.StackedInline):
+    model = ArticleFile
+    extra = 0
+
+    # Grappelli options
+    allow_add = True
+
 class ArticleAdmin(admin.ModelAdmin):
     inlines = [
        ImageInline,
-       ProjectInline
+       FileInline,
+       ProjectInline,
     ]
 
     prepopulated_fields = {"slug": ("title",)}

@@ -9,10 +9,13 @@ from taggit.managers import TaggableManager
 from blocks.models import LinkBase, ArticleBase
 from images.models import RelatedImageAutoBase
 
+from futuregreen.portfolio.models import Project
+
 class NewsItem(ArticleBase):
     """
-        An article entry for a news item
+        An article entry for a news item. Extends ArticleBase, and abstract model from django-backbeat-blocks.
     """
+
     class Meta:
         ordering = ('-date_published',)
 
@@ -27,7 +30,20 @@ class NewsItem(ArticleBase):
 
 class NewsItemImage(RelatedImageAutoBase):
     """
-        Images for a research entry.
+        Images for a news item.
     """
     news_item = models.ForeignKey(NewsItem)
 
+class NewsItemFile(models.Model):
+    """
+        Files for a news item.
+    """
+    file = models.FileField(upload_to='files/news/', blank=True)
+    news_item = models.ForeignKey(NewsItem)
+
+class NewsProject(models.Model):
+    """
+        A project related to the article
+    """
+    project = models.ForeignKey(Project)
+    article = models.ForeignKey(NewsItem)
