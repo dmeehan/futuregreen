@@ -7,11 +7,12 @@
                     <ul class="categories">
                         <li {% if not category %}class="active"{% endif %}>
                             <a href="{% url portfolio_project_list %}"
-                               class="square center">ALL</a></li>
+                               class="square center"
+                               title="All Projects">ALL</a></li>
                         {% for type in projecttype_list %}
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
-                                   title="{{ type.name }}"
+                                   title="{{ type.name }} Projects"
                                    class="project-type square center">
                                    {{ type.alternate_title }}
                                 </a>
