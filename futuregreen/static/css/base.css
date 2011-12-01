@@ -975,7 +975,7 @@ body.studio.news .main{
 }
 
 .details .meta ul.linked-list {
-    margin:0;
+    margin:0 0 0 20px;
     padding: 0;
 }
 
