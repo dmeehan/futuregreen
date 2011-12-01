@@ -503,12 +503,12 @@ body.studio.news .main{
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
-    padding:10px 10px 0 10px;
+    padding:10px 10px 2px 10px;
     color:#3d6e31;
 }
 
 .home article#profile p {
-    padding: 10px 10px 0 10px;
+    padding: 8px 10px 0 10px;
 }
 
 .home article.text h1 {
