@@ -29,7 +29,7 @@
             {% endfor %}
         </ul>
         <h2 class="box">Latest Projects</h2>
-        {% get_latest_projects 8 as project_list %}
+        {% get_latest_projects 6 as project_list %}
         {%  for project in project_list %}
             <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
                     <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
