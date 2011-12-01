@@ -495,8 +495,9 @@ body.studio.news .main{
     margin: 0;
 }
 
-.home article#profile {
+.home article#profile div {
     background:url('images/profile_bg.png') no-repeat right top;
+    padding: 10px;
 }
 
 .home article#profile h2 {
