@@ -1282,7 +1282,7 @@ ul#project-nav {
         margin: 0 12.5%;
     }
 
-    .home .text {
+    .home article.text {
         font-size:120%;
     }
 }
