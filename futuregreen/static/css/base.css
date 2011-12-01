@@ -1256,7 +1256,7 @@ ul#project-nav {
 }
 
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1240px) and (max-width:1440px) {
   body {
     width:80%;
     margin: 0 10%;
@@ -1276,15 +1276,13 @@ ul#project-nav {
 
 }
 
-/*
 @media screen and (min-width: 1440px) {
      body {
-        width:75%;
-        margin: 0 12.5%;
+        width:60%;
+        margin: 0 20%;
     }
 
     .home article.text {
-        font-size:120%;
+        font-size:110%;
     }
 }
-*/
