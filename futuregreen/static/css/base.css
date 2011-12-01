@@ -1285,4 +1285,8 @@ ul#project-nav {
     .home article.text {
         font-size:110%;
     }
+
+    .home article.text div {
+        width:75%;
+    }
 }
