@@ -34,7 +34,7 @@
             <a class="wraplink" href="{% url studio %}">
             <div>
             {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-            <p class="tease">Read More</p>
+            <p><a href="{% url studio %}" class="tease">Read More</a></p>
             </div>
             </a>
         </article>
@@ -87,6 +87,7 @@
 
     </article>
     {% endfor %}
+
 </div>
 {% endblock content %}
 {% block js_local %}
@@ -97,12 +98,10 @@
         }
         $(document).ready(function() {
             Flex();
-            Square();
         });
 
         $(window).resize(function() {
             Flex();
-            Square();
         });
     </script>
 {% endblock js_local %}
