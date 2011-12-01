@@ -495,6 +495,10 @@ body.studio.news .main{
     margin: 0;
 }
 
+.home article#profile {
+    background:url('images/profile_bg.png') no-repeat right top;
+}
+
 .home article#profile h2 {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
