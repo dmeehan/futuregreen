@@ -547,7 +547,7 @@ body.studio.news .main{
 }
 
 .home article.update h1 {
-    /*font-weight:bold;
+    font-weight:bold;
     position:absolute;
     bottom:5px;
     right:5px;
@@ -556,7 +556,7 @@ body.studio.news .main{
     font-size:5em;
     line-height:1em;
     margin: 0;
-    padding: 0;*/
+    padding: 0;
 }
 
 .home article.update .tease {
