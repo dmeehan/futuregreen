@@ -1230,7 +1230,7 @@ ul#project-nav {
 }
 
 
-@media screen and (min-width: 1240px) and (max-width:1440px) {
+@media screen and (min-width: 1240px) and (max-width:1680px) {
   body {
     width:80%;
     margin: 0 10%;
@@ -1250,7 +1250,7 @@ ul#project-nav {
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1680px) {
      body {
         width:70%;
         margin: 0 20%;
