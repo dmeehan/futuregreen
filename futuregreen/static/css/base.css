@@ -588,6 +588,7 @@ body.studio.news .main{
 
 .categories li a {
         color:#fff;
+        background: #ccc;
         float:left;
         width:100%;
         font-weight: bold;
