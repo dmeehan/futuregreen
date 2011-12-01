@@ -503,7 +503,7 @@ body.studio.news .main{
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
-    padding:10px;
+    padding:10px 10px 0 10px;
     color:#3d6e31;
 }
 
