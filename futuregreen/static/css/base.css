@@ -981,7 +981,7 @@ body.studio.news .main{
 
 .details .meta ul.linked-list li {
     margin:0;
-    padding: 0;
+    padding: 2px 0 0 0;
     line-height: 1.1em;
 }
 
