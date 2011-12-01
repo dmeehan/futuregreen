@@ -1281,4 +1281,8 @@ ul#project-nav {
         width:75%;
         margin: 0 12.5%;
     }
+
+    .home .text p {
+        font-size:1.2em;
+    }
 }
