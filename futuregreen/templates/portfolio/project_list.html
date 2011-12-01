@@ -67,7 +67,7 @@
             });
     }
 
-    function ProjectSort() {
+    function ProjectFilter() {
         //substitute anchors for links
         $('nav.filter a').each(function (){
             var thisLink = $(this);
@@ -77,7 +77,7 @@
             thisLink.attr("href", newHref);
 
             // create click functions to sort by type
-            $("#subnav").find(currentClass).click(function () {
+            $("nav.filter").find(currentClass).click(function () {
                 if (currentClass != '.all') {
                     $(".project").addClass('hide')
                     $(".project").removeClass('show')
