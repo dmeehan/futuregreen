@@ -33,8 +33,8 @@
         <article class="text box three-quarters" id="profile">
             <a class="wraplink" href="{% url studio %}">
             <div>
-            {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
-            <p>Read More</p>
+                {%  gblock "firm_profile" for "content.ContentBlock" with "content/contentblock/excerpt.html" %}
+                <p class="tease">Read More</p>
             </div>
             </a>
         </article>
@@ -43,10 +43,10 @@
         <article class="text box three-quarters update" id="article">
             <a class="wraplink" href="{{ article.get_absolute_url }}">
             <div>
-            <h1>Research</h1>
-            <h2>{{ article.title }}</h2>
-            {{ article.excerpt_html|safe|truncatewords_html:30 }}
-            <p>Read More</p>
+                <h1>Research</h1>
+                <h2>{{ article.title }}</h2>
+                {{ article.excerpt_html|safe|truncatewords_html:30 }}
+                <p class="tease">Read More</p>
             </div>
             </a>
         </article>
