@@ -53,7 +53,7 @@ class AdminThumbnail(ImageSpec):
 
 class Thumbnail(ImageSpec):
     pre_cache = False
-    processors = [ResizeThumbnail, EnhanceSmall]
+    processors = [ResizeThumbnail]
 
 class List(ImageSpec):
     pre_cache = False
