@@ -1278,7 +1278,7 @@ ul#project-nav {
 
 @media screen and (min-width: 1440px) {
      body {
-        width:60%;
+        width:70%;
         margin: 0 20%;
     }
 
@@ -1286,7 +1286,7 @@ ul#project-nav {
         font-size:110%;
     }
 
-    .home article.text div {
+    .home article.text p {
         width:75%;
     }
 }
