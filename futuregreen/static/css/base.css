@@ -973,8 +973,16 @@ body.studio.news .main{
 .details .meta p {
     margin: 0 0 0 0;
 }
-.details .meta ul {
-    /*margin:0 0 0 0;*/
+
+.details .meta ul.linked-list {
+    margin:0;
+    padding: 0;
+}
+
+.details .meta ul.linked-list li {
+    margin:0;
+    padding: 0;
+    line-height: 1.1em;
 }
 
 .details .meta .info-boxes ul {
