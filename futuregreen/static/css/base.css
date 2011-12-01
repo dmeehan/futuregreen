@@ -931,6 +931,7 @@ body.studio.news .main{
     float:left;
     width:41.66667%;
     margin:0;
+    overflow: hidden;
     /*background:url('images/corner-bg-top-right.png') no-repeat right top;*/
 
 }
