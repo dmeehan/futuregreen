@@ -3,17 +3,17 @@
     {% block aside %}
         <aside class="sixth">
             {% block filter_nav %}
-                <nav class="box">
+                <nav class="box filter">
                     <ul class="categories">
                         <li {% if not category %}class="active"{% endif %}>
                             <a href="{% url portfolio_project_list %}"
-                               class="square center"
+                               class="square center all"
                                title="All Projects">ALL</a></li>
                         {% for type in projecttype_list %}
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }} Projects"
-                                   class="project-type square center">
+                                   class="project-type {{ type.slug }} square center">
                                    {{ type.alternate_title }}
                                 </a>
                             </li>
@@ -54,6 +54,7 @@
     {% endblock aside %}
 {% endblock content %}
 {% block js_local %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.url.js"></script>
 <script type="text/javascript">
     function Square() {
             $('.square').each(function(){
@@ -64,6 +65,52 @@
                 width = $(this).width();
                 $(this).css('line-height',width + "px");
             });
+    }
+
+    function ProjectSort() {
+        //substitute anchors for links
+        $('nav.filter a').each(function (){
+            var thisLink = $(this);
+            var thisClass = thisLink.attr('class');
+            var currentClass = '.' + thisClass;
+            var newHref = "#" + thisClass
+            thisLink.attr("href", newHref);
+
+            // create click functions to sort by type
+            $("#subnav").find(currentClass).click(function () {
+                if (currentClass != '.all') {
+                    $(".project").addClass('hide')
+                    $(".project").removeClass('show')
+                    $(".projects").find(currentClass).addClass('show')
+                    $(".projects").find(currentClass).removeClass('hide')
+                    $(".hide").hide(1000)
+                    $(".show").show(1000)
+                    $("nav.filter li").removeClass('active')
+                    $(this).parent().addClass('active')
+                } else {
+                    $(".project").removeClass('hide')
+                    $(".project").addClass('show')
+                    $(".hide").hide(1000)
+                    $(".show").show(1000)
+                    $("#subnav li").removeClass('active')
+                    $(".all").parent().addClass('active')
+                    $("#footer").show()
+                }
+            });
+        });
+        // if url includes an anchor on
+        var anchor = jQuery.url.attr("anchor");
+        var currentClass = '.' + anchor;
+        if (anchor && anchor != 'all') {
+            $("nav.filter li").removeClass('on')
+            $("nav.filter").find(currentClass).parent().addClass('on');
+            $(".project").addClass('hide')
+            $(".project").removeClass('show')
+            $(".projects").find(currentClass).addClass('show')
+            $(".projects").find(currentClass).removeClass('hide')
+            $(".hide").hide()
+            $(".show").show()
+        }
     }
 
 
