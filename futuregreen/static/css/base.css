@@ -987,6 +987,10 @@ body.studio.news .main{
     line-height: 1.1em;
 }
 
+.details .meta ul.linked-list li:first-child {
+    padding: 0 0 0 0;
+}
+
 .details .meta .info-boxes ul {
     margin: 0 0 0 0;
     overflow: auto;
