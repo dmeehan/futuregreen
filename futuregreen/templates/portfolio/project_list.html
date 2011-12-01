@@ -7,13 +7,15 @@
                     <ul class="categories">
                         <li {% if not category %}class="active"{% endif %}>
                             <a href="{% url portfolio_project_list %}"
-                               class="square center all"
+                               id="all"
+                               class="square center"
                                title="All Projects">ALL</a></li>
                         {% for type in projecttype_list %}
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }} Projects"
-                                   class="project-type {{ type.slug }} square center">
+                                   id="{{ type.slug }}"
+                                   class="project-type square center">
                                    {{ type.alternate_title }}
                                 </a>
                             </li>
@@ -22,6 +24,7 @@
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_landscape type.slug %}"
                                    title="{{ type.name }}"
+                                   id="{{ type.slug }}"
                                    class="landscape-type square center">
                                    {{ type.alternate_title }}
                                 </a>
@@ -71,7 +74,7 @@
         //substitute anchors for links
         $('nav.filter a').each(function (){
             var thisLink = $(this);
-            var thisClass = thisLink.attr('class');
+            var thisClass = thisLink.attr('id');
             var currentClass = '.' + thisClass;
             var newHref = "#" + thisClass
             thisLink.attr("href", newHref);
