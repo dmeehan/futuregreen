@@ -1248,13 +1248,17 @@ ul#project-nav {
     -moz-column-gap: 20px;
     }
 
+    .home article.text p {
+        width:90%;
+    }
+
 }
 
 @media screen and (min-width: 1680px) {
-     /*body {
-        width:70%;
-        margin: 0 20%;
-    }*/
+     body {
+        width:75%;
+        margin: 0 12.5%;
+    }
 
     .home article.text {
         font-size:110%;
