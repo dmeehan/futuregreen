@@ -1289,6 +1289,6 @@ ul#project-nav {
     .home article.text p {
         width:75%;
         margin: 0;
-        padding: 10px 0;
+        padding-top: 10px;
     }
 }
