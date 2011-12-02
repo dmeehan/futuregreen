@@ -329,6 +329,10 @@ h1.overlay {
     color:#fff;"
 }
 
+.file-list {
+    margin: 10px 0;
+}
+
 .linked-list {
     list-style-type: square;
     margin-left:15px;

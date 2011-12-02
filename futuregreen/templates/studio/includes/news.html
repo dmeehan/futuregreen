@@ -18,7 +18,7 @@
             {%  endfor %}
             {{ news.body_html|safe }}
             {%  if news.newsitemfile_set.all %}
-            <ul>
+            <ul class="file-list">
             {% load futuregreen_extras %}
             {%  for item in news.newsitemfile_set.all %}
                 <li><strong><a href="{{ item.file.url }}">{{ item.file|filename }}</a></strong>
