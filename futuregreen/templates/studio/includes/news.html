@@ -17,10 +17,15 @@
             {%  endif %}
             {%  endfor %}
             {{ news.body_html|safe }}
+            {%  if news.newsitemfile_set.all %}
+            <ul>
             {% load futuregreen_extras %}
             {%  for item in news.newsitemfile_set.all %}
-                <p><a href="{{ item.file.url }}">{{ item.file|filename }}</a> [ {{ item.file.size|filesizeformat  }} ]</p>
+                <li><strong><a href="{{ item.file.url }}">{{ item.file|filename }}</a></strong>
+                    [ {{ item.file.size|filesizeformat  }} ]</li>
             {% endfor %}
+            </ul>
+            {%  endif %}
              {%  if news.newsitemproject_set.all %}
              <h3>Related Projects</h3>
              {%  for item in news.newsitemproject_set.all %}

@@ -439,6 +439,7 @@ article.project.list img {
 article.project.related {
     margin-top:10px;
     clear:both;
+    overflow: auto;
 }
 
 article.project.related section {
