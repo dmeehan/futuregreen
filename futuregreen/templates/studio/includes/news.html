@@ -17,7 +17,7 @@
             {%  endif %}
             {%  endfor %}
             {{ news.body_html|safe }}
-             {%  for item in news.newsproject_set.all %}
+             {%  for item in news.newsitemproject_set.all %}
                 <article class="project related">
                     <figure class="seventh">
                         {% for image in item.project.projectimage_set.all %}
