@@ -367,7 +367,11 @@ h1.overlay {
 }
 
 .main > article {
-    margin-top:20px;
+    margin-top:40px;
+}
+
+.main > article:first-child {
+    margin-top:0;
 }
 
 article.news,
@@ -447,6 +451,7 @@ section.related-projects {
 article.project.related {
     clear:both;
     margin-top:10px;
+    overflow: auto;
 }
 
 article.project.related section {
