@@ -445,7 +445,7 @@ section.related-projects {
 }
 
 article.project.related {
-    margin-top:10px;
+    padding-top:20px;
     clear:both;
     overflow: auto;
 }
