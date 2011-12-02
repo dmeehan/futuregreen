@@ -436,6 +436,15 @@ article.project.list img {
     display:block;
 }
 
+section.related-projects {
+    margin-top:20px;
+}
+
+article.project.related {
+    clear:both;
+    margin-top:10px;
+}
+
 article.project.related section {
     padding-left:10px;
     -webkit-box-sizing: border-box;
