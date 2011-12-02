@@ -504,7 +504,7 @@ body.studio .content {
 body.research .main,
 body.studio.news .main{
     background:url('images/corner-bg-top-right.png') no-repeat right top,
-    url('images/side-bg.png') no-repeat left 150px;
+    url('images/side-bg.png') no-repeat left 170px;
 }
 
 
