@@ -20,7 +20,6 @@
             {%  for item in news.newsitemfile_set.all %}
                 {{ item.file }} {{ item. }}
             {% endfor %}
-            {%  endif %}
              {%  if news.newsitemproject_set.all %}
              <h3>Related Projects</h3>
              {%  for item in news.newsitemproject_set.all %}
