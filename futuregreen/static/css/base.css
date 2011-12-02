@@ -368,6 +368,7 @@ h1.overlay {
 
 .main > article {
     margin-top:40px;
+    overflow: auto;
 }
 
 .main > article:first-child {
