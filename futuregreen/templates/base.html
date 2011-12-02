@@ -29,11 +29,10 @@
     {% endblock favicons %}
 
     {% block css %}
-    {% load compress %}
-    {% compress css %}
+
     <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
-    {% endcompress %}
+    
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
     <link rel="stylesheet" media="handheld" href="css/handheld.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" />
@@ -92,13 +91,11 @@
     <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js">\x3C/script>')</script>
     {% endblock js_frameworks %}
 
-    {% compress js %}
     {% block js_global %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/utils.js"></script>
     {% endblock js_global %}
     {% block js_local %}
     {% endblock js_local %}
-    {% endcompress %}
     {% block google_analytics %}
     <script type="text/javascript">
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
