@@ -21,6 +21,8 @@
                 {{ item.file }} {{ item. }}
             {% endfor %}
             {%  endif %}
+             {%  if news.newsitemproject_set.all %}
+             <h3>Related Projects</h3>
              {%  for item in news.newsitemproject_set.all %}
                 <article class="project related">
                     <figure class="seventh">
@@ -41,5 +43,6 @@
 
                 </article>
             {%  endfor %}
+            {% endif %}
          </section>
     </article>
