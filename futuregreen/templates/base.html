@@ -94,9 +94,7 @@
 
     {% compress js %}
     {% block js_global %}
-    <script type="text/javascript">
-        <script type="text/javascript" src="{{ STATIC_URL }}js/utils.js"></script>
-    </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/utils.js"></script>
     {% endblock js_global %}
     {% block js_local %}
     {% endblock js_local %}
