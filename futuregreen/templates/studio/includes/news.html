@@ -17,8 +17,9 @@
             {%  endif %}
             {%  endfor %}
             {{ news.body_html|safe }}
+            {% load futuregreen_extras %}
             {%  for item in news.newsitemfile_set.all %}
-                <p><a href="{{ item.file.url }}">{{ item.filename }}</a> [ {{ item.file.size|filesizeformat  }} ]</p>
+                <p><a href="{{ item.file.url }}">{{ item.file.name|filename }}</a> [ {{ item.file.size|filesizeformat  }} ]</p>
             {% endfor %}
              {%  if news.newsitemproject_set.all %}
              <h3>Related Projects</h3>
