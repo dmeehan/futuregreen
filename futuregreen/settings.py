@@ -182,7 +182,7 @@ EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07
 
 PIL_IMAGEFILE_MAXBLOCK = 1024 * 2 ** 10
 
-COMPRESS_ENABLED = True
+#COMPRESS_ENABLED = True
 
 #==============================================================================
 # local app settings
