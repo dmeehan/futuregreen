@@ -27,9 +27,10 @@
             </ul>
             {%  endif %}
              {%  if news.newsitemproject_set.all %}
-             <h3>Related Projects</h3>
-             {%  for item in news.newsitemproject_set.all %}
-                <article class="project related">
+             <section class="related-projects">
+                 <h3>Related Projects</h3>
+                 {%  for item in news.newsitemproject_set.all %}
+                 <article class="project related">
                     <figure class="seventh">
                         {% for image in item.project.projectimage_set.all %}
                             {% if image.is_main %}
@@ -45,9 +46,9 @@
                         <h3><a href="{{ item.project.get_absolute_url }}">{{ item.project.name }}</a></h3>
                         <p style="font-size:.85em;">{{ item.project.short_description|safe }}</p>
                     </section>
-
-                </article>
-            {%  endfor %}
+                 </article>
+                {%  endfor %}
+              </section>
             {% endif %}
          </section>
     </article>
