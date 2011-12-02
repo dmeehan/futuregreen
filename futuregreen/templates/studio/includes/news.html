@@ -18,7 +18,7 @@
             {%  endfor %}
             {{ news.body_html|safe }}
             {%  for item in news.newsitemfile_set.all %}
-                {{ item.file }} {{ item. }}
+                <p><a href="{{ item.file.url }}">{{ item.file.name }}</a>[{{ item.file.size|filesizeformat  }}]</p>
             {% endfor %}
              {%  if news.newsitemproject_set.all %}
              <h3>Related Projects</h3>
