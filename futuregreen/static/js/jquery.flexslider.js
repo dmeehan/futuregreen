@@ -1,12 +1,12 @@
 /*
- * jQuery FlexSlider v1.8
+ * jQuery FlexSlider v1.7
  * http://flex.madebymufffin.com
  *
  * Copyright 2011, Tyler Smith
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Contrib: Darin Richardson
+ * Shoutout to Darin Richardson for his wonderful contributions to the betterment of FlexSlider
  */
 
 ;(function ($) {
@@ -28,14 +28,6 @@
       slider.eventType = ('ontouchstart' in document.documentElement) ? 'touchstart' : 'click';
       slider.cloneCount = 0;
       slider.cloneOffset = 0;
-      slider.manualPause = false;
-      slider.vertical = (slider.vars.slideDirection == "vertical");
-      slider.prop = (slider.vertical) ? "top" : "marginLeft";
-      slider.args = {};
-      
-      //Test for webbkit CSS3 Animations
-      slider.transitions = "webkitTransition" in document.body.style;
-      if (slider.transitions) slider.prop = "-webkit-transform";
       
       //Test for controlsContainer
       if (slider.vars.controlsContainer != "") {
@@ -55,45 +47,26 @@
         slider.container.empty().append(slider.slides);
       }
       ///////////////////////////////////////////////////////////////////
-      
+
       ///////////////////////////////////////////////////////////////////
       // FlexSlider: Slider Animation Initialize
       if (slider.vars.animation.toLowerCase() == "slide") {
-        if (slider.transitions) {
-          slider.setTransition(0);
-        }
         slider.css({"overflow": "hidden"});
         if (slider.vars.animationLoop) {
           slider.cloneCount = 2;
           slider.cloneOffset = 1;
           slider.container.append(slider.slides.filter(':first').clone().addClass('clone')).prepend(slider.slides.filter(':last').clone().addClass('clone'));
         }
+        slider.container.width(((slider.count + slider.cloneCount) * slider.width()) + 2000); //extra width to account for quirks
         //create newSlides to capture possible clones
         slider.newSlides = $('.slides > li', slider);
-        var sliderOffset = (-1 * (slider.currentSlide + slider.cloneOffset));
-        if (slider.vertical) {
-          slider.newSlides.css({"display": "block", "width": "100%", "float": "left"});
-          slider.container.height((slider.count + slider.cloneCount) * 200 + "%").css("position", "absolute").width("100%");
-          //Timeout function to give browser enough time to get proper height initially
-          setTimeout(function() {
-            slider.css({"position": "relative"}).height(slider.slides.filter(':first').height());
-            slider.args[slider.prop] = (slider.transitions) ? "translate3d(0," + sliderOffset * slider.height() + "px,0)" : sliderOffset * slider.height() + "px";
-            slider.container.css(slider.args);
-          }, 100);
-
-        } else {
-          slider.args[slider.prop] = (slider.transitions) ? "translate3d(" + sliderOffset * slider.width() + "px,0,0)" : sliderOffset * slider.width() + "px";
-          slider.container.width((slider.count + slider.cloneCount) * 200 + "%").css(slider.args);
-          //Timeout function to give browser enough time to get proper width initially
-          setTimeout(function() {
-            slider.newSlides.width(slider.width()).css({"float": "left", "display": "block"});
-          }, 100);
-        }
-        
+        //Timeout function to give browser enough time to get proper width initially
+        setTimeout(function() {
+          slider.newSlides.width(slider.width()).css({"float": "left"}).show();
+        }, 100);
+        slider.container.css({"marginLeft": (-1 * (slider.currentSlide + slider.cloneOffset))* slider.width() + "px"});
       } else { //Default to fade
-        //Not supporting fade CSS3 transitions right now
-        slider.transitions = false;
-        slider.slides.css({"width": "100%", "float": "left", "marginRight": "-100%"}).eq(slider.currentSlide).fadeIn(slider.vars.animationDuration); 
+        slider.slides.css({"width": "100%", "float": "left", "marginRight": "-100%"}).eq(slider.currentSlide).fadeIn(400);
       }
       ///////////////////////////////////////////////////////////////////
       
@@ -124,7 +97,6 @@
         slider.controlNav.bind(slider.eventType, function(event) {
           event.preventDefault();
           if (!$(this).hasClass('active')) {
-            (slider.controlNav.index($(this)) > slider.currentSlide) ? slider.direction = "next" : slider.direction = "prev";
             slider.flexAnimate(slider.controlNav.index($(this)), slider.vars.pauseOnAction);
           }
         });
@@ -167,7 +139,7 @@
       //////////////////////////////////////////////////////////////////
       //FlexSlider: Keyboard Nav
       if (slider.vars.keyboardNav && $('ul.slides').length == 1) {
-        function keyboardMove(event) {
+        $(document).keyup(function(event) {
           if (slider.animating) {
             return;
           } else if (event.keyCode != 39 && event.keyCode != 37){
@@ -183,27 +155,9 @@
               slider.flexAnimate(target, slider.vars.pauseOnAction);
             }
           }
-        }
-        $(document).bind('keyup', keyboardMove);
-      }
-      //////////////////////////////////////////////////////////////////
-      
-      ///////////////////////////////////////////////////////////////////
-      // FlexSlider: Mousewheel interaction
-      if (slider.vars.mousewheel) {
-        slider.mousewheelEvent = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel";
-        slider.bind(slider.mousewheelEvent, function(e) {
-          e.preventDefault();
-          e = e ? e : window.event;
-          var wheelData = e.detail ? e.detail * -1 : e.wheelDelta / 40,
-              target = (wheelData < 0) ? slider.getTarget('next') : slider.getTarget('prev');
-          
-          if (slider.canAdvance(target)) {
-            slider.flexAnimate(target, slider.vars.pauseOnAction);
-          }
         });
       }
-      ///////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
       
       //////////////////////////////////////////////////////////////////
       //FlexSlider: Slideshow Setup
@@ -213,9 +167,7 @@
           slider.hover(function() {
             slider.pause();
           }, function() {
-            if (!slider.manualPause) {
-              slider.resume();
-            }
+            slider.resume();
           });
         }
 
@@ -238,146 +190,73 @@
         }
         
         var pausePlayState = (slider.vars.slideshow) ? 'pause' : 'play';
-        slider.pausePlay.addClass(pausePlayState).text((pausePlayState == 'pause') ? slider.vars.pauseText : slider.vars.playText);
+        slider.pausePlay.addClass(pausePlayState).text(pausePlayState);
         
-        slider.pausePlay.bind(slider.eventType, function(event) {
+        slider.pausePlay.click(function(event) {
           event.preventDefault();
-          if ($(this).hasClass('pause')) {
-            slider.pause();
-            slider.manualPause = true;
-          } else {
-            slider.resume();
-            slider.manualPause = false;
-          }
+          ($(this).hasClass('pause'))? slider.pause() : slider.resume();
         });
       }
       //////////////////////////////////////////////////////////////////
       
       //////////////////////////////////////////////////////////////////
       //FlexSlider:Touch Swip Gestures
-      //Some brilliant concepts adapted from the following sources
-      //Source: TouchSwipe - http://www.netcu.de/jquery-touchwipe-iphone-ipad-library
-      //Source: SwipeJS - http://swipejs.com
-      if ('ontouchstart' in document.documentElement) {
-        //For brevity, variables are named for x-axis scrolling
-        //The variables are then swapped if vertical sliding is applied
-        //This reduces redundant code...I think :)
-        //If debugging, recognize variables are named for horizontal scrolling
-        var startX,
-          startY,
-          offset,
-          cwidth,
-          dx,
-          startT,
-          scrolling = false;
-              
+      //Credit of concept: TouchSwipe - http://www.netcu.de/jquery-touchwipe-iphone-ipad-library
+      if (slider.vars.touchSwipe && 'ontouchstart' in document.documentElement) {
         slider.each(function() {
+          var startX,
+              min_move_x = 20;
+              isMoving = false;
+
+          function cancelTouch() {
+            this.removeEventListener('touchmove', onTouchMove);
+            startX = null;
+            isMoving = false;
+          }
+          function onTouchMove(e) {
+            if (isMoving) {
+              var x = e.touches[0].pageX,
+                  dx = startX - x;
+          
+              if(Math.abs(dx) >= min_move_x) {
+                cancelTouch();
+                var target = (dx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
+                
+                if (slider.canAdvance(target)) {
+                  slider.flexAnimate(target, slider.vars.pauseOnAction);
+                }
+              }
+            }
+          }
+          function onTouchStart(e) {
+            if (e.touches.length == 1) {
+              startX = e.touches[0].pageX;
+              isMoving = true;
+              this.addEventListener('touchmove', onTouchMove, false);
+            }
+          }
           if ('ontouchstart' in document.documentElement) {
             this.addEventListener('touchstart', onTouchStart, false);
           }
         });
-        
-        function onTouchStart(e) {
-          if (slider.animating) {
-            e.preventDefault();
-          } else if (e.touches.length == 1) {
-            slider.pause();
-            cwidth = (slider.vertical) ? slider.height() : slider.width();
-            startT = Number(new Date());
-            offset = (slider.vertical) ? (slider.currentSlide + slider.cloneOffset) * slider.height() : (slider.currentSlide + slider.cloneOffset) * slider.width();
-            startX = (slider.vertical) ? e.touches[0].pageY : e.touches[0].pageX;
-            startY = (slider.vertical) ? e.touches[0].pageX : e.touches[0].pageY;
-            slider.setTransition(0);
-
-            this.addEventListener('touchmove', onTouchMove, false);
-            this.addEventListener('touchend', onTouchEnd, false);
-          }
-        }
-
-        function onTouchMove(e) {
-          dx = (slider.vertical) ? startX - e.touches[0].pageY : startX - e.touches[0].pageX;
-          scrolling = (slider.vertical) ? (Math.abs(dx) < Math.abs(e.touches[0].pageX - startY)) : (Math.abs(dx) < Math.abs(e.touches[0].pageY - startY));
-
-          if (!scrolling) {
-            e.preventDefault();
-            if (slider.vars.animation == "slide" && slider.transitions) {
-              if (!slider.vars.animationLoop) {
-                dx = dx/((slider.currentSlide == 0 && dx < 0 || slider.currentSlide == slider.count - 1 && dx > 0) ? (Math.abs(dx)/cwidth+2) : 1);
-              }
-              slider.args[slider.prop] = (slider.vertical) ? "translate3d(0," + (-offset - dx) + "px,0)": "translate3d(" + (-offset - dx) + "px,0,0)";
-              slider.container.css(slider.args);
-            }
-          }
-        }
-        
-        function onTouchEnd(e) {
-          slider.animating = false;
-          if (slider.animatingTo == slider.currentSlide && !scrolling && !(dx == null)) {
-            var target = (dx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
-            if (slider.canAdvance(target) && Number(new Date()) - startT < 550 && Math.abs(dx) > 20 || Math.abs(dx) > cwidth/2) {
-              slider.flexAnimate(target, slider.vars.pauseOnAction);
-            } else {
-              slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction);
-            }
-          }
-          
-          //Finish the touch by undoing the touch session
-          this.removeEventListener('touchmove', onTouchMove, false);
-          this.removeEventListener('touchend', onTouchEnd, false);
-          startX = null;
-          startY = null;
-          dx = null;
-          offset = null;
-        }
       }
       //////////////////////////////////////////////////////////////////
       
       //////////////////////////////////////////////////////////////////
       //FlexSlider: Resize Functions (If necessary)
       if (slider.vars.animation.toLowerCase() == "slide") {
+        slider.sliderTimer;
         $(window).resize(function(){
-          if (!slider.animating) {
-            if (slider.vertical) {
-              slider.height(slider.slides.filter(':first').height());
-              slider.args[slider.prop] = (-1 * (slider.currentSlide + slider.cloneOffset))* slider.slides.filter(':first').height() + "px";
-              if (slider.transitions) {
-                slider.setTransition(0);
-                slider.args[slider.prop] = (slider.vertical) ? "translate3d(0," + slider.args[slider.prop] + ",0)" : "translate3d(" + slider.args[slider.prop] + ",0,0)";
-              }
-              slider.container.css(slider.args);
-            } else {
-              slider.newSlides.width(slider.width());
-              slider.args[slider.prop] = (-1 * (slider.currentSlide + slider.cloneOffset))* slider.width() + "px";
-              if (slider.transitions) {
-                slider.setTransition(0);
-                slider.args[slider.prop] = (slider.vertical) ? "translate3d(0," + slider.args[slider.prop] + ",0)" : "translate3d(" + slider.args[slider.prop] + ",0,0)";
-              }
-              slider.container.css(slider.args);
-            }
-          }
+          slider.newSlides.width(slider.width());
+          slider.container.width(((slider.count + slider.cloneCount) * slider.width()) + 2000); //extra width to account for quirks
+    
+          //Slider resize reset
+          clearTimeout(slider.sliderTimer);
+          slider.sliderTimer = setTimeout(function(){
+            slider.flexAnimate(slider.currentSlide);
+          }, 300);
         });
       }
-      //////////////////////////////////////////////////////////////////
-      
-      //////////////////////////////////////////////////////////////////
-      //FlexSlider: Destroy the slider entity
-      //Destory is not included in the minified version right now, but this is a working function for anyone who wants to include it.
-      //Simply bind the actions you need from this function into a function in the start() callback to the event of your chosing
-      /*
-      slider.destroy = function() {
-        slider.pause();
-        if (slider.controlNav && slider.vars.manualControls == "") slider.controlNav.closest('.flex-control-nav').remove();
-        if (slider.directionNav) slider.directionNav.closest('.flex-direction-nav').remove();
-        if (slider.vars.pausePlay) slider.pausePlay.closest('.flex-pauseplay').remove();
-        if (slider.vars.keyboardNav && $('ul.slides').length == 1) $(document).unbind('keyup', keyboardMove);
-        if (slider.vars.mousewheel) slider.unbind(slider.mousewheelEvent);
-        if (slider.transitions) slider.each(function(){this.removeEventListener('touchstart', onTouchStart, false);});
-        if (slider.vars.animation == "slide" && slider.vars.animationLoop) slider.newSlides.filter('.clone').remove();
-        if (slider.vertical) slider.height("auto");
-        slider.slides.hide();
-        slider.removeData('flexslider');
-      }
-      */
       //////////////////////////////////////////////////////////////////
       
       //FlexSlider: start() Callback
@@ -389,10 +268,6 @@
       if (!slider.animating) {
         //Animating flag
         slider.animating = true;
-        
-        //FlexSlider: before() animation Callback
-        slider.animatingTo = target;
-        slider.vars.before(slider);
         
         //Optional paramter to pause slider when making an anmiation call
         if (pause) {
@@ -406,84 +281,61 @@
         
         //Is the slider at either end
         slider.atEnd = (target == 0 || target == slider.count - 1) ? true : false;
-        if (!slider.vars.animationLoop && slider.vars.directionNav) {
+        if (!slider.vars.animationLoop) {
           if (target == 0) {
             slider.directionNav.removeClass('disabled').filter('.prev').addClass('disabled');
           } else if (target == slider.count - 1) {
             slider.directionNav.removeClass('disabled').filter('.next').addClass('disabled');
+            slider.pause();
+            //FlexSlider: end() of cycle Callback
+            slider.vars.end(slider);
           } else {
             slider.directionNav.removeClass('disabled');
           }
         }
         
-        if (!slider.vars.animationLoop && target == slider.count - 1) {
-          slider.pause();
-          //FlexSlider: end() of cycle Callback
-          slider.vars.end(slider);
-        }
+        //FlexSlider: before() animation Callback
+        slider.animatingTo = target;
+        slider.vars.before(slider);
         
         if (slider.vars.animation.toLowerCase() == "slide") {
-          var dimension = (slider.vertical) ? slider.slides.filter(':first').height() : slider.slides.filter(':first').width();
-          
-          if (slider.currentSlide == 0 && target == slider.count - 1 && slider.vars.animationLoop && slider.direction != "next") {
-            slider.slideString = "0px";
-          } else if (slider.currentSlide == slider.count - 1 && target == 0 && slider.vars.animationLoop && slider.direction != "prev") {
-            slider.slideString = (-1 * (slider.count + 1)) * dimension + "px";
-          } else {
-            slider.slideString = (-1 * (target + slider.cloneOffset)) * dimension + "px";
-          }
-          slider.args[slider.prop] = slider.slideString;
 
-          if (slider.transitions) {
-              slider.setTransition(slider.vars.animationDuration); 
-              slider.args[slider.prop] = (slider.vertical) ? "translate3d(0," + slider.slideString + ",0)" : "translate3d(" + slider.slideString + ",0,0)";
-              slider.container.css(slider.args).one("webkitTransitionEnd transitionend", function(){
-                slider.wrapup(dimension);
-              });   
+          if (slider.currentSlide == 0 && target == slider.count - 1 && slider.vars.animationLoop) {
+            slider.slideString = "0px";
+          } else if (slider.currentSlide == slider.count - 1 && target == 0 && slider.vars.animationLoop) {
+            slider.slideString = (-1 * (slider.count + 1)) * slider.slides.filter(':first').width() + "px";
           } else {
-            slider.container.animate(slider.args, slider.vars.animationDuration, function(){
-              slider.wrapup(dimension);
-            });
+            slider.slideString = (-1 * (target + slider.cloneOffset)) * slider.slides.filter(':first').width() + "px";
           }
+          slider.container.animate({"marginLeft": slider.slideString}, slider.vars.animationDuration, function(){
+            //Jump the slider if necessary
+            if (slider.currentSlide == 0 && target == slider.count - 1 && slider.vars.animationLoop) {
+              slider.container.css({"marginLeft": (-1 * slider.count) * slider.slides.filter(':first').width() + "px"});
+            } else if (slider.currentSlide == slider.count - 1 && target == 0 && slider.vars.animationLoop) {
+              slider.container.css({"marginLeft": -1 * slider.slides.filter(':first').width() + "px"});
+            }
+            slider.animating = false;
+            slider.currentSlide = target;
+            //FlexSlider: after() animation Callback
+            slider.vars.after(slider);
+          });
         } else { //Default to Fade
           slider.slides.eq(slider.currentSlide).fadeOut(slider.vars.animationDuration);
           slider.slides.eq(target).fadeIn(slider.vars.animationDuration, function() {
-            slider.wrapup();
+            slider.animating = false;
+            slider.currentSlide = target;
+            //FlexSlider: after() animation Callback
+            slider.vars.after(slider);
           });
         }
       }
     }
     
-    //FlexSlider: Function to minify redundant animation actions
-    slider.wrapup = function(dimension) {
-      if (slider.vars.animation == "slide") {
-        //Jump the slider if necessary
-        if (slider.currentSlide == 0 && slider.animatingTo == slider.count - 1 && slider.vars.animationLoop) {
-          slider.args[slider.prop] = (-1 * slider.count) * dimension + "px";
-          if (slider.transitions) {
-            slider.setTransition(0);
-            slider.args[slider.prop] = (slider.vertical) ? "translate3d(0," + slider.args[slider.prop] + ",0)" : "translate3d(" + slider.args[slider.prop] + ",0,0)";
-          }
-          slider.container.css(slider.args);
-        } else if (slider.currentSlide == slider.count - 1 && slider.animatingTo == 0 && slider.vars.animationLoop) {
-          slider.args[slider.prop] = -1 * dimension + "px";
-          if (slider.transitions) {
-            slider.setTransition(0);
-            slider.args[slider.prop] = (slider.vertical) ? "translate3d(0," + slider.args[slider.prop] + ",0)" : "translate3d(" + slider.args[slider.prop] + ",0,0)";
-          }
-          slider.container.css(slider.args);
-        }
-      }
-      slider.animating = false;
-      slider.currentSlide = slider.animatingTo;
-      //FlexSlider: after() animation Callback
-      slider.vars.after(slider);
-    }
-    
     //FlexSlider: Automatic Slideshow
     slider.animateSlides = function() {
       if (!slider.animating) {
-        slider.flexAnimate(slider.getTarget("next"));
+        var target = (slider.currentSlide == slider.count - 1) ? 0 : slider.currentSlide + 1;
+        slider.flexAnimate(target);
       }
     }
     
@@ -491,7 +343,7 @@
     slider.pause = function() {
       clearInterval(slider.animatedSlides);
       if (slider.vars.pausePlay) {
-        slider.pausePlay.removeClass('pause').addClass('play').text(slider.vars.playText);
+        slider.pausePlay.removeClass('pause').addClass('play').text('play');
       }
     }
     
@@ -499,7 +351,7 @@
     slider.resume = function() {
       slider.animatedSlides = setInterval(slider.animateSlides, slider.vars.slideshowSpeed);
       if (slider.vars.pausePlay) {
-        slider.pausePlay.removeClass('play').addClass('pause').text(slider.vars.pauseText);
+        slider.pausePlay.removeClass('play').addClass('pause').text('pause');
       }
     }
     
@@ -528,38 +380,30 @@
       }
     }
     
-    //FlexSlider: Helper function to set CSS3 transitions
-    slider.setTransition = function(dur) {
-      slider.container.css({'-webkit-transition-duration': (dur/1000) + "s"});
-    }
-
     //FlexSlider: Initialize
     slider.init();
   }
   
   //FlexSlider: Default Settings
   $.flexslider.defaults = {
-    animation: "fade",              //String: Select your animation type, "fade" or "slide"
-    slideDirection: "horizontal",   //String: Select the sliding direction, "horizontal" or "vertical"
-    slideshow: true,                //Boolean: Animate slider automatically
-    slideshowSpeed: 7000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
-    animationDuration: 600,         //Integer: Set the speed of animations, in milliseconds
-    directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
-    controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-    keyboardNav: true,              //Boolean: Allow slider navigating via keyboard left/right keys
-    mousewheel: false,              //Boolean: Allow slider navigating via mousewheel
-    prevText: "Previous",           //String: Set the text for the "previous" directionNav item
-    nextText: "Next",               //String: Set the text for the "next" directionNav item
-    pausePlay: false,               //Boolean: Create pause/play dynamic element
-    pauseText: 'Pause',             //String: Set the text for the "pause" pausePlay item
-    playText: 'Play',               //String: Set the text for the "play" pausePlay item
-    randomize: false,               //Boolean: Randomize slide order
-    slideToStart: 0,                //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-    animationLoop: true,            //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
-    pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-    pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
-    controlsContainer: "",          //Selector: Declare which container the navigation elements should be appended too. Default container is the flexSlider element. Example use would be ".flexslider-container", "#container", etc. If the given element is not found, the default action will be taken.
-    manualControls: "",             //Selector: Declare custom control navigation. Example would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+    animation: "fade",              //Select your animation type (fade/slide)
+    slideshow: true,                //Should the slider animate automatically by default? (true/false)
+    slideshowSpeed: 7000,           //Set the speed of the slideshow cycling, in milliseconds
+    animationDuration: 600,         //Set the speed of animations, in milliseconds
+    directionNav: true,             //Create navigation for previous/next navigation? (true/false)
+    controlNav: true,               //Create navigation for paging control of each clide? (true/false)
+    keyboardNav: true,              //Allow for keyboard navigation using left/right keys (true/false)
+    touchSwipe: true,               //Touch swipe gestures for left/right slide navigation (true/false)
+    prevText: "Previous",           //Set the text for the "previous" directionNav item
+    nextText: "Next",               //Set the text for the "next" directionNav item
+    pausePlay: false,               //Create pause/play dynamic element (true/false)
+    randomize: false,               //Randomize slide order on page load? (true/false)
+    slideToStart: 0,                //The slide that the slider should start on. Array notation (0 = first slide)
+    animationLoop: true,            //Should the animation loop? If false, directionNav will received disabled classes when at either end (true/false)
+    pauseOnAction: true,            //Pause the slideshow when interacting with control elements, highly recommended. (true/false)
+    pauseOnHover: false,            //Pause the slideshow when hovering over slider, then resume when no longer hovering (true/false)
+    controlsContainer: "",          //Advanced property: Can declare which container the navigation elements should be appended too. Default container is the flexSlider element. Example use would be ".flexslider-container", "#container", etc. If the given element is not found, the default action will be taken.
+    manualControls: "",             //Advanced property: Can declare custom control navigation. Example would be ".flex-control-nav" or "#tabs-nav", etc. The number of elements in your controlNav should match the number of slides/tabs (obviously).
     start: function(){},            //Callback: function(slider) - Fires when the slider loads the first slide
     before: function(){},           //Callback: function(slider) - Fires asynchronously with each slider animation
     after: function(){},            //Callback: function(slider) - Fires after each slider animation completes
