@@ -18,7 +18,7 @@ class ContactAdmin(admin.ModelAdmin):
         }),
         ('Metadata', {
             'classes': ('collapse closed',),
-            'fields': ('slug', 'user',)
+            'fields': ('public', 'slug', 'user',)
         }),
     )
 
