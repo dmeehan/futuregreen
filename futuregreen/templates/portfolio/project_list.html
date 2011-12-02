@@ -59,17 +59,6 @@
 {% block js_local %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.url.js"></script>
 <script type="text/javascript">
-    function Square() {
-            $('.square').each(function(){
-                width = $(this).width();
-                $(this).css('height',width);
-            });
-            $('.center').each(function(){
-                width = $(this).width();
-                $(this).css('line-height',width + "px");
-            });
-    }
-
     function ProjectFilter() {
         //substitute anchors for links
         $('nav.filter a').each(function (){

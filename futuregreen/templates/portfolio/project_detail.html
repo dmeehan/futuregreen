@@ -151,20 +151,6 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>
 <script type="text/javascript">
-    function Square() {
-            $('.square').each(function(){
-                width = $(this).width();
-                $(this).css('height',width);
-            });
-            $('.center').each(function(){
-                width = $(this).width();
-                $(this).css('line-height',width + "px");
-            });
-    }
-
-
-
-
     $(document).ready(function() {
         Square();
         $('.carousel').flexslider({
@@ -175,7 +161,6 @@
             directionNav: true,
             controlNav: true,
             keyboardNav: true,
-            touchSwipe: true,
             prevText: "	&#171;",
             nextText: "	&#187;",
             pausePlay: false,
@@ -187,9 +172,6 @@
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
-
-        //var offset = $(".controls").height() + 10;
-        //$(".slideshow .flex-direction-nav").css('bottom',offset);
 
     });
 
