@@ -14,7 +14,7 @@
                     {% for image in project.projectimage_set.all %}
                         <li>
                             <div class="image">
-                            <img id="image_{{ forloop.counter }}" src="{{ image.detail.url }}" alt="{{ image.caption }}" />
+                            <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
                             </div>
                             {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
                         </li>
@@ -148,9 +148,23 @@
 {% endblock content %}
 
 {% block js_local %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>
 <script type="text/javascript">
+    function Square() {
+            $('.square').each(function(){
+                width = $(this).width();
+                $(this).css('height',width);
+            });
+            $('.center').each(function(){
+                width = $(this).width();
+                $(this).css('line-height',width + "px");
+            });
+    }
+
+
+
+
     $(document).ready(function() {
         Square();
         $('.carousel').flexslider({
@@ -161,6 +175,7 @@
             directionNav: true,
             controlNav: true,
             keyboardNav: true,
+            touchSwipe: true,
             prevText: "	&#171;",
             nextText: "	&#187;",
             pausePlay: false,
@@ -172,6 +187,9 @@
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
+
+        //var offset = $(".controls").height() + 10;
+        //$(".slideshow .flex-direction-nav").css('bottom',offset);
 
     });
 

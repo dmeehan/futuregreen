@@ -29,10 +29,7 @@
     {% endblock favicons %}
 
     {% block css %}
-
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
-    
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
     <link rel="stylesheet" media="handheld" href="css/handheld.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" />
@@ -85,19 +82,31 @@
     <!-- JavaScript at the bottom for fast page loading -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-
     {% block js_frameworks %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js">\x3C/script>')</script>
     {% endblock js_frameworks %}
 
     {% block js_global %}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/utils.js"></script>
+    <script type="text/javascript">
+        function Square() {
+                $('.square').each(function(){
+                    width = $(this).width();
+                    $(this).css('height',width);
+                });
+                $('.center').each(function(){
+                    width = $(this).width();
+                    $(this).css('line-height',width + "px");
+                });
+        }
+    </script>
     {% endblock js_global %}
+
     {% block js_local %}
     {% endblock js_local %}
+
     {% block google_analytics %}
-    <script type="text/javascript">
+    <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
@@ -113,6 +122,7 @@
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
     <![endif]-->
     {% endblock browser_prompt %}
+
 {% endblock body %}
 </body>
 </html>
