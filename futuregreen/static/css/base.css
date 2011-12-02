@@ -436,6 +436,10 @@ article.project.list img {
     display:block;
 }
 
+article.project.related {
+    margin-top:10px;
+}
+
 article.project.related section {
     padding-left:10px;
     -webkit-box-sizing: border-box;
