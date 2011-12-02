@@ -366,6 +366,10 @@ h1.overlay {
 	height: 100%;
 }
 
+.main > article {
+    margin-top:20px;
+}
+
 article.news,
 article.article {
     clear:both;
