@@ -55,13 +55,14 @@ body {
     font-size:87.5%;
     font-family: kulturista-web-1,kulturista-web-2, Arial, Helvetica, sans-serif;
     color:#444;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 h1 {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
-    word-wrap: break-word;
 }
 
 h2 {
