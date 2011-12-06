@@ -61,6 +61,7 @@ h1 {
     font-family: purista-web-1,purista-web-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
+    word-wrap: break-word;
 }
 
 h2 {
@@ -682,16 +683,13 @@ body.studio.news .main{
 
 }
 
-.slideshow .carousel .slides {
-
-}
-
 .slideshow .carousel .slides img {
     width:100%;
     display:block;
 }
 
 .slideshow .carousel .slides li {
+    display:none;
     position:relative;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
