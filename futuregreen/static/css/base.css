@@ -84,6 +84,8 @@ strong {
 
 body > header {
     font-family: purista-web-1,purista-web-2, sans-serif;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
 }
 
 
