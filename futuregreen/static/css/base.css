@@ -1211,6 +1211,10 @@ ul#project-nav {
         display:none;
     }
 
+    body.home > div:first-child article.project:first-child {
+        display:block;
+    }
+
     article.text {
         clear:both;
         width:100%;
