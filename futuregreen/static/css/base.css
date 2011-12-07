@@ -1191,6 +1191,8 @@ ul#project-nav {
         width:50%;
         color:#fff;
         background: #ccc;
+        overflow: auto;
+        margin: 10px;
     }
 
     body.home > .content > div {
@@ -1198,13 +1200,23 @@ ul#project-nav {
         width:100%;
     }
 
-    article#profile {
+    body.home > .content > div > article.project {
+        display:none;
+    }
+
+    article.text {
         clear:both;
         width:100%;
     }
 
     body.home article.project {
-        width:50%;
+        clear:both;
+        width:100%;
+    }
+
+    footer .contact {
+        clear:both;
+        text-align: left;
     }
 }
 
