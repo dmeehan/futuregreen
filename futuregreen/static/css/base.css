@@ -1049,8 +1049,7 @@ ul#project-nav {
 }
 
 .max .details .description {
-    width:50%;
-    margin-right:33.333333%;
+    width:66.66667%;
     -webkit-column-count:2;
     -moz-column-count:2;
     -o-column-count:2;
@@ -1088,6 +1087,7 @@ ul#project-nav {
 }
 
 .max ul#project-nav {
+    width:16.66667%;
     margin-top:40px;
     padding-right:20px;
     top:0;
