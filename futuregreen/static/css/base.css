@@ -1194,7 +1194,7 @@ ul#project-nav {
         color:#fff;
         background: #ccc;
         overflow: auto;
-        margin: 10px;
+        border: 10px solid white;
     }
 
     body.home > .content > div {
