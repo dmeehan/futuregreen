@@ -1181,11 +1181,11 @@ ul#project-nav {
     }
 
     body > header > a {
-        font-size:8px;
         width:100%;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
+        height:auto;
+        padding: 0 0 0 0;
+        text-indent: -999999px;
+        background-size: contain;
     }
 
     body > header > nav {
