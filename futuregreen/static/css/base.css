@@ -1184,6 +1184,15 @@ ul#project-nav {
         clear:both;
     }
 
+    body > header > nav li {
+        float:left;
+        line-height:80px;
+        text-align: center;
+        width:50%;
+        color:#fff;
+        background: #ccc;
+    }
+
     body.home > .content > div {
         clear:both;
         width:100%;
@@ -1192,6 +1201,10 @@ ul#project-nav {
     article#profile {
         clear:both;
         width:100%;
+    }
+
+    body.home article.project {
+        width:50%;
     }
 }
 
