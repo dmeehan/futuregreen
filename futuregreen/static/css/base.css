@@ -1233,6 +1233,12 @@ ul#project-nav {
         width:100%;
     }
 
+    body .content > section {
+        clear:both;
+        width:100%;
+        float:none;
+    }
+
     footer .contact {
         clear:both;
         text-align: left;
