@@ -126,7 +126,6 @@ a.wraplink {
 
 /********** LAYOUT **********/
 body {
-    min-width:1024px;
     padding:10px;
     position:relative;
 }
@@ -1168,6 +1167,21 @@ ul#project-nav {
 }
 
 /******** MEDIA QUERIES **********/
+@media screen and (max-width: 480px) {
+    body > header > h1 {
+        font-size:8px;
+        width:100%;
+        overflow: hidden;
+    }
+
+    body > header > nav {
+        float:left;
+        width:100%;
+        clear:both;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
     section.text article {
         font-size:0.92857em;
