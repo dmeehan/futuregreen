@@ -1180,6 +1180,14 @@ ul#project-nav {
         padding: 0;
     }
 
+    body > header > a {
+        font-size:8px;
+        width:100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
     body > header > nav {
         float:left;
         width:100%;
@@ -1202,16 +1210,20 @@ ul#project-nav {
         border: 10px solid white;
     }
 
+    body .content {
+        padding: 0 0 0 0;
+    }
+
     body.home > .content > div {
         clear:both;
         width:100%;
     }
 
-    body.home > div:first-child article.project {
+    body.home .content div div:first-child article.project {
         display:none;
     }
 
-    body.home > div:first-child article.project:first-child {
+    body.home .content div div:first-child article.project:first-child {
         display:block;
     }
 
@@ -1228,6 +1240,7 @@ ul#project-nav {
     footer .contact {
         clear:both;
         text-align: left;
+        float:none;
     }
 }
 
