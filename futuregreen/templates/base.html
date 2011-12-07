@@ -25,7 +25,7 @@
     {% endblock mobile_viewport %}
 
     {% block favicons %}
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/ico" href="{{ STATIC_URL }}images/favicon.ico" />
     {% endblock favicons %}
 
     {% block css %}
@@ -51,7 +51,7 @@
 {% endblock head %}
 </head>
 
-<body id="{% block body_id %}default{% endblock body_id%}">
+<body class="{% block body_class %}default{% endblock body_class%}">
 {% block body %}
     {% block header %}
     <header>
@@ -74,8 +74,9 @@
     
     {% block footer %}
     <footer>
+        {% load generic_flatblocks %}
         <span class="copyright">&copy; {% now "Y" %} Future Green Studio Corp.</span>
-        <span class="contact">92 3rd Street Brooklyn, NY 11231&nbsp;&nbsp;|&nbsp;&nbsp;t. 718.855.8995&nbsp;&nbsp;|&nbsp;&nbsp;f. 718-228-7004&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@futuregreenstudio.com">info@futuregreenstudio.com</a></span>
+        <span class="contact">{%  gblock "footer_contact" for "content.ContentBlock" with "content/contentblock/simple.html" %}</span>
     </footer>
     {% endblock footer %}
 
@@ -88,6 +89,18 @@
     {% endblock js_frameworks %}
 
     {% block js_global %}
+    <script type="text/javascript">
+        function Square() {
+                $('.square').each(function(){
+                    width = $(this).width();
+                    $(this).css('height',width);
+                });
+                $('.center').each(function(){
+                    width = $(this).width();
+                    $(this).css('line-height',width + "px");
+                });
+        }
+    </script>
     {% endblock js_global %}
 
     {% block js_local %}
@@ -95,7 +108,7 @@
 
     {% block google_analytics %}
     <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    var _gaq=[['_setAccount','UA-6701616-1'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));

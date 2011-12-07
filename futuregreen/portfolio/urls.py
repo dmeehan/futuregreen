@@ -7,7 +7,6 @@ from django.views.generic import ListView, DetailView
 from categories.views import CategoryDetailView, CategoryRelatedList
 
 from futuregreen.portfolio.views import *
-from futuregreen.portfolio.models import ProjectType
 
 urlpatterns = patterns('',
     url(r'^projects/$', ProjectListView.as_view(), name='portfolio_project_list'),
@@ -18,12 +17,8 @@ urlpatterns = patterns('',
     url(r'^projects/scale/descending/$', ProjectSizeDescListView.as_view(), name = 'portfolio_project_area_desc'),
     url(r'^project/(?P<slug>[-\w]+)/$', ProjectDetailView.as_view(), name = 'portfolio_project_detail'),
 
-    url(r'^projects/projecttypes/$', ListView.as_view(queryset = ProjectType._default_manager.filter(level=0)),
-        name = 'categories_tree_list'),
     url(r'^projects/projecttypes/(?P<path>.+)/$',
-        CategoryDetailView.as_view(queryset=ProjectType._default_manager.filter(project__status=1),
-        template_name = 'portfolio/projects_by_type.html'), name = 'portfolio_projects_by_type'),
+        ProjectTypeDetailView.as_view(), name = 'portfolio_projects_by_type'),
     url(r'^projects/landscapetypes/(?P<path>.+)/$',
-        CategoryDetailView.as_view(queryset=LandscapeType._default_manager.filter(project__status=1),
-        template_name ='portfolio/projects_by_landscape.html'), name = 'portfolio_projects_by_landscape'),
+        LandscapeTypeDetailView.as_view(), name = 'portfolio_projects_by_landscape'),
 )

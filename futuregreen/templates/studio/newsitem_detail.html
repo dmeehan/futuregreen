@@ -1,0 +1,7 @@
+{% extends "studio/studio_news.html" %}
+{% block page_title %}: News: {{ newsitem.name }}{% endblock page_title %}
+{% block main %}
+<section class="main two-thirds">
+   {% include "studio/includes/news.html" %}
+</section>
+{% endblock main %}

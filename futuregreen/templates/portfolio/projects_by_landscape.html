@@ -1,6 +1,6 @@
 {% extends 'portfolio/projects_by_category.html' %}
 {% block projects %}
-    {% for project in category.landscapetype.project_set.all %}
+    {% for project in category.landscapetype.project_set.live %}
         {% include "portfolio/project_snippet.html" %}
     {% endfor %}
     </section>

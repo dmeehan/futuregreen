@@ -3,49 +3,48 @@
     {% block aside %}
         <aside class="sixth">
             {% block filter_nav %}
-                <nav>
-                    <h2 class="box">Project Type</h2>
+                <nav class="box filter">
                     <ul class="categories">
+                        <li {% if not category %}class="active"{% endif %}>
+                            <a href="{% url portfolio_project_list %}"
+                               id="all"
+                               class="square center"
+                               title="All Projects">ALL</a></li>
                         {% for type in projecttype_list %}
-                            <li style="float:none; width:100%; text-align: left;">
+                            <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
-                                   title="{{ type.name }}"
-                                   class="project-type square center"
-                                   style="width:20%;">
+                                   title="{{ type.name }} Projects"
+                                   id="{{ type.slug }}"
+                                   class="project-type square center">
                                    {{ type.alternate_title }}
                                 </a>
-                                <span style="color:#444; font-weight:normal;">{{ type.name }}</span>
                             </li>
                         {% endfor %}
-                    </ul>
-                     <h2 class="box">Landscape Type</h2>
-                     <ul class="categories">
                         {% for type in landscapetype_list %}
-                            <li style="float:none; width:100%; text-align: left;">
+                            <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_landscape type.slug %}"
                                    title="{{ type.name }}"
-                                   class="landscape-type square center"
-                                   style="width:20%;">
-                                    {{ type.alternate_title }}
+                                   id="{{ type.slug }}"
+                                   class="landscape-type square center">
+                                   {{ type.alternate_title }}
                                 </a>
-                                <span style="color:#444; font-weight:normal;">{{ type.name }}</span>
                             </li>
                         {% endfor %}
                     </ul>
-                    <h2>Sort By Date</h2>
-                    <h2>Sort By Size</h2>
                 </nav>
             {% endblock filter_nav %}
         </aside>
     {% block main %}
-        <section class="five-sixths">
+        <section class="sixth">
             {% block content_header %}
-                <header class="two-fifths">
+                <header>
                     {% block content_title %}
                     <h1 class="box full">All Projects</h1>
                     {% endblock content_title %}
                 </header>
             {% endblock content_header %}
+        </section>
+        <section class="two-thirds">
             {% block projects %}
             <section class="project-list">
             {% for project in project_list %}
@@ -58,21 +57,58 @@
     {% endblock aside %}
 {% endblock content %}
 {% block js_local %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.url.js"></script>
 <script type="text/javascript">
-    function Square() {
-            $('.square').each(function(){
-                width = $(this).width();
-                $(this).css('height',width);
+    function ProjectFilter() {
+        //substitute anchors for links
+        $('nav.filter a').each(function (){
+            var thisLink = $(this);
+            var thisClass = thisLink.attr('id');
+            var currentClass = '.' + thisClass;
+            var newHref = "#" + thisClass
+            thisLink.attr("href", newHref);
+
+            // create click functions to filter by type
+            $("nav.filter").find(currentClass).click(function () {
+                if (currentClass != '.all') {
+                    $(".project").addClass('hide')
+                    $(".project").removeClass('show')
+                    $(".projects").find(currentClass).addClass('show')
+                    $(".projects").find(currentClass).removeClass('hide')
+                    $(".hide").hide(1000)
+                    $(".show").show(1000)
+                    $("nav.filter li").removeClass('active')
+                    $(this).parent().addClass('active')
+                } else {
+                    $(".project").removeClass('hide')
+                    $(".project").addClass('show')
+                    $(".hide").hide(1000)
+                    $(".show").show(1000)
+                    $("nav.filter li").removeClass('active')
+                    $("#all").parent().addClass('active')
+                    $("footer").show()
+                }
             });
-            $('.center').each(function(){
-                width = $(this).width();
-                $(this).css('line-height',width + "px");
-            });
+        });
+        // if url includes an anchor on
+        var anchor = jQuery.url.attr("anchor");
+        var currentClass = '.' + anchor;
+        if (anchor && anchor != 'all') {
+            $("nav.filter li").removeClass('on')
+            $("nav.filter").find(currentClass).parent().addClass('on');
+            $(".project").addClass('hide')
+            $(".project").removeClass('show')
+            $(".projects").find(currentClass).addClass('show')
+            $(".projects").find(currentClass).removeClass('hide')
+            $(".hide").hide()
+            $(".show").show()
+        }
     }
 
 
     $(document).ready(function() {
         Square();
+        //ProjectFilter();
     });
 
     $(window).resize(function() {

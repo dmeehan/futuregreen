@@ -28,7 +28,7 @@ class EmployeeAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             'fields': ('contact_type', 'name', 'description', 'image',
-                       'employee_type', 'job_title', 'status')
+                       'employee_type', 'job_title', 'status', 'resume')
         }),
         ('Contact Info', {
             'classes': ('collapse closed',),
@@ -38,7 +38,7 @@ class EmployeeAdmin(admin.ModelAdmin):
         }),
         ('Metadata', {
             'classes': ('collapse closed',),
-            'fields': ('slug', 'user',)
+            'fields': ('public', 'slug', 'user',)
         }),
     )
 

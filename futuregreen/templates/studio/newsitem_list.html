@@ -1,0 +1,8 @@
+{% extends "studio/studio_news.html" %}
+{% block main %}
+<section class="main two-thirds">
+    {%  for news in news_list %}
+         {% include "studio/includes/news.html" %}
+    {%  endfor %}
+</section>
+{% endblock main %}

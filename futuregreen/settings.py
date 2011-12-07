@@ -17,6 +17,7 @@ MANAGERS = ADMINS
 
 SITE_ID = 1
 
+
 #==============================================================================
 # Localization
 #==============================================================================
@@ -49,6 +50,7 @@ STATICFILES_DIRS = [
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
@@ -86,7 +88,9 @@ TEMPLATE_LOADERS = (
 
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -116,11 +120,14 @@ INSTALLED_APPS = (
     # third party apps
     'south',
     'taggit',
+    'taggit_templatetags',
     'imagekit',
     'django_generic_flatblocks',
     'easy_maps',
     'categories',
     'editor',
+    'oembed',
+    'compressor',
 
     # backbeat apps
     'images',
@@ -129,10 +136,10 @@ INSTALLED_APPS = (
 
     # local apps
     'futuregreen.portfolio',
-    'futuregreen.blog',
+    'futuregreen.research',
     'futuregreen.people',
     'futuregreen.content',
-    'futuregreen.news',
+    'futuregreen.studio',
     'futuregreen.templatetags',
 )
 
@@ -178,6 +185,8 @@ EASY_MAPS_GOOGLE_KEY = 'ABQIAAAAayJegR1S7-F1AMio1LsppBSLB-iwKszotXgLQy-KoofPut07
 
 PIL_IMAGEFILE_MAXBLOCK = 1024 * 2 ** 10
 
+#COMPRESS_ENABLED = True
+
 #==============================================================================
 # local app settings
 #==============================================================================
@@ -187,7 +196,7 @@ IMAGES_CACHE_FILENAME_FORMAT = "%(filename)s_%(specname)s.%(extension)s"
 IMAGES_PREPROCESSOR_SPEC = None
 
 PROJECT_MARKUP = 'markdown'
-PROJECT_PAGINATE_BY = 20
+PROJECT_PAGINATE_BY = 40
 
 CONTACT_MARKUP = 'markdown'
 CONTACT_PAGINATE_BY = 10

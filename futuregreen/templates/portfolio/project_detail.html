@@ -73,12 +73,14 @@
                             </p>
                         </li>
                     {% endif %}
+                    {% if project.area %}
                     <li class="box">
                         <p class="size square">
                         <span class="number">{{ project.area|floatformat }}</span>
                         <span class="unit">{{ project.get_unit_display }}</span>
                         </p>
                     </li>
+                    {% endif %}
                     </ul>
                 </div>
                 {% if project.clients.all or project.collaborators.all %}
@@ -86,7 +88,7 @@
                     {% if project.clients.all %}
                     <div class="box">
                         <h2>Clients</h2>
-                        <ul>
+                        <ul class="linked-list">
                         {% for client in project.clients.all %}
                             <li> {{ client.name }} </li>
                         {% endfor %}
@@ -96,7 +98,7 @@
                     {% if project.collaborators.all %}
                     <div class="box">
                         <h2>Collaborators</h2>
-                        <ul>
+                        <ul class="linked-list">
                         {% for collaborator in project.collaborators.all %}
                             <li> {{ collaborator.name }} </li>
                         {% endfor %}
@@ -161,6 +163,8 @@
     }
 
 
+
+
     $(document).ready(function() {
         Square();
         $('.carousel').flexslider({
@@ -179,13 +183,10 @@
             slideToStart: 0,
             animationLoop: true,
             pauseOnAction: true,
-            pauseOnHover: false,
+            pauseOnHover: true,
             controlsContainer:".controls",
             manualControls: "ul li a"
         });
-
-        //var offset = $(".controls").height() + 10;
-        //$(".slideshow .flex-direction-nav").css('bottom',offset);
 
     });
 

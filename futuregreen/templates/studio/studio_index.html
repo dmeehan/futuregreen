@@ -11,51 +11,63 @@
         {%  gblock "people" for "content.ContentBlock" with "content/contentblock/aside.html" %}
     </header>
     {% for employee in principal_list %}
-        <article class="fifth box">
+        <article class="quarter box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
-                 src="{{ employee.list.url }}" />
+                 src="{{ employee.thumbnail.url }}" />
             </a> 
         </article>
     {%  endfor %}
     {% for employee in associate_list %}
-        <article class="fifth box">
+        <article class="quarter box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
-                 src="{{ employee.list.url }}" />
+                 src="{{ employee.thumbnail.url }}" />
             </a>
         </article>
     {%  endfor %}
     {% for employee in staff_list %}
-        <article class="fifth box">
+        <article class="quarter box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
                  class="flex"
-                 src="{{ employee.list.url }}" />
+                 src="{{ employee.thumbnail.url }}" />
             </a>
         </article>
     {%  endfor %}
 
 </section>
 <section class="third">
-    <article class="box" id="news">
+    <article id="news">
         <div>
-        {% for image in news.itemimage_set.all %}
-                    {% if image.is_main %}
-                        <a href="{% url news_item_list %}">
-                            <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" /></a>
-                    {% endif %}
-        {%  endfor %}
-        <h1 class="overlay">News</h1>
-        <p class="date">{{ news.date_published|date:"M d, Y" }}</p>
-        <h2>{{ news.title }}</h2>
-        {{ news.excerpt_html|safe }}
-        <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+            <section class="box">
+            {% for image in news.newsitemimage_set.all %}
+                        {% if image.is_main %}
+                            <a href="{% url newsitem_list %}">
+                                <img class="flex" alt="{{ news.title }}" src="{{ image.aside.url }}" />
+                            </a>
+                        {% endif %}
+            {%  endfor %}
+            <h1 class="overlay">News</h1>
+            </section>
+            <section class="box quarter">
+                <div class="date">
+                    <ul class="square">
+                        <li class="month">{{ news.date_published|date:"M" }}</li>
+                        <li class="day">{{ news.date_published|date:"d" }}</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="box three-quarters">
+                <h2>{{ news.title }}</h2>
+                {{ news.excerpt_html|safe }}
+                <p><a href="{{ news.get_absolute_url }}" class="tease">Read More</a></p>
+            </section>
         </div>
     </article>
 </section>

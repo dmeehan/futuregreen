@@ -48,9 +48,10 @@ class Employee(ImageFieldAutoMixin, Contact):
     # extended core fields
     employee_type = models.ForeignKey(EmployeeType)
     job_title = models.CharField(max_length=250)
+    resume = models.FileField(upload_to='files/employee', blank=True, null=True)
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES,
                                               default=STATUS_FULL)
-
+    public = models.BooleanField(default=True)
 
     @permalink
     def get_absolute_url(self):

@@ -74,10 +74,10 @@ class ProjectBase(models.Model):
         return ('portfolio_project_detail', [str(self.slug)])
 
     def get_next_project(self):
-        return self.get_next_by_date_end(status=self.STATUS_LIVE)
+        return self.get_previous_by_date_end(status=self.STATUS_LIVE)
 
     def get_previous_project(self):
-        return self.get_previous_by_date_end(status=self.STATUS_LIVE)
+        return self.get_next_by_date_end(status=self.STATUS_LIVE)
 
     def __unicode__(self):
         return u'%s' % self.name
@@ -178,7 +178,8 @@ class PhysicalMixin(models.Model):
     @property
     def relative_size(self):
         max = self._default_manager.live().aggregate(Max('area_normalized'))['area_normalized__max']
-        return (self.area_normalized/max)*100
+        rel =  (self.area_normalized/max)*100
+        
 
     def save(self, force_insert=False, force_update=False):
         self.area_normalized = self.convert(self.UNIT_SQUAREFOOT)
