@@ -1168,6 +1168,10 @@ ul#project-nav {
 
 /******** MEDIA QUERIES **********/
 @media screen and (max-width: 480px) {
+    body > header {
+        height:auto;
+    }
+
     body > header > h1 {
         font-size:8px;
         width:100%;
@@ -1178,6 +1182,16 @@ ul#project-nav {
         float:left;
         width:100%;
         clear:both;
+    }
+
+    body.home > .content > div {
+        clear:both;
+        width:100%;
+    }
+
+    article#profile {
+        clear:both;
+        width:100%;
     }
 }
 
