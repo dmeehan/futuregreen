@@ -1170,22 +1170,25 @@ ul#project-nav {
 @media screen and (max-width: 480px) {
     body > header {
         height:auto;
-    }
-
-    body > header > h1 {
-        font-size:8px;
-        width:100%;
-        overflow: hidden;
         margin: 0;
         padding: 0;
     }
 
-    body > header > a {
+    body > header > h1 {
+        width:100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height;auto;
+    }
+
+    body > header > h1 a {
         width:100%;
         height:auto;
         padding: 0 0 0 0;
         text-indent: -999999px;
         background-size: contain;
+
     }
 
     body > header > nav {
@@ -1201,7 +1204,7 @@ ul#project-nav {
         -ms-box-sizing: border-box;
         box-sizing: border-box;
         float:left;
-        line-height:80px;
+        line-height:40px;
         text-align: center;
         width:50%;
         color:#fff;
