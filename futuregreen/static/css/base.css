@@ -1265,6 +1265,13 @@ ul#project-nav {
         text-align:left;
         margin:10px 0 0 0;
     }
+
+    body > footer > .copyright {
+        float:none;
+        clear:both;
+        text-align:left;
+        margin:10px 0 0 0;
+    }
 }
 
 
