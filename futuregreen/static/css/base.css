@@ -1261,6 +1261,7 @@ ul#project-nav {
 
     body > footer > .contact {
         float:none;
+        clear:both;
         text-align:left;
         margin:10px 0 0 0;
     }
