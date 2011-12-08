@@ -1226,14 +1226,15 @@ ul#project-nav {
         display:none;
     }
 
-    body.home .content div div:first-child article.project:first-child {
-        display:block;
-    }
-
     article.text {
         clear:both;
         width:100%;
     }
+
+    article.text div {
+        padding-bottom: 10px;
+    }
+
 
     body.home article.project {
         clear:both;
