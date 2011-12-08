@@ -1233,7 +1233,7 @@ ul#project-nav {
 
     body.home article.project {
         clear:both;
-        width:100%;
+        width:50%;
     }
 
     body .content > section {
