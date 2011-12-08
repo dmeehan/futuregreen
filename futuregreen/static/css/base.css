@@ -1205,24 +1205,23 @@ ul#project-nav {
         -ms-box-sizing: border-box;
         box-sizing: border-box;
         float:left;
+        line-height:40px;
         text-align: center;
         width:50%;
+        color:#fff;
+        background: #ccc;
         overflow: auto;
         border: 10px solid white;
     }
 
     body > header > nav li a,
     body > header > nav li a:link {
-        line-height:40px;
         font-size: 1em;
         padding: 0;
-        color:#fff;
-        background: #ccc;
     }
 
     body > header > nav li a:hover {
-        color:#999;
-        background: #efefef;
+        color:#fff;
         font-size: 1em;
         padding: 0;
     }
