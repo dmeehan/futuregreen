@@ -1239,6 +1239,7 @@ ul#project-nav {
 
     article#article h1 {
         left:0;
+        word-wrap: normal;
     }
 
 
