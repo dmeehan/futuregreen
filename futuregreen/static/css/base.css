@@ -1214,7 +1214,8 @@ ul#project-nav {
 
     body > header > nav li a {
         color:#fff;
-        font-size: 1.28571em;
+        font-size: 1em;
+        padding: 0;
     }
 
     body .content {
