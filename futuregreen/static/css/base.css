@@ -1188,9 +1188,6 @@ ul#project-nav {
         padding: 0 0 0 0;
         text-indent: -999999px;
         background-size: contain;
-        color:#fff;
-        font-size: 1.28571em;
-
     }
 
     body > header > nav {
@@ -1213,6 +1210,11 @@ ul#project-nav {
         background: #ccc;
         overflow: auto;
         border: 10px solid white;
+    }
+
+    body > header > nav li a {
+        color:#fff;
+        font-size: 1.28571em;
     }
 
     body .content {
