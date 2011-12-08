@@ -1167,7 +1167,7 @@ ul#project-nav {
 }
 
 /******** MEDIA QUERIES **********/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) {
     body > header {
         height:auto;
         margin: 0;
@@ -1188,6 +1188,8 @@ ul#project-nav {
         padding: 0 0 0 0;
         text-indent: -999999px;
         background-size: cover;
+        color:#fff;
+        font-size: 1.28571em;
 
     }
 
@@ -1231,7 +1233,7 @@ ul#project-nav {
         width:100%;
     }
 
-    article.text div {
+    article.text .tease {
         padding-bottom: 10px;
     }
 
