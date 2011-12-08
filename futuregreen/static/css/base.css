@@ -1184,9 +1184,9 @@ ul#project-nav {
 
     body > header > h1 a {
         width:100%;
-        min-height:70px;
-        padding: 0 0 0 10px;
-        margin: 0 0 0 0;
+        max-height:70px;
+        padding: 0 0 0 0;
+        margin: 0 0 0 10px;
         text-indent: -999999px;
         background-size: contain;
     }
