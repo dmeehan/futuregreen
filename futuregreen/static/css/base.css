@@ -1238,8 +1238,6 @@ ul#project-nav {
     body.home article.project {
         clear:both;
         width:100%;
-        height:160px;
-        overflow: hidden;
     }
 
     body .content > section {
