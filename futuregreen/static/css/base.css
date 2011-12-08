@@ -1196,6 +1196,8 @@ ul#project-nav {
         float:left;
         width:100%;
         clear:both;
+        margin: 0;
+        padding: 0;
     }
 
     body > header > nav li {
