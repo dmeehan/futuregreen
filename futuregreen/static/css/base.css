@@ -1167,7 +1167,7 @@ ul#project-nav {
 }
 
 /******** MEDIA QUERIES **********/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 480px) {
     body > header {
         height:auto;
         margin: 0;
@@ -1187,7 +1187,7 @@ ul#project-nav {
         height:60px;
         padding: 0 0 0 0;
         text-indent: -999999px;
-        background-size: cover;
+        background-size: contain;
         color:#fff;
         font-size: 1.28571em;
 
