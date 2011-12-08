@@ -1259,10 +1259,10 @@ ul#project-nav {
         float:none;
     }
 
-    footer .contact {
-        clear:both;
-        text-align: left;
+    body > footer > .contact {
         float:none;
+        text-align:left;
+        margin:10px 0 0 0;
     }
 }
 
