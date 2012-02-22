@@ -12,7 +12,7 @@ from futuregreen.research.views import ArticleIndexView, ArticleDetailView, Arti
 urlpatterns = patterns('',
     url(r'^$', ArticleIndexView.as_view() , name = 'research'),
 
-    url(r'^(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$',
+    url(r'^(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/$',
         ArticleDetailView.as_view(), name = 'research_article_detail'),
 
     url(r'^(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{1,2})/$',
