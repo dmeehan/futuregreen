@@ -3,8 +3,8 @@
 from django.db import models
 from django.db.models import permalink
 
-from contacts.models import ContactBase
-from images.models import ImageFieldAutoMixin
+from futuregreen.contacts.models import ContactBase
+from futuregreen.images.models import ImageFieldAutoMixin
 
 class Contact(ContactBase):
     pass

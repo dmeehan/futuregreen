@@ -1,6 +1,6 @@
 # content/models.py
-from blocks.models import TextBlockBase
-from images.models import ImageFieldAutoMixin
+from futuregreen.blocks.models import TextBlockBase
+from futuregreen.images.models import ImageFieldAutoMixin
 
 class ContentBlock(ImageFieldAutoMixin, TextBlockBase):
     pass
