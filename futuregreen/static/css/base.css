@@ -1622,6 +1622,16 @@ ul#project-nav {
         float:none;
         width:100%;
     }
+
+    body.contact section.sixth {
+        display:none;
+    }
+
+    body.contact section#contact-info {
+        width:100%;
+        float:none;
+        clear:both;
+    }
 }
 
 
