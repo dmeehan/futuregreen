@@ -1583,6 +1583,30 @@ ul#project-nav {
     .categories li.active {
         width:25%;
     }
+
+    .details .meta .categories,
+    .details .meta .info-boxes,
+    .details .meta .people,
+    .details .meta #project-nav {
+        clear:none;
+        float:none;
+        width:100%;
+    }
+
+    .details .meta .categories li {
+        width:25%;
+    }
+
+    .details .meta .info-boxes {
+        padding: 10px 0;
+
+    }
+
+    .details .meta .info-boxes li {
+        margin: 0;
+        padding: 4px 4px 0 0;
+        float:left;
+    }
 }
 
 
