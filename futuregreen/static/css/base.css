@@ -1337,6 +1337,7 @@ ul#project-nav {
     }
 
     body.home > .content > div.third > article.featured {
+        clear:none;
         float:left;
         width:25%;
     }
