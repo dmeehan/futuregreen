@@ -1423,6 +1423,14 @@ ul#project-nav {
         display:none;
     }
 
+    .details .meta .categories, 
+    .details .meta .info-boxes, 
+    .details .meta .people,
+    .details .meta #project-nav {
+        float:left;
+        width:25%;
+    }
+
 }
 
 
