@@ -1460,6 +1460,12 @@ ul#project-nav {
         width:12.5%;
     }
 
+    body.studio > .content > aside,
+    body.studio > .content > section {
+        clear:both;
+        width:100%;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1631,12 +1637,6 @@ ul#project-nav {
         width:100%;
         float:none;
         clear:both;
-    }
-
-    body.studio > .content > aside,
-    body.studio > .content > section {
-        clear:both;
-        width:100%;
     }
 }
 
