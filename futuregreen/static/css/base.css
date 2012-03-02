@@ -1383,6 +1383,18 @@ ul#project-nav {
     .slideshow {
         width:100%;
     }
+
+    nav.expand {
+        display:none;
+    }
+
+    .details .description {
+        width:75%;
+    }
+
+    .details .meta {
+        width:25%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
