@@ -1466,6 +1466,16 @@ ul#project-nav {
         width:100%;
     }
 
+    body.contact section.sixth {
+        display:none;
+    }
+
+    body.contact section#contact-info {
+        width:100%;
+        float:none;
+        clear:both;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1629,15 +1639,6 @@ ul#project-nav {
         width:100%;
     }
 
-    body.contact section.sixth {
-        display:none;
-    }
-
-    body.contact section#contact-info {
-        width:100%;
-        float:none;
-        clear:both;
-    }
 }
 
 
