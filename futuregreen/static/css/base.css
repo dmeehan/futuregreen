@@ -1379,6 +1379,10 @@ ul#project-nav {
     .categories li.active a {
         font-size:1.14em;
     }
+
+    .slideshow {
+        width:100%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
