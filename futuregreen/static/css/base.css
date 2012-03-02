@@ -1388,6 +1388,12 @@ ul#project-nav {
         display:none;
     }
 
+    .details {
+        clear:both;
+        float:none;
+        width:100%;
+    }
+
     .details .description {
         width:75%;
     }
