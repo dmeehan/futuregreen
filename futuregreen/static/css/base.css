@@ -1180,7 +1180,7 @@ ul#project-nav {
         overflow: hidden;
         margin: 0;
         padding: 0;
-        height;auto;
+        height:auto;
     }
 
     body > header > h1 a {
@@ -1310,6 +1310,14 @@ ul#project-nav {
         height:auto;
         margin: 0;
         padding: 0;
+    }
+
+     body > header > h1 {
+        width:100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height:auto;
     }
 
     body > header > nav {
