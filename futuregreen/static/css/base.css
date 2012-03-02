@@ -1325,6 +1325,11 @@ ul#project-nav {
         width:100%;
     }
 
+    body.home > .content > div.two-thirds {
+        clear:both;
+        width:100%;
+    }
+
     body.portfolio aside.sixth {
         clear:both;
         width:100%;
