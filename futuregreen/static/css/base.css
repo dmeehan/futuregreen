@@ -1296,7 +1296,7 @@ ul#project-nav {
 
     .categories li {
        width:12.5%;
-        border: 1px solid red;
+       border: 1px solid red;
     }
 
     .categories li.active {
@@ -1349,6 +1349,16 @@ ul#project-nav {
 
 
 @media screen and (max-width: 1024px) {
+    body {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        width:100%;
+        margin: 0;
+        padding: 10px;
+    }
     section.text article {
         font-size:0.92857em;
     }
