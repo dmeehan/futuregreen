@@ -1336,6 +1336,14 @@ ul#project-nav {
         width:25%;
         float:left;
     }
+    
+    .categories li {
+        width:50%;
+    }
+    
+    #project-nav {
+        position: static;
+    }
 
 }
 
