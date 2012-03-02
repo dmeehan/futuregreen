@@ -1196,15 +1196,6 @@ ul#project-nav {
         width:100%;
     }
 
-    .categories, .info-boxes, .people, #project-nav {
-        width:25%;
-        float:left;
-    }
-
-    .categories li {
-        width:50%;
-    }
-
     .details .meta #project-nav {
         position:static;
         width:25%;
