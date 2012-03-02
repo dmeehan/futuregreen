@@ -1341,6 +1341,7 @@ ul#project-nav {
 
     .categories li.active {
         width:6.25%;
+        font-size:1.14em;
     }
 }
 
