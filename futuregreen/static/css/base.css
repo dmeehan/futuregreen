@@ -1447,6 +1447,11 @@ ul#project-nav {
         float:left;
     }
 
+    article.project.list:hover header {
+        display:none;
+        opacity:0;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1606,11 +1611,6 @@ ul#project-nav {
         margin: 0;
         padding: 4px 4px 0 0;
         float:left;
-    }
-
-    article.project.list:hover header {
-        display:none;
-        opacity:0;
     }
 }
 
