@@ -91,7 +91,7 @@
 {% block js_local %}
     <script type="text/javascript">
         function Flex() {
-            if ( $(window).width() >= 1024 ) {
+            if ( $(window).width() > 480 ) {
                 var height = $("article.project").width();
                 $("article.text div").css('min-height', height);
             }
