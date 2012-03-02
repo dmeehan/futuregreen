@@ -1632,6 +1632,12 @@ ul#project-nav {
         float:none;
         clear:both;
     }
+
+    body.studio > content > aside,
+    body.studio > content > section {
+        clear:both;
+        width:100%;
+    }
 }
 
 
