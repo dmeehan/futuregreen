@@ -1168,7 +1168,62 @@ ul#project-nav {
 }
 
 /******** MEDIA QUERIES **********/
+@media screen and (max-width: 640px) {
+    body.home .content div div:nth-child(2) article.project:first-child {
+       display:none;
+    }
 
+    article#profile {
+        clear:both;
+        width:100%;
+    }
+
+    .details {
+        clear:both;
+        float:none;
+        width:100%;
+    }
+
+    .details .description {
+        clear:both;
+        float:none;
+        width:100%;
+    }
+
+    .details .meta {
+        clear:both;
+        float:none;
+        width:100%;
+    }
+
+    .categories, .info-boxes, .people, #project-nav {
+        width:25%;
+        float:left;
+    }
+
+    .categories li {
+        width:50%;
+    }
+
+    .details .meta #project-nav {
+        position:static;
+        width:25%;
+        float:left;
+    }
+
+    .slideshow {
+        width:100%;
+    }
+
+    .slideshow .flex-direction-nav {
+        width:80px;
+    }
+
+    nav.expand {
+        display:none;
+    }
+
+}
 
 @media screen and (max-width: 960px) {
     body > header {
