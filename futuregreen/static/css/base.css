@@ -1384,6 +1384,10 @@ ul#project-nav {
         width:100%;
     }
 
+    .slideshow .flex-direction-nav {
+        width:80px;
+    }
+
     nav.expand {
         display:none;
     }
@@ -1403,11 +1407,12 @@ ul#project-nav {
     }
 
     .details .meta .categories {
-        width:25%;
+        width:100%;
     }
 
     .details .meta #project-nav {
         position:static;
+        clear:both;
     }
 }
 
