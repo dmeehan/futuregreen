@@ -1613,8 +1613,8 @@ ul#project-nav {
         float:left;
     }
 
-    body.research > .content > .header.two-thirds,
-    body.research > .content > aside.two-thirds, {
+    body.research > .content > header.two-thirds,
+    body.research > .content > aside.third {
         float:none;
         width:100%;
     }
