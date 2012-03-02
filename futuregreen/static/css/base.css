@@ -1438,7 +1438,7 @@ ul#project-nav {
 
     .details .meta .info-boxes li {
         margin: 0;
-        padding: 0;
+        padding: 4px;
         float:left;
     }
 
