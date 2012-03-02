@@ -1289,11 +1289,20 @@ ul#project-nav {
         text-align:left;
         margin:0;
     }
+
+    body.portfolio aside.sixth {
+        width:100%;
+    }
+
+    .categories li {
+       width:12.5%;
+    }
+    .categories li.active {
+        width:25%;
+    }
 }
 
-body.portfolio aside.sixth {
-    width:100%;
-}
+
 
 /*********** PROJECT STYLES **********/
 .categories {
