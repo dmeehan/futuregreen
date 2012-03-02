@@ -1291,12 +1291,12 @@ ul#project-nav {
     }
 
     body.portfolio aside.sixth {
+        clear:both;
         width:100%;
     }
 
     .categories li {
        width:12.5%;
-       border: 1px solid red;
     }
 
     .categories li.active {
