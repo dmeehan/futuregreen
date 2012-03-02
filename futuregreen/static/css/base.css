@@ -1612,6 +1612,12 @@ ul#project-nav {
         padding: 4px 4px 0 0;
         float:left;
     }
+
+    body.research > .content > .header.two-thirds,
+    body.research > .content > aside.two-thirds, {
+        float:none;
+        width:100%;
+    }
 }
 
 
