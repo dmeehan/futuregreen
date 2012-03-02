@@ -1614,8 +1614,10 @@ ul#project-nav {
     }
 
     body.research > .content > header.two-thirds,
+    body.research > .content > section.two-thirds,
     body.research > .content > aside.third,
     body.news > .content > header.two-thirds,
+    body.news > .content > section.two-thirds,
     body.news > .content > aside.third {
         float:none;
         width:100%;
