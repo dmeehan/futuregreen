@@ -1314,6 +1314,12 @@ ul#project-nav {
         width:100%;
     }
 
+    .details {
+        clear:both;
+        float:none;
+        width:100%;
+    }
+
     .details .description {
         clear:both;
         float:none;
