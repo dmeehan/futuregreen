@@ -1326,11 +1326,11 @@ ul#project-nav {
     }
 
     .categories li {
-       width:6.25%;
+       width:12.5%;
     }
 
     .categories li.active {
-        width:6.25%;
+        width:12.5%;
     }
 
     .categories li.active a {
