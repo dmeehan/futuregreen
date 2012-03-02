@@ -1436,6 +1436,11 @@ ul#project-nav {
         width:50%;
     }
 
+    .details .meta .info-boxes {
+        padding: 10px;
+
+    }
+
     .details .meta .info-boxes li {
         margin: 0;
         padding: 4px;
