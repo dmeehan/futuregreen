@@ -1427,8 +1427,13 @@ ul#project-nav {
     .details .meta .info-boxes, 
     .details .meta .people,
     .details .meta #project-nav {
+        clear:none;
         float:left;
         width:25%;
+    }
+
+    .details .meta .categories li {
+        width:50%;
     }
 
 }
