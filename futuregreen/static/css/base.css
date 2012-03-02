@@ -1305,7 +1305,7 @@ ul#project-nav {
 }
 
 @media screen and (max-width: 640px) {
-    body.home .content div div:first-child article.project {
+    body.home .content div div:first-child article.project:first-child {
        display:none;
     }
 
