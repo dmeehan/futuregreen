@@ -1330,6 +1330,11 @@ ul#project-nav {
         width:100%;
     }
 
+    body.portfolio section.sixth {
+        clear:both;
+        width:100%;
+    }
+
     body.portfolio section.two-thirds {
         clear:both;
         width:100%;
