@@ -1297,6 +1297,7 @@ ul#project-nav {
     .categories li {
        width:12.5%;
     }
+
     .categories li.active {
         width:25%;
     }
