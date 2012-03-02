@@ -1325,7 +1325,8 @@ ul#project-nav {
         width:100%;
     }
 
-    body.home > .content > div.two-thirds {
+    body.home > .content > div.two-thirds,
+    body.home > .content > div.third {
         clear:both;
         width:100%;
     }
