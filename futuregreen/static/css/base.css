@@ -1443,7 +1443,7 @@ ul#project-nav {
 
     .details .meta .info-boxes li {
         margin: 0;
-        padding: 4px;
+        padding: 4px 4px 0 0;
         float:left;
     }
 
