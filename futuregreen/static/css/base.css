@@ -1332,7 +1332,7 @@ ul#project-nav {
     }
 
     body.home > .content > div.third > article.update {
-        float:left;
+        float:right;
         width:75%;
     }
 
