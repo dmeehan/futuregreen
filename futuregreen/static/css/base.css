@@ -1336,11 +1336,11 @@ ul#project-nav {
     }
 
     .categories li {
-       width:12.5%;
+       width:6.25%;
     }
 
     .categories li.active {
-        width:25%;
+        width:12.5%;
     }
 }
 
