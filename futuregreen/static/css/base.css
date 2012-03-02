@@ -1326,6 +1326,12 @@ ul#project-nav {
     }
 
     body.portfolio aside.sixth {
+        clear:both;
+        width:100%;
+    }
+
+    body.portfolio aside.two-thirds {
+        clear:both;
         width:100%;
     }
 
