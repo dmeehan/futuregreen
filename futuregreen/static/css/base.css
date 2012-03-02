@@ -1341,8 +1341,10 @@ ul#project-nav {
         width:50%;
     }
     
-    #project-nav {
-        position:relative;
+    .details .meta #project-nav {
+        position:static;
+        width:25%;
+        float:left;
     }
 
 }
