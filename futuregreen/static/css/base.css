@@ -1342,7 +1342,7 @@ ul#project-nav {
     }
     
     #project-nav {
-        position: static;
+        position:relative;
     }
 
 }
