@@ -1449,7 +1449,141 @@ ul#project-nav {
 
 }
 
+@media screen and (max-width: 480px) {
+    body > header {
+        height:auto;
+        margin: 0;
+        padding: 0;
+    }
 
+    body > header > h1 {
+        width:100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height:auto;
+    }
+
+    body > header > h1 a {
+        width:100%;
+        height:65px;
+        padding: 0 0 0 0;
+        margin: 0 0 0 10px;
+        text-indent: -999999px;
+        background-size: contain;
+    }
+
+
+    body > header > nav {
+        float:left;
+        width:100%;
+        clear:both;
+        margin: 0;
+        padding: 0;
+    }
+
+    body > header > nav li {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        float:left;
+        line-height:40px;
+        text-align: center;
+        width:50%;
+        color:#fff;
+        background: #ccc;
+        overflow: auto;
+        border: 10px solid white;
+    }
+
+    body > header > nav li a,
+    body > header > nav li a:link {
+        font-size: 1em;
+        padding: 0;
+    }
+
+    body > header > nav li a:hover {
+        color:#fff;
+        font-size: 1em;
+        padding: 0;
+    }
+
+    body .content {
+        padding: 0 0 0 0;
+    }
+
+    body.home > .content > div {
+        clear:both;
+        width:100%;
+    }
+
+    body.home .content div div:first-child article.project {
+        display:none;
+    }
+
+    article.text {
+        clear:both;
+        width:100%;
+    }
+
+    article#article h1 {
+        left:0;
+        word-wrap: normal;
+    }
+
+
+    article.text .tease {
+        padding-bottom: 10px;
+    }
+
+
+    body.home article.project {
+        clear:both;
+        width:100%;
+    }
+
+    body .content > section {
+        clear:both;
+        width:100%;
+        float:none;
+    }
+
+    body > footer  {
+        padding: 10px;
+    }
+
+    body > footer > .contact {
+        display:block;
+        float:none;
+        clear:both;
+        text-align:left;
+        margin:0;
+        padding-top:10px;
+    }
+
+    body > footer > .copyright {
+        display:block;
+        float:none;
+        clear:both;
+        text-align:left;
+        margin:0;
+    }
+
+    body.portfolio aside.sixth {
+        clear:both;
+        width:100%;
+    }
+
+    .categories li {
+       width:12.5%;
+    }
+
+    .categories li.active {
+        width:25%;
+    }
+}
 
 
 
