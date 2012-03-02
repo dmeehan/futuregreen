@@ -1304,6 +1304,17 @@ ul#project-nav {
     }
 }
 
+@media screen and (max-width: 640px) {
+    body.home .content div div:first-child article.project {
+       display:none;
+    }
+
+    article.text {
+        clear:both;
+        width:100%;
+    }
+
+}
 
 @media screen and (max-width: 960px) {
     body > header {
