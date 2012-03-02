@@ -1304,7 +1304,7 @@ ul#project-nav {
     }
 }
 
-@media screen and (max-width: 640px) and (min-width: 480px) {
+@media screen and (max-width: 640px) {
     body.home .content div div:nth-child(2) article.project:first-child {
        display:none;
     }
