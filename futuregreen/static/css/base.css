@@ -1633,8 +1633,8 @@ ul#project-nav {
         clear:both;
     }
 
-    body.studio > content > aside.third,
-    body.studio > content > section.two-thirds {
+    body.studio > .content > aside,
+    body.studio > .content > section {
         clear:both;
         width:100%;
     }
