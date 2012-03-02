@@ -1306,9 +1306,15 @@ ul#project-nav {
 
 
 @media screen and (max-width: 960px) {
+    body > header {
+        height:auto;
+        margin: 0;
+        padding: 0;
+    }
+
     body > header > nav {
-    clear:both;
-    width:100%;
+        clear:both;
+        width:100%;
     }
 }
 
