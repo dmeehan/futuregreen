@@ -1410,6 +1410,10 @@ ul#project-nav {
         width:100%;
     }
 
+    .details .meta .categories li {
+        width:25%;
+    }
+
     .details .meta #project-nav {
         position:static;
         clear:both;
