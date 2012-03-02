@@ -1309,7 +1309,7 @@ ul#project-nav {
        display:none;
     }
 
-    article.text {
+    article#profile {
         clear:both;
         width:100%;
     }
