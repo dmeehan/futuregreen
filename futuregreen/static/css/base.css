@@ -1401,6 +1401,14 @@ ul#project-nav {
     .details .meta {
         width:25%;
     }
+
+    .details .meta .categories {
+        width:25%;
+    }
+
+    .details .meta #project-nav {
+        position:static;
+    }
 }
 
 @media screen and (max-width: 1024px) {
