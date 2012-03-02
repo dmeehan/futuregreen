@@ -1168,7 +1168,7 @@ ul#project-nav {
 }
 
 /******** MEDIA QUERIES **********/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
     body > header {
         height:auto;
         margin: 0;
