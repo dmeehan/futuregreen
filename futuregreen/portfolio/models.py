@@ -12,8 +12,8 @@ from django.utils.html import strip_tags
 from taggit.managers import TaggableManager
 from categories.models import Category
 
-from images.models import RelatedImageAutoBase
-from images.managers import ImageManager
+from futuregreen.images.models import RelatedImageAutoBase
+from futuregreen.images.managers import ImageManager
 
 from futuregreen.portfolio.managers import ProjectManager
 from futuregreen.people.models import Client, Collaborator, Employee

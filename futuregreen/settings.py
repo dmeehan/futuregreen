@@ -129,12 +129,10 @@ INSTALLED_APPS = (
     'oembed',
     'compressor',
 
-    # backbeat apps
-    'images',
-    'contacts',
-    'blocks',
-
     # local apps
+    'futuregreen.images',
+    'futuregreen.contacts',
+    'futuregreen.blocks',
     'futuregreen.portfolio',
     'futuregreen.research',
     'futuregreen.people',

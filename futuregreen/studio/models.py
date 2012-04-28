@@ -7,8 +7,8 @@ from django.db.models import permalink
 
 from taggit.managers import TaggableManager
 
-from blocks.models import LinkBase, ArticleBase
-from images.models import RelatedImageAutoBase
+from futuregreen.blocks.models import LinkBase, ArticleBase
+from futuregreen.images.models import RelatedImageAutoBase
 
 from futuregreen.portfolio.models import Project
 
