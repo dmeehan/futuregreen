@@ -1,8 +1,0 @@
-{% extends 'portfolio/projects_by_category.html' %}
-{% block projects %}
-    {% for project in category.projecttype.project_set.live %}
-        {% include "portfolio/project_snippet.html" %}
-    {% endfor %}
-    </section>
-{% endblock projects %}
-
