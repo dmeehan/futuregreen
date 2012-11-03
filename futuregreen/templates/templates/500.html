@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block section_title %}: 500 - Page Not Found {% endblock section_title %}
+{% block content %}
+{% load generic_flatblocks %}
+<section class="main two-thirds">
+    <article class="box">
+        {%  gblock "500_error" for "content.ContentBlock" %}
+    </article>
+</section>
+{% endblock content %}

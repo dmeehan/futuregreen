@@ -1,11 +1,11 @@
-{% extends "studio/studio_base.html" %}
-{% block page_title %}: News{% endblock page_title %}
-{% block body_class%}{{ block.super }} news{% endblock body_class %}
+{% extends "base.html" %}
+{% block section_title %}News{% endblock section_title %}
+{% block body_class%}news{% endblock body_class %}
 {% load generic_flatblocks %}
 {% block content %}
     <header class="box two-thirds">
     {% block content_title %}
-        <h1>Studio: News</h1>
+        <h1>News</h1>
     {% endblock content_title %}
     </header>
 {% block main %}
@@ -48,3 +48,14 @@
     </aside>
 {% endblock aside %}
 {% endblock content %}
+{% block js_local %}
+        <script type="text/javascript">
+         $(document).ready(function() {
+            Square();
+        });
+
+	$(window).resize(function() {
+            Square();
+        });
+     </script>
+{% endblock js_local %}

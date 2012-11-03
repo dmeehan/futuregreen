@@ -1,0 +1,213 @@
+{% extends "portfolio/portfolio_base.html" %}
+{% block page_title %}: {{ project.name }}{% endblock page_title %}
+{% block content %}
+    <article class="project detail">
+    {% if project.projectimage_set.all %}
+        <section class="slideshow">
+            <div class="carousel">
+                <div class="image">
+                    <nav class="expand">
+                        <a id="open" href="#zoomin" title="maximize slideshow">+</a>
+                        <a id="close" href="#zoomout" title="minimize slideshow">-</a>
+                    </nav>
+                    <ul class="slides">
+                    {% for image in project.projectimage_set.all %}
+                        <li>
+                            <div class="image">
+                            <img src="{{ image.detail.url }}" alt="{{ image.caption }}" />
+                            </div>
+                            {% if image.caption %}<p class="flex-caption">{{ image.caption }}</p>{% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="controls">
+                <ul>
+                   {% for image in project.projectimage_set.all %}
+                        <li class="box">
+                            <div class="image">
+                            <a href="#"><img src="{{ image.thumbnail.url }}" alt="{{ image.caption }}"/></a>
+                            </div>
+                        </li>
+                   {% endfor %}
+                </ul>
+            </div>
+        </section>
+    {% endif %}
+        <section class="details">
+            <header style="margin: 0 10px 5px 10px;"><h1>{{ project.name }}</h1></header>
+            <div class="description box">
+                {{ project.description_html|safe }}
+            </div>
+            <div class="meta">
+                {% if project.project_types.all or project.landscape_types.all %}
+                    <ul class="categories box">
+                        {% if project.project_types.all %}
+                            {% for category in project.project_types.all %}
+                                <li class="square">
+                                    <a href="{% url portfolio_projects_by_type category.slug %}" title="{{ category.name }}" class="project-type square center">
+                                        {{ category.alternate_title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if project.landscape_types.all %}
+                            {% for category in project.landscape_types.all %}
+                                <li class="square">
+                                    <a href="{% url portfolio_projects_by_landscape category.slug %}" title="{{ category.name }}" class="landscape-type square center">
+                                        {{ category.alternate_title }}
+                                    </a>
+                                </li>
+                           {% endfor %}
+                        {% endif %}
+                    </ul>
+                {% endif %}
+                <div class="info-boxes">
+                    <ul>
+                    {% if project.date_end %}
+                        <li class="box">
+                            <p class="date square">
+                            <span class="month">{{ project.date_end|date:"F" }}</span>
+                            <span class="year">{{ project.date_end|date:"Y" }}</span>
+                            </p>
+                        </li>
+                    {% endif %}
+                    {% if project.area %}
+                    <li class="box">
+                        <p class="size square">
+                        <span class="number">{{ project.area|floatformat }}</span>
+                        <span class="unit">{{ project.get_unit_display }}</span>
+                        </p>
+                    </li>
+                    {% endif %}
+                    </ul>
+                </div>
+                {% if project.clients.all or project.collaborators.all %}
+                <div class="people">
+                    {% if project.clients.all %}
+                    <div class="box">
+                        <h2>Clients</h2>
+                        <ul class="linked-list">
+                        {% for client in project.clients.all %}
+                            <li> {{ client.name }} </li>
+                        {% endfor %}
+                        </ul>
+                     </div>
+                    {% endif %}
+                    {% if project.collaborators.all %}
+                    <div class="box">
+                        <h2>Collaborators</h2>
+                        <ul class="linked-list">
+                        {% for collaborator in project.collaborators.all %}
+                            <li> {{ collaborator.name }} </li>
+                        {% endfor %}
+                         </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="other">
+                    {% if project.external_url %}
+                    <div class="box">
+                        <h2>Web Link</h2>
+                        <p class="url">{{ project.external_url|urlizetrunc:25 }}</p>
+                    </div>
+                    {% endif %}
+                    {% if project.tags.all %}
+                    <div class="box">
+                        <h2>Tags</h2>
+                        <ul class="tags">
+                        {% for tag in project.tags.all %}
+                            <li> {{ tag.name }} </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                </div>
+                <ul id="project-nav" class="square">
+                {%  if project.get_next_project %}
+                <li class="box"><h2>Next Project</h2>
+                    <a class="next-proj tease"
+                       title="Next Project: {{ project.get_next_project.name }}"
+                       href="{{ project.get_next_project.get_absolute_url }}">{{ project.get_next_project.name }}</a>
+                </li>
+                {%  endif %}
+                {%  if project.get_previous_project %}
+                <li  class="box"><h2>Previous Project</h2>
+                    <a class="prev-proj tease"
+                       title="Previous Project: {{ project.get_previous_project.name }}"
+                       href="{{ project.get_previous_project.get_absolute_url }}">{{ project.get_previous_project.name }}</a>
+                </li>
+                {%  endif %}
+            </ul>
+            </div>
+
+         </section>
+    </article>
+{% endblock content %}
+
+{% block js_local %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>
+<script type="text/javascript">
+    function Square() {
+            $('.square').each(function(){
+                width = $(this).width();
+                $(this).css('height',width);
+            });
+            $('.center').each(function(){
+                width = $(this).width();
+                $(this).css('line-height',width + "px");
+            });
+    }
+
+
+
+
+    $(document).ready(function() {
+        Square();
+        $('.carousel').flexslider({
+            animation: "slide",
+            slideshow: true,
+            slideshowSpeed: 7000,
+            animationDuration: 600,
+            directionNav: true,
+            controlNav: true,
+            keyboardNav: true,
+            touchSwipe: true,
+            prevText: "	&#171;",
+            nextText: "	&#187;",
+            pausePlay: false,
+            randomize: false,
+            slideToStart: 0,
+            animationLoop: true,
+            pauseOnAction: true,
+            pauseOnHover: true,
+            controlsContainer:".controls",
+            manualControls: "ul li a"
+        });
+
+    });
+
+    $(window).resize(function() {
+        Square();
+    });
+
+    $("#open").click(function () {
+        $(".content").addClass('max');
+        $(".slideshow").resize(function() {
+            $.fn.flexslider.reset()
+        });
+        $("#open").hide();
+        $("#close").show();
+        $("#close").css('display', 'block');
+    });
+
+    $("#close").click(function () {
+        $(".content").removeClass('max');
+        $("#open").show();
+        $("#close").hide();
+    });
+</script>
+{% endblock js_local %}

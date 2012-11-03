@@ -1,0 +1,8 @@
+{% if object.title %}
+<header>
+    <h2>{{ object.title }}</h2>
+</header>
+{% endif %}
+{% if object.excerpt_html %}
+{{ object.excerpt_html|safe }}
+{% endif %}

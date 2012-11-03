@@ -1,4 +1,4 @@
-# studio/templatetags/news_tags.py
+# news/templatetags/news_tags.py
 
 import re
 
@@ -7,7 +7,7 @@ from django.conf import settings
 from django.db import models
 
 
-from futuregreen.studio.models import NewsItem
+from futuregreen.news.models import NewsItem
 
 register = template.Library()
 
