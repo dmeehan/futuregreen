@@ -8,7 +8,8 @@ urlpatterns = patterns('',
 
     # redirects
     (r'^website/', RedirectView.as_view(url='/')),
-    (r'^newsfeed/', RedirectView.as_view(url='/studio/news/')),
+    (r'^newsfeed/', RedirectView.as_view(url='/news/')),
+    (r'^studio/news/', RedirectView.as_view(url='/news/')),
 
     # admin
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -22,6 +23,9 @@ urlpatterns = patterns('',
 
     # studio
     (r'^studio/', include('futuregreen.studio.urls')),
+
+    # news
+    (r'^news/', include('futuregreen.news.urls')),
 
     # research
     (r'^research/', include('futuregreen.research.urls')),

@@ -3,7 +3,7 @@
 from django.shortcuts import render
 
 from futuregreen.portfolio.models import Project
-from futuregreen.studio.models import NewsItem
+from futuregreen.news.models import NewsItem
 from futuregreen.research.models import Article
 
 def index(request):
