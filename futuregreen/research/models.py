@@ -40,6 +40,9 @@ class ArticleImage(RelatedImageAutoBase):
     """
     article = models.ForeignKey(Article)
 
+    def __unicode__(self):
+        return '%s image %d' % (self.article.title, self.order)
+
 class ArticleFile(models.Model):
     """
         Files for a news item.

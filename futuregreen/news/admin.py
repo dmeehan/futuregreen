@@ -37,4 +37,9 @@ class NewsItemAdmin(admin.ModelAdmin):
 
     prepopulated_fields = {"slug": ("title",)}
 
+class NewsItemImageAdmin(admin.ModelAdmin):
+    list_display = ('image', 'admin_thumbnail_view','news_item')
+
+
 admin.site.register(NewsItem, NewsItemAdmin)
+admin.site.register(NewsItemImage, NewsItemImageAdmin)

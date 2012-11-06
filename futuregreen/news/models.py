@@ -40,6 +40,8 @@ class NewsItemImage(RelatedImageAutoBase):
     class Meta:
        	db_table = 'studio_newsitemimage'
 
+    def __unicode__(self):
+        return u'%s image %d' % (self.news_item.title, self.order)
 
 class NewsItemFile(models.Model):
     """

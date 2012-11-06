@@ -10,8 +10,8 @@ from futuregreen.portfolio.models import Project, ProjectImage, ProjectType, Lan
 
 class ProjectImageAdmin(admin.ModelAdmin):
     model = ProjectImage
-    list_display = ('name', 'admin_thumbnail_view', 'project')
-
+    list_display = ('image', 'admin_thumbnail_view', 'project')
+    list_filter = ('public', 'project__name')
     ordering = ('project',)
 
 class ImageInline(admin.StackedInline):
