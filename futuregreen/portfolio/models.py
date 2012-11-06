@@ -223,7 +223,13 @@ class ProjectImage(RelatedImageAutoBase):
     project = models.ForeignKey(Project)
 
     def __unicode__(self):
-        return u'%s image %d' % (self.project.name, self.order)
+        if self.name:
+            return u'%s' % self.name
+        elif self.order:
+            n = self.order + 1
+            return u'%s image %d' % (self.project.name, n)
+        else:
+            return u'%s image 1' % self.project.name
 
 class ProjectType(Category):
     pass
