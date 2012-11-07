@@ -41,7 +41,13 @@ class ArticleImage(RelatedImageAutoBase):
     article = models.ForeignKey(Article)
 
     def __unicode__(self):
-        return '%s image %d' % (self.article.title, self.order)
+        if self.name:
+            return u'%s' % self.name
+        elif self.order:
+            n = self.order + 1
+            return u'%s image %d' % (self.article.title, n)
+        else:
+            return u'%s image 1' % self.article.title
 
 class ArticleFile(models.Model):
     """

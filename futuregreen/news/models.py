@@ -41,7 +41,13 @@ class NewsItemImage(RelatedImageAutoBase):
        	db_table = 'studio_newsitemimage'
 
     def __unicode__(self):
-        return u'%s image %d' % (self.news_item.title, self.order)
+        if self.name:
+            return u'%s' % self.name
+        elif self.order:
+            n = self.order + 1
+            return u'%s image %d' % (self.news_item.title, n)
+        else:
+            return u'%s image 1' % self.news_item.title
 
 class NewsItemFile(models.Model):
     """
