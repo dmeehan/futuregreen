@@ -140,7 +140,7 @@ body > header {
 
 body > header > h1 {
     font-size:8px;
-    width:50%;
+    width:400px;
     overflow: hidden;
     float:left;
 }
@@ -155,15 +155,14 @@ body > header > h1 a {
 }
 
 body > header > nav {
-    float:left;
-    width:50%;
+    float:right;
 }
 
 body > header > nav li {
-    float:left;
     line-height:80px;
     text-align: center;
-    width:25%;
+    display:inline;
+    /*width:20%;*/
 }
 
 body > header > nav li a {
@@ -171,7 +170,7 @@ body > header > nav li a {
     font-size: 1.14285714em;
     letter-spacing:1px;
     text-decoration:none;
-    padding: 15px 20px;
+    padding: 15px 15px;
 }
 
 body > header > nav li a:link,
@@ -184,7 +183,8 @@ body > header > nav li a:active {
 body.studio > header > nav li a.studio,
 body.portfolio > header > nav li a.portfolio,
 body.research > header > nav li a.research,
-body.news > header > nav li a.news {
+body.news > header > nav li a.news,
+body.contact > header > nav li a.contact {
      background:url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px,
                url('images/corner-bg-bottom-right.png') no-repeat right bottom;
@@ -1271,6 +1271,7 @@ ul#project-nav {
     section.text article {
         font-size:0.92857em;
     }
+    
 }
 
 @media screen and (max-width: 960px) {
@@ -1292,6 +1293,12 @@ ul#project-nav {
         clear:both;
         width:100%;
     }
+    
+    body > header > nav li {
+       float:left;
+       width:20%;
+    }
+
 
     body.home > .content > div.two-thirds,
     body.home > .content > div.third {
