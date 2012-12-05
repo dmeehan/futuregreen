@@ -3,8 +3,7 @@
 {% block metadata %}
 {{ block.super }}
 {% if project.tags.all %}
-<meta name="keywords" 
-content="{% for tag in project.tags.all %}{{ tag.name }}, {% endfor %}">
+<meta name="keywords" content="{% for tag in project.tags.all %}{{ tag.name }}, {% endfor %}">
 {% endif %}
 {% endblock metadata %}
 {% block content %}
