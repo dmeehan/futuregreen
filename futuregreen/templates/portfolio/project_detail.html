@@ -1,5 +1,12 @@
 {% extends "portfolio/portfolio_base.html" %}
 {% block page_title %}: {{ project.name }}{% endblock page_title %}
+{% block metadata %}
+{{ block.super }}
+{% if project.tags.all %}
+<meta name="keywords" 
+content="{% for tag in project.tags.all %}{{ tag.name }}, {% endfor %}">
+{% endif %}
+{% endblock metadata %}
 {% block content %}
     <article class="project detail">
     {% if project.projectimage_set.all %}
@@ -114,16 +121,6 @@
                         <p class="url">{{ project.external_url|urlizetrunc:25 }}</p>
                     </div>
                     {% endif %}
-                    {% if project.tags.all %}
-                    <div class="box">
-                        <h2>Tags</h2>
-                        <ul class="tags">
-                        {% for tag in project.tags.all %}
-                            <li> {{ tag.name }} </li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                {% endif %}
                 </div>
                 <ul id="project-nav" class="square">
                 {%  if project.get_next_project %}
