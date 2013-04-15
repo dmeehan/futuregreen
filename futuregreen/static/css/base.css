@@ -53,14 +53,14 @@ table {
 body {
     font-weight:normal;
     font-size:87.5%;
-    font-family: kulturista-web-1,kulturista-web-2, Arial, Helvetica, sans-serif;
+    font-family: "museo-sans-1","museo-sans-2", Arial, Helvetica, sans-serif;
     color:#444;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
 
 h1 {
-    font-family: purista-web-1,purista-web-2, sans-serif;
+    font-family: "museo-sans-1","museo-sans-2, sans-serif;
     font-size:1.71428em;
     text-transform: uppercase;
 }
@@ -83,7 +83,7 @@ strong {
 }
 
 body > header {
-    font-family: purista-web-1,purista-web-2, sans-serif;
+    font-family: "museo-sans-1","museo-sans-2", sans-serif;
     -ms-word-wrap: normal;
     word-wrap: normal;
 }
@@ -336,7 +336,7 @@ h1.overlay {
     padding: 0 0 0 0;
     font-size:2.4em;
     line-height:1em;
-    margin:-.95em 0 0 10px;
+    margin:-0.8em 0 0 10px;
     color:#fff;"
 }
 

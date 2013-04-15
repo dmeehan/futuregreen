@@ -28,23 +28,6 @@
             <li><a href="{% url news_archive_month year=date|date:"Y", month=date|date:"M" %}" title="{{ date|date:"F Y" }}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
             {% endfor %}
         </ul>
-        <h2 class="box">Latest Projects</h2>
-        {% get_latest_projects 6 as project_list %}
-        {%  for project in project_list %}
-            <article class="project list box half {% for type in project.project_types.all %}{{ type.name|lower }}&nbsp;{% endfor %}">
-                    <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>
-                    <section>
-                        {% for image in project.projectimage_set.all %}
-                            {% if image.is_main %}
-                                <a href="{{ project.get_absolute_url }}">
-                                    <img class="flex" src="{{ image.list.url }}"
-                                         alt="{{ image.caption }}" />
-                                </a>
-                            {% endif %}
-                        {% endfor %}
-                    </section>
-                </article>
-        {%  endfor %}
     </aside>
 {% endblock aside %}
 {% endblock content %}

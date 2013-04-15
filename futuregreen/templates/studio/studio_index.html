@@ -20,24 +20,8 @@
             </a> 
         </article>
     {%  endfor %}
-</section>
-<section class="third">
-    <header class="box">
-        <a class="wraplink" href="{% url contact %}">
-        {%  gblock "studio_contact" for "content.ContentBlock" with "content/contentblock/aside.html" %}
-        </a>
-    </header>
-    <article id="news">
-              <section class="box">
-            <h2>Future Green Studio</h2>
-            <p><a href="{% url contact %}">18 Bay Street
-               Brooklyn, NY 11231</a> <br />
-               T. 718.855.8995 <br />
-               F. 718.228.7004 <br />
-               E. <a href="info@futuregreenstudio.com">info@futuregreenstudio.com</a>
-            </p>
-            </section>
-        </div>
-    </article>
+    <div class="box" style="clear:both">
+      {%  gblock "studio_collaborators" for "content.ContentBlock" with "content/contentblock/flatblock.html" %}
+    </div>
 </section>
 {% endblock content %}
