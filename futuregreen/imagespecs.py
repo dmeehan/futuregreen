@@ -38,6 +38,11 @@ class ResizeThird(processors.Resize):
     height = 341
     crop = True
 
+class ResizeLetterbox(processors.Resize):
+    width = 1600
+    height = 904
+    crop = True
+
 class EnhanceSmall(processors.Adjustment):
     contrast = 1.2
     sharpness = 1.1
@@ -74,3 +79,7 @@ class Main(ImageSpec):
 class Aside(ImageSpec):
     pre_cache = False
     processors = [ResizeThird]
+
+class Letterbox(ImageSpec):
+    pre_cache = False
+    processors = [ResizeLetterbox]
