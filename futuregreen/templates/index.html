@@ -14,10 +14,9 @@
                             {% endfor %}
                             </a>
                         </div>
-                        <div class="text">
+                        <div class="text box full">
                             <h2>{{ news.title }}</h2> 
-                            <p>{{ news.excerpt_html|safe }}</p>
-                            <p class="tease"><a href="{{ news.get_absolute_url }}">Read more...</a></p>
+                            <p>{{news.excerpt_html|safe }}</p>
                         </div>
                      </li>
 
@@ -32,11 +31,6 @@
                                 {% endfor %}
                             </a>
                             </div>
-                            <div class="text">
-                                <h2>{{ project.name }}</h2> 
-                                <p>{{ project.description_html|safe|truncatewords_html:40 }}</p>
-                                <p class="tease"><a href="{{ project.get_absolute_url }}">Read More...</a></p>
-                            </div>
 
                      </li>
                      {% endfor %}
@@ -50,11 +44,9 @@
                             {% endfor %}
                             </a>
                         </div>
-                        <div class="text">
+                        <div class="text box full">
                             <h2>{{ article.title }}</h2> 
                             <p>{{ article.excerpt_html|safe }}</p>
-                            <p class="tease"><a href="{{ article.get_absolute_url }}">Read 
-more...</a></p>
                         </div>
                      </li>
 
@@ -64,39 +56,20 @@ more...</a></p>
 {% endblock content %}
 
 {% block js_local %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider-1.8-min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.resize.min.js"></script>
 <script type="text/javascript">
-    function Square() {
-            $('.square').each(function(){
-                width = $(this).width();
-                $(this).css('height',width);
-            });
-            $('.center').each(function(){
-                width = $(this).width();
-                $(this).css('line-height',width + "px");
-            });
-    }
-
-
-
-
     $(document).ready(function() {
-        Square();
         $('.carousel').flexslider({
-            animation: "slide",
+            animation: "fade",
             slideshow: true,
-            slideshowSpeed: 5000,
-            animationDuration: 600,
+            slideshowSpeed: 7000,
+            animationSpeed: 2000,
             directionNav: false,
             controlNav: false,
             keyboardNav: true,
-            touchSwipe: true,
-            prevText: "	&#171;",
-            nextText: "	&#187;",
-            pausePlay: false,
-            randomize: false,
-            //slideToStart: 0,
+            touch: true,
+            useCSS: true,
             animationLoop: true,
             pauseOnAction: true,
             pauseOnHover: false,
@@ -104,24 +77,5 @@ more...</a></p>
 
     });
 
-    $(window).resize(function() {
-        Square();
-    });
-
-    $("#open").click(function () {
-        $(".content").addClass('max');
-        $(".slideshow").resize(function() {
-            $.fn.flexslider.reset()
-        });
-        $("#open").hide();
-        $("#close").show();
-        $("#close").css('display', 'block');
-    });
-
-    $("#close").click(function () {
-        $(".content").removeClass('max');
-        $("#open").show();
-        $("#close").hide();
-    });
 </script>
 {% endblock js_local %}

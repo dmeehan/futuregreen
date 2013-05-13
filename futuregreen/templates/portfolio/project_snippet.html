@@ -1,4 +1,4 @@
-<article class="project list box quarter
+<article class="project list box fifth
                {% for type in project.project_types.all %}{{ type.slug }}&nbsp;{% endfor %}
                {% for type in project.landscape_types.all %}{{ type.slug }}&nbsp;{% endfor %}">
     <header><a href="{{ project.get_absolute_url }}"><h1>{{ project.name }}</h1></a></header>

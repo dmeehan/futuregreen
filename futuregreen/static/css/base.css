@@ -208,7 +208,7 @@ body > footer {
     width:100%;
     overflow: hidden;
     font-family: purista-web-1,purista-web-2, sans-serif;
-    margin-bottom:20px;
+    margin:10px 0;
 }
 
 body > footer > .contact a:link,
@@ -316,7 +316,7 @@ body > footer > .contact {
 }
 
 .content .pullquote {
-    font-size:1.5em;
+    font-size:1.3em;
     color:#999;
     line-height:1.5em;
     margin: 0 0 0 0;
@@ -497,6 +497,48 @@ div.date .month {
     font-size: .85em;
 }
 
+
+.fullframe {
+    position:relative;
+    width:100%
+}
+
+.fullframe .image {
+    padding:0 0 0 0;
+    margin: 0 0 0 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.fullframe .image img {
+    width:100%;
+}
+
+.fullframe .text {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /* background-color: rgba(255,255,255,0.5); */
+    /*width: 510px; */
+    padding: 30px 40px;
+}
+
+.fullframe .text h2 {
+    font-size:1.4em;
+    line-height:1.2em;
+    color:#444;
+    text-transform:uppercase;
+}
+
+.home .slideshow .text a {
+
+}
+
+
+
+
+
 body.research .content,
 body.studio .content {
     background:url('images/corner-bg-bottom-right.png') no-repeat right bottom;
@@ -507,6 +549,8 @@ body.studio.news .main{
     background:url('images/corner-bg-top-right.png') no-repeat right top,
     url('images/side-bg.png') no-repeat left 170px;
 }
+
+
 
 
 /********** HOMEPAGE ***********/
@@ -586,19 +630,10 @@ body.studio.news .main{
 
 /* slideshow */
 .slideshow {
-    background:url('images/corner-bg-top-right.png') no-repeat right top,
-               url('images/vertical-bg.png') no-repeat 10px 90%,
-               url('images/vertical-bg.png') no-repeat 10px top,
-               url('images/bottom-bg.png') no-repeat left 10px;
     float:left;
     width:58.33333%;
     position: relative;
     overflow: hidden;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    -ms-transition: all .3s ease-out;
-    -transition: all .3s ease-out;
 
 }
 
@@ -606,9 +641,6 @@ body.studio.news .main{
 .slideshow .carousel {
     position: relative;
     margin: 10px;
-    background:url('images/vertical-bg.png') no-repeat right bottom,
-               url('images/bottom-bg.png') no-repeat left bottom;
-
 }
 
 .slideshow .carousel .slides img {
@@ -619,11 +651,6 @@ body.studio.news .main{
 .slideshow .carousel .slides li {
     display:none;
     position:relative;
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    -ms-transition: all .3s ease-out;
-    -transition: all .3s ease-out;
 }
 
 .slideshow .carousel .flex-caption {
@@ -833,21 +860,49 @@ body.studio.news .main{
 
 .home .slideshow .text {
     position:absolute;
-    top:40px;
-    right:0px;
-    width: 50%;
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    padding:20px;
+    bottom:0px;
+    left:0px;
+    background-color: rgba(255,255,255,0.6);
+    font-size:.9em;
+}
+
+.home .slideshow .image {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    
 }
 
 .home .slideshow .text h2 {
-    font-size:2em;
-    line-height:1.2em;
+    text-transform: uppercase;
 }
 
 
 .home .slideshow .text a {
+
+}
+
+.portfolio .slideshow,
+.portfolio .slideshow .carousel .slides li {
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -transition: all .3s ease-out;
+}
+
+.portfolio .slideshow {
+    background:url('images/corner-bg-top-right.png') no-repeat right top,
+               url('images/vertical-bg.png') no-repeat 10px 90%,
+               url('images/vertical-bg.png') no-repeat 10px top,
+               url('images/bottom-bg.png') no-repeat left 10px;
+
+}
+
+
+.portfolio .slideshow .carousel {
+   background:url('images/vertical-bg.png') no-repeat right bottom,
+               url('images/bottom-bg.png') no-repeat left bottom;
 
 }
 
@@ -1115,43 +1170,13 @@ ul#project-nav {
 }
 
 /******** MEDIA QUERIES **********/
-@media screen and (min-width: 1680px) {
-     body {
-        width:70%;
-        margin: 0 15%;
-    }
-
-    .home article.text {
-        font-size:110%;
-    }
-
-    .home article.text p {
-        width:80%;
-        margin: 0;
-        padding-top: 10px;
-    }
-}
-
-@media screen and (min-width: 1240px) and (max-width:1680px) {
-  body {
-    width:80%;
-    margin: 0 10%;
-  }
-
-  .studio .content .main article section.body {
-    }
-
-    .home article.text p {
-        width:90%;
-    }
-
-}
-
 
 @media screen and (min-width: 1240px) {
-  .studio .content .main article section.body {
-}
 
+  body {
+    width:1200px;
+    margin: 0 auto;
+  }
      section.text article {
         font-size:1em;
     }

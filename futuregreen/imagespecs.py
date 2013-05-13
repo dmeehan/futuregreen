@@ -40,7 +40,7 @@ class ResizeThird(processors.Resize):
 
 class ResizeLetterbox(processors.Resize):
     width = 1600
-    height = 904
+    height = 800
     crop = True
 
 class EnhanceSmall(processors.Adjustment):
