@@ -208,7 +208,7 @@ body > footer {
     width:100%;
     overflow: hidden;
     font-family: purista-web-1,purista-web-2, sans-serif;
-    margin:10px 0;
+    /*margin:10px 0;*/
 }
 
 body > footer > .contact a:link,
@@ -855,7 +855,8 @@ body.studio.news .main{
 .slideshow .flex-direction-nav .prev {}
 
 .home .slideshow {
-    width:100%
+    width:100%;
+    margin-bottom: 10px;
 }
 
 .home .slideshow .text {
