@@ -4,23 +4,7 @@
         <section class="slideshow">
             <div class="carousel">
                 <ul class="slides">
-                    <li>
-                        <div class="image">
-                            <a href="{{ news.get_absolute_url }}">
-                            {% for image in news.newsitemimage_set.all %}
-                            {% if image.is_main %}
-                            <img src="{{ image.letterbox.url }}" alt="{{ image.caption }}" />                     
-                            {% endif %}
-                            {% endfor %}
-                            </a>
-                        </div>
-                        <div class="text box full">
-                            <h2>{{ news.title }}</h2> 
-                            <p>{{news.excerpt_html|safe }}</p>
-                        </div>
-                     </li>
-
-                    {% for project in project_list %}
+                    {% for project in project_list|slice:":2" %}
                      <li>
                             <div class="image">
                             <a href="{{ project.get_absolute_url }}">
@@ -34,6 +18,37 @@
 
                      </li>
                      {% endfor %}
+                     <li>
+                        <div class="image">
+                            <a href="{% url news %}">
+                            {% for image in news.newsitemimage_set.all %}
+                            {% if image.is_main %}
+                            <img src="{{ image.letterbox.url }}" alt="{{ image.caption }}" />                     
+                            {% endif %}
+                            {% endfor %}
+                            </a>
+                        </div>
+                        <div class="text box full">
+                            <h2>{{ news.title }}</h2> 
+                            <p>{{news.excerpt_html|safe }}</p>
+                        </div>
+                     </li>
+
+                    {% for project in project_list|slice:"2:" %}
+                     <li>
+                            <div class="image">
+                            <a href="{{ project.get_absolute_url }}">
+                                {% for image in project.projectimage_set.all %}
+                                {% if image.is_main %}
+                                <img src="{{ image.letterbox.url }}" alt="{{ image.caption }}" />
+                                {% endif %}
+                                {% endfor %}
+                            </a>
+                            </div>
+
+                     </li>
+                     {% endfor %}
+
                      <li>
                         <div>
                             <a href="{{ article.get_absolute_url }}">
