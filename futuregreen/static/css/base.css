@@ -77,7 +77,8 @@ div,p,ul,ol,section,article {
 }
 
 strong {
-    font-weight:bold;
+    font-weight: bold;
+    line-height: 1.0em;
 }
 
 body > header {
@@ -316,9 +317,8 @@ body > footer > .contact {
 }
 
 .content .pullquote {
-    font-size:1.3em;
-    color:#999;
-    line-height:1.5em;
+    font-size: 1.3em;
+    color: #999;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
