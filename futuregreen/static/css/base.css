@@ -1510,8 +1510,20 @@ z-index:1; width:80%;}
         clear:both;
         width:100%;
     }
+   
+    #mc_embed_signup {
+        position: static;
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    .fullframe .image {
+        opacity: 0.2;
+    }
 
-
+    .fullframe .text {
+        width: 100%;
+    }
 
 }
 
@@ -1674,6 +1686,22 @@ z-index:1; width:80%;}
     body.news > .content > aside.third {
         float:none;
         width:100%;
+    }
+
+    #mc_embed_signup {
+        position: static;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .fullframe .image {
+        display: none;
+    }
+
+    .fullframe .text {
+        width: 100%;
+        padding: 20px 0;
+        position: static;
     }
 
 }
