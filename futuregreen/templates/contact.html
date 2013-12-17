@@ -2,8 +2,9 @@
 {% load generic_flatblocks %}
 {% block body_class %}contact{% endblock body_class %}
 {% block content %}
-<div class="full box">
+<div class="contact-content full box" style="position: relative">
 {%  gblock "contact_image" for "content.ContentBlock" with "content/contentblock/overlay.html" %}
+{%  gblock "email_signup_form" for "content.ContentBlock" with "content/contentblock/simple.html" %}
 </div>
 {% endblock content %}
 {% block js_local %}
