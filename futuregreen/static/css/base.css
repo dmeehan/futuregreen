@@ -1179,9 +1179,10 @@ ul#project-nav {
 #mc_embed_signup {
     position: absolute;
     bottom: 40px;
-    left: 20px;
-    width: 33%;
+    right: 40px;
+    width: 465px;
     padding: 20px;
+    background: rgba(255,255,255,0.7);
 }
 
 
@@ -1196,7 +1197,11 @@ ul#project-nav {
 
 #mc_embed_signup input:focus {border-color:#999;}
 
-#mc_embed_signup .button {clear:both; background-color: #4c6684; border: 0 none;  color: #FFFFFF; 
+#mc_embed_signup .button {
+    clear:both; 
+    background-color: #4c6684; 
+    background-color: #8ec42a;
+    border: 0 none;  color: #FFFFFF; 
 cursor: pointer; font-size:14px; font-weight: padding:5px 20px; text-align: center; text-decoration: none; 
 vertical-align: top; white-space: nowrap; 
 width: 
@@ -1211,12 +1216,11 @@ auto;}
 #mc_embed_signup .clear {clear:none; display:inline;}
 
 #mc_embed_signup label {
-   display: inline-block; 
+   display: block; 
    font-size: 18px;
-   padding:2px 4px;
-   margin-bottom: 10px; 
+   margin-bottom: 20px; 
    font-weight: normal;
-   background: rgba(255,255,255,0.8);
+   /*background: rgba(255,255,255,0.8);*/
 }
 
 #mc_embed_signup input.email {display:block; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:100%; 
