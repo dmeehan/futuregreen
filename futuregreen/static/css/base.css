@@ -1180,16 +1180,17 @@ ul#project-nav {
     position: absolute;
     bottom: 40px;
     right: 40px;
-    width: 465px;
+    width: 33%;
     padding: 20px;
     background: rgba(255,255,255,0.7);
 }
 
 
-#mc_embed_signup h2 {font-weight: normal; padding:0; margin:15px 0;}
+#mc_embed_signup h2 {font-size: .75em; font-weight: normal; padding:0; margin:15px 0;}
 
 
-#mc_embed_signup input {border:1px solid #ccc; width: 100%, border-radius: 2px;  -webkit-appearance:none;}
+#mc_embed_signup input {border:1px solid #ccc; border-radius: 2px;  
+-webkit-appearance:none;}
 
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
 
@@ -1198,9 +1199,8 @@ ul#project-nav {
 #mc_embed_signup input:focus {border-color:#999;}
 
 #mc_embed_signup .button {
-    clear:both; 
+    display: inline-block; 
     background-color: #4c6684; 
-    background-color: #8ec42a;
     border: 0 none;  color: #FFFFFF; 
 cursor: pointer; font-size:14px; font-weight: padding:5px 20px; text-align: center; text-decoration: none; 
 vertical-align: top; white-space: nowrap; 
@@ -1217,16 +1217,16 @@ auto;}
 
 #mc_embed_signup label {
    display: block; 
-   font-size: 18px;
-   margin-bottom: 20px; 
+   font-size: 14px;
+   margin-bottom: 10px; 
    font-weight: normal;
    /*background: rgba(255,255,255,0.8);*/
 }
 
-#mc_embed_signup input.email {display:block; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:100%; 
-min-width:130px; border-radius: 2px}
+#mc_embed_signup input.email {display: inline-block; padding:8px 0; margin:0; text-indent:5px; 
+width:75%;  border-radius: 2px}
 
-#mc_embed_signup input.button { padding: 10px 20px; border-radius: 2px }
+#mc_embed_signup input.button { font-size: 12px; padding: 8px; border-radius: 2px }
 
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; 
 width:90%;margin: 0 5%; clear: both;}
