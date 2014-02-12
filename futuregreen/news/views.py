@@ -8,7 +8,7 @@ from futuregreen.people.models import Employee
 from futuregreen.portfolio.models import Project
 
 class NewsDetailView(DetailView):
-    model = NewsItem
+    model = NewsItem.objects.live()
 
 class NewsListView(ListView):
     queryset = NewsItem.objects.live()
