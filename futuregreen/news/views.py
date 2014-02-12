@@ -11,10 +11,10 @@ class NewsDetailView(DetailView):
     model = NewsItem
 
 class NewsListView(ListView):
-    model = NewsItem
+    queryset = NewsItem.objects.live()
 
 class NewsIndexView(ArchiveIndexView):
-    model = NewsItem
+    queryset = NewsItem.objects.live()
     date_field="date_published"
     
     #context_object_name = "news_list"
