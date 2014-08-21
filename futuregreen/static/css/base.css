@@ -1029,6 +1029,7 @@ body.studio.news .main{
 ul#project-nav {
     position:absolute;
     bottom:0;
+    margin-bottom: 10px;
 }
 
 .prev-proj.tease:after {
