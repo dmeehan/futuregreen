@@ -926,6 +926,14 @@ body.studio.news .main{
     font-size:.85em;
 }
 
+.details header {
+	margin: 5px 10px;
+}
+
+.details header h2 {
+	margin-top: 10px;
+}
+
 .details p {
     text-align: justify;
     margin:10px 0;
