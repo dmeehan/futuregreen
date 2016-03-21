@@ -26,13 +26,13 @@
         {% endif %}
     </header>
     <article>
-        <section class="book-description">
+        <section class="book-description three-fifths">
             <h2>Description: </h2>
             {% if book.description_html %}
                 {{ book.description_html|safe }}
             {% endif %}
         </section>
-        <section class="book-productDetail">
+        <section class="book-productDetail two-fifths">
             <h2>Product Detail:</h2>
             {% if book.product_detail_html %}
                 {{ book.product_detail_html|safe }}

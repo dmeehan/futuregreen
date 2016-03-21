@@ -559,13 +559,14 @@ body.studio.news .main{
 
 body.book .book-image img {
     width: 100%;
-}
-
-body.book .book-image {
     background:url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px,
                url('images/corner-bg-bottom-right.png') no-repeat right bottom;
     padding: 10px;
+}
+
+body.book .book-content h1, h2, h3 {
+    margin-bottom: 10px;
 }
 
 
