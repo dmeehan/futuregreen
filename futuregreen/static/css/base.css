@@ -550,6 +550,10 @@ body.studio.news .main{
     url('images/side-bg.png') no-repeat left 170px;
 }
 
+body.book .book-image img {
+    width: 100%;
+}
+
 
 
 
