@@ -229,11 +229,11 @@ body > footer .social-links {
     float: left;
     margin: 0;
     text-align: center;
-    margin-left:20px;
+    margin-left:10px;
 }
 
 body > footer .social-links li {
-    margin: 0 5px;
+    margin: 0 3px;
     display: inline-block;
 }
 
