@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %}book{% endblock %}
 {% block content %}
-<section class="book-image box one-half">
+<section class="book-image box half">
     {% if book.image %}
         <img src="{{ book.image.url }}" />
     {% endif %}
@@ -12,7 +12,7 @@
         <li><a class="purchase" href="{{ book.purchase_link }}"><span>Purchase</span></a></li>
     </ul>
 </section>
-<section class="book-content box one-half">
+<section class="book-content box half">
     <header>
         <h1>{{ book.title }}</h1>
         {% if book.subtitle %}
