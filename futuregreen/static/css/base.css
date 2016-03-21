@@ -222,6 +222,7 @@ body > footer > .contact a:visited {
 body > footer > .copyright {
     float:left;
     margin-left:20px;
+    line-height: 20px;
 }
 
 body > footer .social-links {
@@ -231,12 +232,10 @@ body > footer .social-links {
     margin-left:20px;
 }
 
-body > footer .social-links li {
-    margin: 0 5px;
-    display: inline-block;
-}
 
-body > footer .social-links li a {
+
+body > footer .social-links a {
+    margin: 0 5px;
     display: inline-block;
     background: rgb(142, 196, 42);
     color: white;
