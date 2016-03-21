@@ -549,7 +549,8 @@ body.studio .content {
 }
 
 body.research .main,
-body.studio.news .main{
+body.studio.news .main, 
+body.book .book-content {
     background:url('images/corner-bg-top-right.png') no-repeat right top,
     url('images/side-bg.png') no-repeat left 170px;
 }
@@ -566,6 +567,10 @@ body.book .book-image img {
 
 body.book .book-content h1, h2, h3 {
     margin-bottom: 6px;
+}
+
+body.book .book-content article {
+    margin-top: 12px;
 }
 
 
