@@ -32,7 +32,7 @@ urlpatterns = patterns('',
     (r'^research/', include('futuregreen.research.urls')),
 
     # book
-    #(r'^book/', include('futuregreen.publications.urls')),
+    (r'^book/', include('futuregreen.publications.urls')),
 
     # contact
     url(r'^contact/', TemplateView.as_view(template_name="contact.html"), name='contact'),
