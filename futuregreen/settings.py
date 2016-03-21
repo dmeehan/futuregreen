@@ -139,7 +139,7 @@ INSTALLED_APPS = (
     'futuregreen.content',
     'futuregreen.studio',
     'futuregreen.news',
-    #'futuregreen.publications',
+    'futuregreen.publications',
     'futuregreen.templatetags',
 )
 
