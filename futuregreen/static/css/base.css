@@ -261,6 +261,10 @@ body > footer > .contact {
     width:40%; float:left;
 }
 
+.three-fifths {
+    width:60%; float:left;
+}
+
 .half {
     width:50%; float:left;
 }
@@ -550,8 +554,18 @@ body.studio.news .main{
     url('images/side-bg.png') no-repeat left 170px;
 }
 
+
+/**** book *****/
+
 body.book .book-image img {
     width: 100%;
+}
+
+body.book .book-image {
+    background:url('images/vertical-bg.png') no-repeat 10px top,
+               url('images/bottom-bg.png') no-repeat left 10px,
+               url('images/corner-bg-bottom-right.png') no-repeat right bottom;
+    padding: 10px;
 }
 
 
