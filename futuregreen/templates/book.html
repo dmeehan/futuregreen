@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body_class %}book{% endblock %}
+{% block content %}
+<section class="book-image box one-half">
+    {% if book.image %}
+        <img src="{{ book.image.url }}" />
+    {% endif %}
+    <ul class="book-links">
+        <li><a class="social" href="{{ book.facebook_link }}"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="social" href="{{ book.twitter_link }}"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="social" href="{{ book.instagram_link }}"><i class="fa fa-instagram"></i></a></li>
+        <li><a class="purchase" href="{{ book.purchase_link }}"><span>Purchase</span></a></li>
+    </ul>
+</section>
+<section class="book-content box one-half">
+    <header>
+        <h1>{{ book.title }}</h1>
+        {% if book.subtitle %}
+        <h2>{{ book.subtitle }}</h2>
+        {% endif %}
+        {% if book.author %}
+        <h3>By {{ book.author }}</h3>
+        {% endif %}
+        {% if book.coauthor %}
+        <h3>With {{ book.coauthor }}</h3>
+        {% endif %}
+    </header>
+    <article>
+        <section class="book-description">
+            <h2>Description: </h2>
+            {% if book.description_html %}
+                {{ book.description_html|safe }}
+            {% endif %}
+        </section>
+        <section class="book-productDetail">
+            <h2>Product Detail:</h2>
+            {% if book.product_detail_html %}
+                {{ book.product_detail_html|safe }}
+            {% endif %}
+            <h2>Related Links:</h2>
+            <ul class="book-relatedLinks">
+            {% for link in book.publicationlink_set.all %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </section>
+</section>
+{% endblock content %}
