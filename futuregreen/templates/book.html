@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %}book{% endblock %}
 {% block content %}
-<section class="book-image box three-fifths">
+<section class="book-image box half">
     {% if book.image %}
         <img src="{{ book.image.url }}" />
     {% endif %}
@@ -26,7 +26,7 @@
         {% endif %}
     </header>
     <article>
-        <section class="book-description half">
+        <section class="book-description three-fifths">
             <h2>Description: </h2>
             {% if book.description_html %}
                 {{ book.description_html|safe }}
