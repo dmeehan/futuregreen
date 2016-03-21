@@ -12,7 +12,7 @@
         <li><a class="purchase" href="{{ book.purchase_link }}"><span>Purchase</span></a></li>
     </ul>
 </section>
-<section class="book-content box two-fifths">
+<section class="book-content box half">
     <header>
         <h1>{{ book.title }}</h1>
         {% if book.subtitle %}
@@ -26,7 +26,7 @@
         {% endif %}
     </header>
     <article>
-        <section class="book-description three-fifths">
+        <section class="book-description half">
             <h2>Description: </h2>
             {% if book.description_html %}
                 {{ book.description_html|safe }}
