@@ -578,7 +578,31 @@ body.book .book-content article {
     margin-top: 12px;
 }
 
+body.book .book-links li {
+      padding: $small-spacing/2;
+      display: inline-block;
+}
 
+body.book .book-links .social {
+    background: rgb(142, 196, 42);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.1em;
+    height: 30px;
+    width: 30px;
+}
+
+body.book  .book-links  .purchase {
+    padding: 0 $small-spacing;
+    border: 3px solid rgb(142, 196, 42);
+    color: rgb(142, 196, 42);;
+    border-radius: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1em;
+    height: 30px;
+}
+  
 
 
 /********** HOMEPAGE ***********/
