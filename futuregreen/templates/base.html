@@ -76,6 +76,11 @@ src="//use.typekit.net/uyl4qjv.js"></script>
     <footer>
         {% load generic_flatblocks %}
         <span class="copyright">&copy; {% now "Y" %} Future Green Studio Corp.</span>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/Future-Green-Studio-189508231078006"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/future_green"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/futuregreenstudio/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
         <span class="contact">{%  gblock "footer_contact" for "content.ContentBlock" with "content/contentblock/simple.html" %}</span>
     </footer>
     {% endblock footer %}

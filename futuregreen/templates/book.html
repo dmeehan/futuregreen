@@ -38,7 +38,7 @@
                 {{ book.product_detail_html|safe }}
             {% endif %}
             <h2>Related Links:</h2>
-            <ul class="book-relatedLinks">
+            <ul class="book-relatedLinks linked-list">
             {% for link in book.publicationlink_set.all %}
                 <li><a href="{{ link.url }}">{{ link.title }}</a></li>
             {% endfor %}

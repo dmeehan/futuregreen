@@ -1732,6 +1732,29 @@ z-index:1; width:80%;}
         margin:0;
     }
 
+    body > footer .social-links {
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    body > footer .social-links li {
+        margin: 5px;
+        display: inline-block;
+    }
+
+    body > footer .social-links li a {
+        display: inline-block;
+        background: rgb(142, 196, 42);
+        color: white;
+        border-radius: 50%;
+        font-size: 1.1em;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+
     body.portfolio aside.sixth {
         clear:both;
         width:100%;
