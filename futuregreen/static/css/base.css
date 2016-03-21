@@ -579,11 +579,12 @@ body.book .book-content article {
 }
 
 body.book .book-links {
+    margin-top: 12px;
     text-align: center;
 }
 
 body.book .book-links li {
-      padding: 5px;
+      margin: 5px;
       display: inline-block;
 }
 
@@ -610,6 +611,7 @@ body.book  .book-links  .purchase {
     font-size: 1em;
     height: 30px;
     line-height: 30px;
+    text-decoration: none;
 }
   
 
