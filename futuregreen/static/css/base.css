@@ -571,6 +571,11 @@ body.book .book-content h1, h2, h3 {
 
 body.book .book-content article {
     margin-top: 12px;
+    font-size: 0.85em;
+}
+
+body.book .book-content article {
+    margin-top: 12px;
 }
 
 
