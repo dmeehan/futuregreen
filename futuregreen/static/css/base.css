@@ -652,7 +652,7 @@ body.book  .book-links  .purchase {
     clear:both;
 }
 
-.categories li {
+/*.categories li {
     overflow: hidden;
     float:left;
     width:25%;
@@ -675,19 +675,17 @@ body.book  .book-links  .purchase {
 .categories li.active a {
     font-size:2.28570em;
 }
-
+*/
 .categories li a {
-        color:#fff;
-        background: #ccc;
-        float:left;
-        width:100%;
-        font-weight: bold;
-        text-align: center;
-        font-size:1.14285em;
-        text-decoration: none;
+    font-weight:bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display:block;
+    padding-top:10px;
+    color:#8ec42a;
 }
 
-
+/*
 .categories .project-type {
     background:#3d6e31;
 }
@@ -695,6 +693,8 @@ body.book  .book-links  .purchase {
 .categories .landscape-type {
     background:#8ec42a;
 }
+*/
+
 
 /***** project list *****/
 .portfolio aside > nav {
