@@ -652,7 +652,7 @@ body.book  .book-links  .purchase {
     clear:both;
 }
 
-.categories li {
+/*.categories li {
     overflow: hidden;
     float:left;
     width:25%;
@@ -695,6 +695,7 @@ body.book  .book-links  .purchase {
 .categories .landscape-type {
     background:#8ec42a;
 }
+*/
 
 /***** project list *****/
 .portfolio aside > nav {
