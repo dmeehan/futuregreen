@@ -13,8 +13,7 @@
                             <li {% if type.slug == category.slug %}class="active"{% endif %}>
                                 <a href="{% url portfolio_projects_by_type type.slug %}"
                                    title="{{ type.name }} Projects"
-                                   id="{{ type.slug }}"
-                                   class="tease">
+                                   id="{{ type.slug }}">
                                    {{ type.name }}
                                 </a>
                             </li>
