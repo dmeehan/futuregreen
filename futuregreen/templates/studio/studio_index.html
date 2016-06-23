@@ -13,7 +13,7 @@
         {%  gblock "people" for "content.ContentBlock" with "content/contentblock/aside.html" %}
     </header>
     {% for employee in employee_list %}
-        <article class="quarter box">
+        <article class="third box">
             <a href="{{ employee.get_absolute_url }}"><img title="{{ employee.name }}"
                  alt="{{ employee.name }}"
                  style="border: 1px solid #efefef"
