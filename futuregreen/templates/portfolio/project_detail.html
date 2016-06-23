@@ -56,7 +56,7 @@
                             {% for category in project.project_types.all %}
                                 <li>
                                     <a href="{% url portfolio_projects_by_type category.slug %}" title="{{ category.name }}" class="project-type square center">
-                                        {{ category.alternate_title }}
+                                        {{ category.name }}
                                     </a>
                                 </li>
                             {% endfor %}
