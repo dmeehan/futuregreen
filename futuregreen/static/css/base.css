@@ -676,7 +676,7 @@ body.book  .book-links  .purchase {
 */
 
 .categories li{
-    line-height: 80px;
+    /*line-height: 80px;*/
 }
 
 .categories li.active {
@@ -692,7 +692,7 @@ body.book  .book-links  .purchase {
     color:#8ec42a;
     padding: 15px 15px;
     text-transform:uppercase;
-    font-size: 1.14285714em;
+    /*font-size: 1.14285714em;*/
     letter-spacing:1px;
     color: #444;
 }
