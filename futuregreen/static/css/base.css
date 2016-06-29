@@ -691,7 +691,7 @@ body.book  .book-links  .purchase {
     display:inline-block;
     color:#8ec42a;
     padding: 10px  15px;
-    line-height: 2;
+    /*line-height: 2;*/
     text-transform:uppercase;
     /*font-size: 1.14285714em;*/
     letter-spacing:1px;
