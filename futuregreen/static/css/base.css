@@ -668,14 +668,19 @@ body.book  .book-links  .purchase {
     box-sizing: border-box;
 }
 
-.categories li.active {
-    width:50%;
-}
+
 
 .categories li.active a {
     font-size:2.28570em;
 }
 */
+
+.categories li.active {
+    background:url('images/vertical-bg.png') no-repeat 10px top,
+               url('images/bottom-bg.png') no-repeat left 10px,
+               url('images/corner-bg-bottom-right.png') no-repeat right bottom;
+}
+
 .categories li a {
     font-weight:bold;
     text-transform: uppercase;
