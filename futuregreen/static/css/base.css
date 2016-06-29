@@ -679,7 +679,7 @@ body.book  .book-links  .purchase {
     /*line-height: 80px;*/
 }
 
-.categories li.active {
+.categories li.active a {
     background:url('images/vertical-bg.png') no-repeat 10px top,
                url('images/bottom-bg.png') no-repeat left 10px,
                url('images/corner-bg-bottom-right.png') no-repeat right bottom;
@@ -688,9 +688,10 @@ body.book  .book-links  .purchase {
 .categories li a {
     text-transform: uppercase;
     text-decoration: none;
-    display:block;
+    display:inline-block;
     color:#8ec42a;
-    padding: 15px 15px;
+    padding: 10px  15px;
+    line-height: 2;
     text-transform:uppercase;
     /*font-size: 1.14285714em;*/
     letter-spacing:1px;
