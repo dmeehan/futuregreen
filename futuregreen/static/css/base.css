@@ -730,6 +730,10 @@ body.book  .book-links  .purchase {
                 url('images/corner-bg-top-right_sm.png') no-repeat right top;
 }
 
+.portfolio .project.detail .categories li a {
+    padding: 0 0 10px 0;
+}
+
 /* slideshow */
 .slideshow {
     float:left;
