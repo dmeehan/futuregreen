@@ -87,7 +87,7 @@ strong {
 }
 
 body > header {
-    font-family: "museo-sans", sans-serif;
+    font-family: "purista-web", sans-serif;
     -ms-word-wrap: normal;
     word-wrap: normal;
 }
@@ -691,6 +691,7 @@ body.book  .book-links  .purchase {
 }
 
 .categories li a {
+    font-family: "purista-web", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     display:inline-block;
