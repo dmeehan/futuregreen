@@ -51,11 +51,16 @@ table {
 
 /********** FONTS **********/
 body {
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
     font-weight:normal;
     font-size:87.5%;
     color:#444;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "purista-web", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -82,7 +87,7 @@ strong {
 }
 
 body > header {
-    font-family: "museo-sans-1","museo-sans-2", sans-serif;
+    font-family: "museo-sans", sans-serif;
     -ms-word-wrap: normal;
     word-wrap: normal;
 }
@@ -209,7 +214,7 @@ body > footer {
     font-size:.85em;
     width:100%;
     overflow: hidden;
-    font-family: purista-web-1,purista-web-2, sans-serif;
+    font-family: purista-web, sans-serif;
     /*margin:10px 0;*/
 }
 
