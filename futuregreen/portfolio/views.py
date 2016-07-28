@@ -15,7 +15,7 @@ class ProjectDetailView(DetailView):
 
 class ProjectListView(ListView):
     queryset = Project._default_manager.filter(status=Project.STATUS_LIVE).order_by('-featured', '-date_end')
-    paginate_by = settings.PROJECT_PAGINATE_BY
+    #paginate_by = settings.PROJECT_PAGINATE_BY
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
